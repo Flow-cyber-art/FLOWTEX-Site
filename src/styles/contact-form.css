@@ -1,0 +1,16 @@
+.cf-form{background:#fff;border-radius:2px;padding:26px;display:grid;gap:14px}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cf-form input,.cf-form textarea{width:100%;border:1px solid #d8d6ce;padding:11px 12px;font:14px 'IBM Plex Sans',sans-serif;border-radius:2px;outline:none;background:#fff;color:#272728}
+.cf-form input:focus,.cf-form textarea:focus{border-color:#aa8038}
+.cf-form textarea{resize:vertical;min-height:96px}
+.cf-consent{display:flex;align-items:flex-start;gap:10px;font-size:12px;line-height:1.5;color:#6b6f6a}
+.cf-consent input{width:auto;margin-top:3px;flex:0 0 auto}
+.cf-consent a{color:#a47b2b;text-decoration:underline}
+.cf-error{font-size:13px;color:#B91C1C;margin:0}
+.cf-submit{border:0;cursor:pointer;background:#e2a73b;color:#272728;font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;padding:15px 18px;border-radius:2px;transition:background .2s;width:100%}
+.cf-submit:hover{background:#c9973f}
+.cf-submit:disabled{opacity:.55;cursor:not-allowed}
+.cf-done{padding:34px 8px;text-align:center}
+.cf-done strong{display:block;font-family:'Big Shoulders Display',sans-serif;font-size:26px;margin-bottom:8px;color:#272728}
+.cf-done p{color:#6b6f6a;font-size:14px;margin:0}
+@media(max-width:640px){.cf-row{grid-template-columns:1fr}}
