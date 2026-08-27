@@ -6,13 +6,21 @@ import { COLORS } from "../theme.js";
 import { ContactForm } from "../components/ContactForm.jsx";
 import "../styles/defect-catalog.css";
 import { DEFECTS } from "../data/defects.js";
+import CONTENT_DATES from "../data/generated-dates.json";
 
 const IMAGE = "/images/flowtex/";
 
+// datePublished/dateModified liczone automatycznie z historii gita pliku
+// src/data/defects.js (patrz scripts/generate-content-dates.js, uruchamiany
+// na starcie `npm run build`) — edycja treści wady i commit wystarczą, żeby
+// przy najbliższym buildzie ta data sama się zaktualizowała, bez ręcznego
+// wpisywania.
+const DEFECT_DATES = CONTENT_DATES.defects;
 
 function Detail({ defect }) {
   const canonicalUrl = `https://www.flowtex.pl/katalog-wad/${defect.id}`;
   const metaDescription = `${defect.intro} Poznaj możliwe przyczyny i kierunek naprawy — bezpłatna wycena FLOWTEX Polska.`;
+  const titleLower = defect.title.toLowerCase();
 
   return <article className="defect-detail-page">
     <Helmet>
@@ -32,6 +40,8 @@ function Detail({ defect }) {
               description: metaDescription,
               about: defect.title,
               mainEntityOfPage: canonicalUrl,
+              datePublished: DEFECT_DATES.published,
+              dateModified: DEFECT_DATES.modified,
               author: { "@type": "Organization", name: "FLOWTEX Polska" },
               publisher: { "@type": "Organization", name: "FLOWTEX Polska" },
             },
@@ -41,6 +51,21 @@ function Detail({ defect }) {
                 { "@type": "ListItem", position: 1, name: "Strona główna", item: "https://www.flowtex.pl/" },
                 { "@type": "ListItem", position: 2, name: "Katalog wad", item: "https://www.flowtex.pl/katalog-wad" },
                 { "@type": "ListItem", position: 3, name: defect.title, item: canonicalUrl },
+              ],
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: `Jakie są możliwe przyczyny: ${titleLower}?`,
+                  acceptedAnswer: { "@type": "Answer", text: defect.causes.join("; ") + "." },
+                },
+                {
+                  "@type": "Question",
+                  name: `Jak naprawić: ${titleLower}?`,
+                  acceptedAnswer: { "@type": "Answer", text: defect.solutions.join("; ") + "." },
+                },
               ],
             },
           ],
