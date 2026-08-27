@@ -1,0 +1,7 @@
+#!/bin/sh
+# Auto-instalowany przez `npm install` (patrz package.json "prepare" i
+# scripts/install-git-hooks.js). Przed każdym commitem: jeśli commitujesz
+# zmiany w src/data/defects.js, dopisuje aktualną datę do pola `updated`
+# tych wpisów, które faktycznie się zmieniły (patrz
+# scripts/update-defect-dates.js po pełne wyjaśnienie).
+node "$(git rev-parse --show-toplevel)/scripts/update-defect-dates.js" --staged

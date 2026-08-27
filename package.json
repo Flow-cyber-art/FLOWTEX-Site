@@ -4,13 +4,11 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "predev": "node scripts/generate-content-dates.js",
     "dev": "vite",
-    "prebuild": "node scripts/generate-content-dates.js",
     "build": "node scripts/generate-sitemap.js && vite build && vite build --ssr src/entry-server.jsx --outDir dist-ssr && node scripts/prerender.js && node scripts/indexnow-ping.js",
-    "prebuild:client": "node scripts/generate-content-dates.js",
     "build:client": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "node scripts/install-git-hooks.js"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
