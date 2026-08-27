@@ -5,3 +5,22 @@
 @media(max-width:960px){.defect-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.defect-breadcrumbs{padding:14px 22px 0;flex-wrap:wrap}.defect-catalog-hero{min-height:390px;padding:56px 22px}.defect-catalog-hero h1,.defect-detail-hero h1{font-size:56px}.defect-grid{grid-template-columns:1fr}.defect-detail-hero,.defect-detail-columns,.defect-funnel-form{grid-template-columns:1fr}.defect-detail-hero{padding:56px 22px;gap:34px}.defect-detail-hero img{height:250px}.defect-detail-body{padding:58px 22px 80px}.defect-funnel{padding:30px 22px}}
 .cross-tool-link{display:flex;align-items:center;gap:8px;margin-top:26px;color:#8a6a29;text-decoration:none;font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.04em}.cross-tool-link:hover{text-decoration:underline}
+
+/* --- Added: author byline, explanation paragraph, FAQ block --- */
+.defect-byline{margin-top:18px;font:500 12px 'IBM Plex Mono',monospace;color:#a39d8c;letter-spacing:.02em}
+.defect-byline strong{color:#e2a73b;font-weight:600}
+.defect-byline time{color:#c7c4b8}
+
+.defect-explanation{margin-top:18px;padding-top:18px;border-top:1px solid #d8d6ce;font-size:17px;line-height:1.6;color:#3a3b3d}
+
+.defect-faq{margin-top:56px;max-width:760px}
+.defect-faq h2{font-family:'Big Shoulders Display',sans-serif;font-size:clamp(34px,4.5vw,52px);line-height:.95;margin:14px 0 22px}
+.defect-faq-list{display:grid;gap:12px}
+.defect-faq-item{background:#f7f5ef;border:1px solid #d8d6ce;padding:0}
+.defect-faq-item[open]{background:#fff}
+.defect-faq-item summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:18px 22px;font:600 15px 'IBM Plex Sans',sans-serif;color:#3a3b3d}
+.defect-faq-item summary::-webkit-details-marker{display:none}
+.defect-faq-item summary svg{color:#b8892e;flex:0 0 auto}
+.defect-faq-item summary::after{content:'+';margin-left:auto;font:400 20px 'IBM Plex Mono',monospace;color:#a47b2b}
+.defect-faq-item[open] summary::after{content:'–'}
+.defect-faq-item p{margin:0;padding:0 22px 20px 49px;font-size:15px;line-height:1.55;color:#58636d}
