@@ -66,13 +66,10 @@ function Detail({ defect }) {
     <div className="defect-detail-body">
       <section className="defect-summary"><p className="defect-kicker"><span>01</span> ROZPOZNANIE</p><h2>Co może oznaczać ten objaw?</h2><p>Ten sam objaw może mieć kilka przyczyn. Przed wyborem technologii naprawy warto sprawdzić podłoże, sposób użytkowania i warunki panujące w obiekcie.</p><p className="defect-disclaimer"><strong>Ważne:</strong> opis ma charakter edukacyjny i nie jest diagnozą ani projektem naprawy. Dobór technologii wymaga oceny podłoża, obciążeń, wody, temperatury i chemikaliów oraz potwierdzenia w aktualnej karcie technicznej konkretnego systemu.</p></section>
       <div className="defect-detail-columns"><section className="defect-panel"><p className="defect-panel-label">MOŻLIWE POWODY POWSTAWANIA</p><ul>{defect.causes.map((cause) => <li key={cause}><CircleAlert size={15} />{cause}</li>)}</ul></section><section className="defect-panel defect-panel-dark"><p className="defect-panel-label">SUGESTIE ROZWIĄZANIA</p><ul>{defect.solutions.map((solution) => <li key={solution}><CheckCircle2 size={15} />{solution}</li>)}</ul></section></div>
-      <a className="defect-help-banner" href="#defect-kontakt">
-        <span><strong>Widzisz ten problem u siebie?</strong> Możemy Ci pomóc — rozpoznamy przyczynę i zaproponujemy naprawę.</span>
-        <span className="defect-help-banner-cta">Przejdź do kontaktu <ArrowRight size={16} /></span>
-      </a>
       <section id="defect-kontakt" className="defect-funnel defect-funnel-form">
         <div className="defect-funnel-copy">
           <p className="defect-kicker"><span>02</span> NASTĘPNY KROK</p>
+          <p className="defect-funnel-highlight"><strong>Widzisz ten problem u siebie?</strong> Możemy Ci pomóc — rozpoznamy przyczynę i zaproponujemy naprawę.</p>
           <h2>Szukasz wykonawcy?<br />Zadzwoń albo napisz.</h2>
           <p>Opisz problem — wrócimy z możliwym kierunkiem działania i przygotujemy bezpłatną wycenę. Możesz też zadzwonić od razu.</p>
           <div className="defect-funnel-quick-contact">
