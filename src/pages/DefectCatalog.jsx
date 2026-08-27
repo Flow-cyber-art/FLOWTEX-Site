@@ -69,7 +69,7 @@ function Detail({ defect }) {
       <section id="defect-kontakt" className="defect-funnel defect-funnel-form">
         <div className="defect-funnel-copy">
           <p className="defect-kicker"><span>02</span> NASTĘPNY KROK</p>
-          <h2>Widzisz ten problem u siebie? Możemy Ci pomóc — rozpoznamy przyczynę i zaproponujemy naprawę.</h2>
+          <h2 className="defect-funnel-lead">Widzisz ten problem u siebie? Możemy Ci pomóc — rozpoznamy przyczynę i zaproponujemy naprawę.</h2>
           <p>Opisz problem — wrócimy z możliwym kierunkiem działania i przygotujemy bezpłatną wycenę. Możesz też zadzwonić od razu.</p>
           <div className="defect-funnel-quick-contact">
             <a href="tel:+48507394552"><Phone size={16} /> +48 507 394 552</a>
