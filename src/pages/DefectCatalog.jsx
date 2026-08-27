@@ -95,7 +95,7 @@ function Detail({ defect }) {
       {defect.faq && defect.faq.length ? (
         <section className="defect-faq">
           <p className="defect-kicker"><span>02</span> NAJCZĘSTSZE PYTANIA</p>
-          <h2>Pytania o {defect.title.toLowerCase()}</h2>
+          <h2>Najczęściej zadawane pytania</h2>
           <div className="defect-faq-list">
             {defect.faq.map((item) => (
               <details className="defect-faq-item" key={item.question}>
