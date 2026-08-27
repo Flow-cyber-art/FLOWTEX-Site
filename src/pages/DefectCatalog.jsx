@@ -1,21 +1,13 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, ArrowRight, CircleAlert, CheckCircle2, Phone, Mail } from "lucide-react";
+import { ArrowLeft, ArrowRight, CircleAlert, CheckCircle2, Phone, Mail, HelpCircle } from "lucide-react";
 import { COLORS } from "../theme.js";
 import { ContactForm } from "../components/ContactForm.jsx";
 import "../styles/defect-catalog.css";
-import { DEFECTS } from "../data/defects.js";
-import CONTENT_DATES from "../data/generated-dates.json";
+import { DEFECTS, AUTHOR } from "../data/defects.js";
 
 const IMAGE = "/images/flowtex/";
-
-// datePublished/dateModified liczone automatycznie z historii gita pliku
-// src/data/defects.js (patrz scripts/generate-content-dates.js, uruchamiany
-// na starcie `npm run build`) — edycja treści wady i commit wystarczą, żeby
-// przy najbliższym buildzie ta data sama się zaktualizowała, bez ręcznego
-// wpisywania.
-const DEFECT_DATES = CONTENT_DATES.defects;
 
 function Detail({ defect }) {
   const canonicalUrl = `https://www.flowtex.pl/katalog-wad/${defect.id}`;
@@ -35,14 +27,20 @@ function Detail({ defect }) {
           "@context": "https://schema.org",
           "@graph": [
             {
+              "@type": "Person",
+              "@id": "https://www.flowtex.pl/#author-pawel-najduk",
+              name: AUTHOR.name,
+              jobTitle: AUTHOR.role,
+              worksFor: { "@type": "Organization", name: AUTHOR.organization },
+            },
+            {
               "@type": "Article",
               headline: defect.title,
               description: metaDescription,
               about: defect.title,
               mainEntityOfPage: canonicalUrl,
-              datePublished: DEFECT_DATES.published,
-              dateModified: DEFECT_DATES.modified,
-              author: { "@type": "Organization", name: "FLOWTEX Polska" },
+              dateModified: defect.updated,
+              author: { "@id": "https://www.flowtex.pl/#author-pawel-najduk" },
               publisher: { "@type": "Organization", name: "FLOWTEX Polska" },
             },
             {
@@ -53,21 +51,14 @@ function Detail({ defect }) {
                 { "@type": "ListItem", position: 3, name: defect.title, item: canonicalUrl },
               ],
             },
-            {
+            ...(defect.faq && defect.faq.length ? [{
               "@type": "FAQPage",
-              mainEntity: [
-                {
-                  "@type": "Question",
-                  name: `Jakie są możliwe przyczyny: ${titleLower}?`,
-                  acceptedAnswer: { "@type": "Answer", text: defect.causes.join("; ") + "." },
-                },
-                {
-                  "@type": "Question",
-                  name: `Jak naprawić: ${titleLower}?`,
-                  acceptedAnswer: { "@type": "Answer", text: defect.solutions.join("; ") + "." },
-                },
-              ],
-            },
+              mainEntity: defect.faq.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: { "@type": "Answer", text: item.answer },
+              })),
+            }] : []),
           ],
         })}
       </script>
@@ -85,15 +76,39 @@ function Detail({ defect }) {
         <p className="defect-kicker"><span>{defect.no}</span> KARTA WADY / {defect.tag.toUpperCase()}</p>
         <h1>{defect.title}</h1>
         <p className="defect-lede">{defect.intro}</p>
+        <p className="defect-byline">
+          Autor: <strong>{AUTHOR.name}</strong> — {AUTHOR.role}, {AUTHOR.organization}
+          {defect.updated ? <> · Zaktualizowano: <time dateTime={defect.updated}>{defect.updated}</time></> : null}
+        </p>
       </div>
       <img src={`${IMAGE}${defect.image}`} alt={`Przykład: ${defect.title.toLowerCase()}`} width="960" height="720" loading="eager" fetchpriority="high" decoding="async" />
     </div>
     <div className="defect-detail-body">
-      <section className="defect-summary"><p className="defect-kicker"><span>01</span> ROZPOZNANIE</p><h2>Co może oznaczać ten objaw?</h2><p>Ten sam objaw może mieć kilka przyczyn. Przed wyborem technologii naprawy warto sprawdzić podłoże, sposób użytkowania i warunki panujące w obiekcie.</p><p className="defect-disclaimer"><strong>Ważne:</strong> opis ma charakter edukacyjny i nie jest diagnozą ani projektem naprawy. Dobór technologii wymaga oceny podłoża, obciążeń, wody, temperatury i chemikaliów oraz potwierdzenia w aktualnej karcie technicznej konkretnego systemu.</p></section>
+      <section className="defect-summary">
+        <p className="defect-kicker"><span>01</span> ROZPOZNANIE</p>
+        <h2>Co może oznaczać ten objaw?</h2>
+        <p>Ten sam objaw może mieć kilka przyczyn. Przed wyborem technologii naprawy warto sprawdzić podłoże, sposób użytkowania i warunki panujące w obiekcie.</p>
+        {defect.explanation ? <p className="defect-explanation">{defect.explanation}</p> : null}
+        <p className="defect-disclaimer"><strong>Ważne:</strong> opis ma charakter edukacyjny i nie jest diagnozą ani projektem naprawy. Dobór technologii wymaga oceny podłoża, obciążeń, wody, temperatury i chemikaliów oraz potwierdzenia w aktualnej karcie technicznej konkretnego systemu.</p>
+      </section>
       <div className="defect-detail-columns"><section className="defect-panel"><p className="defect-panel-label">MOŻLIWE POWODY POWSTAWANIA</p><ul>{defect.causes.map((cause) => <li key={cause}><CircleAlert size={15} />{cause}</li>)}</ul></section><section className="defect-panel defect-panel-dark"><p className="defect-panel-label">SUGESTIE ROZWIĄZANIA</p><ul>{defect.solutions.map((solution) => <li key={solution}><CheckCircle2 size={15} />{solution}</li>)}</ul></section></div>
+      {defect.faq && defect.faq.length ? (
+        <section className="defect-faq">
+          <p className="defect-kicker"><span>02</span> NAJCZĘSTSZE PYTANIA</p>
+          <h2>Pytania o {defect.title.toLowerCase()}</h2>
+          <div className="defect-faq-list">
+            {defect.faq.map((item) => (
+              <details className="defect-faq-item" key={item.question}>
+                <summary><HelpCircle size={15} />{item.question}</summary>
+                <p>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+      ) : null}
       <section id="defect-kontakt" className="defect-funnel defect-funnel-form">
         <div className="defect-funnel-copy">
-          <p className="defect-kicker"><span>02</span> NASTĘPNY KROK</p>
+          <p className="defect-kicker"><span>03</span> NASTĘPNY KROK</p>
           <h2 className="defect-funnel-lead">Widzisz ten problem u siebie? Możemy Ci pomóc — rozpoznamy przyczynę i zaproponujemy naprawę.</h2>
           <p>Opisz problem — wrócimy z możliwym kierunkiem działania i przygotujemy bezpłatną wycenę. Możesz też zadzwonić od razu.</p>
           <div className="defect-funnel-quick-contact">
@@ -131,10 +146,18 @@ export default function DefectCatalog() {
           "@context": "https://schema.org",
           "@graph": [
             {
+              "@type": "Person",
+              "@id": "https://www.flowtex.pl/#author-pawel-najduk",
+              name: AUTHOR.name,
+              jobTitle: AUTHOR.role,
+              worksFor: { "@type": "Organization", name: AUTHOR.organization },
+            },
+            {
               "@type": "CollectionPage",
               name: "Katalog wad posadzek przemysłowych",
               description: "14 typów wad posadzek przemysłowych i żywicznych z przyczynami i kierunkiem naprawy.",
               url: "https://www.flowtex.pl/katalog-wad",
+              author: { "@id": "https://www.flowtex.pl/#author-pawel-najduk" },
               mainEntity: {
                 "@type": "ItemList",
                 itemListElement: DEFECTS.map((item, index) => ({
