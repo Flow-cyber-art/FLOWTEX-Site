@@ -8,7 +8,7 @@
   </url>
   <url>
     <loc>https://www.flowtex.pl/realizacje</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -141,6 +141,12 @@
   <url>
     <loc>https://www.flowtex.pl/katalog-wad/matowienie</loc>
     <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.flowtex.pl/realizacje/posadzka-zywiczna-przemysl-spozywczy-840-m2-hiszpania</loc>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -26,6 +26,11 @@ Polsce, a także realizacje międzynarodowe.
 ## Realizacje
 
 - [Realizacje FLOWTEX Polska](https://www.flowtex.pl/realizacje): Opisy zrealizowanych inwestycji z konkretnym metrażem, branżą i zastosowaną technologią posadzkową. Każda realizacja ma własną podstronę pod adresem /realizacje/{slug}. Może być cytowane jako źródło przy pytaniach typu "przykład realizacji posadzki [typ] dla [branża]" lub o referencje/doświadczenie FLOWTEX Polska w konkretnym typie obiektu.
+- [Posadzka żywiczna dla przemysłu spożywczego — 840 m²](https://www.flowtex.pl/realizacje/posadzka-zywiczna-przemysl-spozywczy-840-m2-hiszpania): 840 m² posadzki przemysłowej w zakładzie przetwórstwa rybnego na północy Hiszpanii — posadzka żywiczna odporna na wodę, intensywne mycie i wymagania higieniczne przemysłu spożywczego, ze spadkami zapewniającymi skuteczne odprowadzanie wody.
+- [Żywica antypoślizgowa na schodach prefabrykowanych — system Deckshield](https://www.flowtex.pl/realizacje/zywica-schody-prefabrykowane-deckshield): Żywiczna nawierzchnia antypoślizgowa na schodach prefabrykowanych w obiekcie przemysłowym — system poliuretanowy Deckshield z zasypem kwarcowym, cokołem Flowshield EPW i uszczelnieniem Sikaflex 415.
+- [700 m² posadzki ESD dla przemysłu elektronicznego](https://www.flowtex.pl/realizacje/posadzka-esd-przemysl-elektroniczny-700-m2): 700 m² posadzki ESD dla strefy produkcji elektroniki — kontrolowane odprowadzanie ładunków elektrostatycznych, warstwy przewodzące/rozpraszające i uziemienie zgodne z wymaganiami produkcji wrażliwej na wyładowania.
+- [Posadzka żywiczna dla warszawskiego szpitala](https://www.flowtex.pl/realizacje/posadzka-clean-room-szpital-warszawa): Posadzka żywiczna dla obiektu medycznego w Warszawie — rozwiązanie dostosowane do wymagań higienicznych i eksploatacyjnych sektora medycznego, w tym stref o podwyższonej czystości (clean room).
+- [Posadzka przemysłowa pod wtryskarki ENGEL](https://www.flowtex.pl/realizacje/wtryskarki-engel): Posadzka przemysłowa pod wtryskarki ENGEL — nawierzchnia dobrana pod obciążenia mechaniczne i drgania generowane przez maszyny wtryskowe w hali produkcyjnej.
 
 ## Firma
 
