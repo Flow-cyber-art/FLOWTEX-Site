@@ -25,6 +25,48 @@
 */
 export const REALIZACJE = [
   {
+    slug: "posadzka-zywiczna-przemysl-spozywczy-840-m2-hiszpania",
+    title: "Posadzka żywiczna 840 m² dla przemysłu spożywczego",
+    category: "Przemysł spożywczy",
+    date: "Wrzesień 2026",
+    paragraphs: [
+      "W ramach realizacji wykonaliśmy 840 m² posadzki przemysłowej w zakładzie przetwórstwa rybnego na północy Hiszpanii.",
+      "Realizacja wymagała uwzględnienia specyfiki produkcji spożywczej, w tym intensywnego kontaktu z wodą, regularnego mycia powierzchni oraz wymagań związanych z utrzymaniem higieny zakładu.",
+    ],
+    sections: [
+      {
+        heading: "Spadki posadzki i odprowadzanie wody",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Jednym z istotnych wyzwań było rozwiązanie kwestii spadków posadzki i odprowadzania wody. W zakładach przemysłu spożywczego prawidłowa geometria posadzki i skuteczne odwodnienie mają kluczowe znaczenie dla efektywnego mycia oraz utrzymania powierzchni w odpowiednim stanie higienicznym.",
+          },
+        ],
+      },
+      {
+        heading: "Dobór technologii do warunków eksploatacji",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Technologię posadzki dobrano z uwzględnieniem warunków eksploatacji obiektu, obciążeń mechanicznych, kontaktu z wodą oraz wymaganej odporności chemicznej.",
+          },
+          {
+            type: "list",
+            items: [
+              { label: "Powierzchnia", text: "840 m²." },
+              { label: "Branża", text: "przemysł spożywczy." },
+              { label: "Specjalizacja", text: "przetwórstwo rybne." },
+              { label: "Lokalizacja", text: "północ Hiszpanii." },
+              { label: "Rodzaj", text: "posadzka przemysłowa / żywiczna." },
+              { label: "Główne wymagania", text: "woda, mycie, higiena, obciążenia mechaniczne, odporność chemiczna." },
+            ],
+          },
+        ],
+      },
+    ],
+    relatedServiceSlug: "posadzki-zywiczne",
+  },
+  {
     slug: "zywica-schody-prefabrykowane-deckshield",
     title: "Żywica antypoślizgowa na schodach prefabrykowanych — system Deckshield",
     category: "Schody przemysłowe",
