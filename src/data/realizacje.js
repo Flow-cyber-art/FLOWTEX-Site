@@ -25,6 +25,52 @@
 */
 export const REALIZACJE = [
   {
+    slug: "posadzka-zywiczna-clean-room-farmacja-mazowieckie",
+    title: "Posadzka żywiczna do clean roomu dla przemysłu farmaceutycznego",
+    category: "Przemysł farmaceutyczny",
+    date: "Wrzesień 2026",
+    paragraphs: [
+      "Wykonaliśmy posadzkę żywiczną w clean roomie zakładu farmaceutycznego na Mazowszu, w okolicach Warszawy, na powierzchni 340 m².",
+      "W pomieszczeniach czystych dla przemysłu farmaceutycznego posadzka nie jest jedynie elementem wykończenia hali — jest częścią środowiska produkcyjnego, w którym liczy się ograniczenie możliwości powstawania i gromadzenia zanieczyszczeń oraz zapewnienie powierzchni łatwej do utrzymania w odpowiednim stanie higienicznym.",
+    ],
+    sections: [
+      {
+        heading: "Posadzka do pomieszczeń czystych w przemyśle farmaceutycznym",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "W zależności od przeznaczenia pomieszczenia i prowadzonego w nim procesu, znaczenie mają wymagania dotyczące kontroli czystości środowiska określone m.in. w normach serii ISO 14644, a w przypadku procesów wymagających warunków aseptycznych — w wytycznych EU GMP Aneks 1. Dlatego dobór systemu posadzkowego wynikał nie tylko z jego wyglądu czy deklarowanej odporności mechanicznej, ale przede wszystkim z analizy warunków pracy konkretnego pomieszczenia.",
+          },
+          {
+            type: "paragraph",
+            text: "Wykonany system jest całkowicie bezspoinowy, z wywinięciem na ściany (fasetą), co eliminuje ostre kąty i połączenia ściana-podłoga — miejsca, w których najłatwiej o zaleganie zanieczyszczeń trudnych do usunięcia podczas czyszczenia i dezynfekcji.",
+          },
+        ],
+      },
+      {
+        heading: "Od zniszczonego podłoża do gładkiej, higienicznej powierzchni",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Przed rozpoczęciem prac podłoże było mocno zdegradowaną, porowatą wylewką betonową — niespełniającą wymagań higienicznych stawianych pomieszczeniom czystym. Po przygotowaniu podłoża wykonaliśmy system żywiczny z dekoracyjnymi płatkami kwarcowymi, dający jednolitą, bezpyłową i wysoko połyskliwą powierzchnię, odporną na częstą, intensywną dezynfekcję środkami chemicznymi stosowanymi w zakładach farmaceutycznych.",
+          },
+          {
+            type: "list",
+            items: [
+              { label: "Powierzchnia", text: "340 m²." },
+              { label: "Branża", text: "przemysł farmaceutyczny." },
+              { label: "Obiekt", text: "clean room." },
+              { label: "Lokalizacja", text: "Mazowieckie, okolice Warszawy." },
+              { label: "Rodzaj posadzki", text: "posadzka żywiczna bezspoinowa z fasetą." },
+              { label: "Zakres prac", text: "przygotowanie podłoża i wykonanie systemu posadzkowego." },
+            ],
+          },
+        ],
+      },
+    ],
+    relatedServiceSlug: "posadzki-zywiczne",
+  },
+  {
     slug: "posadzka-zywiczna-przemysl-spozywczy-840-m2-hiszpania",
     title: "Posadzka żywiczna 840 m² dla przemysłu spożywczego",
     category: "Przemysł spożywczy",
