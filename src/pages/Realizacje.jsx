@@ -230,6 +230,20 @@ function RealizacjaDetail({ item }) {
   const metaDescription = item.paragraphs?.[0]?.slice(0, 300);
   const pageTitle = `${item.title} | Realizacje FLOWTEX Polska`;
 
+  // Ustrukturyzowane fakty (powierzchnia/branża/lokalizacja) jako
+  // schema.org PropertyValue — czytelne wprost dla wyszukiwarek i modeli AI,
+  // niezależnie od opisu w prozie. Wypełniane tylko gdy dane pole jest
+  // podane przy wpisie w realizacje.js (patrz komentarz w tym pliku).
+  const additionalProperty = [
+    item.areaSqm != null && {
+      "@type": "PropertyValue",
+      name: "Powierzchnia realizacji",
+      value: item.areaSqm,
+      unitCode: "MTK", // m² (UN/CEFACT)
+    },
+    item.industry && { "@type": "PropertyValue", name: "Branża", value: item.industry },
+  ].filter(Boolean);
+
   return (
     <>
       <Helmet>
@@ -261,6 +275,10 @@ function RealizacjaDetail({ item }) {
                 ...(relatedService
                   ? { about: { "@type": "Service", name: relatedService.title, url: `https://www.flowtex.pl/${relatedService.slug}` } }
                   : {}),
+                ...(item.location
+                  ? { contentLocation: { "@type": "Place", name: item.location } }
+                  : {}),
+                ...(additionalProperty.length ? { additionalProperty } : {}),
               },
               {
                 "@type": "BreadcrumbList",

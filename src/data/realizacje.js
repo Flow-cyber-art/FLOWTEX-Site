@@ -22,6 +22,11 @@
     wpisach z `sections` podsumowanie umieszczaj jako ostatnią sekcję.
   - relatedServiceSlug: (opcjonalnie) slug usługi z services.js, do której
     najbardziej pasuje ta realizacja — doda link "Zobacz usługę" pod wpisem
+  - areaSqm / industry / location: (opcjonalnie) ustrukturyzowane dane do
+    JSON-LD (schema.org additionalProperty + contentLocation) — wypełniaj
+    TYLKO gdy dana wartość jest jednoznacznie znana; nie zgaduj. Zasilają
+    dane strukturalne czytane przez wyszukiwarki i modele AI (SEO/GEO),
+    niezależnie od tego, co jest w prozie/tabeli tekstowej wpisu.
 */
 export const REALIZACJE = [
   {
@@ -29,6 +34,9 @@ export const REALIZACJE = [
     title: "Posadzka żywiczna do clean roomu dla przemysłu farmaceutycznego",
     category: "Przemysł farmaceutyczny",
     date: "Wrzesień 2026",
+    areaSqm: 340,
+    industry: "Przemysł farmaceutyczny",
+    location: "Mazowieckie, Polska",
     paragraphs: [
       "Wykonaliśmy posadzkę żywiczną w clean roomie zakładu farmaceutycznego na Mazowszu, w okolicach Warszawy, na powierzchni 340 m².",
       "W pomieszczeniach czystych dla przemysłu farmaceutycznego posadzka nie jest jedynie elementem wykończenia hali — jest częścią środowiska produkcyjnego, w którym liczy się ograniczenie możliwości powstawania i gromadzenia zanieczyszczeń oraz zapewnienie powierzchni łatwej do utrzymania w odpowiednim stanie higienicznym.",
@@ -75,6 +83,9 @@ export const REALIZACJE = [
     title: "Posadzka żywiczna 840 m² dla przemysłu spożywczego",
     category: "Przemysł spożywczy",
     date: "Wrzesień 2026",
+    areaSqm: 840,
+    industry: "Przemysł spożywczy",
+    location: "Hiszpania (północ)",
     paragraphs: [
       "W ramach realizacji wykonaliśmy 840 m² posadzki przemysłowej w zakładzie przetwórstwa rybnego na północy Hiszpanii.",
       "Realizacja wymagała uwzględnienia specyfiki produkcji spożywczej, w tym intensywnego kontaktu z wodą, regularnego mycia powierzchni oraz wymagań związanych z utrzymaniem higieny zakładu.",
@@ -182,6 +193,8 @@ export const REALIZACJE = [
     title: "700 m² posadzki ESD dla przemysłu elektronicznego",
     category: "Posadzki ESD",
     date: "Sierpień 2026",
+    areaSqm: 700,
+    industry: "Przemysł elektroniczny",
     paragraphs: [
       "Zrealizowaliśmy 700 m² posadzki ESD dla strefy przeznaczonej do produkcji elektroniki. To jeden z tych projektów, w których posadzka przemysłowa nie jest tylko elementem wykończenia hali — jest częścią środowiska produkcyjnego, w którym konieczna jest kontrola elektryczności statycznej i ograniczenie ryzyka wyładowań mogących wpływać na wrażliwe komponenty elektroniczne.",
     ],
@@ -249,6 +262,8 @@ export const REALIZACJE = [
     title: "Posadzka żywiczna dla warszawskiego szpitala",
     category: "Sektor medyczny",
     date: "Sierpień 2026",
+    industry: "Sektor medyczny",
+    location: "Warszawa, Polska",
     paragraphs: [
       "Zrealizowaliśmy posadzkę żywiczną dla jednego z warszawskich szpitali. To inna branża niż nasze wcześniejsze realizacje hal produkcyjnych typu clean room, jednak wymagania okazały się bardzo zbliżone — pomieszczenia szpitalne o podwyższonym reżimie czystości (bloki operacyjne, sale zabiegowe, sterylizatornie, strefy przygotowania leków) muszą spełniać normy porównywalne do tych obowiązujących w przemysłowych clean roomach.",
       "To doświadczenie z realizacji hal clean room dla zakładów produkcyjnych pozwoliło nam sprawnie przełożyć te same standardy techniczne na warunki placówki medycznej — mimo że inwestor, przepisy i procedury odbioru są w obu przypadkach zupełnie inne.",
@@ -318,6 +333,7 @@ export const REALIZACJE = [
     title: "Posadzka przemysłowa pod wtryskarki ENGEL",
     category: "Posadzki przemysłowe",
     date: "Sierpień 2026",
+    industry: "Przetwórstwo tworzyw sztucznych",
     paragraphs: [
       "Jedną z realizacji, które szczególnie dobrze pokazują nasze podejście do posadzek przemysłowych, było przygotowanie powierzchni pod wtryskarki ENGEL pracujące w hali produkcyjnej.",
       "W przypadku takiej inwestycji nie wystarczy spojrzeć wyłącznie na ciężar maszyn. Posadzka musi być przygotowana z uwzględnieniem całego środowiska pracy, w którym będzie funkcjonować przez kolejne lata.",
