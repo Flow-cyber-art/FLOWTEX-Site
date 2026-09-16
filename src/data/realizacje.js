@@ -30,6 +30,99 @@
 */
 export const REALIZACJE = [
   {
+    slug: "posadzka-antywybuchowa-atex-grojec-1420-m2",
+    title: "Posadzka antywybuchowa ATEX — realizacja 1420 m² pod Grójcem",
+    category: "Posadzki antywybuchowe ATEX",
+    date: "Wrzesień 2026",
+    areaSqm: 1420,
+    industry: "Magazynowanie materiałów sypkich — strefa zagrożenia wybuchem",
+    location: "Grójec, woj. mazowieckie",
+    paragraphs: [
+      "Nie każda posadzka antyelektrostatyczna jest posadzką przeznaczoną do pracy w strefie zagrożenia wybuchem. To różnica, która na pierwszy rzut oka może być trudna do zauważenia — dlatego przy tego typu realizacjach nie zaczynamy od pytania, jaką żywicę zastosować, tylko od określenia, jakie wymagania musi spełniać cały system posadzkowy.",
+      "Jedną z naszych ostatnich realizacji była wykonana przez FLOWTEX posadzka antywybuchowa o powierzchni 1420 m² w hali magazynowej przeznaczonej do składowania materiałów sypkich, zlokalizowanej w rejonie Grójca, w województwie mazowieckim.",
+    ],
+    sections: [
+      {
+        heading: "Posadzka do strefy zagrożenia wybuchem",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "W obiektach, w których występuje możliwość powstania atmosfery wybuchowej, kontrola elektryczności statycznej jest jednym z elementów całego systemu bezpieczeństwa. Sama informacja, że posadzka jest „przewodząca” albo „antystatyczna”, nie mówi jeszcze wystarczająco dużo — znaczenie ma cały układ.",
+          },
+          {
+            type: "list",
+            items: [
+              { label: "Przygotowanie podłoża", text: "odpowiednie mechaniczne przygotowanie podłoża betonowego pod system przewodzący." },
+              { label: "System posadzkowy", text: "dobór systemu dostosowanego do klasyfikacji strefy Ex w obiekcie." },
+              { label: "Warstwa przewodząca", text: "prawidłowe wykonanie warstwy odprowadzającej ładunki elektrostatyczne." },
+              { label: "Uziemienie", text: "połączenia warstwy przewodzącej z instalacją uziemiającą obiektu." },
+              { label: "Taśmy miedziane", text: "zastosowanie taśm miedzianych jako elementu drogi odprowadzania ładunków." },
+              { label: "Pomiary", text: "kontrola parametrów elektrycznych gotowej posadzki po zakończeniu prac." },
+              { label: "Eksploatacja", text: "sposób późniejszego użytkowania i utrzymania właściwości systemu." },
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "Właśnie dlatego posadzkę w strefie Ex należy traktować jako system, a nie tylko warstwę żywicy na betonie.",
+          },
+        ],
+      },
+      {
+        heading: "1420 m² powierzchni przemysłowej",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "W przypadku realizacji pod Grójcem wykonaliśmy 1420 m² posadzki przeznaczonej do pracy w hali magazynującej materiały sypkie. To specyfika, w której obecność pyłów ma bezpośrednie znaczenie dla klasyfikacji strefy zagrożenia wybuchem — a co za tym idzie, dla wymagań stawianych całemu systemowi posadzkowemu. Duża powierzchnia oznacza dodatkowo konieczność zachowania powtarzalnych parametrów na całym wykonanym obszarze.",
+          },
+          {
+            type: "paragraph",
+            text: "Przy tego typu pracach istotne jest nie tylko prawidłowe wykonanie poszczególnych warstw, ale również kontrola całej powierzchni po zakończeniu prac — to pomiary i dokumentacja pozwalają zweryfikować, czy wykonany system osiągnął wymagane parametry.",
+          },
+        ],
+      },
+      {
+        heading: "Posadzka antywybuchowa a posadzka ESD",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Posadzki ESD i posadzki stosowane w obszarach zagrożonych wybuchem mają ze sobą wiele wspólnego — w obu przypadkach istotne jest kontrolowanie ładunków elektrostatycznych i ich bezpieczne odprowadzanie. Cel zastosowania systemu może być jednak inny.",
+          },
+          {
+            type: "paragraph",
+            text: "W środowisku ESD głównym problemem jest ochrona wrażliwej elektroniki przed wyładowaniami elektrostatycznymi. W strefie zagrożenia wybuchem kontrola elektryczności statycznej jest natomiast jednym z elementów ograniczania potencjalnych źródeł zapłonu. Dlatego określenie „posadzka antyelektrostatyczna” nie powinno być automatycznie traktowane jako synonim posadzki do strefy Ex — wymagania należy określić na podstawie warunków występujących w konkretnym obiekcie i jego klasyfikacji.",
+          },
+        ],
+      },
+      {
+        heading: "Dlaczego wykonanie ma znaczenie",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "W posadzce przemysłowej widać przede wszystkim jej powierzchnię — nie widać natomiast tego, co znajduje się pod nią. W systemie przewodzącym znaczenie mają między innymi warstwy pod warstwą użytkową, sposób wykonania połączeń oraz uziemienie. Dlatego dwa systemy mogą wyglądać niemal identycznie, a jednocześnie różnić się pod względem zastosowania i parametrów.",
+          },
+          {
+            type: "paragraph",
+            text: "W FLOWTEX podczas realizacji posadzek przemysłowych patrzymy na cały układ, a nie wyłącznie na końcową warstwę żywiczną.",
+          },
+        ],
+      },
+      {
+        heading: "Posadzki ATEX i przemysłowe w województwie mazowieckim",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Realizacja pod Grójcem jest kolejnym przykładem tego, że posadzka przemysłowa powinna być dobierana do procesu, warunków pracy i wymagań obiektu, a nie tylko do wyglądu czy ceny za metr kwadratowy. FLOWTEX wykonuje posadzki przemysłowe i żywiczne dla zakładów produkcyjnych, magazynów oraz obiektów przemysłowych — doświadczenie firmy obejmuje ponad 20 lat pracy przy tego typu realizacjach.",
+          },
+          {
+            type: "paragraph",
+            text: "Jeżeli planujesz posadzkę antywybuchową, posadzkę antyelektrostatyczną ESD lub system posadzkowy do strefy zagrożenia wybuchem, warto określić wymagania już na etapie planowania prac. Masz halę, w której występuje strefa Ex? Skontaktuj się z FLOWTEX — przeanalizujemy warunki pracy i dobierzemy rozwiązanie odpowiednie do konkretnego zastosowania.",
+          },
+        ],
+      },
+    ],
+    relatedServiceSlug: "posadzki-zywiczne",
+  },
+  {
     slug: "posadzka-zywiczna-clean-room-farmacja-mazowieckie",
     title: "Posadzka żywiczna do clean roomu dla przemysłu farmaceutycznego",
     category: "Przemysł farmaceutyczny",
