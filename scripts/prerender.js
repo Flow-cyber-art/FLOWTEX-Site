@@ -145,6 +145,20 @@ for (const url of routes) {
   console.log(`  ✓ prerendered ${url}`);
 }
 
+// 404.html: Vercel serwuje ten plik ze statusem HTTP 404 dla każdej ścieżki,
+// która nie istnieje w dist/ (zastępuje catch-all rewrite na /index.html,
+// który zwracał stronę główną ze statusem 200 — tzw. soft 404).
+{
+  const { appHtml, helmet } = await render("/__404__");
+  let html = template.replace(
+    '<div id="root"></div>',
+    `<div id="root">${appHtml}</div>`
+  );
+  html = injectHelmet(html, helmet);
+  fs.writeFileSync(path.join(distDir, "404.html"), html);
+  console.log("  ✓ wygenerowano 404.html");
+}
+
 // Sprzątamy tymczasowy build SSR — nie jest potrzebny w finalnym dist/
 fs.rmSync(ssrDir, { recursive: true, force: true });
 
