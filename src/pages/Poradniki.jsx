@@ -8,6 +8,23 @@ import { getServiceBySlug } from "../data/services.js";
 import { getRealizacjaBySlug } from "../data/realizacje.js";
 import NotFound from "./NotFound.jsx";
 
+// Zdjęcia poradników z src/assets/poradniki/. Nazwa pliku (bez rozszerzenia)
+// = slug poradnika z poradniki.js. Poradnik bez pliku po prostu nie pokaże zdjęcia.
+const imageModules = import.meta.glob("../assets/poradniki/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}", {
+  eager: true,
+  import: "default",
+});
+const IMAGES = Object.fromEntries(
+  Object.entries(imageModules).map(([path, src]) => [path.split("/").pop().replace(/\.[^.]+$/, ""), src])
+);
+
+const SITE_ORIGIN = "https://www.flowtex.pl";
+// og:image i pole "image" w JSON-LD muszą być pełnym URL-em.
+function toAbsoluteUrl(src) {
+  if (!src) return undefined;
+  return src.startsWith("http") ? src : `${SITE_ORIGIN}${src}`;
+}
+
 const LIST_URL = "https://www.flowtex.pl/poradniki";
 const listMetaDescription =
   "Poradniki FLOWTEX Polska — praktyczna wiedza o posadzkach przemysłowych i żywicznych: dobór systemu, różnice między rozwiązaniami i najczęstsze błędy przy wyborze.";
@@ -188,6 +205,7 @@ function PoradnikDetail({ item }) {
   const services = (item.relatedServiceSlugs || []).map(getServiceBySlug).filter(Boolean);
   const realizacje = (item.relatedRealizacjeSlugs || []).map(getRealizacjaBySlug).filter(Boolean);
   const datePublished = toISODate(item.date);
+  const image = toAbsoluteUrl(IMAGES[item.slug]);
 
   return (
     <>
@@ -199,8 +217,10 @@ function PoradnikDetail({ item }) {
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={item.metaDescription} />
         <meta property="og:url" content={canonicalUrl} />
+        {image && <meta property="og:image" content={image} />}
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={item.metaDescription} />
+        {image && <meta name="twitter:image" content={image} />}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -214,6 +234,7 @@ function PoradnikDetail({ item }) {
                 url: canonicalUrl,
                 mainEntityOfPage: canonicalUrl,
                 inLanguage: "pl",
+                ...(image ? { image } : {}),
                 author: { "@type": "Organization", name: "FLOWTEX Polska", url: "https://www.flowtex.pl/" },
                 publisher: { "@type": "Organization", name: "FLOWTEX Polska", url: "https://www.flowtex.pl/" },
                 ...(services.length
@@ -260,6 +281,21 @@ function PoradnikDetail({ item }) {
       </div>
 
       <article className="max-w-4xl mx-auto px-5 md:px-8 py-14 md:py-20">
+        {image && (
+          <div className="relative rounded-sm overflow-hidden mb-8" style={{ border: `1px solid ${COLORS.borderOnLight}` }}>
+            <img
+              src={image}
+              alt={item.imageAlt || item.title}
+              className="w-full object-cover"
+              style={{ height: "clamp(220px, 38vw, 460px)" }}
+              loading="eager"
+              fetchpriority="high"
+              width="1200"
+              height="630"
+            />
+          </div>
+        )}
+
         <div className="flex items-center gap-4 mb-4 ft-mono text-xs tracking-wider uppercase" style={{ color: COLORS.mutedOnLight }}>
           <span className="px-2.5 py-1 rounded-sm" style={{ backgroundColor: COLORS.lightBg, border: `1px solid ${COLORS.borderOnLight}`, color: COLORS.accent, fontWeight: 600 }}>
             {item.category}

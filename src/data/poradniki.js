@@ -3,6 +3,7 @@
   dopisuj na GÓRZE tablicy.
 
   Pola:
+  - zdjęcie: plik src/assets/poradniki/{slug}.webp (opcjonalnie imageAlt)
   - slug, title, metaTitle (opcjonalnie), metaDescription, category, date
     ("Miesiąc RRRR")
   - intro: lista akapitów wstępu (tekst może zawierać linki [tekst](/ścieżka))
@@ -24,6 +25,7 @@ export const PORADNIKI = [
     metaDescription:
       "Posadzka antystatyczna to nie zawsze posadzka do strefy zagrożenia wybuchem. Sprawdź, czym różni się posadzka ESD od antywybuchowej ATEX i jak dobrać system do obiektu.",
     category: "Posadzki ESD i ATEX",
+    imageAlt: "Posadzka ESD w strefie produkcji elektroniki — realizacja FLOWTEX Polska",
     date: "Październik 2026",
     intro: [
       "Nie każda posadzka antyelektrostatyczna jest posadzką przeznaczoną do pracy w strefie zagrożenia wybuchem. Na pierwszy rzut oka to różnica trudna do zauważenia — obie posadzki wyglądają podobnie, obie odprowadzają ładunki elektrostatyczne i obie bywają określane jako „przewodzące” albo „antystatyczne”. Cel ich zastosowania jest jednak inny, a pomylenie jednej z drugą może mieć poważne skutki.",
