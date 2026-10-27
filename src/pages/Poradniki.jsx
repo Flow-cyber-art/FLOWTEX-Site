@@ -77,7 +77,7 @@ function Block({ block }) {
               <tr key={r} className="border-t" style={{ borderColor: COLORS.borderOnLight }}>
                 {row.map((cell, c) => (
                   <td key={c} className="px-4 py-3 align-top" style={{ color: COLORS.textOnLight, fontWeight: c === 0 ? 600 : 400 }}>
-                    {cell}
+                    {renderInline(cell)}
                   </td>
                 ))}
               </tr>

@@ -21,6 +21,261 @@
 */
 const ALL_PORADNIKI = [
   {
+    slug: "dlaczego-posadzka-betonowa-pyli",
+    llmsSummary: "Poradnik o pyleniu posadzek betonowych: przyczyny (brak utwardzenia, zbyt niska klasa betonu, pielęgnacja, karbonatyzacja), kiedy wystarczy impregnat pyłochłonny, a kiedy warstwa żywiczna, problem higieniczny w spożywce i farmacji.",
+    publishAt: "2026-11-26",
+    title: "Dlaczego posadzka betonowa pyli? Przyczyny i sposoby naprawy",
+    metaTitle: "Pylenie posadzki betonowej — przyczyny i naprawa | FLOWTEX Polska",
+    metaDescription:
+      "Pyląca posadzka betonowa to sygnał słabej wierzchniej warstwy. Poznaj przyczyny pylenia, kiedy wystarczy impregnat, a kiedy potrzebna jest warstwa żywiczna.",
+    category: "Naprawy posadzek",
+    imageAlt: "Przykład: pylenie powierzchni betonu",
+    date: "Listopad 2026",
+    intro: [
+      "Szary nalot na oponach wózków i obuwiu, pył unoszący się przy ruchu — to klasyczne objawy pylącej posadzki betonowej. W obiektach z rygorami czystości, takich jak zakłady spożywcze i farmaceutyczne, pylący beton bywa powodem uwag podczas audytów, nawet jeśli sama płyta ma wystarczającą nośność.",
+      "Wyjaśniamy, skąd bierze się pylenie, jak je rozpoznać i jak dobrać naprawę: od impregnatu po warstwę żywiczną.",
+    ],
+    sections: [
+      {
+        heading: "Co oznacza pylenie posadzki",
+        blocks: [
+          { type: "paragraph", text: "Pylenie to sygnał, że wierzchnia warstwa betonu jest słabsza niż reszta płyty. Może wynikać z niedostatecznej pielęgnacji podczas wiązania albo z naturalnej karbonatyzacji zachodzącej przez lata. Samo pylenie nie musi oznaczać problemu z nośnością całej płyty." },
+        ],
+      },
+      {
+        heading: "Najczęstsze przyczyny",
+        blocks: [
+          { type: "list", items: ["brak lub niewystarczające utwardzenie powierzchniowe betonu,", "zbyt niska klasa wytrzymałości betonu w stosunku do obciążeń,", "nieprawidłowa pielęgnacja betonu podczas wiązania,", "karbonatyzacja i degradacja wierzchniej warstwy pod wpływem czasu."] },
+        ],
+      },
+      {
+        heading: "Jak naprawić pylącą posadzkę",
+        blocks: [
+          { type: "paragraph", text: "Metodę dobiera się po ocenie chłonności i wytrzymałości podłoża. Najczęściej rozważa się trzy kierunki:" },
+          { type: "table", head: ["Rozwiązanie", "Kiedy się sprawdza"], rows: [["Impregnat utwardzająco-pyłochłonny (np. na bazie krzemianów)", "Umiarkowany ruch, podłoże o odpowiedniej chłonności i wytrzymałości"], ["Posadzka utwardzona powierzchniowo", "Gdy trzeba trwale wzmocnić powierzchnię betonu pod obciążenia"], ["Warstwa żywiczna", "Intensywna eksploatacja lub wymagania higieniczne; zobacz [posadzki żywiczne](/posadzki-zywiczne)"]] },
+          { type: "paragraph", text: "Jeśli osłabiona warstwa jest zdegradowana, usuwa się ją po potwierdzeniu jej stanu badaniami — sama karbonatyzacja nie przesądza jeszcze o metodzie naprawy. Technologię dobiera się do faktycznych obciążeń strefy. Więcej w katalogu wad: [pylenie powierzchni betonu](/katalog-wad/pylenie)." },
+        ],
+      },
+      {
+        heading: "Pylenie a higiena",
+        blocks: [
+          { type: "paragraph", text: "W halach spożywczych i farmaceutycznych pył z posadzki jest problemem higienicznym niezależnie od kwestii BHP. Sam pył betonowy przy długotrwałej ekspozycji nie jest obojętny dla dróg oddechowych. Dlatego w takich obiektach pylący beton zwykle zastępuje się bezspoinową warstwą żywiczną." },
+        ],
+      },
+      {
+        heading: "Najczęstsze błędy",
+        blocks: [
+          { type: "list", ordered: true, items: ["Zakładanie, że wystarczy zamiatanie i odkurzanie — pył wraca, bo problem leży w warstwie wierzchniej.", "Wybór impregnatu bez oceny chłonności i wytrzymałości podłoża.", "Impregnat tam, gdzie przy intensywnej eksploatacji potrzebna jest pełna warstwa żywiczna.", "Pominięcie przyczyny (pielęgnacja, klasa betonu) przy planowaniu naprawy."] },
+        ],
+      },
+      {
+        heading: "Pytania do wykonawcy",
+        blocks: [
+          { type: "list", ordered: true, items: ["Jaka jest chłonność i wytrzymałość podłoża?", "Jakie obciążenia i jaki ruch występują w strefie?", "Czy obiekt ma wymogi higieniczne (spożywka, farmacja)?", "Czy wystarczy impregnat, czy potrzebna jest warstwa żywiczna?", "Jak zostaną przeprowadzone prace i jak długo potrwa przestój?"] },
+        ],
+      },
+    ],
+    faq: [
+      { q: "Czy pyląca posadzka jest niebezpieczna dla zdrowia?", a: "Sam pył betonowy przy długotrwałej ekspozycji nie jest obojętny dla dróg oddechowych, a w halach spożywczych czy farmaceutycznych bywa też problemem higienicznym niezależnie od BHP." },
+      { q: "Czy impregnat wystarczy, czy trzeba nakładać powłokę żywiczną?", a: "Zależy od obciążeń i chłonności podłoża — impregnat utwardzający sprawdza się przy umiarkowanym ruchu, przy intensywnej eksploatacji zwykle potrzebna jest pełna warstwa żywiczna." },
+      { q: "Dlaczego beton pyli, mimo że płyta jest nośna?", a: "Pylenie dotyczy wierzchniej warstwy, która może być słabsza niż reszta płyty z powodu braku utwardzenia powierzchniowego, złej pielęgnacji lub karbonatyzacji." },
+    ],
+    cta: { heading: "Pyli Ci posadzka w hali?", text: "Opisz nam obiekt, obciążenia i wymagania higieniczne — ocenimy stan podłoża i zaproponujemy naprawę. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat." },
+    relatedServiceSlugs: ["posadzki-zywiczne", "betonowe-posadzki-przemyslowe"],
+    relatedRealizacjeSlugs: [],
+  },
+  {
+    slug: "pekajaca-posadzka-przemyslowa-jak-naprawic",
+    llmsSummary: "Poradnik o pęknięciach posadzek przemysłowych: rysa statyczna a aktywna, dobór żywicy (sztywna epoksydowa a elastyczna poliuretanowa), przyczyny, rola dylatacji, kiedy wystarczy naprawa punktowa, najczęstsze błędy.",
+    publishAt: "2026-12-03",
+    title: "Pękająca posadzka przemysłowa: rysa statyczna czy aktywna i jak ją naprawić",
+    metaTitle: "Pękająca posadzka przemysłowa — przyczyny i naprawa | FLOWTEX Polska",
+    metaDescription:
+      "Pęknięcie posadzki to nie zawsze powód do wymiany. Sprawdź, czym różni się rysa statyczna od aktywnej, dlaczego pęknięcia wracają i jak dobrać naprawę.",
+    category: "Naprawy posadzek",
+    imageAlt: "Przykład: pęknięcia posadzki",
+    date: "Grudzień 2026",
+    intro: [
+      "Widoczne rysy przebiegające przez warstwę wykończeniową, czasem sięgające do podłoża betonowego — to jeden z najczęstszych problemów posadzek przemysłowych. Wiele zakładów od razu myśli o wymianie całej posadzki, choć w większości przypadków wystarcza naprawa punktowa.",
+      "Kluczowe jest rozpoznanie, z jaką rysą mamy do czynienia. Od tego zależy, czym ją naprawić — i czy pęknięcie nie wróci po kilku miesiącach.",
+    ],
+    sections: [
+      {
+        heading: "Rysa statyczna czy aktywna",
+        blocks: [
+          { type: "paragraph", text: "Kluczowe rozróżnienie to charakter pracy rysy. Rysy statyczne — ustabilizowane, niezmieniające szerokości — można trwale wypełnić sztywną żywicą epoksydową, która przenosi obciążenia jak jednolity element konstrukcji. Rysy aktywne, wciąż pracujące pod wpływem temperatury lub obciążeń, wymagają elastycznego wypełnienia poliuretanowego, które podąża za ruchem krawędzi bez pękania wtórnego." },
+          { type: "table", head: ["", "Rysa statyczna", "Rysa aktywna"], rows: [["Charakter", "Ustabilizowana, nie zmienia szerokości", "Pracuje pod wpływem temperatury lub obciążeń"], ["Wypełnienie", "Sztywna żywica epoksydowa (iniekcja)", "Elastyczne wypełnienie poliuretanowe"], ["Typowy błąd", "—", "Sztywna żywica w rysie aktywnej — pęknięcie wraca w tym samym miejscu w ciągu kilku miesięcy"]] },
+        ],
+      },
+      {
+        heading: "Skąd biorą się pęknięcia",
+        blocks: [
+          { type: "list", items: ["skurcz betonu podczas wiązania lub brak prawidłowo rozmieszczonych szczelin dylatacyjnych,", "ruchy konstrukcji budynku lub osiadanie podłoża,", "przeciążenie punktowe przekraczające nośność płyty,", "zbyt cienka warstwa posadzki w stosunku do obciążeń eksploatacyjnych."] },
+          { type: "paragraph", text: "Dylatacje ograniczają ryzyko niekontrolowanego pękania płyty — opisujemy je przy okazji [betonowych posadzek przemysłowych](/betonowe-posadzki-przemyslowe). Gdy dylatacje są uszkodzone, zobacz też katalog wad: [uszkodzone dylatacje](/katalog-wad/dylatacje)." },
+        ],
+      },
+      {
+        heading: "Jak wygląda naprawa",
+        blocks: [
+          { type: "list", ordered: true, items: ["Rozpoznanie charakteru rysy (statyczna czy aktywna) przed wyborem metody naprawy.", "Dla rys aktywnych — elastyczne wypełnienie poliuretanowe; dla rys statycznych — sztywna iniekcja epoksydowa. Dobór wyłącznie po ocenie rodzaju i przyczyny rysy.", "Rozpoznanie rodzaju szczeliny, jej ruchu, stanu krawędzi i podparcia przed odtworzeniem lub zmianą układu dylatacji.", "Dobór konstrukcji naprawczej do obciążeń po ocenie nośności podłoża i przyczyny pęknięcia."] },
+          { type: "paragraph", text: "W wielu przypadkach prace wykonuje się technikami [serwisu posadzek](/serwis-posadzek-i-kanalizacji) i [cięcia diamentowego](/technika-diamentowa), bez wymiany całej nawierzchni. Więcej w katalogu: [pęknięcia posadzki](/katalog-wad/peknieca)." },
+        ],
+      },
+      {
+        heading: "Czy trzeba wymieniać całą posadzkę",
+        blocks: [
+          { type: "paragraph", text: "W większości przypadków nie — naprawa punktowa (iniekcja, wypełnienie, wzmocnienie krawędzi) wystarcza, o ile przyczyna nie jest konstrukcyjna, np. osiadanie budynku." },
+        ],
+      },
+      {
+        heading: "Najczęstsze błędy",
+        blocks: [
+          { type: "list", ordered: true, items: ["Zalewanie każdej rysy tą samą żywicą bez oceny, czy jest aktywna.", "Doraźne zalepienie rysy bez diagnozy przyczyny.", "Pominięcie dylatacji lub ich uszkodzonego wypełnienia.", "Brak oceny nośności podłoża przy przeciążeniach punktowych."] },
+        ],
+      },
+      {
+        heading: "Pytania do wykonawcy",
+        blocks: [
+          { type: "list", ordered: true, items: ["Czy rysa jest statyczna czy aktywna i jak to sprawdzono?", "Jaka jest przyczyna pęknięcia?", "Jaki materiał wypełnienia zostanie użyty i dlaczego?", "Czy dylatacje wymagają naprawy lub zmiany układu?", "Jak długo potrwa naprawa i czy trzeba wstrzymać ruch?"] },
+        ],
+      },
+    ],
+    faq: [
+      { q: "Czy każdą rysę można po prostu zalać żywicą?", a: "Nie — dopiero ocena, czy rysa jest aktywna czy statyczna, decyduje o rodzaju żywicy (elastyczna poliuretanowa vs sztywna epoksydowa). Zalanie rysy aktywnej sztywną żywicą zwykle kończy się nawrotem pęknięcia." },
+      { q: "Czy pęknięcie oznacza, że trzeba wymienić całą posadzkę?", a: "W większości przypadków nie — naprawa punktowa (iniekcja, wypełnienie, wzmocnienie krawędzi) wystarcza, o ile przyczyna nie jest konstrukcyjna, np. osiadanie budynku." },
+      { q: "Dlaczego pęknięcie wraca po naprawie?", a: "Najczęściej zastosowano sztywną żywicę w rysie aktywnej albo nie zdiagnozowano przyczyny pęknięcia." },
+    ],
+    cta: { heading: "Pęka Ci posadzka w hali?", text: "Opisz nam rysy, obciążenia i układ dylatacji — ocenimy ich charakter i zaproponujemy naprawę. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat." },
+    relatedServiceSlugs: ["serwis-posadzek-i-kanalizacji", "technika-diamentowa"],
+    relatedRealizacjeSlugs: [],
+  },
+  {
+    slug: "odspojenie-zywicy-od-podloza-przyczyny-i-naprawa",
+    llmsSummary: "Poradnik o odspajaniu się żywicy od podłoża (delaminacja): przyczyny (wilgotność resztkowa, przygotowanie podłoża, ciśnienie osmotyczne, zanieczyszczenia), badanie przed naprawą, kroki naprawy, najczęstsze błędy.",
+    publishAt: "2026-12-10",
+    title: "Odspojenie żywicy od podłoża: przyczyny, diagnoza i naprawa",
+    metaTitle: "Odspojenie żywicy od podłoża — przyczyny i naprawa | FLOWTEX Polska",
+    metaDescription:
+      "Żywica odspaja się od betonu? To objaw, nie przyczyna. Sprawdź, skąd bierze się delaminacja posadzki żywicznej i jak ją trwale naprawić.",
+    category: "Naprawy posadzek",
+    imageAlt: "Przykład: odspojenie żywicy od podłoża",
+    date: "Grudzień 2026",
+    intro: [
+      "Warstwa żywiczna traci przyczepność do betonu: pojawiają się pęcherze, łuszczenie się lub całkowite oderwanie fragmentów. Naturalny odruch to wymiana odspojonego kawałka — ale bez diagnozy przyczyny problem zwykle wraca w sąsiednim miejscu.",
+      "Wyjaśniamy, skąd bierze się delaminacja posadzki żywicznej i jak ją naprawić tak, żeby naprawa była trwała.",
+    ],
+    sections: [
+      {
+        heading: "Delaminacja to objaw, nie przyczyna",
+        blocks: [
+          { type: "paragraph", text: "Wymiana odspojonego fragmentu bez zdiagnozowania źródła wilgoci lub zanieczyszczenia kończy się zwykle identycznym problemem w sąsiadującej strefie. Dlatego badanie wilgotności resztkowej betonu i ewentualnego parcia osmotycznego poprzedza każdą naprawę, a nie jest opcjonalnym krokiem." },
+        ],
+      },
+      {
+        heading: "Najczęstsze przyczyny",
+        blocks: [
+          { type: "list", items: ["podwyższona wilgotność resztkowa betonu w trakcie aplikacji,", "niewystarczające przygotowanie mechaniczne podłoża (frezowanie, śrutowanie),", "ciśnienie osmotyczne pary wodnej z podłoża,", "zanieczyszczenia (olej, pył) pozostawione przed gruntowaniem."] },
+        ],
+      },
+      {
+        heading: "Jak wygląda trwała naprawa",
+        blocks: [
+          { type: "list", ordered: true, items: ["Badanie wilgotności i nośności podłoża przed każdą naprawą.", "Mechaniczne usunięcie odspojonej warstwy do zdrowego betonu.", "Zastosowanie kompatybilnej bariery przeciwwilgociowej wyłącznie po badaniu wilgotności, parcia wilgoci i potwierdzeniu w karcie technicznej systemu.", "Ponowna aplikacja systemu żywicznego zgodnie z kartą techniczną."] },
+          { type: "paragraph", text: "Takie prace wykonujemy w ramach [serwisu posadzek](/serwis-posadzek-i-kanalizacji). Więcej w katalogu wad: [odspojenie żywicy od podłoża](/katalog-wad/odspojenie-zywicy)." },
+        ],
+      },
+      {
+        heading: "Odspojenie w jednym miejscu czy na całej posadzce",
+        blocks: [
+          { type: "paragraph", text: "Odspojenie tylko w jednym miejscu zwykle wskazuje na lokalne źródło problemu — punktowe zawilgocenie podłoża, niedoczyszczony fragment przed aplikacją albo miejscowe uszkodzenie warstwy gruntującej. Nie zawsze oznacza to problem z całą płytą betonową: często to kwestia przygotowania powierzchni lub wilgoci, a nie stanu konstrukcyjnego płyty. To właśnie ustala diagnostyka przed naprawą." },
+        ],
+      },
+      {
+        heading: "Jak uniknąć odspojenia przy nowej posadzce",
+        blocks: [
+          { type: "list", items: ["zbadać wilgotność podłoża przed aplikacją,", "przygotować podłoże mechanicznie (frezowanie, śrutowanie),", "usunąć olej i pył przed gruntowaniem,", "stosować system zgodnie z kartą techniczną; więcej o [posadzkach żywicznych](/posadzki-zywiczne)."] },
+        ],
+      },
+      {
+        heading: "Najczęstsze błędy",
+        blocks: [
+          { type: "list", ordered: true, items: ["Wymiana odspojonego fragmentu bez badania wilgotności podłoża.", "Pominięcie mechanicznego przygotowania podłoża.", "Stosowanie bariery przeciwwilgociowej bez badania i potwierdzenia w karcie technicznej.", "Naprawa „na gotowo” bez ustalenia, czy problem jest lokalny, czy dotyczy całej strefy."] },
+        ],
+      },
+    ],
+    faq: [
+      { q: "Dlaczego żywica odspaja się tylko w jednym miejscu, a nie na całej posadzce?", a: "Zwykle wskazuje to na lokalne źródło problemu — punktowe zawilgocenie podłoża, niedoczyszczony fragment przed aplikacją albo miejscowe uszkodzenie warstwy gruntującej." },
+      { q: "Czy odspojenie żywicy oznacza problem z całą płytą betonową?", a: "Nie zawsze — często to kwestia przygotowania powierzchni lub wilgoci, a nie stanu konstrukcyjnego płyty. To właśnie ustala diagnostyka przed naprawą." },
+      { q: "Czy wystarczy wymienić odspojony fragment?", a: "Nie, jeśli nie zdiagnozowano źródła wilgoci lub zanieczyszczenia — problem zwykle wraca w sąsiadującej strefie." },
+    ],
+    cta: { heading: "Odspaja Ci się żywica?", text: "Opisz nam miejsce, stan posadzki i warunki w hali — zaczniemy od diagnostyki i dopiero wtedy zaproponujemy naprawę. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat." },
+    relatedServiceSlugs: ["posadzki-zywiczne", "serwis-posadzek-i-kanalizacji"],
+    relatedRealizacjeSlugs: [],
+  },
+  {
+    slug: "sliska-posadzka-jak-poprawic-antyposlizgowosc",
+    llmsSummary: "Poradnik o śliskich posadzkach: przyczyny (zbyt gładki topcoat, wypolerowanie przez ruch kołowy, niedopasowana klasa, pozostałości środków myjących), dobór antypoślizgowości do warunków (DIN 51130 jako jedna z metod), posypka kwarcowa, schody Deckshield.",
+    publishAt: "2026-12-17",
+    title: "Śliska posadzka w zakładzie: jak poprawić antypoślizgowość",
+    metaTitle: "Śliska posadzka — jak poprawić antypoślizgowość | FLOWTEX Polska",
+    metaDescription:
+      "Posadzka śliska od wody, oleju lub po wypolerowaniu przez ruch kołowy? Sprawdź, dlaczego najwyższa klasa antypoślizgowości nie zawsze jest najlepsza i jak dobrać rozwiązanie.",
+    category: "Bezpieczeństwo posadzek",
+    imageAlt: "Przykład: śliska powierzchnia posadzki",
+    date: "Grudzień 2026",
+    intro: [
+      "Posadzka potrafi stać się niebezpiecznie śliska w kontakcie z wodą, olejem lub po tym, jak ruch kołowy wypoleruje jej fakturę. Naturalny odruch to wybór „najwyższej klasy antypoślizgowości” — ale to nie zawsze najlepsze rozwiązanie.",
+      "Wyjaśniamy, skąd bierze się śliskość, jak dobrać antypoślizgowość do warunków w zakładzie i o czym warto pamiętać przy naprawie.",
+    ],
+    sections: [
+      {
+        heading: "Antypoślizgowość nie jest jedną wartością",
+        blocks: [
+          { type: "paragraph", text: "Antypoślizgowość zależy od tego, czym jest zabrudzona powierzchnia (woda, olej, tłuszcz), w jakim obuwiu poruszają się ludzie i jak intensywny jest ruch kołowy. Dlatego dobór zaczyna się od analizy konkretnych warunków eksploatacji, a nie od wyboru najwyższej dostępnej klasy z karty technicznej. DIN 51130 jest jedną z metod weryfikacji, a nie uniwersalną klasą dla każdej sytuacji." },
+        ],
+      },
+      {
+        heading: "Dlaczego posadzka staje się śliska",
+        blocks: [
+          { type: "list", items: ["zbyt gładka struktura topcoatu w strefie mokrej lub tłustej,", "wypolerowanie faktury przez wieloletni ruch kołowy,", "niedopasowana klasa antypoślizgowości do warunków eksploatacji,", "pozostałości środków myjących obniżające tarcie powierzchni."] },
+        ],
+      },
+      {
+        heading: "Jak poprawić antypoślizgowość",
+        blocks: [
+          { type: "list", ordered: true, items: ["Dobrać badanie i kryterium antypoślizgowości do medium, obuwia, ruchu i sposobu użytkowania.", "Odtworzyć fakturę posypką kwarcową lub strukturalną warstwą zamykającą — po sprawdzeniu wpływu na czyszczenie i odporność chemiczną.", "Punktowo wzmocnić antypoślizgowość w strefach krytycznych, np. na rampach i przejściach.", "Dostosować procedury mycia do zastosowanego systemu."] },
+          { type: "paragraph", text: "Przykładem są schody prefabrykowane, na których wykonaliśmy poliuretanowy system Deckshield z zasypem piaskiem kwarcowym — zapewnia on certyfikowaną antypoślizgowość przy intensywnym ruchu pieszym. [Zobacz realizację](/realizacje/zywica-schody-prefabrykowane-deckshield). Więcej o [posadzkach żywicznych](/posadzki-zywiczne) i w katalogu wad: [śliska powierzchnia](/katalog-wad/sliska-powierzchnia)." },
+        ],
+      },
+      {
+        heading: "Czy wyższa klasa to zawsze lepiej",
+        blocks: [
+          { type: "paragraph", text: "Nie zawsze. Bardziej chropowata faktura utrudnia czyszczenie i może zwiększać zużycie kół wózków, dlatego dobiera się ją do realnych warunków, a nie maksymalizuje na wyrost." },
+        ],
+      },
+      {
+        heading: "Czy śliskość wraca po naprawie",
+        blocks: [
+          { type: "paragraph", text: "Może, jeśli faktura antypoślizgowa zostanie stopniowo wypolerowana przez ruch kołowy. W strefach intensywnej eksploatacji warto zaplanować cykliczny przegląd." },
+        ],
+      },
+      {
+        heading: "Najczęstsze błędy",
+        blocks: [
+          { type: "list", ordered: true, items: ["Wybór najwyższej klasy bez analizy warunków pracy.", "Pominięcie wpływu faktury na czyszczenie i odporność chemiczną.", "Ignorowanie pozostałości środków myjących na powierzchni.", "Brak przeglądów w strefach intensywnego ruchu kołowego."] },
+        ],
+      },
+    ],
+    faq: [
+      { q: "Czy wyższa klasa antypoślizgowości to zawsze lepszy wybór?", a: "Nie zawsze — bardziej chropowata faktura utrudnia czyszczenie i może zwiększać zużycie kół wózków, dlatego dobiera się ją do realnych warunków, a nie maksymalizuje na wyrost." },
+      { q: "Czy śliskość powraca po pewnym czasie mimo naprawy?", a: "Może, jeśli faktura antypoślizgowa zostanie stopniowo wypolerowana przez ruch kołowy — w strefach intensywnej eksploatacji warto zaplanować cykliczny przegląd." },
+      { q: "Czy DIN 51130 to uniwersalna klasa antypoślizgowości?", a: "Nie. To jedna z metod weryfikacji antypoślizgowości, którą dobiera się do medium, obuwia, ruchu i sposobu użytkowania." },
+    ],
+    cta: { heading: "Masz śliską posadzkę w hali?", text: "Opisz nam strefę, medium (woda, olej, tłuszcz) i rodzaj ruchu — dobierzemy rozwiązanie do warunków. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat." },
+    relatedServiceSlugs: ["posadzki-zywiczne"],
+    relatedRealizacjeSlugs: ["zywica-schody-prefabrykowane-deckshield"],
+  },
+  {
     slug: "posadzka-zywiczna-czy-betonowa-do-magazynu",
     llmsSummary: "Poradnik o różnicy między posadzką betonową (nośność, utwardzanie, zbrojenie, dylatacje) a żywiczną (powłoka bezspoinowa, higiena, ścieranie), kiedy wystarczy beton, kiedy dokłada się żywicę, błędy i pytania do wykonawcy.",
     publishAt: "2026-11-19",
