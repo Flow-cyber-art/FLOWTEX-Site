@@ -1,9 +1,9 @@
-import { Droplets, ShieldAlert, Ruler, Layers, Waves, Building2 } from "lucide-react";
+import { Droplets, ShieldAlert, Ruler, Layers, Waves, Building2, Zap, Flame, Wind } from "lucide-react";
 
 /*
   Każdy wpis = jedna usługa = jedna podstrona pod adresem /{slug}.
-  Treści są przykładowe (placeholder) — podmień na rzeczywiste opisy,
-  zdjęcia realizacji i dokładne parametry techniczne.
+  Nowa usługa automatycznie trafia do menu, strony głównej, sitemap i
+  prerenderingu. Zdjęcie na stronie usługi: src/assets/realizacje/{slug}.webp.
 */
 export const SERVICES = [
   {
@@ -38,6 +38,107 @@ export const SERVICES = [
     ],
     closing:
       "Każdy projekt zaczynamy od analizy podłoża i obciążeń, a kończymy na warstwie ochronnej dobranej do warunków eksploatacji.",
+  },
+  {
+    slug: "posadzki-esd",
+    icon: Zap,
+    title: "Posadzki ESD (antyelektrostatyczne)",
+    shortDesc: "Rozwiązujemy problem wyładowań elektrostatycznych w produkcji elektroniki — posadzki ESD z kontrolowanym odprowadzaniem ładunków, uziemieniem i pomiarem parametrów po wykonaniu.",
+    metaDescription:
+      "Posadzki ESD FLOWTEX Polska — antyelektrostatyczne posadzki żywiczne dla przemysłu elektronicznego: warstwy przewodzące lub rozpraszające, uziemienie i pomiary.",
+    intro:
+      "Wyładowania elektrostatyczne potrafią uszkodzić wrażliwe komponenty elektroniczne, a posadzka jest jednym z elementów, który decyduje o tym, czy ładunki są bezpiecznie odprowadzane, czy gromadzą się na ludziach i wyposażeniu. Wykonujemy posadzki ESD jako kompletny system — od przygotowania podłoża, przez warstwy przewodzące lub rozpraszające i uziemienie, po pomiar parametrów gotowej powierzchni.",
+    sections: [
+      {
+        heading: "Posadzka ESD to system, nie sama żywica",
+        body: "O działaniu posadzki ESD decyduje cała konstrukcja: przygotowanie podłoża betonowego, warstwy przewodzące lub rozpraszające, sposób wykonania połączeń oraz uziemienie. Dwie posadzki mogą wyglądać niemal identycznie, a zachowywać się zupełnie inaczej — dlatego patrzymy na cały układ, a nie wyłącznie na końcową warstwę żywiczną. Istotne jest też to, jak posadzka współpracuje z obuwiem ESD: podłoga i obuwie ocenione osobno nie gwarantują jeszcze prawidłowego działania całego układu osoba–obuwie–podłoga.",
+      },
+      {
+        heading: "Zastosowania",
+        body: "Posadzki ESD stosujemy w halach produkcji i montażu elektroniki, strefach EPA, laboratoriach oraz magazynach komponentów wrażliwych na wyładowania. Przykładem jest nasza realizacja 700 m² posadzki ESD dla strefy produkcji elektroniki. Posadzki ESD są też spokrewnione z systemami do stref zagrożenia wybuchem, ale cel zastosowania jest inny — dlatego w strefach Ex wymagania określamy osobno (zobacz: posadzki antywybuchowe ATEX).",
+      },
+      {
+        heading: "Pomiary i dokumentacja",
+        body: "Po zakończeniu prac sprawdzamy parametry elektryczne wykonanej posadzki, ponieważ nieprawidłowo wykonany detal — np. połączenie warstwy przewodzącej z uziemieniem — może wpłynąć na działanie całego systemu, nawet jeśli powierzchnia wygląda poprawnie. Pomiary i dokumentacja pozwalają zweryfikować, czy system osiągnął wymagane parametry, a późniejsza kontrola w trakcie eksploatacji pozwala utrzymać je na właściwym poziomie.",
+      },
+    ],
+    highlights: [
+      "Posadzki żywiczne ESD w wariantach przewodzących i rozpraszających, dobieranych do wymagań strefy",
+      "Przygotowanie podłoża betonowego pod system antyelektrostatyczny",
+      "Wykonanie warstw przewodzących i połączeń z uziemieniem obiektu",
+      "Pomiar parametrów elektrycznych gotowej posadzki",
+      "Wskazówki dotyczące użytkowania i czyszczenia powierzchni oraz kontroli parametrów w eksploatacji",
+      "Możliwość realizacji etapami, bez zatrzymywania całego zakładu",
+    ],
+    closing:
+      "Zanim dobierzemy system, pytamy o proces, wymagania strefy i sposób użytkowania — dopiero na tej podstawie określamy zakres prac.",
+  },
+  {
+    slug: "posadzki-antywybuchowe-atex",
+    icon: Flame,
+    title: "Posadzki antywybuchowe ATEX",
+    shortDesc: "Rozwiązujemy problem posadzek w strefach zagrożenia wybuchem — systemy przewodzące z uziemieniem i taśmami miedzianymi, z kontrolą parametrów elektrycznych po wykonaniu.",
+    metaDescription:
+      "Posadzki antywybuchowe ATEX FLOWTEX Polska — systemy przewodzące do stref zagrożenia wybuchem (Ex) z uziemieniem, taśmami miedzianymi i pomiarami po wykonaniu.",
+    intro:
+      "Nie każda posadzka antyelektrostatyczna jest posadzką przeznaczoną do pracy w strefie zagrożenia wybuchem. W obiektach, w których może powstać atmosfera wybuchowa — np. w halach magazynujących materiały sypkie — kontrola elektryczności statycznej jest jednym z elementów całego systemu bezpieczeństwa. Wykonujemy posadzki do stref Ex jako kompletny system, a wymagania określamy na podstawie klasyfikacji strefy w konkretnym obiekcie.",
+    sections: [
+      {
+        heading: "Posadzka do strefy Ex jako system",
+        body: "Informacja, że posadzka jest „przewodząca” albo „antystatyczna”, nie wystarcza. Znaczenie ma cały układ: mechaniczne przygotowanie podłoża, system dobrany do klasyfikacji strefy, prawidłowo wykonana warstwa odprowadzająca ładunki, połączenie z instalacją uziemiającą obiektu oraz taśmy miedziane stanowiące element drogi odprowadzania ładunków. Dlatego posadzkę w strefie Ex traktujemy jako system, a nie warstwę żywicy na betonie.",
+      },
+      {
+        heading: "Posadzka antywybuchowa a posadzka ESD",
+        body: "W środowisku ESD głównym celem jest ochrona wrażliwej elektroniki przed wyładowaniami. W strefie zagrożenia wybuchem kontrola elektryczności statycznej jest natomiast jednym ze sposobów ograniczania potencjalnych źródeł zapłonu. Oba rodzaje posadzek łączy kontrolowane odprowadzanie ładunków, ale określenie „posadzka antyelektrostatyczna” nie powinno być automatycznie traktowane jako synonim posadzki do strefy Ex — wymagania trzeba określić na podstawie warunków i klasyfikacji konkretnego obiektu.",
+      },
+      {
+        heading: "Pomiary i odbiór",
+        body: "Przy dużych powierzchniach ważne jest zachowanie powtarzalnych parametrów na całym wykonanym obszarze. Po zakończeniu prac kontrolujemy parametry elektryczne gotowej posadzki, a pomiary i dokumentacja pozwalają zweryfikować, czy system osiągnął wymagane parametry. Przykładem jest nasza realizacja 1420 m² posadzki antywybuchowej w hali magazynującej materiały sypkie pod Grójcem.",
+      },
+    ],
+    highlights: [
+      "Posadzki przewodzące do stref zagrożenia wybuchem, dobierane do klasyfikacji strefy Ex obiektu",
+      "Mechaniczne przygotowanie podłoża betonowego pod system przewodzący",
+      "Warstwa odprowadzająca ładunki elektrostatyczne i połączenia z instalacją uziemiającą",
+      "Taśmy miedziane jako element drogi odprowadzania ładunków",
+      "Kontrola parametrów elektrycznych po zakończeniu prac",
+      "Realizacje na dużych powierzchniach magazynowych i produkcyjnych",
+    ],
+    closing:
+      "Masz halę ze strefą Ex? Opisz nam proces i klasyfikację strefy — przeanalizujemy warunki pracy i zaproponujemy rozwiązanie.",
+  },
+  {
+    slug: "posadzki-clean-room",
+    icon: Wind,
+    title: "Posadzki do clean roomów i pomieszczeń czystych",
+    shortDesc: "Rozwiązujemy problem zanieczyszczeń gromadzących się w spoinach i porach — bezspoinowe posadzki żywiczne z fasetą dla farmacji, szpitali i produkcji o podwyższonym reżimie czystości.",
+    metaDescription:
+      "Posadzki do clean roomów FLOWTEX Polska — bezspoinowe posadzki żywiczne z fasetą dla przemysłu farmaceutycznego i szpitali, odporne na częstą dezynfekcję.",
+    intro:
+      "W pomieszczeniach czystych posadzka nie jest wyłącznie wykończeniem — jest częścią środowiska produkcyjnego lub medycznego, w którym liczy się ograniczenie powstawania i gromadzenia zanieczyszczeń oraz łatwość utrzymania higieny. Wykonujemy bezspoinowe posadzki żywiczne z wywinięciem na ściany dla zakładów farmaceutycznych, obiektów medycznych i innych stref o podwyższonym reżimie czystości.",
+    sections: [
+      {
+        heading: "Wymagania stawiane posadzce",
+        body: "Wymagania dotyczące kontroli czystości środowiska określają m.in. normy serii ISO 14644, a w procesach wymagających warunków aseptycznych — wytyczne EU GMP Aneks 1. Przekładają się one na cechy posadzki: musi być bezpyłowa, nie może generować ani zatrzymywać cząstek, powinna być pozbawiona porów i odporna na częstą, intensywną dezynfekcję środkami chemicznymi. Dlatego system dobieramy na podstawie analizy warunków pracy konkretnego pomieszczenia, a nie wyłącznie wyglądu czy odporności mechanicznej.",
+      },
+      {
+        heading: "Bezspoinowość i faseta",
+        body: "Posadzka jest wykonywana bez spoin, z wywinięciem na ściany (fasetą), co eliminuje ostre kąty i połączenia ściana–podłoga — miejsca, w których najłatwiej o zaleganie zanieczyszczeń trudnych do usunięcia podczas czyszczenia i dezynfekcji. Gładka, jednolita powierzchnia z dekoracyjnymi płatkami kwarcowymi jest łatwa w codziennym utrzymaniu czystości.",
+      },
+      {
+        heading: "Przemysł i obiekty medyczne",
+        body: "Techniczne zasady są wspólne dla hal produkcyjnych i placówek medycznych, różni się natomiast kontekst: inwestor, przepisy i procedury odbioru, a w czynnych obiektach szpitalnych także organizacja prac — często etapowa, z uwzględnieniem sąsiedztwa stref sterylnych. Mamy za sobą realizację clean roomu 340 m² dla zakładu farmaceutycznego na Mazowszu oraz posadzkę dla warszawskiego szpitala.",
+      },
+    ],
+    highlights: [
+      "Posadzki żywiczne bezspoinowe z fasetą wywiniętą na ściany",
+      "Przygotowanie zdegradowanych, porowatych podłoży betonowych",
+      "Powierzchnie bezpyłowe, odporne na częstą dezynfekcję chemiczną",
+      "Realizacje dla przemysłu farmaceutycznego i obiektów medycznych",
+      "Prace etapowe w czynnych obiektach, z uwzględnieniem stref o podwyższonej czystości",
+    ],
+    closing:
+      "Zakres systemu określamy po analizie przeznaczenia pomieszczenia, klasy czystości i sposobu odbioru obiektu.",
   },
   {
     slug: "systemy-odbojowe",
