@@ -21,16 +21,257 @@
 */
 const ALL_PORADNIKI = [
   {
+    slug: "pecherze-w-zywicy-aplikacyjne-czy-osmotyczne",
+    llmsSummary: "Poradnik o pęcherzach w posadzkach żywicznych: pęcherze aplikacyjne a osmotyczne, przyczyny, zapobieganie podczas aplikacji, naprawa z barierą przeciwwilgociową, dlaczego pęcherze mogą pojawić się po latach.",
+    publishAt: "2027-02-17",
+    title: "Pęcherze w posadzce żywicznej: aplikacyjne czy osmotyczne i jak je naprawić",
+    metaTitle: "Pęcherze w posadzce żywicznej — przyczyny i naprawa | FLOWTEX Polska",
+    metaDescription:
+      "Pęcherze w żywicy mają dwie różne przyczyny: błąd aplikacji albo wilgoć osmotyczna. Sprawdź, jak je rozpoznać i dlaczego naprawa wymaga innego podejścia.",
+    category: "Naprawy posadzek",
+    imageAlt: "Przykład: pęcherze i bąble w żywicy",
+    date: "Luty 2027",
+    intro: [
+      "Drobne wybrzuszenia pod powłoką żywiczną pojawiają się czasem w trakcie aplikacji, tuż po niej, a czasem dopiero po latach eksploatacji. Wszystkie nazywamy pęcherzami, ale ich przyczyny bywają zupełnie różne.",
+      "Wyjaśniamy, jak odróżnić pęcherze aplikacyjne od osmotycznych i dlaczego od tego zależy sposób naprawy.",
+    ],
+    sections: [
+      {
+        heading: "Dwa różne zjawiska pod jedną nazwą",
+        blocks: [
+          { type: "paragraph", text: "Pęcherze pojawiające się w trakcie lub tuż po aplikacji to zwykle efekt powietrza wypychanego z porowatego podłoża albo zbyt szybkiego wiązania przy rosnącej temperaturze — to problem procesu wykonania. Pęcherze pojawiające się miesiące lub lata po aplikacji mają zwykle inne źródło: ciśnienie osmotyczne wilgoci przenikającej przez półprzepuszczalną warstwę żywiczną od strony podłoża." },
+          { type: "table", head: ["", "Pęcherze aplikacyjne", "Pęcherze osmotyczne"], rows: [["Kiedy się pojawiają", "W trakcie lub tuż po aplikacji", "Miesiące lub lata po aplikacji"], ["Źródło", "Powietrze z porowatego podłoża, rosnąca temperatura, zbyt gruba warstwa", "Wilgoć w podłożu przenikająca przez żywicę"], ["Rodzaj problemu", "Proces wykonania", "Wilgoć w podłożu, nie błąd aplikacji"]] },
+        ],
+      },
+      {
+        heading: "Najczęstsze przyczyny",
+        blocks: [
+          { type: "list", items: ["powietrze uwięzione w porowatym podłożu wypychane podczas wiązania żywicy,", "aplikacja przy rosnącej temperaturze podłoża (efekt outgassingu),", "zbyt gruba warstwa nakładana jednorazowo,", "ciśnienie osmotyczne wilgoci resztkowej ujawniające się z opóźnieniem."] },
+        ],
+      },
+      {
+        heading: "Jak zapobiegać i jak naprawiać",
+        blocks: [
+          { type: "list", ordered: true, items: ["Podczas aplikacji: odpowietrzenie świeżej warstwy walcem kolczastym — wyłącznie wtedy, gdy przewiduje to technologia systemu.", "Kontrola temperatury podłoża i powietrza przed rozpoczęciem prac.", "Aplikacja w zalecanej grubości i liczbie warstw.", "Naprawa pęcherzy osmotycznych: usunięcie uszkodzonej warstwy do zdrowego podłoża, badanie wilgotności i zastosowanie bariery przeciwwilgociowej przed odtworzeniem systemu."] },
+          { type: "paragraph", text: "Samo odtworzenie warstwy bez zamontowania bariery przeciwwilgociowej nie usuwa przyczyny pęcherzy osmotycznych. Więcej w katalogu wad: [pęcherze i bąble w żywicy](/katalog-wad/pecherze). Takie naprawy wykonujemy w ramach [serwisu posadzek](/serwis-posadzek-i-kanalizacji)." },
+        ],
+      },
+      {
+        heading: "Czy pęcherze mogą poczekać",
+        blocks: [
+          { type: "paragraph", text: "Nieleczone pęcherze pękają pod obciążeniem i przyspieszają dalszą delaminację wokół uszkodzenia, więc lepiej nie zwlekać, zwłaszcza w strefach ruchu kołowego. Zobacz też poradnik o [odspojeniu żywicy od podłoża](/poradniki/odspojenie-zywicy-od-podloza-przyczyny-i-naprawa)." },
+        ],
+      },
+      {
+        heading: "Najczęstsze błędy",
+        blocks: [
+          { type: "list", ordered: true, items: ["Traktowanie wszystkich pęcherzy jako błędu wykonawcy bez sprawdzenia wilgotności podłoża.", "Naprawa bez bariery przeciwwilgociowej w przypadku pęcherzy osmotycznych.", "Aplikacja przy rosnącej temperaturze podłoża.", "Zbyt grube warstwy nakładane za jednym razem."] },
+        ],
+      },
+    ],
+    faq: [
+      { q: "Dlaczego pęcherze pojawiły się dopiero po roku, skoro posadzka była robiona prawidłowo?", a: "To typowy przebieg pęcherzy osmotycznych — ich przyczyną jest wilgoć w podłożu, a nie błąd wykonawczy w trakcie aplikacji, dlatego ujawniają się z opóźnieniem." },
+      { q: "Czy pęcherze trzeba naprawiać od razu, czy mogą poczekać?", a: "Nieleczone pęcherze pękają pod obciążeniem i przyspieszają dalszą delaminację wokół uszkodzenia, więc lepiej nie zwlekać, zwłaszcza w strefach ruchu kołowego." },
+    ],
+    cta: { heading: "Masz pęcherze na posadzce?", text: "Opisz nam, kiedy się pojawiły i gdzie — ustalimy przyczynę i zaproponujemy naprawę. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat." },
+    relatedServiceSlugs: ["posadzki-zywiczne", "serwis-posadzek-i-kanalizacji"],
+    relatedRealizacjeSlugs: [],
+  },
+  {
+    slug: "zastoiny-wody-na-posadzce-spadki-i-odwodnienie",
+    llmsSummary: "Poradnik o zastoinach wody na posadzkach: przyczyny (brak spadków, osiadanie, błędne rozmieszczenie wpustów), pomiar i lokalizacja, miejscowa korekta spadków, projekt spadków w nowych realizacjach, przykład zakładu spożywczego.",
+    publishAt: "2027-03-03",
+    title: "Zastoiny wody na posadzce: spadki i odwodnienie w zakładzie produkcyjnym",
+    metaTitle: "Zastoiny wody na posadzce — spadki i odwodnienie | FLOWTEX Polska",
+    metaDescription:
+      "Woda zalega na posadzce zamiast spływać do wpustów? Sprawdź, skąd biorą się zastoiny, jak je zmierzyć i skorygować bez wymiany całej posadzki.",
+    category: "Naprawy posadzek",
+    imageAlt: "Przykład: zastoiny wody na posadzce",
+    date: "Marzec 2027",
+    intro: [
+      "Woda zbiera się w nieckach na powierzchni zamiast spływać do wpustów. W zakładach z intensywnym myciem to nie tylko kłopot z czystością — zalegająca woda sprzyja śliskości i rozwojowi mikroorganizmów.",
+      "Wyjaśniamy, skąd biorą się zastoiny wody, jak je zlokalizować i jak naprawić bez wymiany całej posadzki.",
+    ],
+    sections: [
+      {
+        heading: "Dlaczego powstają zastoiny",
+        blocks: [
+          { type: "paragraph", text: "Brak spadków rzadko wynika z jednego błędu — to zwykle suma niewielkich odchyleń w warstwie wyrównującej, które kumulują się w nieckę w newralgicznym miejscu." },
+          { type: "list", items: ["niewystarczające spadki wykonane podczas układania warstwy wyrównującej,", "osiadanie podłoża po pewnym czasie eksploatacji,", "błędne rozmieszczenie wpustów względem geometrii pomieszczenia,", "zbyt płaska posadzka w strefie intensywnego mycia."] },
+        ],
+      },
+      {
+        heading: "Dlaczego spadki są ważne w przemyśle spożywczym",
+        blocks: [
+          { type: "paragraph", text: "W zakładach przemysłu spożywczego prawidłowa geometria posadzki i skuteczne odwodnienie mają kluczowe znaczenie dla efektywnego mycia oraz utrzymania powierzchni w odpowiednim stanie higienicznym. Z takim wyzwaniem mierzyliśmy się przy realizacji 840 m² posadzki w zakładzie przetwórstwa rybnego na północy Hiszpanii. [Zobacz realizację](/realizacje/posadzka-zywiczna-przemysl-spozywczy-840-m2-hiszpania). Więcej w poradniku [jaka posadzka do zakładu spożywczego](/poradniki/jaka-posadzka-do-zakladu-spozywczego)." },
+        ],
+      },
+      {
+        heading: "Jak wygląda naprawa",
+        blocks: [
+          { type: "list", ordered: true, items: ["Pomiar spadków i lokalizacja punktów zalegania wody.", "Miejscowa korekta spadków warstwą wyrównującą.", "Weryfikacja rozmieszczenia i drożności odpływów.", "Uwzględnienie wymaganych spadków już na etapie projektu w nowych realizacjach."] },
+          { type: "paragraph", text: "Punktowa korekta spadków jest zwykle szybsza i tańsza niż wymiana całej strefy, o ile problem zostanie precyzyjnie zmapowany pomiarem. Więcej w katalogu wad: [zastoiny wody](/katalog-wad/zastoiny-wody). Drożność odpływów sprawdzamy w ramach [serwisu posadzek i kanalizacji](/serwis-posadzek-i-kanalizacji)." },
+        ],
+      },
+      {
+        heading: "Czy trzeba wymieniać całą posadzkę",
+        blocks: [
+          { type: "paragraph", text: "W większości przypadków nie. Punktowa korekta spadków w miejscu zalegania wody rozwiązuje problem bez ingerencji w całą powierzchnię. Jeśli woda zbiera się tylko w jednym miejscu hali, zwykle wskazuje to na lokalne osiadanie podłoża albo błąd wykonawczy przy układaniu warstwy wyrównującej w tej strefie." },
+        ],
+      },
+      {
+        heading: "Najczęstsze błędy",
+        blocks: [
+          { type: "list", ordered: true, items: ["Pominięcie spadków na etapie projektu nowej posadzki.", "Naprawa bez pomiaru, w którym miejscu woda faktycznie zalega.", "Ignorowanie rozmieszczenia i drożności wpustów.", "Wymiana całej strefy, gdy wystarczyłaby korekta punktowa."] },
+        ],
+      },
+    ],
+    faq: [
+      { q: "Czy zastoiny wody można naprawić bez wymiany całej posadzki?", a: "W większości przypadków tak — punktowa korekta spadków w miejscu zalegania wody rozwiązuje problem bez ingerencji w całą powierzchnię." },
+      { q: "Dlaczego woda zbiera się tylko w jednym miejscu hali?", a: "Zwykle wskazuje to na lokalne osiadanie podłoża albo błąd wykonawczy przy układaniu warstwy wyrównującej w tej konkretnej strefie." },
+    ],
+    cta: { heading: "Zalega Ci woda na posadzce?", text: "Opisz nam strefę i sposób mycia — zmierzymy spadki i zaproponujemy korektę. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat." },
+    relatedServiceSlugs: ["serwis-posadzek-i-kanalizacji", "posadzki-zywiczne"],
+    relatedRealizacjeSlugs: ["posadzka-zywiczna-przemysl-spozywczy-840-m2-hiszpania"],
+  },
+  {
+    slug: "uszkodzone-cokoly-higieniczne-naprawa",
+    llmsSummary: "Poradnik o uszkodzonych cokołach higienicznych: przyczyny (uderzenia, przygotowanie naroża, ruchy termiczne, agresywne środki myjące), dlaczego narożniki pękają najczęściej, naprawa i wzmocnienie detalu, cokoły Polysto Sanicoat i ochrona ścian.",
+    publishAt: "2027-03-17",
+    title: "Uszkodzone cokoły higieniczne: dlaczego pękają i jak je naprawić",
+    metaTitle: "Uszkodzone cokoły higieniczne — naprawa i zapobieganie | FLOWTEX Polska",
+    metaDescription:
+      "Cokół higieniczny odspaja się, pęka lub się kruszy? Sprawdź, dlaczego narożniki uszkadzają się najczęściej i jak naprawić cokół oraz mu zapobiec.",
+    category: "Naprawy posadzek",
+    imageAlt: "Przykład: zniszczony cokół higieniczny",
+    date: "Marzec 2027",
+    intro: [
+      "Odspojenie, pęknięcia lub ubytki w wyobleniu posadzka–ściana to typowy problem stref mokrych i higienicznych. W takich miejscach cokół nie jest ozdobą — to element funkcjonalny, który uszczelnia styk posadzki ze ścianą.",
+      "Wyjaśniamy, dlaczego cokoły się uszkadzają, jak je naprawić i jak im zapobiegać już na etapie wykonania.",
+    ],
+    sections: [
+      {
+        heading: "Dlaczego cokół uszkadza się częściej niż płaska posadzka",
+        blocks: [
+          { type: "paragraph", text: "Cokół higieniczny pracuje inaczej niż płaska posadzka — koncentruje na sobie uderzenia mechaniczne przy myciu i transporcie wewnętrznym, a jednocześnie musi znosić stały kontakt ze środkami dezynfekującymi. Naroża i przejścia instalacyjne to statystycznie najczęstsze miejsca uszkodzeń." },
+        ],
+      },
+      {
+        heading: "Najczęstsze przyczyny",
+        blocks: [
+          { type: "list", items: ["uderzenia mechaniczne podczas mycia lub transportu wewnętrznego,", "niewystarczające przygotowanie naroża posadzka–ściana przed aplikacją,", "ruchy termiczne lub konstrukcyjne w strefie styku,", "agresywne środki myjące degradujące krawędź cokołu."] },
+        ],
+      },
+      {
+        heading: "Jak wygląda naprawa i zapobieganie",
+        blocks: [
+          { type: "list", ordered: true, items: ["Odtworzenie wyoblenia zgodnie z wymaganiami higienicznymi strefy.", "Wzmocnienie detalu w newralgicznych punktach: narożnikach i przejściach instalacyjnych.", "Dobór systemu odpornego na stosowane środki myjąco-dezynfekujące.", "Regularna kontrola stanu cokołów w harmonogramie utrzymania."] },
+          { type: "paragraph", text: "Naprawę lub wymianę uszkodzonych cokołów wykonujemy w ramach [serwisu posadzek](/serwis-posadzek-i-kanalizacji). Więcej w katalogu wad: [zniszczone cokoły higieniczne](/katalog-wad/cokoly)." },
+        ],
+      },
+      {
+        heading: "Cokoły i ochrona ścian przed uderzeniami",
+        blocks: [
+          { type: "paragraph", text: "Jeśli przyczyną są uderzenia wózków, sam cokół nie wystarczy. W zakładach spożywczych stosujemy cokoły Polysto® z gładką powłoką Sanicoat, bezpieczną dla żywności, montowane na systemowym kleju Hygiseal® — razem z odbojami i okładzinami ściennymi, które przejmują uderzenia. Zobacz [systemy odbojowe i ochronę ścian](/systemy-odbojowe) oraz poradnik [jak zabezpieczyć ściany hali przed wózkami](/poradniki/jak-zabezpieczyc-sciany-hali-przed-wozkami)." },
+        ],
+      },
+      {
+        heading: "Czy uszkodzony cokół to problem tylko estetyczny",
+        blocks: [
+          { type: "paragraph", text: "Nie. W strefach mokrych i higienicznych cokół jest elementem funkcjonalnym, uszczelniającym styk posadzka–ściana. Jego uszkodzenie sprzyja zaleganiu wody i zabrudzeń w szczelinie." },
+        ],
+      },
+      {
+        heading: "Najczęstsze błędy",
+        blocks: [
+          { type: "list", ordered: true, items: ["Naprawa samego ubytku bez wzmocnienia narożnika, który uszkadza się najczęściej.", "Pominięcie odporności na stosowane środki myjąco-dezynfekujące.", "Brak ochrony cokołu i ściany przed uderzeniami wózków.", "Brak kontroli stanu cokołów w harmonogramie utrzymania."] },
+        ],
+      },
+    ],
+    faq: [
+      { q: "Dlaczego akurat narożniki cokołów pękają najczęściej?", a: "Koncentrują naprężenia mechaniczne przy myciu i transporcie oraz są trudniejsze do równego wykonania niż proste odcinki — stąd wyższe ryzyko uszkodzeń." },
+      { q: "Czy uszkodzony cokół to problem tylko estetyczny?", a: "Nie — w strefach mokrych i higienicznych to element funkcjonalny, uszczelniający styk posadzka-ściana. Jego uszkodzenie sprzyja zaleganiu wody i zabrudzeń w szczelinie." },
+    ],
+    cta: { heading: "Masz uszkodzone cokoły w hali?", text: "Opisz nam strefę, rodzaj uszkodzeń i sposób mycia — zaproponujemy naprawę i wzmocnienie detalu. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat." },
+    relatedServiceSlugs: ["serwis-posadzek-i-kanalizacji", "systemy-odbojowe"],
+    relatedRealizacjeSlugs: [],
+  },
+  {
+    slug: "jak-wybrac-wykonawce-posadzki-przemyslowej",
+    llmsSummary: "Poradnik o wyborze wykonawcy posadzki przemysłowej: kryteria (badanie podłoża, dobór systemu, własny zespół, certyfikaty i normy ISO/GMP/HACCP, gwarancja i serwis, portfolio), jak wygląda wycena, ile trwa realizacja, pytania kontrolne.",
+    publishAt: "2027-04-07",
+    title: "Jak wybrać wykonawcę posadzki przemysłowej? Wycena, etapy i czas realizacji",
+    metaTitle: "Jak wybrać wykonawcę posadzki przemysłowej? | FLOWTEX Polska",
+    metaDescription:
+      "Po czym poznać dobrego wykonawcę posadzek przemysłowych? Przygotowanie podłoża, dobór systemu, certyfikaty, gwarancja, przebieg wyceny i czas realizacji.",
+    category: "Wybór wykonawcy",
+    imageAlt: "Posadzka betonowa w hali przemysłowej",
+    date: "Kwiecień 2027",
+    intro: [
+      "Posadzka przemysłowa to inwestycja, której błędy widać dopiero po miesiącach: odspojenie, pęcherze, pylenie, pęknięcia. Najczęstsza przyczyna reklamacji przy tańszych wykonawcach to nie sama żywica, ale niedostateczne przygotowanie podłoża.",
+      "Poniżej opisujemy, po czym poznać dobrą firmę wykonawczą, jak wygląda wycena i ile zwykle trwa realizacja.",
+    ],
+    sections: [
+      {
+        heading: "Po czym poznać dobrą firmę wykonującą posadzki",
+        blocks: [
+          { type: "paragraph", text: "Dobra firma wykonawcza prowadzi klienta przez cały proces, a nie tylko układa warstwę żywicy. Kluczowe elementy to:" },
+          { type: "list", items: ["rzetelne badanie i przygotowanie podłoża (wilgotność, wytrzymałość i czystość betonu) — to najczęstsza przyczyna reklamacji przy tańszych wykonawcach,", "dobór systemu posadzkowego dopasowanego do realnych warunków eksploatacji: obciążeń, chemii procesowej i wymogów higienicznych,", "wykonawstwo własnym, doświadczonym zespołem,", "udokumentowane certyfikaty i zgodność z normami (ISO, GMP, HACCP),", "gwarancja i opieka serwisowa po zakończeniu inwestycji."] },
+          { type: "paragraph", text: "Najlepszym dowodem takiego doświadczenia jest portfolio zrealizowanych obiektów, a nie same deklaracje. Zobacz nasze [realizacje](/realizacje)." },
+        ],
+      },
+      {
+        heading: "Jak wygląda proces wyceny",
+        blocks: [
+          { type: "paragraph", text: "Proces zaczyna się od oględzin obiektu lub analizy dokumentacji, następnie przygotowujemy indywidualną wycenę uwzględniającą metraż, wymagany system posadzkowy i harmonogram prac. Wycenę można zamówić przez formularz kontaktowy na stronie. Wstępny kierunek technologiczny pomoże ustalić narzędzie [dobór systemu posadzkowego](/dobor-posadzki)." },
+        ],
+      },
+      {
+        heading: "Ile trwa wykonanie posadzki żywicznej",
+        blocks: [
+          { type: "paragraph", text: "Czas realizacji zależy od metrażu i liczby warstw, zwykle od kilku dni do kilku tygodni. Uwzględnia czas na przygotowanie podłoża, gruntowanie, aplikację warstwy żywicznej oraz jej utwardzanie. W wielu przypadkach prace można prowadzić etapami, w ruchu ciągłym zakładu." },
+        ],
+      },
+      {
+        heading: "Rodzaje posadzek, między którymi wybierasz",
+        blocks: [
+          { type: "paragraph", text: "Najczęściej stosuje się posadzki żywiczne (epoksydowe i poliuretanowe), posadzki betonowe utwardzane powierzchniowo oraz posadzki specjalistyczne dla przemysłu spożywczego i farmaceutycznego. Dobór technologii zależy od obciążeń, chemii procesowej i wymogów higienicznych obiektu. Zobacz [posadzki żywiczne](/posadzki-zywiczne) i poradnik [żywiczna czy betonowa do magazynu](/poradniki/posadzka-zywiczna-czy-betonowa-do-magazynu)." },
+        ],
+      },
+      {
+        heading: "Najczęstsze błędy przy wyborze wykonawcy",
+        blocks: [
+          { type: "list", ordered: true, items: ["Wybór wyłącznie po cenie za metr kwadratowy.", "Brak pytania o badanie i przygotowanie podłoża.", "Pominięcie referencji i portfolio podobnych obiektów.", "Brak ustaleń dotyczących gwarancji i serwisu po realizacji.", "Brak harmonogramu dopasowanego do pracy zakładu."] },
+        ],
+      },
+      {
+        heading: "Pytania kontrolne do wykonawcy",
+        blocks: [
+          { type: "list", ordered: true, items: ["Jak zostanie zbadane i przygotowane podłoże?", "Na jakiej podstawie dobrano system do moich warunków?", "Czy prace wykona własny zespół?", "Jakie certyfikaty i normy spełnia wykonanie?", "Jaka jest gwarancja i jak wygląda serwis po realizacji?", "Jaki jest harmonogram i czy prace można prowadzić etapami?"] },
+        ],
+      },
+    ],
+    faq: [
+      { q: "Po czym poznać dobrą firmę wykonującą posadzki przemysłowe?", a: "Prowadzi klienta przez cały proces: bada i przygotowuje podłoże, dobiera system do realnych warunków eksploatacji, wykonuje prace własnym zespołem, ma udokumentowane certyfikaty i zgodność z normami, a po realizacji zapewnia gwarancję i serwis." },
+      { q: "Ile trwa wykonanie posadzki żywicznej?", a: "Zwykle od kilku dni do kilku tygodni, w zależności od metrażu i liczby warstw. Uwzględnia się czas na przygotowanie podłoża, gruntowanie, aplikację i utwardzanie." },
+      { q: "Jak wygląda proces wyceny posadzki przemysłowej?", a: "Zaczyna się od oględzin obiektu lub analizy dokumentacji, następnie powstaje indywidualna wycena uwzględniająca metraż, system posadzkowy i harmonogram. Wycenę można zamówić przez formularz kontaktowy." },
+      { q: "Czy FLOWTEX Polska realizuje projekty w całej Polsce?", a: "Tak, realizujemy projekty na terenie całej Polski, a nasze doświadczenie obejmuje również realizacje międzynarodowe." },
+    ],
+    cta: { heading: "Szukasz wykonawcy posadzki?", text: "Opisz nam obiekt, obciążenia i wymagania — przygotujemy indywidualną wycenę. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat." },
+    relatedServiceSlugs: ["posadzki-zywiczne", "betonowe-posadzki-przemyslowe"],
+    relatedRealizacjeSlugs: [],
+  },
+  {
     slug: "dlaczego-posadzka-betonowa-pyli",
     llmsSummary: "Poradnik o pyleniu posadzek betonowych: przyczyny (brak utwardzenia, zbyt niska klasa betonu, pielęgnacja, karbonatyzacja), kiedy wystarczy impregnat pyłochłonny, a kiedy warstwa żywiczna, problem higieniczny w spożywce i farmacji.",
-    publishAt: "2026-11-26",
+    publishAt: "2026-12-16",
     title: "Dlaczego posadzka betonowa pyli? Przyczyny i sposoby naprawy",
     metaTitle: "Pylenie posadzki betonowej — przyczyny i naprawa | FLOWTEX Polska",
     metaDescription:
       "Pyląca posadzka betonowa to sygnał słabej wierzchniej warstwy. Poznaj przyczyny pylenia, kiedy wystarczy impregnat, a kiedy potrzebna jest warstwa żywiczna.",
     category: "Naprawy posadzek",
     imageAlt: "Przykład: pylenie powierzchni betonu",
-    date: "Listopad 2026",
+    date: "Grudzień 2026",
     intro: [
       "Szary nalot na oponach wózków i obuwiu, pył unoszący się przy ruchu — to klasyczne objawy pylącej posadzki betonowej. W obiektach z rygorami czystości, takich jak zakłady spożywcze i farmaceutyczne, pylący beton bywa powodem uwag podczas audytów, nawet jeśli sama płyta ma wystarczającą nośność.",
       "Wyjaśniamy, skąd bierze się pylenie, jak je rozpoznać i jak dobrać naprawę: od impregnatu po warstwę żywiczną.",
@@ -87,14 +328,14 @@ const ALL_PORADNIKI = [
   {
     slug: "pekajaca-posadzka-przemyslowa-jak-naprawic",
     llmsSummary: "Poradnik o pęknięciach posadzek przemysłowych: rysa statyczna a aktywna, dobór żywicy (sztywna epoksydowa a elastyczna poliuretanowa), przyczyny, rola dylatacji, kiedy wystarczy naprawa punktowa, najczęstsze błędy.",
-    publishAt: "2026-12-03",
+    publishAt: "2027-01-06",
     title: "Pękająca posadzka przemysłowa: rysa statyczna czy aktywna i jak ją naprawić",
     metaTitle: "Pękająca posadzka przemysłowa — przyczyny i naprawa | FLOWTEX Polska",
     metaDescription:
       "Pęknięcie posadzki to nie zawsze powód do wymiany. Sprawdź, czym różni się rysa statyczna od aktywnej, dlaczego pęknięcia wracają i jak dobrać naprawę.",
     category: "Naprawy posadzek",
     imageAlt: "Przykład: pęknięcia posadzki",
-    date: "Grudzień 2026",
+    date: "Styczeń 2027",
     intro: [
       "Widoczne rysy przebiegające przez warstwę wykończeniową, czasem sięgające do podłoża betonowego — to jeden z najczęstszych problemów posadzek przemysłowych. Wiele zakładów od razu myśli o wymianie całej posadzki, choć w większości przypadków wystarcza naprawa punktowa.",
       "Kluczowe jest rozpoznanie, z jaką rysą mamy do czynienia. Od tego zależy, czym ją naprawić — i czy pęknięcie nie wróci po kilku miesiącach.",
@@ -152,14 +393,14 @@ const ALL_PORADNIKI = [
   {
     slug: "odspojenie-zywicy-od-podloza-przyczyny-i-naprawa",
     llmsSummary: "Poradnik o odspajaniu się żywicy od podłoża (delaminacja): przyczyny (wilgotność resztkowa, przygotowanie podłoża, ciśnienie osmotyczne, zanieczyszczenia), badanie przed naprawą, kroki naprawy, najczęstsze błędy.",
-    publishAt: "2026-12-10",
+    publishAt: "2027-01-20",
     title: "Odspojenie żywicy od podłoża: przyczyny, diagnoza i naprawa",
     metaTitle: "Odspojenie żywicy od podłoża — przyczyny i naprawa | FLOWTEX Polska",
     metaDescription:
       "Żywica odspaja się od betonu? To objaw, nie przyczyna. Sprawdź, skąd bierze się delaminacja posadzki żywicznej i jak ją trwale naprawić.",
     category: "Naprawy posadzek",
     imageAlt: "Przykład: odspojenie żywicy od podłoża",
-    date: "Grudzień 2026",
+    date: "Styczeń 2027",
     intro: [
       "Warstwa żywiczna traci przyczepność do betonu: pojawiają się pęcherze, łuszczenie się lub całkowite oderwanie fragmentów. Naturalny odruch to wymiana odspojonego kawałka — ale bez diagnozy przyczyny problem zwykle wraca w sąsiednim miejscu.",
       "Wyjaśniamy, skąd bierze się delaminacja posadzki żywicznej i jak ją naprawić tak, żeby naprawa była trwała.",
@@ -215,14 +456,14 @@ const ALL_PORADNIKI = [
   {
     slug: "sliska-posadzka-jak-poprawic-antyposlizgowosc",
     llmsSummary: "Poradnik o śliskich posadzkach: przyczyny (zbyt gładki topcoat, wypolerowanie przez ruch kołowy, niedopasowana klasa, pozostałości środków myjących), dobór antypoślizgowości do warunków (DIN 51130 jako jedna z metod), posypka kwarcowa, schody Deckshield.",
-    publishAt: "2026-12-17",
+    publishAt: "2027-02-03",
     title: "Śliska posadzka w zakładzie: jak poprawić antypoślizgowość",
     metaTitle: "Śliska posadzka — jak poprawić antypoślizgowość | FLOWTEX Polska",
     metaDescription:
       "Posadzka śliska od wody, oleju lub po wypolerowaniu przez ruch kołowy? Sprawdź, dlaczego najwyższa klasa antypoślizgowości nie zawsze jest najlepsza i jak dobrać rozwiązanie.",
     category: "Bezpieczeństwo posadzek",
     imageAlt: "Przykład: śliska powierzchnia posadzki",
-    date: "Grudzień 2026",
+    date: "Luty 2027",
     intro: [
       "Posadzka potrafi stać się niebezpiecznie śliska w kontakcie z wodą, olejem lub po tym, jak ruch kołowy wypoleruje jej fakturę. Naturalny odruch to wybór „najwyższej klasy antypoślizgowości” — ale to nie zawsze najlepsze rozwiązanie.",
       "Wyjaśniamy, skąd bierze się śliskość, jak dobrać antypoślizgowość do warunków w zakładzie i o czym warto pamiętać przy naprawie.",
@@ -278,14 +519,14 @@ const ALL_PORADNIKI = [
   {
     slug: "posadzka-zywiczna-czy-betonowa-do-magazynu",
     llmsSummary: "Poradnik o różnicy między posadzką betonową (nośność, utwardzanie, zbrojenie, dylatacje) a żywiczną (powłoka bezspoinowa, higiena, ścieranie), kiedy wystarczy beton, kiedy dokłada się żywicę, błędy i pytania do wykonawcy.",
-    publishAt: "2026-11-19",
+    publishAt: "2026-12-02",
     title: "Posadzka żywiczna czy betonowa do magazynu? Co wybrać i kiedy łączyć oba rozwiązania",
     metaTitle: "Posadzka żywiczna czy betonowa do magazynu? Poradnik | FLOWTEX Polska",
     metaDescription:
       "Posadzka żywiczna czy betonowa do magazynu? Sprawdź, czym się różnią, do czego służy każda z nich i kiedy warto położyć żywicę na betonie.",
     category: "Magazyny i hale",
     imageAlt: "Układanie betonowej posadzki przemysłowej w dużej hali magazynowej",
-    date: "Listopad 2026",
+    date: "Grudzień 2026",
     intro: [
       "Płyta betonowa, która nie udźwignie regałów wysokiego składowania, ściera się pod kołami wózków widłowych albo pęka bez zaplanowanych dylatacji — to typowe problemy inwestycji magazynowych na etapie budowy lub rozbudowy. Z drugiej strony pyląca, pękająca posadzka betonowa i wymogi higieniczne to częsty powód, dla którego zakłady sięgają po posadzki żywiczne.",
       "Pytanie „żywiczna czy betonowa?” sugeruje wybór jednego z dwóch. W praktyce to dwa różne elementy posadzki, które często się uzupełniają. Wyjaśniamy, do czego służy każdy z nich i jak podjąć decyzję.",
@@ -420,7 +661,7 @@ const ALL_PORADNIKI = [
   {
     slug: "jak-zabezpieczyc-sciany-hali-przed-wozkami",
     llmsSummary: "Poradnik o ochronie ścian, słupów i naroży hal przed uderzeniami wózków — rodzaje zabezpieczeń (odboje, narożniki, panele, cokoły, osłony), dobór do ruchu, higiena w zakładach spożywczych, błędy i pytania do wykonawcy.",
-    publishAt: "2026-11-12",
+    publishAt: "2026-11-18",
     title: "Jak zabezpieczyć ściany hali przed wózkami widłowymi? Odboje, narożniki i cokoły",
     metaTitle: "Ochrona ścian hali przed wózkami widłowymi — odboje | FLOWTEX Polska",
     metaDescription:
@@ -1032,7 +1273,9 @@ const TODAY =
     ? __BUILD_DATE__
     : (typeof process !== "undefined" && process.env?.BUILD_DATE) || new Date().toISOString().slice(0, 10);
 
-export const PORADNIKI = ALL_PORADNIKI.filter((p) => !p.publishAt || p.publishAt <= TODAY);
+export const PORADNIKI = ALL_PORADNIKI.filter((p) => !p.publishAt || p.publishAt <= TODAY).sort((a, b) =>
+  (b.publishAt || "").localeCompare(a.publishAt || "")
+);
 
 export function getPoradnikBySlug(slug) {
   return PORADNIKI.find((p) => p.slug === slug);
