@@ -291,7 +291,7 @@ export default function Layout({ children }) {
           </div>
           <div>
             <div className="ft-mono text-xs uppercase tracking-wide mb-3" style={{ color: COLORS.white }}>
-              Narzędzia
+              Wiedza i narzędzia
             </div>
             <ul className="space-y-2 text-sm" style={{ color: COLORS.mutedOnDark }}>
               {TOOL_LINKS.map((t) => (
@@ -301,6 +301,16 @@ export default function Layout({ children }) {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link to="/poradniki" className="hover:opacity-80 transition-opacity">
+                  Poradniki
+                </Link>
+              </li>
+              <li>
+                <Link to="/realizacje" className="hover:opacity-80 transition-opacity">
+                  Realizacje
+                </Link>
+              </li>
             </ul>
           </div>
           <div>

@@ -8,6 +8,8 @@ import { Droplets, ShieldAlert, Ruler, Layers, Waves, Building2, Zap, Flame, Win
 export const SERVICES = [
   {
     slug: "posadzki-zywiczne",
+    metaTitle: "Posadzki żywiczne przemysłowe — epoksydowe i poliuretanowe | FLOWTEX Polska",
+    imageAlt: "Bezspoinowa posadzka żywiczna w hali produkcyjnej — realizacja FLOWTEX Polska",
     icon: Droplets,
     title: "Posadzki żywiczne",
     shortDesc: "Rozwiązujemy pylenie betonu, ścieranie od wózków widłowych i wymogi HACCP — bezspoinowe posadzki epoksydowe i poliuretanowe dla hal produkcyjnych i magazynów.",
@@ -22,7 +24,7 @@ export const SERVICES = [
       },
       {
         heading: "Zastosowanie w różnych branżach",
-        body: "Dzięki odporności na wodę, oleje i smary posadzki żywiczne dobrze sprawdzają się w halach produkcyjnych, warsztatach i magazynach — a krótki czas instalacji ogranicza przestoje zakładu. W wersjach antystatycznych (ESD) stosujemy je w halach elektroniki i pomieszczeniach czystych. Osobną grupę stanowią realizacje dla przemysłu spożywczego i farmaceutycznego, gdzie kluczowa jest odporność na tłuszcze, kwasy, wysoką temperaturę mycia parowego oraz zgodność z wymogami GMP i HACCP.",
+        body: "Dzięki odporności na wodę, oleje i smary posadzki żywiczne dobrze sprawdzają się w halach produkcyjnych, warsztatach i magazynach — a krótki czas instalacji ogranicza przestoje zakładu. W wersjach antystatycznych (ESD) stosujemy je w halach elektroniki i pomieszczeniach czystych — zobacz [posadzki ESD](/posadzki-esd), [posadzki antywybuchowe ATEX](/posadzki-antywybuchowe-atex) i [posadzki do clean roomów](/posadzki-clean-room). Osobną grupę stanowią realizacje dla przemysłu spożywczego i farmaceutycznego, gdzie kluczowa jest odporność na tłuszcze, kwasy, wysoką temperaturę mycia parowego oraz zgodność z wymogami GMP i HACCP.",
       },
       {
         heading: "Korzyści i utrzymanie",
@@ -47,6 +49,8 @@ export const SERVICES = [
   },
   {
     slug: "posadzki-esd",
+    metaTitle: "Posadzki ESD antystatyczne dla przemysłu elektronicznego | FLOWTEX Polska",
+    imageAlt: "Posadzka ESD w strefie produkcji elektroniki — realizacja FLOWTEX Polska",
     icon: Zap,
     title: "Posadzki ESD (antyelektrostatyczne)",
     shortDesc: "Rozwiązujemy problem wyładowań elektrostatycznych w produkcji elektroniki — posadzki ESD z kontrolowanym odprowadzaniem ładunków, uziemieniem i pomiarem parametrów po wykonaniu.",
@@ -61,7 +65,7 @@ export const SERVICES = [
       },
       {
         heading: "Zastosowania",
-        body: "Posadzki ESD stosujemy w halach produkcji i montażu elektroniki, strefach EPA, laboratoriach oraz magazynach komponentów wrażliwych na wyładowania. Przykładem jest nasza realizacja 700 m² posadzki ESD dla strefy produkcji elektroniki. Posadzki ESD są też spokrewnione z systemami do stref zagrożenia wybuchem, ale cel zastosowania jest inny — dlatego w strefach Ex wymagania określamy osobno (zobacz: posadzki antywybuchowe ATEX).",
+        body: "Posadzki ESD stosujemy w halach produkcji i montażu elektroniki, strefach EPA, laboratoriach oraz magazynach komponentów wrażliwych na wyładowania. Przykładem jest nasza realizacja 700 m² posadzki ESD dla strefy produkcji elektroniki. Posadzki ESD są też spokrewnione z [posadzkami do stref zagrożenia wybuchem](/posadzki-antywybuchowe-atex), ale cel zastosowania jest inny — dlatego w strefach Ex wymagania określamy osobno (zobacz: [posadzki antywybuchowe ATEX](/posadzki-antywybuchowe-atex)).",
       },
       {
         heading: "Pomiary i dokumentacja",
@@ -87,6 +91,8 @@ export const SERVICES = [
   },
   {
     slug: "posadzki-antywybuchowe-atex",
+    metaTitle: "Posadzki antywybuchowe ATEX do strefy Ex | FLOWTEX Polska",
+    imageAlt: "Posadzka antywybuchowa w hali magazynowej ze strefą Ex — realizacja FLOWTEX Polska",
     icon: Flame,
     title: "Posadzki antywybuchowe ATEX",
     shortDesc: "Rozwiązujemy problem posadzek w strefach zagrożenia wybuchem — systemy przewodzące z uziemieniem i taśmami miedzianymi, z kontrolą parametrów elektrycznych po wykonaniu.",
@@ -101,7 +107,7 @@ export const SERVICES = [
       },
       {
         heading: "Posadzka antywybuchowa a posadzka ESD",
-        body: "W środowisku ESD głównym celem jest ochrona wrażliwej elektroniki przed wyładowaniami. W strefie zagrożenia wybuchem kontrola elektryczności statycznej jest natomiast jednym ze sposobów ograniczania potencjalnych źródeł zapłonu. Oba rodzaje posadzek łączy kontrolowane odprowadzanie ładunków, ale określenie „posadzka antyelektrostatyczna” nie powinno być automatycznie traktowane jako synonim posadzki do strefy Ex — wymagania trzeba określić na podstawie warunków i klasyfikacji konkretnego obiektu.",
+        body: "W środowisku ESD głównym celem jest ochrona wrażliwej elektroniki przed wyładowaniami. W strefie zagrożenia wybuchem kontrola elektryczności statycznej jest natomiast jednym ze sposobów ograniczania potencjalnych źródeł zapłonu. Oba rodzaje posadzek (zobacz też [posadzki ESD](/posadzki-esd)) łączy kontrolowane odprowadzanie ładunków, ale określenie „posadzka antyelektrostatyczna” nie powinno być automatycznie traktowane jako synonim posadzki do strefy Ex — wymagania trzeba określić na podstawie warunków i klasyfikacji konkretnego obiektu.",
       },
       {
         heading: "Pomiary i odbiór",
@@ -127,6 +133,8 @@ export const SERVICES = [
   },
   {
     slug: "posadzki-clean-room",
+    metaTitle: "Posadzki do clean roomów — farmacja i szpitale | FLOWTEX Polska",
+    imageAlt: "Bezspoinowa posadzka żywiczna w clean roomie zakładu farmaceutycznego — realizacja FLOWTEX Polska",
     icon: Wind,
     title: "Posadzki do clean roomów i pomieszczeń czystych",
     shortDesc: "Rozwiązujemy problem zanieczyszczeń gromadzących się w spoinach i porach — bezspoinowe posadzki żywiczne z fasetą dla farmacji, szpitali i produkcji o podwyższonym reżimie czystości.",
@@ -166,6 +174,8 @@ export const SERVICES = [
   },
   {
     slug: "systemy-odbojowe",
+    metaTitle: "Systemy odbojowe i ochrona ścian w halach | FLOWTEX Polska",
+    imageAlt: "Żółte odboje ścienne, stalowa osłona narożnika i higieniczny cokół w hali produkcyjnej — realizacja FLOWTEX Polska",
     icon: ShieldAlert,
     title: "Systemy odbojowe i ochrona ścian",
     shortDesc: "Rozwiązujemy problem uszkodzonych ścian, słupów i naroży od uderzeń wózków widłowych — odboje, okładziny ścienne i cokoły ograniczające koszty ciągłych napraw.",
@@ -205,6 +215,7 @@ export const SERVICES = [
   },
   {
     slug: "technika-diamentowa",
+    metaTitle: "Cięcie i wiercenie diamentowe betonu | FLOWTEX Polska",
     icon: Ruler,
     title: "Technika diamentowa",
     shortDesc: "Rozwiązujemy potrzebę precyzyjnych dylatacji, przewiertów instalacyjnych i punktowych napraw betonu — bez wstrzymywania pracy hali.",
@@ -233,7 +244,7 @@ export const SERVICES = [
       "Prace realizowane z ograniczeniem pyłu (metoda mokra) — bezpieczne w czynnych halach",
     ],
     closing:
-      "Technikę diamentową łączymy najczęściej z naprawą punktową posadzek żywicznych i betonowych.",
+      "Technikę diamentową łączymy najczęściej z naprawą punktową posadzek żywicznych i betonowych — zobacz też [serwis posadzek i kanalizacji](/serwis-posadzek-i-kanalizacji).",
     faq: [
       { q: "Czy cięcie i wiercenie diamentowe można prowadzić w czynnej hali?", a: "Tak. Prace prowadzimy metodą mokrą, która ogranicza pylenie, a samo cięcie daje minimalne drgania, dzięki czemu można je bezpiecznie wykonywać bez wstrzymywania pracy całego zakładu." },
       { q: "Co obejmuje technika diamentowa?", a: "Cięcie dylatacji konstrukcyjnych i pozornych w świeżym oraz istniejącym betonie, wiercenie otworów instalacyjnych o różnych średnicach oraz punktowe wycinanie i wymianę uszkodzonych fragmentów posadzki." },
@@ -242,6 +253,7 @@ export const SERVICES = [
   },
   {
     slug: "betonowe-posadzki-przemyslowe",
+    metaTitle: "Betonowe posadzki przemysłowe utwardzane | FLOWTEX Polska",
     icon: Layers,
     title: "Betonowe posadzki przemysłowe",
     shortDesc: "Rozwiązujemy problem niewystarczającej nośności podłoża pod regały wysokiego składowania i intensywny ruch wózków widłowych — betonowe posadzki utwardzane powierzchniowo i zbrojone pod realne obciążenia.",
@@ -260,7 +272,7 @@ export const SERVICES = [
       },
       {
         heading: "Dylatacje i wykończenie",
-        body: "Dylatacje konstrukcyjne i pozorne wykonujemy zgodnie z projektem technologicznym obiektu, co ogranicza ryzyko niekontrolowanego pękania płyty. Taka posadzka może funkcjonować samodzielnie albo posłużyć jako podłoże pod docelową warstwę żywiczną, jeśli w przyszłości zajdzie taka potrzeba.",
+        body: "Dylatacje konstrukcyjne i pozorne wykonujemy zgodnie z projektem technologicznym obiektu, co ogranicza ryzyko niekontrolowanego pękania płyty. Taka posadzka może funkcjonować samodzielnie albo posłużyć jako podłoże pod docelową [posadzkę żywiczną](/posadzki-zywiczne), jeśli w przyszłości zajdzie taka potrzeba.",
       },
     ],
     highlights: [
@@ -279,6 +291,7 @@ export const SERVICES = [
   },
   {
     slug: "serwis-posadzek-i-kanalizacji",
+    metaTitle: "Serwis posadzek i kamerowanie kanalizacji | FLOWTEX Polska",
     icon: Waves,
     title: "Serwis posadzek i kanalizacji",
     shortDesc: "Rozwiązujemy odspojenia żywicy, spękany beton i niedrożną kanalizację zakładową — zanim staną się powodem nieplanowanego przestoju lub uwagi podczas audytu.",
@@ -316,6 +329,7 @@ export const SERVICES = [
   },
   {
     slug: "fitout",
+    metaTitle: "Fitout obiektów przemysłowych pod klucz | FLOWTEX Polska",
     icon: Building2,
     title: "Fitout obiektów przemysłowych",
     shortDesc: "Rozwiązujemy problem koordynacji kilku niezależnych ekip przy remoncie — jeden wykonawca odpowiedzialny za cały zakres prac wykończeniowych, od ścianek po instalacje.",

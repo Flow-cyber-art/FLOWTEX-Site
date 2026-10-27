@@ -7,6 +7,7 @@ import { SERVICES, getServiceBySlug } from "../data/services.js";
 import { REALIZACJE } from "../data/realizacje.js";
 import { PORADNIKI } from "../data/poradniki.js";
 import NotFound from "./NotFound.jsx";
+import { renderInline, stripInline } from "../utils/inline.jsx";
 
 // Automatyczne wczytanie zdjęć realizacji z src/assets/realizacje/.
 // Nazwa pliku (bez rozszerzenia) = slug usługi, np. posadzki-zywiczne.webp
@@ -42,6 +43,7 @@ export default function ServicePage() {
   const otherServices = SERVICES.filter((s) => s.slug !== service.slug);
   const remainder = otherServices.length % 3;
   const ctaSpan = remainder === 0 ? 3 : 3 - remainder;
+  const pageTitle = service.metaTitle || `${service.title} | FLOWTEX Polska`;
   const canonicalUrl = `https://www.flowtex.pl/${service.slug}`;
   // Zdjęcia z import.meta.glob mają ścieżkę względną — og:image musi być pełnym URL-em.
   const ogImage = realizationImage
@@ -51,14 +53,14 @@ export default function ServicePage() {
   return (
     <>
       <Helmet>
-        <title>{service.title} | FLOWTEX Polska</title>
+        <title>{pageTitle}</title>
         <meta name="description" content={service.metaDescription} />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content={`${service.title} | FLOWTEX Polska`} />
+        <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={service.metaDescription} />
         <meta property="og:url" content={canonicalUrl} />
         {ogImage && <meta property="og:image" content={ogImage} />}
-        <meta name="twitter:title" content={`${service.title} | FLOWTEX Polska`} />
+        <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={service.metaDescription} />
         {ogImage && <meta name="twitter:image" content={ogImage} />}
         <script type="application/ld+json">
@@ -107,7 +109,7 @@ export default function ServicePage() {
               mainEntity: service.faq.map((item) => ({
                 "@type": "Question",
                 name: item.q,
-                acceptedAnswer: { "@type": "Answer", text: item.a },
+                acceptedAnswer: { "@type": "Answer", text: stripInline(item.a) },
               })),
             })}
           </script>
@@ -140,7 +142,7 @@ export default function ServicePage() {
             {service.title}
           </h1>
           <p className="mt-4 max-w-2xl text-base md:text-lg" style={{ color: COLORS.mutedOnDark }}>
-            {service.intro}
+            {renderInline(service.intro)}
           </p>
           <Link
             to="/#kontakt"
@@ -161,7 +163,7 @@ export default function ServicePage() {
           <Link to="/realizacje" className="relative block rounded-sm overflow-hidden group" style={{ border: `1px solid ${COLORS.borderOnLight}` }}>
             <img
               src={realizationImage}
-              alt={`Realizacja FLOWTEX Polska — ${service.title}`}
+              alt={service.imageAlt || `Realizacja FLOWTEX Polska — ${service.title}`}
               className="w-full object-cover transition group-hover:opacity-90"
               style={{ height: "clamp(240px, 40vw, 500px)" }}
               loading="eager"
@@ -194,7 +196,7 @@ export default function ServicePage() {
             </div>
             <div className="md:col-span-8">
               <p className="text-base md:text-lg" style={{ color: COLORS.textOnLight }}>
-                {sec.body}
+                {renderInline(sec.body)}
               </p>
             </div>
           </div>
@@ -224,7 +226,7 @@ export default function ServicePage() {
               ))}
             </ul>
             <p className="mt-6 text-base" style={{ color: COLORS.textOnLight }}>
-              {service.closing}
+              {renderInline(service.closing)}
             </p>
           </div>
         </div>
@@ -256,7 +258,7 @@ export default function ServicePage() {
                     </span>
                   </summary>
                   <p className="mt-3 text-sm md:text-base" style={{ color: COLORS.textOnLight }}>
-                    {item.a}
+                    {renderInline(item.a)}
                   </p>
                 </details>
               ))}

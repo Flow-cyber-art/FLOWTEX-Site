@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet-async";
 import { ArrowRight, ArrowLeft, CalendarDays } from "lucide-react";
 import { REALIZACJE, getRealizacjaBySlug } from "../data/realizacje.js";
 import { getServiceBySlug } from "../data/services.js";
+import { PORADNIKI } from "../data/poradniki.js";
 import NotFound from "./NotFound.jsx";
 
 // Automatyczne wczytanie zdjęć wpisów z src/assets/case-studies/.
@@ -32,6 +33,20 @@ function toAbsoluteUrl(src) {
   if (!src) return undefined;
   return src.startsWith("http") ? src : `${SITE_ORIGIN}${src}`;
 }
+// Opis alternatywny zdjęcia: tytuł + lokalizacja (jeśli znana) — bardziej
+// opisowy niż sam tytuł i różny dla każdej realizacji.
+function imageAlt(item) {
+  return item.location ? `${item.title} — ${item.location}` : item.title;
+}
+
+// Meta description do ok. 155 znaków (tyle zwykle pokazuje Google), ucięty
+// na granicy słowa — pierwszy akapit wpisu bywa dużo dłuższy.
+function shortDescription(text, max = 155) {
+  if (!text || text.length <= max) return text;
+  const cut = text.slice(0, max);
+  return `${cut.slice(0, cut.lastIndexOf(" "))}…`;
+}
+
 const listMetaDescription =
   "Realizacje FLOWTEX Polska — przegląd zrealizowanych inwestycji: posadzki przemysłowe, żywiczne i betonowe dla hal produkcyjnych i magazynowych. Sekcję uzupełniamy o kolejne wdrożenia.";
 
@@ -141,7 +156,7 @@ function RealizacjeList() {
                     <div className="relative rounded-sm overflow-hidden mb-8" style={{ border: `1px solid ${COLORS.borderOnLight}` }}>
                       <img
                         src={image}
-                        alt={item.title}
+                        alt={imageAlt(item)}
                         className="w-full object-cover transition group-hover:opacity-90"
                         style={{ height: "clamp(220px, 38vw, 460px)" }}
                         loading={i === 0 ? "eager" : "lazy"}
@@ -229,7 +244,8 @@ function RealizacjaDetail({ item }) {
   const canonicalUrl = `${LIST_URL}/${item.slug}`;
   const image = toAbsoluteUrl(CASE_STUDY_IMAGES[item.slug]);
   const relatedService = item.relatedServiceSlug ? getServiceBySlug(item.relatedServiceSlug) : null;
-  const metaDescription = item.paragraphs?.[0]?.slice(0, 300);
+  const metaDescription = shortDescription(item.paragraphs?.[0]);
+  const relatedPoradniki = PORADNIKI.filter((p) => p.relatedRealizacjeSlugs?.includes(item.slug));
   const pageTitle = `${item.title} | Realizacje FLOWTEX Polska`;
 
   // Ustrukturyzowane fakty (powierzchnia/branża/lokalizacja) jako
@@ -315,7 +331,7 @@ function RealizacjaDetail({ item }) {
           <div className="relative rounded-sm overflow-hidden mb-8" style={{ border: `1px solid ${COLORS.borderOnLight}` }}>
             <img
               src={image}
-              alt={item.title}
+              alt={imageAlt(item)}
               className="w-full object-cover"
               style={{ height: "clamp(220px, 38vw, 460px)" }}
               loading="eager"
@@ -383,6 +399,21 @@ function RealizacjaDetail({ item }) {
           <p className="mt-6 text-base md:text-lg italic" style={{ color: COLORS.mutedOnLight }}>
             {item.closing}
           </p>
+        )}
+
+        {relatedPoradniki.length > 0 && (
+          <div className="mt-8">
+            {relatedPoradniki.map((p) => (
+              <Link
+                key={p.slug}
+                to={`/poradniki/${p.slug}`}
+                className="inline-flex items-center gap-2 ft-mono text-xs uppercase tracking-wide hover:opacity-80 mr-6"
+                style={{ color: COLORS.accent, fontWeight: 600 }}
+              >
+                Poradnik: {p.title} <ArrowRight size={14} />
+              </Link>
+            ))}
+          </div>
         )}
 
         {relatedService && (

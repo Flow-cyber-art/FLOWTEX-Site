@@ -19,6 +19,159 @@
 */
 export const PORADNIKI = [
   {
+    slug: "jaka-posadzka-do-zakladu-spozywczego",
+    title: "Jaka posadzka do zakładu spożywczego? Jak dobrać system do produkcji żywności",
+    metaTitle: "Jaka posadzka do zakładu spożywczego? Poradnik doboru | FLOWTEX Polska",
+    metaDescription:
+      "Jak wybrać posadzkę do zakładu spożywczego? Epoksyd czy poliuretan, spadki i odwodnienie, cokoły i ochrona ścian — na co zwrócić uwagę przed decyzją.",
+    category: "Przemysł spożywczy",
+    imageAlt: "Posadzka żywiczna w zakładzie przetwórstwa spożywczego — realizacja FLOWTEX Polska",
+    date: "Październik 2026",
+    intro: [
+      "Zakład spożywczy to dla posadzki jedno z najtrudniejszych środowisk: woda i regularne mycie, tłuszcze i kwasy, wysoka temperatura mycia parowego, ruch wózków widłowych oraz wymogi HACCP i GMP, których stara nawierzchnia często nie spełnia. Pyląca, pękająca lub porowata posadzka betonowa to najczęstszy powód, dla którego zakłady zaczynają szukać nowej.",
+      "W tym poradniku wyjaśniamy, czego wymaga posadzka w produkcji żywności, jak wybrać między systemem epoksydowym a poliuretanowym i o czym łatwo zapomnieć: spadkach, połączeniu ściany z podłogą oraz ochronie ścian przed wózkami.",
+    ],
+    sections: [
+      {
+        heading: "Czego wymaga posadzka w zakładzie spożywczym",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              "Odporność na wodę i mycie — intensywny, regularny kontakt z wodą oraz środkami myjącymi.",
+              "Odporność chemiczna — tłuszcze, kwasy i inne substancje występujące w procesie produkcji.",
+              "Odporność na temperaturę — w tym wysoką temperaturę mycia parowego.",
+              "Odporność mechaniczna — ścieranie i obciążenia od wózków widłowych oraz transportu wewnętrznego.",
+              "Higiena — bezspoinowa, gładka powierzchnia, która ogranicza gromadzenie się brudu i ułatwia utrzymanie czystości.",
+              "Zgodność z wymogami HACCP i GMP, właściwymi dla przemysłu spożywczego i farmaceutycznego.",
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "Żaden z tych punktów nie jest ważniejszy z góry. To warunki konkretnego zakładu — a nawet konkretnej strefy — decydują, które z nich są kluczowe.",
+          },
+        ],
+      },
+      {
+        heading: "Epoksyd czy poliuretan",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Najczęściej wybiera się między [posadzką żywiczną](/posadzki-zywiczne) epoksydową a poliuretanową. Różnią się właściwościami, więc sprawdzają się w innych miejscach:",
+          },
+          {
+            type: "table",
+            head: ["", "System epoksydowy", "System poliuretanowy"],
+            rows: [
+              ["Charakter powłoki", "Twarda, szczelna powłoka, łatwa w utrzymaniu czystości", "Bardziej elastyczna powłoka"],
+              ["Mocna strona", "Odporność na obciążenia mechaniczne i chemikalia", "Lepsze znoszenie wahań temperatury"],
+              ["Typowe zastosowanie", "Magazyny, hale produkcyjne, laboratoria", "Chłodnie, magazyny spożywcze, pomieszczenia o zmiennych warunkach cieplnych"],
+              ["O wyborze decyduje", "Obciążenia, chemia procesowa i wymagania higieniczne konkretnej strefy", "Obciążenia, chemia procesowa i wymagania higieniczne konkretnej strefy"],
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "Dobór wstępny ułatwia nasze narzędzie [dobór systemu posadzkowego](/dobor-posadzki), które na podstawie obciążeń, chemii procesowej, wilgoci, temperatury i wymagań higienicznych pokazuje kierunki technologiczne do dalszej weryfikacji. Nie zastępuje ono projektu ani oceny podłoża.",
+          },
+        ],
+      },
+      {
+        heading: "Spadki i odwodnienie — o czym łatwo zapomnieć",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "W zakładach przemysłu spożywczego prawidłowa geometria posadzki i skuteczne odwodnienie mają kluczowe znaczenie dla efektywnego mycia oraz utrzymania powierzchni w odpowiednim stanie higienicznym. Woda, która stoi na posadzce, utrudnia utrzymanie czystości — dlatego spadki powinny być częścią projektu, a nie poprawką po fakcie.",
+          },
+          {
+            type: "paragraph",
+            text: "Z takim wyzwaniem mierzyliśmy się przy realizacji 840 m² posadzki w zakładzie przetwórstwa rybnego na północy Hiszpanii, gdzie kluczowe były intensywny kontakt z wodą, regularne mycie i wymagania higieniczne. [Zobacz realizację](/realizacje/posadzka-zywiczna-przemysl-spozywczy-840-m2-hiszpania).",
+          },
+        ],
+      },
+      {
+        heading: "Różne strefy — różne warunki",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "W jednym zakładzie warunki potrafią się mocno różnić: inaczej wygląda strefa mokra z częstym myciem, inaczej magazyn, a jeszcze inaczej chłodnia. Dobór rozwiązań powinien uwzględniać nie tylko odporność mechaniczną, lecz także sposób czyszczenia, stosowane środki myjące i warunki panujące w poszczególnych strefach. Jeden system dla całego obiektu bywa więc kompromisem, który nie sprawdza się nigdzie.",
+          },
+        ],
+      },
+      {
+        heading: "Cokoły i ochrona ścian",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Połączenie ściany z podłogą to jedno z miejsc, w których najłatwiej o zaleganie zanieczyszczeń. Dlatego w zakładach spożywczych stosuje się cokoły zapewniające bezszwowe, higieniczne połączenie — u nas są to m.in. cokoły Polysto® z gładką powłoką Sanicoat, bezpieczną dla żywności, montowane na systemowym kleju Hygiseal®.",
+          },
+          {
+            type: "paragraph",
+            text: "Drugi problem to ściany i narożniki narażone na uderzenia wózków. Uszkodzona, wgnieciona lub osypująca się powierzchnia to nie tylko koszt naprawy, ale też miejsce, w którym trudniej utrzymać higienę. Rozwiązaniem są [systemy odbojowe i ochrona ścian](/systemy-odbojowe). Przykładem jest nasza realizacja w zakładzie produkcji przekąsek i chipsów we Wrocławiu: odboje, cokoły higieniczne i okładziny ścienne Polysto w hali o powierzchni 3400 m². [Zobacz realizację](/realizacje/systemy-odbojowe-zaklad-przekasek-wroclaw-3400-m2).",
+          },
+        ],
+      },
+      {
+        heading: "Najczęstsze błędy przy wyborze",
+        blocks: [
+          {
+            type: "list",
+            ordered: true,
+            items: [
+              "Wybór systemu wyłącznie po cenie lub wyglądzie, bez analizy obciążeń, chemii procesowej i temperatur.",
+              "Pominięcie spadków i odwodnienia na etapie projektu.",
+              "Zaniedbanie połączenia ściany z posadzką — cokoły i faseta są częścią systemu higienicznego.",
+              "Jeden system dla wszystkich stref zakładu, mimo różnych warunków w każdej z nich.",
+              "Brak ochrony ścian i narożników przed wózkami, co po czasie niszczy także wykończenie.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Pytania do wykonawcy przed decyzją",
+        blocks: [
+          {
+            type: "list",
+            ordered: true,
+            items: [
+              "Jakie substancje (tłuszcze, kwasy, środki myjące) i jakie temperatury występują w poszczególnych strefach?",
+              "Jak będzie myta posadzka — wodą, parą, jakimi środkami i jak często?",
+              "Jakie obciążenia i jaki ruch wózków przewidujemy?",
+              "Jakie są spadki i jak rozwiązano odwodnienie?",
+              "Czy prace można prowadzić etapami, bez zatrzymywania całego zakładu?",
+            ],
+          },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Czy lepszy jest epoksyd czy poliuretan w zakładzie spożywczym?",
+        a: "To zależy od strefy. Systemy epoksydowe sprawdzają się tam, gdzie liczą się obciążenia mechaniczne i chemikalia, a poliuretanowe — gdzie występują wahania temperatury, np. w chłodniach i magazynach spożywczych. Wybór zależy od obciążeń, chemii procesowej i wymagań higienicznych.",
+      },
+      {
+        q: "Czy posadzkę żywiczną można wykonać bez zatrzymywania produkcji?",
+        a: "W wielu przypadkach tak — prace można prowadzić etapami, w ruchu ciągłym zakładu. Krótki czas instalacji ogranicza przestoje, a kolejność prac planujemy po wizji lokalnej.",
+      },
+      {
+        q: "Czy uszkodzoną posadzkę żywiczną trzeba wymieniać w całości?",
+        a: "Nie zawsze. Uszkodzenia posadzki żywicznej można naprawiać punktowo, bez wymiany całej nawierzchni. Zobacz też [serwis posadzek i kanalizacji](/serwis-posadzek-i-kanalizacji).",
+      },
+      {
+        q: "Jak zabezpieczyć ściany w hali przed uszkodzeniami od wózków?",
+        a: "Stosuje się odboje, okładziny ścienne i elementy narożnikowe, dobrane do rodzaju i natężenia ruchu. W zakładach spożywczych ważne są też cokoły higieniczne i szczelne połączenia elementów.",
+      },
+    ],
+    cta: {
+      heading: "Planujesz posadzkę w zakładzie spożywczym?",
+      text: "Opisz nam strefy, procesy i sposób mycia — przeanalizujemy warunki i zaproponujemy rozwiązanie. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat.",
+    },
+    relatedServiceSlugs: ["posadzki-zywiczne", "systemy-odbojowe"],
+    relatedRealizacjeSlugs: [
+      "posadzka-zywiczna-przemysl-spozywczy-840-m2-hiszpania",
+      "systemy-odbojowe-zaklad-przekasek-wroclaw-3400-m2",
+    ],
+  },
+  {
     slug: "posadzka-esd-a-antywybuchowa",
     title: "Posadzka ESD a posadzka antywybuchowa — czym się różnią i jak je dobrać",
     metaTitle: "Posadzka ESD a antywybuchowa ATEX — różnice i dobór | FLOWTEX Polska",
