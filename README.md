@@ -30,6 +30,16 @@ Do szybkiego podglądu bez prerenderingu służy `npm run build:client`.
 Vercel, automatycznie po pushu na `main` (konfiguracja w `vercel.json`).
 Zmienne `VITE_EMAILJS_*` ustaw w ustawieniach projektu na Vercelu.
 
+## Harmonogram publikacji poradników
+
+Poradnik z polem `publishAt: "RRRR-MM-DD"` w `src/data/poradniki.js` jest
+ukryty (lista, adres, sitemap, `llms.txt`) do tego dnia. Strona jest statyczna,
+więc w dniu publikacji potrzebny jest nowy deploy — robi go codziennie
+`.github/workflows/publish-scheduled.yml` przez Deploy Hook Vercela.
+Wymaga sekretu repozytorium `VERCEL_DEPLOY_HOOK_URL` (Vercel → projekt →
+Settings → Git → Deploy Hooks, gałąź `main`). Test lokalny:
+`BUILD_DATE=2026-11-12 npm run build`.
+
 ## Gdzie edytować treści
 
 | Co | Plik |
