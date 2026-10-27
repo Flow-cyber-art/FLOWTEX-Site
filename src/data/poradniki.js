@@ -19,6 +19,147 @@
 */
 export const PORADNIKI = [
   {
+    slug: "jak-zabezpieczyc-sciany-hali-przed-wozkami",
+    title: "Jak zabezpieczyć ściany hali przed wózkami widłowymi? Odboje, narożniki i cokoły",
+    metaTitle: "Ochrona ścian hali przed wózkami widłowymi — odboje | FLOWTEX Polska",
+    metaDescription:
+      "Jak chronić ściany, słupy i naroża hali przed wózkami widłowymi? Rodzaje odbojów, dobór do ruchu, cokoły higieniczne i najczęstsze błędy przy wyborze.",
+    category: "Systemy odbojowe",
+    imageAlt: "Żółte odboje ścienne, stalowa osłona narożnika i higieniczny cokół w hali produkcyjnej — realizacja FLOWTEX Polska",
+    date: "Październik 2026",
+    intro: [
+      "Wgniecione płyty warstwowe, pęknięte narożniki słupów, odpryskujący tynk w strefach manewrowych — to skutki codziennego kontaktu ścian z wózkami widłowymi i transportem wewnętrznym. Każde takie uszkodzenie to powtarzalny koszt naprawy, a w zakładzie spożywczym także problem z utrzymaniem higieny.",
+      "Rozwiązaniem jest zabezpieczenie, które przejmuje uderzenia zamiast konstrukcji hali. Poniżej wyjaśniamy, jakie są rodzaje zabezpieczeń, jak dobrać je do ruchu w hali i na co zwrócić uwagę przy wyborze.",
+    ],
+    sections: [
+      {
+        heading: "Które miejsca w hali są najbardziej narażone",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              "ściany wzdłuż tras transportu wewnętrznego,",
+              "słupy i naroża w strefach manewrowych,",
+              "elementy wystające ponad standardową wysokość odboju,",
+              "dolne partie ścian i połączenie ściany z podłogą, zwłaszcza w strefach mycia.",
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "Rozmieszczenie zabezpieczeń najlepiej projektować na podstawie realnych tras transportu, a nie wyłącznie rzutu hali.",
+          },
+        ],
+      },
+      {
+        heading: "Rodzaje zabezpieczeń ścian",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "W ramach [systemów odbojowych i ochrony ścian](/systemy-odbojowe) stosuje się kilka rodzajów rozwiązań, które pełnią różne funkcje:",
+          },
+          {
+            type: "table",
+            head: ["Zabezpieczenie", "Co chroni", "Gdzie się sprawdza"],
+            rows: [
+              ["Odboje ścienne", "Ściany przed uderzeniami wózków i transportowanych ładunków", "Wzdłuż tras transportu wewnętrznego"],
+              ["Elementy narożnikowe", "Słupy i naroża", "Strefy manewrowe"],
+              ["Panele ścienne poliestrowe", "Powierzchnie ścian; pozwalają odnowić uszkodzone miejsca bez ich wymiany", "Ściany narażone na uderzenia"],
+              ["Cokoły", "Połączenie ściany z podłogą — bezszwowe, higieniczne", "Strefy o wymaganiach higienicznych, m.in. przemysł spożywczy"],
+              ["Osłony ścienne", "Elementy wystające ponad standardową wysokość odboju", "Miejsca o podwyższonym ryzyku kolizji"],
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Jak dobrać zabezpieczenie do ruchu w hali",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Rodzaj i grubość odboju dobiera się indywidualnie, na podstawie wywiadu dotyczącego rodzaju i natężenia ruchu wózków oraz urządzeń poruszających się po hali. Inaczej wygląda strefa o rzadkim ruchu, a inaczej korytarz, którym wózki jeżdżą przez cały dzień. Dla elementów wystających ponad standardową wysokość odboju proponuje się dodatkowe osłony ścienne, ograniczające ryzyko uszkodzeń w miejscach o podwyższonym ryzyku kolizji.",
+          },
+        ],
+      },
+      {
+        heading: "Higiena w zakładach spożywczych",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "W przemyśle spożywczym uszkodzona, wgnieciona lub osypująca się powierzchnia ściany to nie tylko koszt naprawy, ale też miejsce, w którym trudniej utrzymać czystość. Dlatego stosuje się cokoły z gładką powłoką Sanicoat, bezpieczną dla żywności, a połączenia elementów wykonuje się na systemowym kleju Hygiseal®, co zapewnia szczelność i trwałość.",
+          },
+          {
+            type: "paragraph",
+            text: "Przykładem jest nasza realizacja w zakładzie produkcji przekąsek i chipsów we Wrocławiu — odboje, cokoły higieniczne i okładziny ścienne Polysto w hali o powierzchni 3400 m². [Zobacz realizację](/realizacje/systemy-odbojowe-zaklad-przekasek-wroclaw-3400-m2).",
+          },
+        ],
+      },
+      {
+        heading: "Montaż i późniejsza wymiana",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Warto zadbać o to, by zabezpieczenia dało się naprawiać bez ingerencji w ścianę. Montaż prowadzi się tak, by umożliwić ewentualną wymianę pojedynczych elementów bez naruszania konstrukcji ściany, a poliestrowe panele ścienne pozwalają odnowić uszkodzone powierzchnie bez wymiany całego pola.",
+          },
+        ],
+      },
+      {
+        heading: "Najczęstsze błędy przy wyborze",
+        blocks: [
+          {
+            type: "list",
+            ordered: true,
+            items: [
+              "Dobór zabezpieczeń bez wywiadu o rodzaju i natężeniu ruchu wózków.",
+              "Ochrona tylko ścian, z pominięciem słupów i naroży w strefach manewrowych.",
+              "Pominięcie elementów wystających ponad standardową wysokość odboju.",
+              "Brak uwzględnienia wymagań higienicznych — niewłaściwe cokoły i połączenia w zakładzie spożywczym.",
+              "Montaż, który wymaga ingerencji w ścianę przy każdej wymianie uszkodzonego elementu.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Pytania do wykonawcy przed decyzją",
+        blocks: [
+          {
+            type: "list",
+            ordered: true,
+            items: [
+              "Jakie wózki i urządzenia poruszają się po hali i jak intensywny jest ruch?",
+              "Które ściany, słupy i naroża są najbardziej narażone?",
+              "Czy w hali są elementy wystające ponad standardową wysokość odboju?",
+              "Jakie są wymagania higieniczne i jak będą czyszczone powierzchnie?",
+              "Czy pojedyncze elementy będzie można wymienić bez ingerencji w ścianę?",
+            ],
+          },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Czym różni się odbój od okładziny ściennej?",
+        a: "Odboje montuje się wzdłuż tras transportu, by przejmowały uderzenia wózków. Okładziny i panele ścienne tworzą warstwę ochronną powierzchni ściany, a poliestrowe panele pozwalają odnowić uszkodzone miejsca bez ich wymiany.",
+      },
+      {
+        q: "Jak dobrać grubość odboju?",
+        a: "Indywidualnie, na podstawie wywiadu dotyczącego rodzaju i natężenia ruchu wózków oraz urządzeń w hali. Nie ma jednej grubości dla każdej hali.",
+      },
+      {
+        q: "Czy odboje nadają się do zakładów spożywczych?",
+        a: "Tak, o ile uwzględnia się wymagania higieniczne — stosuje się m.in. cokoły z powłoką Sanicoat, bezpieczną dla żywności, oraz połączenia na systemowym kleju Hygiseal®.",
+      },
+      {
+        q: "Czy można wymienić pojedynczy uszkodzony element odbojowy?",
+        a: "Tak. Montaż prowadzi się tak, by umożliwić wymianę pojedynczych elementów bez ingerencji w konstrukcję ściany.",
+      },
+    ],
+    cta: {
+      heading: "Chcesz zabezpieczyć ściany w swojej hali?",
+      text: "Opisz nam rodzaj ruchu, trasy transportu i wymagania higieniczne — dobierzemy odboje, narożniki i cokoły do Twojej hali. FLOWTEX Polska wykonuje posadzki przemysłowe i systemy ochrony ścian od ponad 20 lat.",
+    },
+    relatedServiceSlugs: ["systemy-odbojowe", "posadzki-zywiczne"],
+    relatedRealizacjeSlugs: ["systemy-odbojowe-zaklad-przekasek-wroclaw-3400-m2"],
+  },
+  {
     slug: "jaka-posadzka-do-clean-roomu",
     title: "Jaka posadzka do clean roomu? Pomieszczenia czyste w farmacji i szpitalu",
     metaTitle: "Jaka posadzka do clean roomu? Farmacja i szpital | FLOWTEX Polska",
