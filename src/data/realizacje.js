@@ -31,32 +31,63 @@
 export const REALIZACJE = [
   {
     slug: "systemy-odbojowe-zaklad-przekasek-wroclaw-3400-m2",
-    title: "Systemy odbojowe w hali zakładu produkującego przekąski i chipsy — Wrocław",
+    title: "Systemy odbojowe i zabezpieczenia ścian Polysto w zakładzie produkcji przekąsek i chipsów — Wrocław",
     category: "Systemy odbojowe",
     date: "Październik 2026",
     industry: "Przemysł spożywczy — produkcja przekąsek i chipsów",
     location: "Wrocław, woj. dolnośląskie",
     paragraphs: [
-      "W tym miesiącu zrealizowaliśmy systemy odbojowe w hali dużego zakładu produkującego przekąski i chipsy we Wrocławiu. Hala ma powierzchnię 3400 m².",
-      "W halach produkcyjnych i magazynowych ściany, słupy i naroża w strefach manewrowych są codziennie narażone na kontakt z wózkami widłowymi i transportem wewnętrznym. W zakładzie spożywczym dochodzi do tego wymóg higieny — uszkodzona, wgnieciona lub osypująca się powierzchnia ściany to nie tylko koszt naprawy, ale też miejsce, w którym trudniej utrzymać czystość.",
+      "W październiku 2026 roku FLOWTEX Polska zrealizował prace związane z zabezpieczeniem infrastruktury w dużym zakładzie produkcyjnym we Wrocławiu, specjalizującym się w produkcji przekąsek i chipsów. Hala ma powierzchnię 3400 m².",
+      "W obiektach przemysłu spożywczego ściany i dolne partie infrastruktury są narażone na uszkodzenia podczas transportu wewnętrznego, przemieszczania palet oraz codziennej eksploatacji hali. Jednocześnie powierzchnie w otoczeniu produkcji muszą uwzględniać wymagania dotyczące utrzymania czystości i higieny.",
     ],
     sections: [
       {
-        heading: "Ochrona ścian w zakładzie spożywczym",
+        heading: "Odboje, cokoły i okładziny ścienne Polysto",
         blocks: [
           {
             type: "paragraph",
-            text: "Odboje i zabezpieczenia ścian przejmują uderzenia zamiast konstrukcji hali, ograniczając powtarzalne naprawy i ryzyko uszkodzeń w strefach, w których pracuje transport wewnętrzny. Rozmieszczenie zabezpieczeń projektujemy na podstawie realnych tras ruchu oraz wymagań higienicznych obiektu.",
+            text: "W ramach realizacji zastosowano rozwiązania z zakresu systemów odbojowych i ochrony ścian Polysto, obejmujące odboje, cokoły higieniczne oraz okładziny ścienne. Każdy z tych elementów pełni inną funkcję:",
           },
           {
             type: "list",
             items: [
-              { label: "Branża", text: "przemysł spożywczy — produkcja przekąsek i chipsów." },
-              { label: "Obiekt", text: "hala produkcyjna o powierzchni 3400 m²." },
+              { label: "Odboje przemysłowe", text: "pomagają chronić ściany i inne zabezpieczone elementy przed uderzeniami wózków oraz transportowanych ładunków." },
+              { label: "Cokoły higieniczne", text: "umożliwiają odpowiednie wykończenie połączenia ściany z posadzką, co ma znaczenie dla utrzymania czystości." },
+              { label: "Okładziny ścienne", text: "tworzą warstwę ochronną, ograniczając ryzyko uszkodzenia powierzchni ścian podczas eksploatacji." },
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Higiena i warunki eksploatacji w zakładzie spożywczym",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "W zakładach produkujących żywność dobór takich rozwiązań powinien uwzględniać nie tylko odporność mechaniczną, lecz także sposób czyszczenia, stosowane środki myjące i warunki panujące w poszczególnych strefach.",
+          },
+          {
+            type: "paragraph",
+            text: "Odpowiednie zabezpieczenie infrastruktury to element długofalowego utrzymania zakładu. Ograniczenie uszkodzeń ścian i ich wykończenia może zmniejszyć potrzebę napraw oraz ułatwić utrzymanie obiektu w dobrym stanie technicznym.",
+          },
+        ],
+      },
+      {
+        heading: "Parametry realizacji",
+        blocks: [
+          {
+            type: "list",
+            items: [
               { label: "Lokalizacja", text: "Wrocław, woj. dolnośląskie." },
-              { label: "Zakres prac", text: "systemy odbojowe i ochrona ścian w hali." },
+              { label: "Rodzaj obiektu", text: "zakład produkcji przekąsek i chipsów." },
+              { label: "Powierzchnia hali", text: "3400 m²." },
+              { label: "Zakres", text: "systemy odbojowe, cokoły higieniczne i okładziny ścienne." },
+              { label: "Zastosowane rozwiązania", text: "Polysto." },
               { label: "Termin", text: "październik 2026." },
             ],
+          },
+          {
+            type: "paragraph",
+            text: "FLOWTEX Polska realizuje rozwiązania dla przemysłu, uwzględniając specyfikę obiektu, warunki eksploatacji oraz wymagania związane z ochroną infrastruktury.",
           },
         ],
       },
