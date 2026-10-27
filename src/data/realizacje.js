@@ -30,6 +30,40 @@
 */
 export const REALIZACJE = [
   {
+    slug: "systemy-odbojowe-zaklad-przekasek-wroclaw-3400-m2",
+    title: "Systemy odbojowe w hali zakładu produkującego przekąski i chipsy — Wrocław",
+    category: "Systemy odbojowe",
+    date: "Październik 2026",
+    industry: "Przemysł spożywczy — produkcja przekąsek i chipsów",
+    location: "Wrocław, woj. dolnośląskie",
+    paragraphs: [
+      "W tym miesiącu zrealizowaliśmy systemy odbojowe w hali dużego zakładu produkującego przekąski i chipsy we Wrocławiu. Hala ma powierzchnię 3400 m².",
+      "W halach produkcyjnych i magazynowych ściany, słupy i naroża w strefach manewrowych są codziennie narażone na kontakt z wózkami widłowymi i transportem wewnętrznym. W zakładzie spożywczym dochodzi do tego wymóg higieny — uszkodzona, wgnieciona lub osypująca się powierzchnia ściany to nie tylko koszt naprawy, ale też miejsce, w którym trudniej utrzymać czystość.",
+    ],
+    sections: [
+      {
+        heading: "Ochrona ścian w zakładzie spożywczym",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Odboje i zabezpieczenia ścian przejmują uderzenia zamiast konstrukcji hali, ograniczając powtarzalne naprawy i ryzyko uszkodzeń w strefach, w których pracuje transport wewnętrzny. Rozmieszczenie zabezpieczeń projektujemy na podstawie realnych tras ruchu oraz wymagań higienicznych obiektu.",
+          },
+          {
+            type: "list",
+            items: [
+              { label: "Branża", text: "przemysł spożywczy — produkcja przekąsek i chipsów." },
+              { label: "Obiekt", text: "hala produkcyjna o powierzchni 3400 m²." },
+              { label: "Lokalizacja", text: "Wrocław, woj. dolnośląskie." },
+              { label: "Zakres prac", text: "systemy odbojowe i ochrona ścian w hali." },
+              { label: "Termin", text: "październik 2026." },
+            ],
+          },
+        ],
+      },
+    ],
+    relatedServiceSlug: "systemy-odbojowe",
+  },
+  {
     slug: "posadzka-antywybuchowa-atex-grojec-1420-m2",
     title: "Posadzka antywybuchowa ATEX — realizacja 1420 m² pod Grójcem",
     category: "Posadzki antywybuchowe ATEX",

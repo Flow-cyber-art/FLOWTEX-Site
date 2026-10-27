@@ -49,7 +49,9 @@ function toISODate(dateStr) {
 function RealizacjeList() {
   // Zdjęcie najnowszej realizacji jako reprezentatywny obrazek dla podglądów
   // (og:image/twitter:image) strony zbiorczej /realizacje.
-  const listImage = toAbsoluteUrl(CASE_STUDY_IMAGES[REALIZACJE[0]?.slug]);
+  const listImage = toAbsoluteUrl(
+    CASE_STUDY_IMAGES[REALIZACJE.find((r) => CASE_STUDY_IMAGES[r.slug])?.slug]
+  );
 
   return (
     <>
