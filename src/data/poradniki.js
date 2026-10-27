@@ -19,6 +19,148 @@
 */
 export const PORADNIKI = [
   {
+    slug: "jaka-posadzka-do-clean-roomu",
+    title: "Jaka posadzka do clean roomu? Pomieszczenia czyste w farmacji i szpitalu",
+    metaTitle: "Jaka posadzka do clean roomu? Farmacja i szpital | FLOWTEX Polska",
+    metaDescription:
+      "Jak dobrać posadzkę do clean roomu? Bezspoinowość, faseta, bezpyłowość i odporność na dezynfekcję — wymagania dla farmacji i szpitali oraz najczęstsze błędy.",
+    category: "Clean room",
+    imageAlt: "Bezspoinowa posadzka żywiczna w clean roomie zakładu farmaceutycznego — realizacja FLOWTEX Polska",
+    date: "Październik 2026",
+    intro: [
+      "W pomieszczeniach czystych posadzka nie jest wyłącznie wykończeniem — jest częścią środowiska produkcyjnego lub medycznego. Liczy się to, czy ogranicza powstawanie i gromadzenie zanieczyszczeń oraz czy da się ją skutecznie czyścić i dezynfekować. Dlatego wybór posadzki do clean roomu zaczyna się od wymagań pomieszczenia, a nie od wyglądu czy ceny za metr kwadratowy.",
+      "W tym poradniku wyjaśniamy, jakie cechy musi mieć posadzka w pomieszczeniach czystych, czym różni się realizacja w zakładzie farmaceutycznym od realizacji w szpitalu i jakich błędów unikać.",
+    ],
+    sections: [
+      {
+        heading: "Jakie wymagania stawia pomieszczenie czyste",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Wymagania dotyczące kontroli czystości środowiska określają m.in. normy serii ISO 14644, a w procesach wymagających warunków aseptycznych — wytyczne EU GMP Aneks 1. Klasy czystości określają dopuszczalną liczbę cząstek w powietrzu, a to bezpośrednio przekłada się na wymagania wobec posadzki.",
+          },
+          {
+            type: "paragraph",
+            text: "W praktyce posadzka w pomieszczeniu czystym powinna być:",
+          },
+          {
+            type: "list",
+            items: [
+              "bezpyłowa — nie może generować ani zatrzymywać cząstek,",
+              "bezspoinowa — każda szczelina czy fuga to potencjalne miejsce gromadzenia się zanieczyszczeń i drobnoustrojów, trudne do skutecznej dezynfekcji,",
+              "pozbawiona porów — bez miejsc, w których mogłyby namnażać się bakterie czy grzyby,",
+              "odporna na częstą, intensywną dezynfekcję środkami chemicznymi,",
+              "łatwa w codziennym utrzymaniu czystości.",
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "Takie wymagania spełniają bezspoinowe [posadzki do clean roomów](/posadzki-clean-room) wykonywane jako systemy żywiczne.",
+          },
+        ],
+      },
+      {
+        heading: "Faseta — dlaczego połączenie ściany z podłogą ma znaczenie",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Najtrudniejszym do utrzymania w czystości miejscem jest zwykle połączenie ściany z podłogą. Dlatego system żywiczny wykonuje się z wywinięciem na ściany, czyli fasetą. Eliminuje ona ostre kąty i połączenia ściana–podłoga — miejsca, w których najłatwiej o zaleganie zanieczyszczeń trudnych do usunięcia podczas czyszczenia i dezynfekcji.",
+          },
+        ],
+      },
+      {
+        heading: "Od zniszczonego podłoża do gładkiej powierzchni",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Często zaczynamy od podłoża, które nie spełnia wymagań higienicznych. W naszej realizacji dla zakładu farmaceutycznego na Mazowszu (340 m²) było to mocno zdegradowane, porowate podłoże betonowe. Po jego przygotowaniu wykonaliśmy system żywiczny z dekoracyjnymi płatkami kwarcowymi, dający jednolitą, bezpyłową i wysoko połyskliwą powierzchnię, odporną na częstą dezynfekcję chemiczną. [Zobacz realizację](/realizacje/posadzka-zywiczna-clean-room-farmacja-mazowieckie).",
+          },
+        ],
+      },
+      {
+        heading: "Farmacja a szpital — co jest wspólne, a co inne",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Pomieszczenia szpitalne o podwyższonym reżimie czystości — bloki operacyjne, sale zabiegowe, sterylizatornie, strefy przygotowania leków — muszą spełniać normy porównywalne do tych obowiązujących w przemysłowych clean roomach. Technicznie oba rozwiązania opierają się na tych samych zasadach: bezspoinowości, fasetach, odporności chemicznej i braku porowatości. Różni je kontekst realizacji:",
+          },
+          {
+            type: "table",
+            head: ["", "Zakład farmaceutyczny / hala produkcyjna", "Placówka medyczna"],
+            rows: [
+              ["Inwestor i regulacje", "Normy branżowe danego sektora (np. farmaceutycznego)", "Przepisy sanitarne i wymagania odbiorowe właściwe dla ochrony zdrowia"],
+              ["Harmonogram prac", "Zwykle bardziej ciągły tok robót", "Często większa elastyczność: praca etapowa, ograniczenia czasowe, sąsiedztwo stref sterylnych"],
+              ["Zakres wykończenia", "Wynika z procesu produkcyjnego", "Częściej dodatkowe wymagania związane z instalacjami medycznymi i sprzętem diagnostycznym"],
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "Mamy za sobą realizację posadzki dla jednego z warszawskich szpitali. [Zobacz realizację](/realizacje/posadzka-clean-room-szpital-warszawa).",
+          },
+        ],
+      },
+      {
+        heading: "Najczęstsze błędy przy wyborze",
+        blocks: [
+          {
+            type: "list",
+            ordered: true,
+            items: [
+              "Wybór systemu po wyglądzie lub odporności mechanicznej, bez analizy warunków pracy konkretnego pomieszczenia.",
+              "Pozostawienie spoin i ostrych kątów przy ścianach zamiast bezspoinowego systemu z fasetą.",
+              "Układanie nowej warstwy na niewystarczająco przygotowanym, porowatym podłożu.",
+              "Pominięcie odporności na środki dezynfekcyjne stosowane w obiekcie.",
+              "Brak planu prac etapowych w czynnym obiekcie, zwłaszcza w placówkach medycznych.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Pytania do wykonawcy przed decyzją",
+        blocks: [
+          {
+            type: "list",
+            ordered: true,
+            items: [
+              "Jaka jest klasa czystości pomieszczenia i jakich wymagań (np. ISO 14644, EU GMP Aneks 1) dotyczy?",
+              "W jakim stanie jest podłoże i jak zostanie przygotowane?",
+              "Jak rozwiązano połączenie ściany z podłogą i czy przewidziano fasetę?",
+              "Jakimi środkami dezynfekcyjnymi i jak często będzie czyszczona posadzka?",
+              "Czy prace odbywają się w czynnym obiekcie i czy trzeba je prowadzić etapami?",
+            ],
+          },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Dlaczego posadzka w clean roomie ma być bezspoinowa?",
+        a: "Każda szczelina czy fuga to potencjalne miejsce gromadzenia się zanieczyszczeń i drobnoustrojów, trudne do skutecznej dezynfekcji. Bezspoinowa powierzchnia jest łatwiejsza do utrzymania w czystości.",
+      },
+      {
+        q: "Co to jest faseta w posadzce żywicznej?",
+        a: "To wywinięcie posadzki na ściany, które eliminuje ostre kąty i połączenia ściana–podłoga — miejsca, w których najłatwiej o zaleganie zanieczyszczeń.",
+      },
+      {
+        q: "Czy posadzkę do clean roomu można wykonać w czynnym szpitalu?",
+        a: "Tak, ale zwykle wymaga to prac etapowych i uwzględnienia ograniczeń czasowych oraz sąsiedztwa stref sterylnych. Mamy za sobą taką realizację dla warszawskiego szpitala.",
+      },
+      {
+        q: "Czy można położyć posadzkę na zniszczonym, porowatym betonie?",
+        a: "Podłoże trzeba najpierw przygotować. W naszej realizacji dla zakładu farmaceutycznego podłożem była mocno zdegradowana, porowata wylewka betonowa, na której po przygotowaniu wykonaliśmy bezspoinowy system żywiczny.",
+      },
+    ],
+    cta: {
+      heading: "Planujesz posadzkę do pomieszczenia czystego?",
+      text: "Opisz nam przeznaczenie pomieszczenia, klasę czystości i stan podłoża — przeanalizujemy warunki i zaproponujemy rozwiązanie. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat.",
+    },
+    relatedServiceSlugs: ["posadzki-clean-room", "posadzki-zywiczne"],
+    relatedRealizacjeSlugs: [
+      "posadzka-zywiczna-clean-room-farmacja-mazowieckie",
+      "posadzka-clean-room-szpital-warszawa",
+    ],
+  },
+  {
     slug: "jaka-posadzka-do-zakladu-spozywczego",
     title: "Jaka posadzka do zakładu spożywczego? Jak dobrać system do produkcji żywności",
     metaTitle: "Jaka posadzka do zakładu spożywczego? Poradnik doboru | FLOWTEX Polska",
