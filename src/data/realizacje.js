@@ -120,7 +120,7 @@ export const REALIZACJE = [
         ],
       },
     ],
-    relatedServiceSlug: "posadzki-zywiczne",
+    relatedServiceSlug: "posadzki-antywybuchowe-atex",
   },
   {
     slug: "posadzka-zywiczna-clean-room-farmacja-mazowieckie",
@@ -169,7 +169,7 @@ export const REALIZACJE = [
         ],
       },
     ],
-    relatedServiceSlug: "posadzki-zywiczne",
+    relatedServiceSlug: "posadzki-clean-room",
   },
   {
     slug: "posadzka-zywiczna-przemysl-spozywczy-840-m2-hiszpania",
@@ -348,7 +348,7 @@ export const REALIZACJE = [
         ],
       },
     ],
-    relatedServiceSlug: "posadzki-zywiczne",
+    relatedServiceSlug: "posadzki-esd",
   },
   {
     slug: "posadzka-clean-room-szpital-warszawa",
@@ -419,7 +419,7 @@ export const REALIZACJE = [
         ],
       },
     ],
-    relatedServiceSlug: "posadzki-zywiczne",
+    relatedServiceSlug: "posadzki-clean-room",
   },
   {
     slug: "wtryskarki-engel",
