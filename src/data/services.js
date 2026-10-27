@@ -38,6 +38,12 @@ export const SERVICES = [
     ],
     closing:
       "Każdy projekt zaczynamy od analizy podłoża i obciążeń, a kończymy na warstwie ochronnej dobranej do warunków eksploatacji.",
+    faq: [
+      { q: "Czym różni się posadzka epoksydowa od poliuretanowej?", a: "Posadzki epoksydowe tworzą twardą, szczelną powłokę odporną na obciążenia mechaniczne i chemikalia — sprawdzają się w magazynach, halach produkcyjnych i laboratoriach. Posadzki poliuretanowe są bardziej elastyczne i lepiej znoszą wahania temperatury, dlatego stosuje się je m.in. w chłodniach i magazynach spożywczych. System dobieramy indywidualnie do obciążeń, chemii procesowej i wymagań higienicznych obiektu." },
+      { q: "Czy posadzkę żywiczną można wykonać w działającym zakładzie?", a: "Tak, w wielu przypadkach prace można prowadzić etapami, w ruchu ciągłym zakładu. Krótki czas instalacji ogranicza przestoje, a kolejność prac planujemy po wizji lokalnej, tak aby jak najmniej zakłócać produkcję." },
+      { q: "Czy uszkodzoną posadzkę żywiczną trzeba wymieniać w całości?", a: "Nie zawsze. Ewentualne uszkodzenia posadzki żywicznej można naprawiać punktowo, bez wymiany całej nawierzchni, co obniża koszty eksploatacji w dłuższej perspektywie." },
+      { q: "Od czego zaczyna się realizacja posadzki żywicznej?", a: "Każdy projekt zaczynamy od analizy podłoża i obciążeń, a kończymy na warstwie ochronnej dobranej do warunków eksploatacji. Od stanu podłoża zależy zakres jego przygotowania, a od obciążeń i chemii procesowej — dobór systemu." },
+    ],
   },
   {
     slug: "posadzki-esd",
@@ -72,6 +78,12 @@ export const SERVICES = [
     ],
     closing:
       "Zanim dobierzemy system, pytamy o proces, wymagania strefy i sposób użytkowania — dopiero na tej podstawie określamy zakres prac.",
+    faq: [
+      { q: "Do czego służy posadzka ESD?", a: "Posadzka ESD tworzy kontrolowaną drogę odprowadzania ładunków elektrostatycznych, dzięki czemu ogranicza ryzyko wyładowań, które mogą uszkodzić wrażliwe komponenty elektroniczne. Stosuje się ją w halach produkcji i montażu elektroniki oraz w strefach EPA." },
+      { q: "Czy posadzka ESD to to samo co posadzka do strefy zagrożenia wybuchem?", a: "Nie. Oba rozwiązania łączy kontrolowane odprowadzanie ładunków, ale cel jest inny: w ESD chodzi o ochronę elektroniki, a w strefie Ex o ograniczanie potencjalnych źródeł zapłonu. Wymagania dla strefy Ex określa się na podstawie jej klasyfikacji w konkretnym obiekcie." },
+      { q: "Czy po wykonaniu sprawdzacie parametry posadzki?", a: "Tak. Po zakończeniu prac sprawdzamy parametry elektryczne gotowej posadzki, bo nieprawidłowo wykonany detal, np. połączenie warstwy przewodzącej z uziemieniem, może wpłynąć na działanie całego systemu, nawet jeśli powierzchnia wygląda poprawnie." },
+      { q: "Czy obuwie ma znaczenie dla działania posadzki ESD?", a: "Tak. Podłoga i obuwie ocenione osobno nie gwarantują jeszcze prawidłowego działania całego układu osoba–obuwie–podłoga, dlatego przy realizacjach ESD nie patrzymy wyłącznie na sam materiał posadzkowy." },
+    ],
   },
   {
     slug: "posadzki-antywybuchowe-atex",
@@ -106,6 +118,12 @@ export const SERVICES = [
     ],
     closing:
       "Masz halę ze strefą Ex? Opisz nam proces i klasyfikację strefy — przeanalizujemy warunki pracy i zaproponujemy rozwiązanie.",
+    faq: [
+      { q: "Czy każda posadzka antystatyczna nadaje się do strefy zagrożenia wybuchem?", a: "Nie. Określenie „posadzka antyelektrostatyczna” nie powinno być automatycznie traktowane jako synonim posadzki do strefy Ex. Wymagania trzeba określić na podstawie warunków i klasyfikacji strefy w konkretnym obiekcie." },
+      { q: "Z czego składa się system posadzkowy do strefy Ex?", a: "Znaczenie ma cały układ: mechaniczne przygotowanie podłoża, system dobrany do klasyfikacji strefy, warstwa odprowadzająca ładunki elektrostatyczne, połączenie z instalacją uziemiającą obiektu oraz taśmy miedziane stanowiące element drogi odprowadzania ładunków." },
+      { q: "Jak kontrolujecie jakość wykonanej posadzki?", a: "Po zakończeniu prac kontrolujemy parametry elektryczne gotowej posadzki. Pomiary i dokumentacja pozwalają zweryfikować, czy system osiągnął wymagane parametry na całej powierzchni." },
+      { q: "Co przygotować, aby uzyskać wycenę posadzki do strefy Ex?", a: "Warto opisać proces i rodzaj składowanych lub przetwarzanych materiałów, klasyfikację strefy zagrożenia wybuchem, powierzchnię oraz stan istniejącego podłoża. Na tej podstawie przeanalizujemy warunki pracy i zaproponujemy rozwiązanie." },
+    ],
   },
   {
     slug: "posadzki-clean-room",
@@ -139,6 +157,12 @@ export const SERVICES = [
     ],
     closing:
       "Zakres systemu określamy po analizie przeznaczenia pomieszczenia, klasy czystości i sposobu odbioru obiektu.",
+    faq: [
+      { q: "Dlaczego posadzka w clean roomie powinna być bezspoinowa i z fasetą?", a: "Każda szczelina czy fuga to potencjalne miejsce gromadzenia się zanieczyszczeń i drobnoustrojów, trudne do skutecznej dezynfekcji. Faseta, czyli wywinięcie posadzki na ściany, eliminuje ostre kąty i połączenia ściana–podłoga, w których najłatwiej o zaleganie zanieczyszczeń." },
+      { q: "Jakie normy dotyczą pomieszczeń czystych?", a: "Wymagania dotyczące kontroli czystości środowiska określają m.in. normy serii ISO 14644, a w procesach wymagających warunków aseptycznych — wytyczne EU GMP Aneks 1. Przekładają się one na cechy posadzki, m.in. bezpyłowość i brak porów." },
+      { q: "Czy wykonujecie posadzki w czynnych obiektach szpitalnych?", a: "Tak, mamy za sobą realizację dla warszawskiego szpitala. W czynnych obiektach medycznych prace często prowadzi się etapami, z uwzględnieniem ograniczeń czasowych i sąsiedztwa stref sterylnych." },
+      { q: "Co ze zniszczonym, porowatym podłożem betonowym?", a: "Podłoże przygotowujemy przed wykonaniem systemu żywicznego. W naszej realizacji dla zakładu farmaceutycznego podłożem była mocno zdegradowana, porowata wylewka betonowa, na której wykonaliśmy bezspoinowy system żywiczny." },
+    ],
   },
   {
     slug: "systemy-odbojowe",
@@ -172,6 +196,12 @@ export const SERVICES = [
     ],
     closing:
       "Rozmieszczenie i dobór zabezpieczeń projektujemy na podstawie realnych tras transportu wewnętrznego oraz wymagań higienicznych obiektu.",
+    faq: [
+      { q: "Co chronią systemy odbojowe w hali?", a: "Odboje, okładziny ścienne i elementy narożnikowe przejmują uderzenia wózków widłowych i transportu wewnętrznego zamiast ścian, słupów i naroży konstrukcji hali, ograniczając powtarzalne koszty napraw." },
+      { q: "Jak dobieracie rodzaj i grubość odboju?", a: "Indywidualnie, na podstawie wywiadu dotyczącego rodzaju i natężenia ruchu wózków oraz urządzeń poruszających się po hali. Rozmieszczenie projektujemy na podstawie realnych tras transportu wewnętrznego." },
+      { q: "Czy systemy odbojowe nadają się do zakładów spożywczych?", a: "Tak. Stosujemy cokoły Polysto z gładką powłoką Sanicoat, bezpieczną dla żywności, oraz montaż na systemowym kleju Hygiseal®. Zrealizowaliśmy m.in. odboje, cokoły higieniczne i okładziny ścienne w zakładzie produkcji przekąsek i chipsów we Wrocławiu." },
+      { q: "Czy można wymienić pojedynczy uszkodzony element?", a: "Tak. Montaż prowadzimy tak, by umożliwić wymianę pojedynczych elementów bez ingerencji w konstrukcję ściany." },
+    ],
   },
   {
     slug: "technika-diamentowa",
@@ -204,6 +234,11 @@ export const SERVICES = [
     ],
     closing:
       "Technikę diamentową łączymy najczęściej z naprawą punktową posadzek żywicznych i betonowych.",
+    faq: [
+      { q: "Czy cięcie i wiercenie diamentowe można prowadzić w czynnej hali?", a: "Tak. Prace prowadzimy metodą mokrą, która ogranicza pylenie, a samo cięcie daje minimalne drgania, dzięki czemu można je bezpiecznie wykonywać bez wstrzymywania pracy całego zakładu." },
+      { q: "Co obejmuje technika diamentowa?", a: "Cięcie dylatacji konstrukcyjnych i pozornych w świeżym oraz istniejącym betonie, wiercenie otworów instalacyjnych o różnych średnicach oraz punktowe wycinanie i wymianę uszkodzonych fragmentów posadzki." },
+      { q: "Po co wykonuje się dylatacje w posadzce?", a: "Dylatacje ograniczają ryzyko niekontrolowanego pękania płyty betonowej. Brak dylatacji tam, gdzie są potrzebne, często kończy się spękaniami w przypadkowych miejscach." },
+    ],
   },
   {
     slug: "betonowe-posadzki-przemyslowe",
@@ -236,6 +271,11 @@ export const SERVICES = [
     ],
     closing:
       "To rozwiązanie sprawdza się jako samodzielna nawierzchnia magazynowa lub jako podłoże pod docelową posadzkę żywiczną.",
+    faq: [
+      { q: "Po co utwardza się powierzchnię posadzki betonowej?", a: "Utwardzanie posypką mineralną lub kwarcową zwiększa odporność na ścieranie, co jest istotne w strefach ruchu wózków widłowych." },
+      { q: "Jakie zbrojenie stosuje się w posadzkach betonowych?", a: "Zbrojenie dobieramy do obciążeń: rozproszone włóknami stalowymi lub polipropylenowymi albo tradycyjne, prętowe, przy większych rozpiętościach i obciążeniach punktowych." },
+      { q: "Czy na posadzce betonowej można później wykonać warstwę żywiczną?", a: "Tak. Posadzka betonowa może funkcjonować samodzielnie albo posłużyć jako podłoże pod docelową warstwę żywiczną, jeśli w przyszłości zajdzie taka potrzeba." },
+    ],
   },
   {
     slug: "serwis-posadzek-i-kanalizacji",
@@ -268,6 +308,11 @@ export const SERVICES = [
     ],
     closing:
       "Serwis planujemy tak, by przygotować strefy produkcyjne do audytów i ograniczyć ryzyko nieplanowanych przestojów.",
+    faq: [
+      { q: "Czy uszkodzoną posadzkę trzeba wymieniać w całości?", a: "Nie zawsze. Zamiast wymiany całej powierzchni punktowo wzmacniamy i uzupełniamy uszkodzone miejsca, co pozwala ograniczyć koszty i czas przestoju." },
+      { q: "Jak diagnozujecie problemy z kanalizacją zakładową?", a: "Wykonujemy kamerowanie ciągów kanalizacyjnych, dzięki czemu można precyzyjnie zdiagnozować przyczynę niedrożności lub nieszczelności przed podjęciem prac naprawczych." },
+      { q: "Jak udrażniacie rury?", a: "Metodą mechaniczną lub chemiczną, dobraną do charakteru osadu, tak aby efekt był trwały, a nie tylko doraźny." },
+    ],
   },
   {
     slug: "fitout",
@@ -300,6 +345,11 @@ export const SERVICES = [
     ],
     closing:
       "Realizację planujemy tak, aby ograniczyć przestoje i dostarczyć gotową przestrzeń zgodnie z ustalonym harmonogramem.",
+    faq: [
+      { q: "Co obejmuje fitout obiektu przemysłowego lub komercyjnego?", a: "Zakres może obejmować montaż ścianek działowych i przeszkleń, wykonanie posadzek, dobór i montaż wyposażenia oraz elementów dekoracyjnych, a także prace elektryczne i hydrauliczne. Zakres dopasowujemy do funkcji docelowej pomieszczeń." },
+      { q: "Kto koordynuje prace różnych branż?", a: "Jeden wykonawca — FLOWTEX Polska. Koordynujemy wszystkie etapy, od demontażu i przygotowania powierzchni, przez roboty budowlane i instalacyjne, po wykończenie i sprzątanie obiektu." },
+      { q: "Od czego zaczyna się projekt fitoutowy?", a: "Od wizji lokalnej, podczas której rozpoznajemy specyfikę obiektu, wymagania techniczne i harmonogram funkcjonowania firmy. Dzięki temu planujemy kolejność prac i minimalizujemy zakłócenia w bieżącej działalności klienta." },
+    ],
   },
 ];
 

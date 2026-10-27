@@ -41,6 +41,10 @@ export default function ServicePage() {
   const remainder = otherServices.length % 3;
   const ctaSpan = remainder === 0 ? 3 : 3 - remainder;
   const canonicalUrl = `https://www.flowtex.pl/${service.slug}`;
+  // Zdjęcia z import.meta.glob mają ścieżkę względną — og:image musi być pełnym URL-em.
+  const ogImage = realizationImage
+    ? realizationImage.startsWith("http") ? realizationImage : `https://www.flowtex.pl${realizationImage}`
+    : undefined;
 
   return (
     <>
@@ -51,6 +55,10 @@ export default function ServicePage() {
         <meta property="og:title" content={`${service.title} | FLOWTEX Polska`} />
         <meta property="og:description" content={service.metaDescription} />
         <meta property="og:url" content={canonicalUrl} />
+        {ogImage && <meta property="og:image" content={ogImage} />}
+        <meta name="twitter:title" content={`${service.title} | FLOWTEX Polska`} />
+        <meta name="twitter:description" content={service.metaDescription} />
+        {ogImage && <meta name="twitter:image" content={ogImage} />}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -78,7 +86,7 @@ export default function ServicePage() {
             },
             areaServed: "PL",
             url: canonicalUrl,
-            ...(realizationImage ? { image: realizationImage } : {}),
+            ...(ogImage ? { image: ogImage } : {}),
             hasOfferCatalog: {
               "@type": "OfferCatalog",
               name: `Zakres usługi: ${service.title}`,
@@ -89,6 +97,19 @@ export default function ServicePage() {
             },
           })}
         </script>
+        {service.faq?.length > 0 && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: service.faq.map((item) => ({
+                "@type": "Question",
+                name: item.q,
+                acceptedAnswer: { "@type": "Answer", text: item.a },
+              })),
+            })}
+          </script>
+        )}
       </Helmet>
 
       {/* Breadcrumb */}
@@ -206,6 +227,41 @@ export default function ServicePage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ usługi */}
+      {service.faq?.length > 0 && (
+        <section className="max-w-7xl mx-auto px-5 md:px-8 py-14 md:py-20 border-t" style={{ borderColor: COLORS.borderOnLight }}>
+          <div className="grid md:grid-cols-12 gap-10">
+            <div className="md:col-span-4">
+              <div className="ft-mono text-xs ft-tracking-wide uppercase mb-3" style={{ color: COLORS.accent }}>
+                FAQ
+              </div>
+              <h2 className="ft-display text-2xl md:text-3xl" style={{ fontWeight: 700 }}>
+                Najczęstsze pytania
+              </h2>
+            </div>
+            <div className="md:col-span-8 divide-y" style={{ borderColor: COLORS.borderOnLight }}>
+              {service.faq.map((item) => (
+                <details key={item.q} className="group py-5 first:pt-0">
+                  <summary className="flex items-center justify-between gap-4 cursor-pointer list-none font-medium text-base md:text-lg">
+                    <span>{item.q}</span>
+                    <span
+                      className="ft-mono text-lg transition-transform group-open:rotate-45"
+                      style={{ color: COLORS.accent }}
+                      aria-hidden="true"
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <p className="mt-3 text-sm md:text-base" style={{ color: COLORS.textOnLight }}>
+                    {item.a}
+                  </p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Powiązane realizacje — linkowanie wewnętrzne do case studies */}
       {relatedRealizacje.length > 0 && (
