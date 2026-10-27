@@ -20,6 +20,7 @@ const root = path.resolve(__dirname, "..");
 const { SERVICES } = await import(path.join(root, "src/data/services.js"));
 const { DEFECTS } = await import(path.join(root, "src/data/defects.js"));
 const { REALIZACJE } = await import(path.join(root, "src/data/realizacje.js"));
+const { PORADNIKI } = await import(path.join(root, "src/data/poradniki.js"));
 
 const HOST = "https://www.flowtex.pl";
 const today = new Date().toISOString().slice(0, 10);
@@ -54,6 +55,7 @@ const PRIORITY_OVERRIDES = {
 const staticRoutes = [
   { path: "/", changefreq: "monthly" },
   { path: "/realizacje", changefreq: "weekly" },
+  { path: "/poradniki", changefreq: "weekly" },
   { path: "/katalog-wad", changefreq: "monthly" },
   { path: "/dobor-posadzki", changefreq: "monthly" },
 ];
@@ -76,7 +78,14 @@ const realizacjaRoutes = REALIZACJE.map((r) => ({
   lastmod: toISODate(r.date),
 }));
 
-const routes = [...staticRoutes, ...serviceRoutes, ...defectRoutes, ...realizacjaRoutes];
+const poradnikRoutes = PORADNIKI.map((p) => ({
+  path: `/poradniki/${p.slug}`,
+  changefreq: "monthly",
+  priority: 0.7,
+  lastmod: toISODate(p.date),
+}));
+
+const routes = [...staticRoutes, ...serviceRoutes, ...defectRoutes, ...realizacjaRoutes, ...poradnikRoutes];
 
 const body = routes
   .map((r) => {

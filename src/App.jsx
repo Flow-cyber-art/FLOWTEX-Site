@@ -18,6 +18,7 @@ const CookiePolicy = lazy(() => import("./pages/CookiePolicy.jsx"));
 const Realizacje = lazy(() => import("./pages/Realizacje.jsx"));
 const ServicePage = lazy(() => import("./pages/ServicePage.jsx"));
 const NotFound = lazy(() => import("./pages/NotFound.jsx"));
+const Poradniki = lazy(() => import("./pages/Poradniki.jsx"));
 const DefectCatalog = lazy(() => import("./pages/DefectCatalog.jsx"));
 const FloorSelector = lazy(() => import("./pages/FloorSelector.jsx"));
 
@@ -32,6 +33,8 @@ export default function App() {
           <Route path="/polityka-cookies" element={<CookiePolicy />} />
           <Route path="/realizacje" element={<Realizacje />} />
           <Route path="/realizacje/:slug" element={<Realizacje />} />
+          <Route path="/poradniki" element={<Poradniki />} />
+          <Route path="/poradniki/:slug" element={<Poradniki />} />
           <Route path="/katalog-wad" element={<DefectCatalog />} />
           <Route path="/katalog-wad/:defectId" element={<DefectCatalog />} />
           <Route path="/dobor-posadzki" element={<FloorSelector />} />

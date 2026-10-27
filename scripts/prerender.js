@@ -26,6 +26,7 @@ const ssrDir = path.join(root, "dist-ssr");
 const { SERVICES } = await import(path.join(root, "src/data/services.js"));
 const { DEFECTS } = await import(path.join(root, "src/data/defects.js"));
 const { REALIZACJE } = await import(path.join(root, "src/data/realizacje.js"));
+const { PORADNIKI } = await import(path.join(root, "src/data/poradniki.js"));
 
 const routes = [
   "/",
@@ -33,6 +34,8 @@ const routes = [
   "/polityka-cookies",
   "/realizacje",
   ...REALIZACJE.map((r) => `/realizacje/${r.slug}`),
+  "/poradniki",
+  ...PORADNIKI.map((p) => `/poradniki/${p.slug}`),
   "/katalog-wad",
   ...DEFECTS.map((d) => `/katalog-wad/${d.id}`),
   "/dobor-posadzki",

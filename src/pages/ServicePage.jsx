@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet-async";
 import { ArrowRight, Check, ArrowLeft } from "lucide-react";
 import { SERVICES, getServiceBySlug } from "../data/services.js";
 import { REALIZACJE } from "../data/realizacje.js";
+import { PORADNIKI } from "../data/poradniki.js";
 import NotFound from "./NotFound.jsx";
 
 // Automatyczne wczytanie zdjęć realizacji z src/assets/realizacje/.
@@ -37,6 +38,7 @@ export default function ServicePage() {
   const Icon = service.icon;
   const realizationImage = REALIZATION_IMAGES[service.slug];
   const relatedRealizacje = REALIZACJE.filter((r) => r.relatedServiceSlug === service.slug);
+  const relatedPoradniki = PORADNIKI.filter((p) => p.relatedServiceSlugs?.includes(service.slug));
   const otherServices = SERVICES.filter((s) => s.slug !== service.slug);
   const remainder = otherServices.length % 3;
   const ctaSpan = remainder === 0 ? 3 : 3 - remainder;
@@ -290,6 +292,38 @@ export default function ServicePage() {
                           {r.date}{r.areaSqm ? ` · ${r.areaSqm} m²` : ""}
                         </span>
                       </span>
+                      <ArrowRight size={16} className="shrink-0" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Powiązane poradniki */}
+      {relatedPoradniki.length > 0 && (
+        <section className="max-w-7xl mx-auto px-5 md:px-8 py-14 md:py-20 border-t" style={{ borderColor: COLORS.borderOnLight }}>
+          <div className="grid md:grid-cols-12 gap-10">
+            <div className="md:col-span-4">
+              <div className="ft-mono text-xs ft-tracking-wide uppercase mb-3" style={{ color: COLORS.accent }}>
+                Wiedza
+              </div>
+              <h2 className="ft-display text-2xl md:text-3xl" style={{ fontWeight: 700 }}>
+                Zobacz też poradnik
+              </h2>
+            </div>
+            <div className="md:col-span-8">
+              <ul className="space-y-3">
+                {relatedPoradniki.map((p) => (
+                  <li key={p.slug}>
+                    <Link
+                      to={`/poradniki/${p.slug}`}
+                      className="flex items-center justify-between gap-4 p-4 rounded-sm hover:opacity-80 transition"
+                      style={{ border: `1px solid ${COLORS.borderOnLight}` }}
+                    >
+                      <span className="text-base" style={{ fontWeight: 600 }}>{p.title}</span>
                       <ArrowRight size={16} className="shrink-0" />
                     </Link>
                   </li>
