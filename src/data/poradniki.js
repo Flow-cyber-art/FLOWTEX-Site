@@ -19,6 +19,146 @@
 */
 export const PORADNIKI = [
   {
+    slug: "posadzka-zywiczna-czy-betonowa-do-magazynu",
+    title: "Posadzka żywiczna czy betonowa do magazynu? Co wybrać i kiedy łączyć oba rozwiązania",
+    metaTitle: "Posadzka żywiczna czy betonowa do magazynu? Poradnik | FLOWTEX Polska",
+    metaDescription:
+      "Posadzka żywiczna czy betonowa do magazynu? Sprawdź, czym się różnią, do czego służy każda z nich i kiedy warto położyć żywicę na betonie.",
+    category: "Magazyny i hale",
+    imageAlt: "Układanie betonowej posadzki przemysłowej w dużej hali magazynowej",
+    date: "Październik 2026",
+    intro: [
+      "Płyta betonowa, która nie udźwignie regałów wysokiego składowania, ściera się pod kołami wózków widłowych albo pęka bez zaplanowanych dylatacji — to typowe problemy inwestycji magazynowych na etapie budowy lub rozbudowy. Z drugiej strony pyląca, pękająca posadzka betonowa i wymogi higieniczne to częsty powód, dla którego zakłady sięgają po posadzki żywiczne.",
+      "Pytanie „żywiczna czy betonowa?” sugeruje wybór jednego z dwóch. W praktyce to dwa różne elementy posadzki, które często się uzupełniają. Wyjaśniamy, do czego służy każdy z nich i jak podjąć decyzję.",
+    ],
+    sections: [
+      {
+        heading: "Posadzka betonowa — nośność i podstawa",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "[Betonowe posadzki przemysłowe](/betonowe-posadzki-przemyslowe) odpowiadają przede wszystkim za nośność. Sprawdzają się w halach magazynowych wysokiego składowania, na placach manewrowych i w strefach produkcyjnych, gdzie kluczowa jest odporność na obciążenia od regałów oraz wózków widłowych. Dobór wykonania zależy od obciążeń:",
+          },
+          {
+            type: "list",
+            items: [
+              "utwardzanie powierzchniowe posypką mineralną lub kwarcową, które zwiększa odporność na ścieranie w strefach ruchu wózków,",
+              "zbrojenie rozproszone włóknami stalowymi lub polipropylenowymi albo tradycyjne, prętowe — przy większych rozpiętościach i obciążeniach punktowych,",
+              "dylatacje konstrukcyjne i pozorne wykonywane zgodnie z projektem technologicznym, które ograniczają ryzyko niekontrolowanego pękania płyty.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Posadzka żywiczna — powłoka dla wymagającej eksploatacji",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "[Posadzki żywiczne](/posadzki-zywiczne) to bezspoinowe systemy epoksydowe i poliuretanowe, które rozwiązują problemy powierzchni: pylenie betonu, ścieranie od wózków widłowych, wymogi higieniczne takie jak HACCP. Są odporne na wodę, oleje i smary, a gładka, bezspoinowa powierzchnia ogranicza gromadzenie się brudu i ułatwia utrzymanie czystości. Krótki czas instalacji ogranicza przestoje zakładu, a ewentualne uszkodzenia można naprawiać punktowo, bez wymiany całej nawierzchni.",
+          },
+        ],
+      },
+      {
+        heading: "Porównanie w skrócie",
+        blocks: [
+          {
+            type: "table",
+            head: ["", "Posadzka betonowa", "Posadzka żywiczna"],
+            rows: [
+              ["Główna rola", "Nośność płyty, odporność na obciążenia od regałów i wózków", "Bezspoinowa, szczelna powierzchnia użytkowa"],
+              ["Rozwiązuje", "Niewystarczającą nośność podłoża, ścieranie (utwardzanie powierzchniowe)", "Pylenie betonu, ścieranie, wymogi higieniczne (np. HACCP)"],
+              ["Typowe zastosowanie", "Magazyny wysokiego składowania, place manewrowe, strefy produkcyjne", "Hale produkcyjne, magazyny, zakłady spożywcze i farmaceutyczne"],
+              ["Dylatacje", "Wykonywane zgodnie z projektem technologicznym", "Wymagają uwzględnienia dylatacji istniejącego podłoża"],
+              ["Naprawa", "Naprawy punktowe i renowacja betonu", "Punktowe naprawy bez wymiany całej nawierzchni"],
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "Warto zauważyć, że posadzka betonowa może funkcjonować samodzielnie albo posłużyć jako podłoże pod docelową warstwę żywiczną, jeśli w przyszłości zajdzie taka potrzeba.",
+          },
+        ],
+      },
+      {
+        heading: "Kiedy wystarczy beton, a kiedy dokłada się żywicę",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              "Zwykły magazyn z ruchem wózków, bez szczególnych wymagań higienicznych — często wystarcza odpowiednio zaprojektowana i utwardzona posadzka betonowa.",
+              "Pylenie lub nadmierne ścieranie betonu — to sygnał, że warto rozważyć warstwę żywiczną. Zobacz też katalog wad: [pylenie posadzki](/katalog-wad/pylenie).",
+              "Wymogi higieniczne, kontakt z wodą, tłuszczami lub chemikaliami — wtedy standardem jest posadzka żywiczna.",
+              "Etap budowy z perspektywą późniejszej zmiany — beton można wykonać tak, by w przyszłości przyjął warstwę żywiczną.",
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "Nośność zapewnia płyta betonowa. Żywica tej nośności nie zastępuje — dlatego w obiektach o dużych obciążeniach pytanie brzmi zwykle nie „żywiczna czy betonowa”, lecz „jaka płyta i czy dodać powłokę”.",
+          },
+        ],
+      },
+      {
+        heading: "Najczęstsze błędy przy wyborze",
+        blocks: [
+          {
+            type: "list",
+            ordered: true,
+            items: [
+              "Traktowanie żywicy jako zamiennika nośności — płytę betonową trzeba zaprojektować pod obciążenia od regałów i wózków.",
+              "Pominięcie dylatacji lub wykonanie ich niezgodnie z projektem technologicznym, co grozi niekontrolowanym pękaniem płyty.",
+              "Układanie żywicy na zdegradowanym, pylącym lub pękającym podłożu bez jego przygotowania.",
+              "Wybór wyłącznie po cenie za metr kwadratowy, bez analizy obciążeń, chemii procesowej i wymagań higienicznych.",
+              "Brak planu na przyszłość — beton wykonany bez myśli o późniejszej warstwie żywicznej.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Pytania do wykonawcy przed decyzją",
+        blocks: [
+          {
+            type: "list",
+            ordered: true,
+            items: [
+              "Jakie obciążenia przewidujemy — regały wysokiego składowania, wózki, obciążenia punktowe?",
+              "Jak zaprojektowano zbrojenie i dylatacje?",
+              "Czy magazyn ma wymogi higieniczne albo kontakt z wodą, tłuszczami lub chemikaliami?",
+              "Czy beton ma pozostać samodzielną nawierzchnią, czy w przyszłości przyjmie warstwę żywiczną?",
+              "Czy prace można prowadzić etapami, bez zatrzymywania pracy obiektu?",
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "Wstępny kierunek możesz sprawdzić w naszym narzędziu [dobór systemu posadzkowego](/dobor-posadzki).",
+          },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Czy żywica zwiększa nośność posadzki?",
+        a: "Nie. Nośność zapewnia płyta betonowa, którą dobiera się do obciążeń od regałów i wózków. Żywica jest bezspoinową powłoką, która rozwiązuje m.in. pylenie, ścieranie i wymagania higieniczne.",
+      },
+      {
+        q: "Czy na posadzce betonowej można później wykonać warstwę żywiczną?",
+        a: "Tak. Posadzka betonowa może funkcjonować samodzielnie albo posłużyć jako podłoże pod docelową warstwę żywiczną, jeśli w przyszłości zajdzie taka potrzeba.",
+      },
+      {
+        q: "Czym utwardza się powierzchnię posadzki betonowej?",
+        a: "Posypką mineralną lub kwarcową. Zwiększa ona odporność na ścieranie w strefach ruchu wózków widłowych.",
+      },
+      {
+        q: "Jakie zbrojenie stosuje się w posadzkach betonowych?",
+        a: "Rozproszone włóknami stalowymi lub polipropylenowymi albo tradycyjne, prętowe — przy większych rozpiętościach i obciążeniach punktowych. Wybór zależy od obciążeń.",
+      },
+    ],
+    cta: {
+      heading: "Planujesz posadzkę do magazynu?",
+      text: "Opisz nam obciążenia, rodzaj ruchu i wymagania obiektu — pomożemy dobrać rozwiązanie. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat.",
+    },
+    relatedServiceSlugs: ["betonowe-posadzki-przemyslowe", "posadzki-zywiczne"],
+    relatedRealizacjeSlugs: [],
+  },
+  {
     slug: "jak-zabezpieczyc-sciany-hali-przed-wozkami",
     title: "Jak zabezpieczyć ściany hali przed wózkami widłowymi? Odboje, narożniki i cokoły",
     metaTitle: "Ochrona ścian hali przed wózkami widłowymi — odboje | FLOWTEX Polska",
