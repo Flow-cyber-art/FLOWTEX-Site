@@ -13,3 +13,6 @@ Zdjęcia wyświetlają się w kolejności alfabetycznej nazw plików. Żeby mie�
   03-ekipa-na-budowie.jpg
 
 Nie trzeba nic zmieniać w kodzie — każde zdjęcie wrzucone do tego folderu (src/assets/hero-carousel/) pojawi się automatycznie w karuzeli po następnym uruchomieniu `npm run dev` / `npm run build`.
+
+WARIANTY DLA TELEFONÓW (opcjonalne):
+Do szybszego ładowania na telefonie dla każdego zdjęcia można dodać mniejsze kopie o TEJ SAMEJ NAZWIE w folderach src/assets/hero-carousel-sm/ (640 px szerokości) i src/assets/hero-carousel-md/ (1024 px szerokości). Strona sama wybierze właściwy rozmiar. Bez nich zdjęcie działa tak jak dotąd.

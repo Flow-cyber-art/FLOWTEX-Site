@@ -10,9 +10,31 @@ const modules = import.meta.glob("../assets/hero-carousel/*.{jpg,jpeg,png,webp,J
   import: "default",
 });
 
+// Mniejsze warianty tych samych zdjęć (640 px i 1024 px szerokości) do
+// srcset — telefon nie musi pobierać pliku 1920 px. Pliki o tej samej nazwie
+// co oryginał w src/assets/hero-carousel-sm/ i hero-carousel-md/. Warianty
+// są opcjonalne: zdjęcie bez nich działa jak dotąd (sam oryginał).
+const smModules = import.meta.glob("../assets/hero-carousel-sm/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}", {
+  eager: true,
+  import: "default",
+});
+const mdModules = import.meta.glob("../assets/hero-carousel-md/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}", {
+  eager: true,
+  import: "default",
+});
+const fileName = (path) => path.split("/").pop();
+const byName = (mods) => Object.fromEntries(Object.entries(mods).map(([p, src]) => [fileName(p), src]));
+const SM = byName(smModules);
+const MD = byName(mdModules);
+
 const SLIDES = Object.keys(modules)
   .sort()
-  .map((path) => modules[path]);
+  .map((path) => {
+    const name = fileName(path);
+    const src = modules[path];
+    const srcSet = SM[name] && MD[name] ? `${SM[name]} 640w, ${MD[name]} 1024w, ${src} 1920w` : undefined;
+    return { src, srcSet };
+  });
 
 const INTERVAL_MS = 6000;
 
@@ -43,10 +65,12 @@ export function HeroCarousel() {
 
   return (
     <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-      {SLIDES.map((src, i) => (
+      {SLIDES.map(({ src, srcSet }, i) => (
         <img
           key={src}
           src={src}
+          srcSet={srcSet}
+          sizes="100vw"
           alt=""
           width="1920"
           height="1080"
