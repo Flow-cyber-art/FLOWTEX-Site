@@ -1,0 +1,35 @@
+# Codziennie sprawdza, czy któryś poradnik ma dziś datę publikacji
+# (publishAt w src/data/poradniki.js). Jeśli tak, uruchamia nowy deploy na
+# Vercelu przez Deploy Hook — strona jest statyczna, więc bez nowego builda
+# zaplanowany poradnik by się nie pojawił.
+#
+# Wymaga sekretu repozytorium VERCEL_DEPLOY_HOOK_URL
+# (Vercel → projekt → Settings → Git → Deploy Hooks → gałąź main).
+name: Publikacja zaplanowanych poradników
+
+on:
+  schedule:
+    - cron: "10 0 * * *" # 00:10 UTC
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Czy dziś jest data publikacji?
+        id: due
+        run: echo "due=$(node scripts/scheduled-today.js)" >> "$GITHUB_OUTPUT"
+      - name: Uruchom deploy na Vercelu
+        if: steps.due.outputs.due == 'yes'
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "Brak sekretu VERCEL_DEPLOY_HOOK_URL — dodaj go w ustawieniach repozytorium." >&2
+            exit 1
+          fi
+          curl -fsS -X POST "$HOOK"

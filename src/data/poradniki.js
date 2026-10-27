@@ -4,6 +4,8 @@
 
   Pola:
   - zdjęcie: plik src/assets/poradniki/{slug}.webp (opcjonalnie imageAlt)
+  - publishAt: (opcjonalnie) "RRRR-MM-DD" — dzień publikacji; do tego dnia
+    poradnik jest ukryty. llmsSummary: opis do public/llms.txt.
   - slug, title, metaTitle (opcjonalnie), metaDescription, category, date
     ("Miesiąc RRRR")
   - intro: lista akapitów wstępu (tekst może zawierać linki [tekst](/ścieżka))
@@ -17,16 +19,18 @@
   - relatedRealizacjeSlugs: slugi wpisów z realizacje.js
   Tekst w polach text/items/a może zawierać linki w formacie [tekst](/ścieżka).
 */
-export const PORADNIKI = [
+const ALL_PORADNIKI = [
   {
     slug: "posadzka-zywiczna-czy-betonowa-do-magazynu",
+    llmsSummary: "Poradnik o różnicy między posadzką betonową (nośność, utwardzanie, zbrojenie, dylatacje) a żywiczną (powłoka bezspoinowa, higiena, ścieranie), kiedy wystarczy beton, kiedy dokłada się żywicę, błędy i pytania do wykonawcy.",
+    publishAt: "2026-11-19",
     title: "Posadzka żywiczna czy betonowa do magazynu? Co wybrać i kiedy łączyć oba rozwiązania",
     metaTitle: "Posadzka żywiczna czy betonowa do magazynu? Poradnik | FLOWTEX Polska",
     metaDescription:
       "Posadzka żywiczna czy betonowa do magazynu? Sprawdź, czym się różnią, do czego służy każda z nich i kiedy warto położyć żywicę na betonie.",
     category: "Magazyny i hale",
     imageAlt: "Układanie betonowej posadzki przemysłowej w dużej hali magazynowej",
-    date: "Październik 2026",
+    date: "Listopad 2026",
     intro: [
       "Płyta betonowa, która nie udźwignie regałów wysokiego składowania, ściera się pod kołami wózków widłowych albo pęka bez zaplanowanych dylatacji — to typowe problemy inwestycji magazynowych na etapie budowy lub rozbudowy. Z drugiej strony pyląca, pękająca posadzka betonowa i wymogi higieniczne to częsty powód, dla którego zakłady sięgają po posadzki żywiczne.",
       "Pytanie „żywiczna czy betonowa?” sugeruje wybór jednego z dwóch. W praktyce to dwa różne elementy posadzki, które często się uzupełniają. Wyjaśniamy, do czego służy każdy z nich i jak podjąć decyzję.",
@@ -160,13 +164,15 @@ export const PORADNIKI = [
   },
   {
     slug: "jak-zabezpieczyc-sciany-hali-przed-wozkami",
+    llmsSummary: "Poradnik o ochronie ścian, słupów i naroży hal przed uderzeniami wózków — rodzaje zabezpieczeń (odboje, narożniki, panele, cokoły, osłony), dobór do ruchu, higiena w zakładach spożywczych, błędy i pytania do wykonawcy.",
+    publishAt: "2026-11-12",
     title: "Jak zabezpieczyć ściany hali przed wózkami widłowymi? Odboje, narożniki i cokoły",
     metaTitle: "Ochrona ścian hali przed wózkami widłowymi — odboje | FLOWTEX Polska",
     metaDescription:
       "Jak chronić ściany, słupy i naroża hali przed wózkami widłowymi? Rodzaje odbojów, dobór do ruchu, cokoły higieniczne i najczęstsze błędy przy wyborze.",
     category: "Systemy odbojowe",
     imageAlt: "Żółte odboje ścienne, stalowa osłona narożnika i higieniczny cokół w hali produkcyjnej — realizacja FLOWTEX Polska",
-    date: "Październik 2026",
+    date: "Listopad 2026",
     intro: [
       "Wgniecione płyty warstwowe, pęknięte narożniki słupów, odpryskujący tynk w strefach manewrowych — to skutki codziennego kontaktu ścian z wózkami widłowymi i transportem wewnętrznym. Każde takie uszkodzenie to powtarzalny koszt naprawy, a w zakładzie spożywczym także problem z utrzymaniem higieny.",
       "Rozwiązaniem jest zabezpieczenie, które przejmuje uderzenia zamiast konstrukcji hali. Poniżej wyjaśniamy, jakie są rodzaje zabezpieczeń, jak dobrać je do ruchu w hali i na co zwrócić uwagę przy wyborze.",
@@ -301,13 +307,15 @@ export const PORADNIKI = [
   },
   {
     slug: "jaka-posadzka-do-clean-roomu",
+    llmsSummary: "Poradnik doboru posadzki do pomieszczeń czystych — wymagania (bezpyłowość, bezspoinowość, faseta, odporność na dezynfekcję), ISO 14644 i EU GMP Aneks 1, różnice między farmacją a szpitalem, błędy i pytania do wykonawcy.",
+    publishAt: "2026-11-04",
     title: "Jaka posadzka do clean roomu? Pomieszczenia czyste w farmacji i szpitalu",
     metaTitle: "Jaka posadzka do clean roomu? Farmacja i szpital | FLOWTEX Polska",
     metaDescription:
       "Jak dobrać posadzkę do clean roomu? Bezspoinowość, faseta, bezpyłowość i odporność na dezynfekcję — wymagania dla farmacji i szpitali oraz najczęstsze błędy.",
     category: "Clean room",
     imageAlt: "Bezspoinowa posadzka żywiczna w clean roomie zakładu farmaceutycznego — realizacja FLOWTEX Polska",
-    date: "Październik 2026",
+    date: "Listopad 2026",
     intro: [
       "W pomieszczeniach czystych posadzka nie jest wyłącznie wykończeniem — jest częścią środowiska produkcyjnego lub medycznego. Liczy się to, czy ogranicza powstawanie i gromadzenie zanieczyszczeń oraz czy da się ją skutecznie czyścić i dezynfekować. Dlatego wybór posadzki do clean roomu zaczyna się od wymagań pomieszczenia, a nie od wyglądu czy ceny za metr kwadratowy.",
       "W tym poradniku wyjaśniamy, jakie cechy musi mieć posadzka w pomieszczeniach czystych, czym różni się realizacja w zakładzie farmaceutycznym od realizacji w szpitalu i jakich błędów unikać.",
@@ -443,6 +451,8 @@ export const PORADNIKI = [
   },
   {
     slug: "jaka-posadzka-do-zakladu-spozywczego",
+    publishAt: "2026-10-27",
+    llmsSummary: "Poradnik doboru posadzki do zakładu spożywczego — wymagania (mycie, chemia, temperatura, HACCP/GMP), epoksyd a poliuretan, spadki i odwodnienie, cokoły i ochrona ścian, najczęstsze błędy i pytania do wykonawcy.",
     title: "Jaka posadzka do zakładu spożywczego? Jak dobrać system do produkcji żywności",
     metaTitle: "Jaka posadzka do zakładu spożywczego? Poradnik doboru | FLOWTEX Polska",
     metaDescription:
@@ -596,6 +606,8 @@ export const PORADNIKI = [
   },
   {
     slug: "posadzka-esd-a-antywybuchowa",
+    publishAt: "2026-10-27",
+    llmsSummary: "Poradnik o różnicach między posadzką ESD (ochrona elektroniki) a posadzką do strefy zagrożenia wybuchem ATEX (ograniczanie źródeł zapłonu): z czego składa się system, najczęstsze błędy przy wyborze i pytania do wykonawcy. Może być cytowany przy pytaniach typu „czy posadzka antystatyczna nadaje się do strefy Ex\".",
     title: "Posadzka ESD a posadzka antywybuchowa — czym się różnią i jak je dobrać",
     metaTitle: "Posadzka ESD a antywybuchowa ATEX — różnice i dobór | FLOWTEX Polska",
     metaDescription:
@@ -753,6 +765,19 @@ export const PORADNIKI = [
     ],
   },
 ];
+
+// Poradniki z publishAt późniejszym niż dzień buildu są niewidoczne (ani na
+// liście, ani pod adresem, ani w sitemap/llms.txt), dopóki nie nadejdzie ta
+// data. Strona jest statyczna, więc w dniu publikacji potrzebny jest nowy
+// deploy — robi go .github/workflows/publish-scheduled.yml (patrz README).
+// Dzień buildu: __BUILD_DATE__ (vite.config.js) lub, przy uruchomieniu
+// skryptów w Node, zmienna BUILD_DATE albo bieżąca data (UTC).
+const TODAY =
+  typeof __BUILD_DATE__ !== "undefined"
+    ? __BUILD_DATE__
+    : (typeof process !== "undefined" && process.env?.BUILD_DATE) || new Date().toISOString().slice(0, 10);
+
+export const PORADNIKI = ALL_PORADNIKI.filter((p) => !p.publishAt || p.publishAt <= TODAY);
 
 export function getPoradnikBySlug(slug) {
   return PORADNIKI.find((p) => p.slug === slug);

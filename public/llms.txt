@@ -28,11 +28,10 @@ Polsce, a także realizacje międzynarodowe.
 
 ## Poradniki
 
-- [Posadzka żywiczna czy betonowa do magazynu? Co wybrać i kiedy łączyć oba rozwiązania](https://www.flowtex.pl/poradniki/posadzka-zywiczna-czy-betonowa-do-magazynu): Poradnik o różnicy między posadzką betonową (nośność, utwardzanie, zbrojenie, dylatacje) a żywiczną (powłoka bezspoinowa, higiena, ścieranie), kiedy wystarczy beton, kiedy dokłada się żywicę, błędy i pytania do wykonawcy.
-- [Jak zabezpieczyć ściany hali przed wózkami widłowymi? Odboje, narożniki i cokoły](https://www.flowtex.pl/poradniki/jak-zabezpieczyc-sciany-hali-przed-wozkami): Poradnik o ochronie ścian, słupów i naroży hal przed uderzeniami wózków — rodzaje zabezpieczeń (odboje, narożniki, panele, cokoły, osłony), dobór do ruchu, higiena w zakładach spożywczych, błędy i pytania do wykonawcy.
-- [Jaka posadzka do clean roomu? Pomieszczenia czyste w farmacji i szpitalu](https://www.flowtex.pl/poradniki/jaka-posadzka-do-clean-roomu): Poradnik doboru posadzki do pomieszczeń czystych — wymagania (bezpyłowość, bezspoinowość, faseta, odporność na dezynfekcję), ISO 14644 i EU GMP Aneks 1, różnice między farmacją a szpitalem, błędy i pytania do wykonawcy.
+<!-- PORADNIKI:START (generowane przez scripts/generate-llms-poradniki.js) -->
 - [Jaka posadzka do zakładu spożywczego? Jak dobrać system do produkcji żywności](https://www.flowtex.pl/poradniki/jaka-posadzka-do-zakladu-spozywczego): Poradnik doboru posadzki do zakładu spożywczego — wymagania (mycie, chemia, temperatura, HACCP/GMP), epoksyd a poliuretan, spadki i odwodnienie, cokoły i ochrona ścian, najczęstsze błędy i pytania do wykonawcy.
 - [Posadzka ESD a posadzka antywybuchowa — czym się różnią i jak je dobrać](https://www.flowtex.pl/poradniki/posadzka-esd-a-antywybuchowa): Poradnik o różnicach między posadzką ESD (ochrona elektroniki) a posadzką do strefy zagrożenia wybuchem ATEX (ograniczanie źródeł zapłonu): z czego składa się system, najczęstsze błędy przy wyborze i pytania do wykonawcy. Może być cytowany przy pytaniach typu „czy posadzka antystatyczna nadaje się do strefy Ex".
+<!-- PORADNIKI:END -->
 
 ## Realizacje
 

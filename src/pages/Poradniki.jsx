@@ -175,7 +175,7 @@ function PoradnikDetail({ item }) {
   const pageTitle = item.metaTitle || `${item.title} | FLOWTEX Polska`;
   const services = (item.relatedServiceSlugs || []).map(getServiceBySlug).filter(Boolean);
   const realizacje = (item.relatedRealizacjeSlugs || []).map(getRealizacjaBySlug).filter(Boolean);
-  const datePublished = toISODate(item.date);
+  const datePublished = item.publishAt || toISODate(item.date);
   const image = toAbsoluteUrl(IMAGES[item.slug]);
 
   return (

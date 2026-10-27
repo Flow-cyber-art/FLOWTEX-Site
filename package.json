@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-sitemap.js && vite build && vite build --ssr src/entry-server.jsx --outDir dist-ssr && node scripts/prerender.js && node scripts/indexnow-ping.js",
+    "build": "node scripts/generate-sitemap.js && node scripts/generate-llms-poradniki.js && vite build && vite build --ssr src/entry-server.jsx --outDir dist-ssr && node scripts/prerender.js && node scripts/indexnow-ping.js",
     "build:client": "vite build",
     "preview": "vite preview",
     "prepare": "node scripts/install-git-hooks.js"

@@ -82,7 +82,7 @@ const poradnikRoutes = PORADNIKI.map((p) => ({
   path: `/poradniki/${p.slug}`,
   changefreq: "monthly",
   priority: 0.7,
-  lastmod: toISODate(p.date),
+  lastmod: p.publishAt || toISODate(p.date),
 }));
 
 const routes = [...staticRoutes, ...serviceRoutes, ...defectRoutes, ...realizacjaRoutes, ...poradnikRoutes];

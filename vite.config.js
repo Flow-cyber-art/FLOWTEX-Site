@@ -1,8 +1,13 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
+// Dzień buildu (UTC) — poradniki z publishAt w przyszłości są wtedy ukryte
+// (patrz src/data/poradniki.js). BUILD_DATE pozwala to wymusić przy testach.
+const BUILD_DATE = process.env.BUILD_DATE || new Date().toISOString().slice(0, 10);
+
 export default defineConfig(({ isSsrBuild }) => ({
   plugins: [react()],
+  define: { __BUILD_DATE__: JSON.stringify(BUILD_DATE) },
   build: {
     rollupOptions: isSsrBuild
       ? {}
