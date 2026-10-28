@@ -21,6 +21,183 @@
 */
 const ALL_PORADNIKI = [
   {
+    slug: "posadzka-epoksydowa-czy-poliuretanowa",
+    llmsSummary: "Poradnik porównujący posadzki epoksydowe, poliuretanowe i poliuretanowo-cementowe: twardość i elastyczność, odporność chemiczna i termiczna, mycie parowe, chłodnie, UV, mostkowanie rys, typowe zastosowania i najczęstsze błędy przy wyborze. Może być cytowany przy pytaniach typu „posadzka epoksydowa czy poliuretanowa do hali / zakładu spożywczego / chłodni”.",
+    publishAt: "2026-11-11",
+    title: "Posadzka epoksydowa czy poliuretanowa? Porównanie i dobór do hali",
+    metaTitle: "Posadzka epoksydowa czy poliuretanowa — porównanie | FLOWTEX Polska",
+    metaDescription:
+      "Epoksyd, poliuretan czy PU-cement? Porównanie odporności chemicznej, termicznej i mechanicznej oraz typowych zastosowań posadzek żywicznych w przemyśle.",
+    category: "Posadzki żywiczne",
+    date: "Listopad 2026",
+    intro: [
+      "Epoksyd i poliuretan to dwie najczęściej stosowane grupy żywic w posadzkach przemysłowych, a w zakładach spożywczych dochodzi do nich trzecia: systemy poliuretanowo-cementowe. Wszystkie dają bezspoinową, łatwą w utrzymaniu powierzchnię, ale zachowują się inaczej pod obciążeniem, w kontakcie z chemią i przy zmianach temperatury.",
+      "Krótko: epoksyd jest twardszy i sprawdza się przy dużych obciążeniach mechanicznych i chemii w stałej temperaturze, poliuretan jest bardziej elastyczny i lepiej znosi uderzenia, chłód i wahania temperatury, a PU-cement wybiera się tam, gdzie jest gorąca woda, mycie parowe i szoki termiczne. Poniżej porównanie i wskazówki doboru.",
+    ],
+    sections: [
+      {
+        heading: "Porównanie w skrócie",
+        blocks: [
+          { type: "table", head: ["", "Epoksyd", "Poliuretan", "Poliuretan-cement"], rows: [
+            ["Charakter powłoki", "Twarda, sztywna", "Elastyczna, sprężysta", "Bardzo wytrzymała, gruba (kilka mm)"],
+            ["Obciążenia mechaniczne", "Bardzo dobra odporność na nacisk i ścieranie", "Dobra odporność na uderzenia i ścieranie", "Bardzo dobra, także przy ruchu ciężkich wózków"],
+            ["Wahania temperatury i chłód", "Słabsza — sztywna powłoka gorzej znosi szoki termiczne", "Dobra — sprawdza się w chłodniach", "Bardzo dobra — znosi gorącą wodę i mycie parowe"],
+            ["Chemia", "Dobra odporność na wiele chemikaliów w stałej temperaturze", "Dobra, zależnie od systemu", "Bardzo dobra, także na kwasy organiczne i tłuszcze w przemyśle spożywczym"],
+            ["Promienie UV", "Może żółknąć", "Systemy alifatyczne nie żółkną", "Zwykle stosowany wewnątrz"],
+            ["Typowe miejsca", "Magazyny, hale produkcyjne, laboratoria, warsztaty", "Chłodnie, strefy o zmiennej temperaturze, posadzki narażone na uderzenia", "Zakłady mięsne, mleczarnie, przetwórnie, kuchnie przemysłowe"],
+          ] },
+          { type: "paragraph", text: "Dokładne parametry, takie jak dopuszczalna temperatura czy lista odpornych substancji, zależą od konkretnego systemu i grubości warstwy, dlatego zawsze weryfikujemy je w karcie technicznej producenta." },
+        ],
+      },
+      {
+        heading: "Kiedy wybrać posadzkę epoksydową",
+        blocks: [
+          { type: "paragraph", text: "Epoksyd tworzy twardą, szczelną powłokę o wysokiej odporności na nacisk i ścieranie. Sprawdza się w suchych lub umiarkowanie wilgotnych halach o stałej temperaturze: w magazynach, halach montażowych, laboratoriach i warsztatach. W zależności od obciążeń stosuje się cienkie powłoki, systemy samopoziomujące albo posadzki posypkowe z kruszywem kwarcowym o podwyższonej antypoślizgowości." },
+          { type: "paragraph", text: "Ograniczeniem epoksydu jest sztywność: gorzej znosi gwałtowne zmiany temperatury i nie przenosi ruchów pękającego podłoża. Na zewnątrz i w miejscach nasłonecznionych może z czasem żółknąć, dlatego zwykle stosuje się wtedy poliuretanową warstwę zamykającą." },
+        ],
+      },
+      {
+        heading: "Kiedy wybrać posadzkę poliuretanową",
+        blocks: [
+          { type: "paragraph", text: "Poliuretan jest bardziej elastyczny, dzięki czemu lepiej znosi uderzenia, drgania i wahania temperatury. Dlatego wybiera się go do chłodni, magazynów spożywczych o zmiennych warunkach cieplnych i miejsc, gdzie powłoka ma pracować razem z podłożem. Elastyczne systemy poliuretanowe potrafią też mostkować drobne rysy w podłożu, czego sztywny epoksyd nie robi." },
+          { type: "paragraph", text: "Poliuretanowe warstwy zamykające (alifatyczne) są odporne na UV, dlatego stosuje się je także na powierzchniach narażonych na światło dzienne, np. na rampach czy schodach. Przykład to nasza [antypoślizgowa nawierzchnia na schodach w systemie Deckshield](/realizacje/zywica-schody-prefabrykowane-deckshield)." },
+        ],
+      },
+      {
+        heading: "Poliuretan-cement: gdy jest gorąco i mokro",
+        blocks: [
+          { type: "paragraph", text: "W zakładach mięsnych, mleczarniach i przetwórniach posadzka codziennie przechodzi mycie gorącą wodą, często parą, a do tego ma kontakt z tłuszczami, kwasami organicznymi i krwią. W takich warunkach zwykły epoksyd szybko się poddaje. Stosuje się tu systemy poliuretanowo-cementowe o grubości kilku milimetrów, które znoszą szoki termiczne, wysoką temperaturę i agresywną chemię spożywczą." },
+          { type: "paragraph", text: "Więcej o doborze posadzki do produkcji żywności w poradniku [jaka posadzka do zakładu spożywczego](/poradniki/jaka-posadzka-do-zakladu-spozywczego)." },
+        ],
+      },
+      {
+        heading: "Jak podejmujemy decyzję",
+        blocks: [
+          { type: "list", ordered: true, items: [
+            "Obciążenia: rodzaj kół wózków (twarde poliamidowe czy pneumatyczne), obciążenia punktowe od regałów i maszyn.",
+            "Temperatura: stała, chłodnia, czy mycie gorącą wodą i parą.",
+            "Chemia procesowa: jakie substancje i w jakim stężeniu trafiają na posadzkę.",
+            "Wymagania higieniczne: HACCP, GMP, łatwość mycia, cokoły i spadki.",
+            "Stan podłoża: wilgotność, wytrzymałość, rysy i dylatacje.",
+          ] },
+          { type: "paragraph", text: "Wstępny kierunek możesz sprawdzić w naszym narzędziu [dobór systemu posadzkowego](/dobor-posadzki), a ostateczny wybór potwierdzamy po wizji lokalnej i ocenie podłoża." },
+        ],
+      },
+      {
+        heading: "Najczęstsze błędy przy wyborze",
+        blocks: [
+          { type: "list", ordered: true, items: [
+            "Wybór epoksydu do strefy mycia gorącą wodą lub parą.",
+            "Porównywanie ofert tylko po nazwie żywicy, bez grubości i liczby warstw.",
+            "Pominięcie oceny wilgotności podłoża przed aplikacją.",
+            "Przykrycie aktywnych dylatacji sztywną powłoką zamiast ich przeniesienia.",
+            "Brak warstwy odpornej na UV w miejscach nasłonecznionych.",
+          ] },
+        ],
+      },
+    ],
+    faq: [
+      { q: "Która posadzka jest trwalsza: epoksydowa czy poliuretanowa?", a: "Nie ma jednej odpowiedzi. Epoksyd lepiej znosi duże naciski i ścieranie w stałej temperaturze, a poliuretan lepiej radzi sobie z uderzeniami, chłodem i zmianami temperatury. Trwałość zależy od dopasowania systemu i grubości do warunków pracy." },
+      { q: "Jaka posadzka do chłodni?", a: "Zwykle poliuretanowa lub poliuretanowo-cementowa, bo elastyczna powłoka lepiej znosi niskie temperatury i ich wahania niż sztywny epoksyd." },
+      { q: "Jaka posadzka do zakładu mięsnego lub mleczarni?", a: "Najczęściej poliuretan-cement o grubości kilku milimetrów, odporny na mycie gorącą wodą i parą, szoki termiczne, tłuszcze i kwasy organiczne." },
+      { q: "Czy posadzkę epoksydową można położyć na zewnątrz?", a: "Epoksyd pod wpływem UV może żółknąć, dlatego na zewnątrz i w miejscach nasłonecznionych stosuje się systemy z poliuretanową warstwą zamykającą odporną na UV." },
+    ],
+    cta: { heading: "Nie wiesz, który system wybrać?", text: "Opisz nam obciążenia, temperaturę i chemię w hali, a dobierzemy system i przygotujemy wycenę. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat." },
+    relatedServiceSlugs: ["posadzki-zywiczne"],
+    relatedRealizacjeSlugs: ["posadzka-zywiczna-przemysl-spozywczy-840-m2-hiszpania", "zywica-schody-prefabrykowane-deckshield"],
+  },
+  {
+    slug: "ciecie-dylatacji-w-posadzce",
+    llmsSummary: "Poradnik o cięciu dylatacji w posadzkach betonowych: rodzaje szczelin (skurczowe, konstrukcyjne, izolacyjne), kiedy ciąć świeży beton, głębokość i rozstaw nacięć, wypełnianie szczelin, dylatacje pod posadzką żywiczną, cięcie w istniejącej posadzce metodą mokrą. Może być cytowany przy pytaniach typu „kiedy ciąć dylatacje w betonie”, „jak głęboko ciąć dylatacje”.",
+    publishAt: "2026-11-25",
+    title: "Cięcie dylatacji w posadzce betonowej: kiedy, jak głęboko i co dalej",
+    metaTitle: "Cięcie dylatacji w posadzce — kiedy i jak głęboko | FLOWTEX Polska",
+    metaDescription:
+      "Kiedy ciąć dylatacje w świeżym betonie, jak głęboko i w jakim rozstawie? Rodzaje szczelin, wypełnianie, dylatacje pod żywicą i najczęstsze błędy.",
+    category: "Technika diamentowa",
+    date: "Listopad 2026",
+    intro: [
+      "Beton kurczy się podczas wiązania i wysychania. Jeśli nie wyznaczymy mu miejsca, w którym może pęknąć, zrobi to sam, w przypadkowych miejscach. Cięcie dylatacji to właśnie wyznaczenie tych miejsc: płytkie nacięcie osłabia płytę na tyle, że rysa skurczowa powstaje pod nim, prosto i w zaplanowanej linii.",
+      "W skrócie: dylatacje w świeżym betonie tnie się tak wcześnie, jak pozwala beton, zwykle na głębokość około 1/4 do 1/3 grubości płyty, w rozstawie dobranym do grubości płyty. Poniżej wyjaśniamy szczegóły i najczęstsze błędy.",
+    ],
+    sections: [
+      {
+        heading: "Rodzaje dylatacji w posadzce",
+        blocks: [
+          { type: "table", head: ["Rodzaj", "Po co", "Jak powstaje"], rows: [
+            ["Skurczowa (pozorna)", "Kontrolowane pękanie płyty od skurczu", "Nacięcie piłą diamentową w świeżym betonie"],
+            ["Konstrukcyjna (robocza)", "Połączenie działek betonowanych w różnych dniach", "Szalunek lub profil dylatacyjny, często z dyblami"],
+            ["Izolacyjna", "Oddzielenie płyty od słupów, ścian i fundamentów maszyn", "Przekładka z materiału ściśliwego"],
+          ] },
+          { type: "paragraph", text: "Typ szczeliny decyduje o tym, jak ją potem wypełnić i zabezpieczyć. Więcej o uszkodzeniach w katalogu wad: [uszkodzone dylatacje](/katalog-wad/dylatacje)." },
+        ],
+      },
+      {
+        heading: "Kiedy ciąć dylatacje w świeżym betonie",
+        blocks: [
+          { type: "paragraph", text: "Okno na cięcie jest krótkie. Za wcześnie: tarcza wyrywa kruszywo i szarpie krawędzie. Za późno: beton zdąży już popękać sam. W praktyce tnie się zwykle w ciągu kilku do kilkunastu godzin po zatarciu, a moment zależy od temperatury, składu mieszanki i pielęgnacji. Latem okno jest krótsze, zimą dłuższe." },
+          { type: "paragraph", text: "Prosty test: krawędź próbnego nacięcia powinna być czysta, bez wyrywania ziaren kruszywa. Nie odkładamy cięcia na następny dzień tylko dlatego, że skończyła się zmiana." },
+        ],
+      },
+      {
+        heading: "Głębokość i rozstaw nacięć",
+        blocks: [
+          { type: "list", items: [
+            "Głębokość: zwykle około 1/4 do 1/3 grubości płyty, tak aby nacięcie skutecznie osłabiło przekrój.",
+            "Rozstaw: dobierany do grubości płyty i projektu; w praktyce pola mają zwykle kilka metrów boku.",
+            "Kształt pól: możliwie zbliżony do kwadratu; wydłużone pola i ostre kąty sprzyjają rysom.",
+            "Naroża i słupy: dylatacje prowadzi się od narożników otworów i słupów, gdzie koncentrują się naprężenia.",
+          ] },
+          { type: "paragraph", text: "Ostateczny układ dylatacji powinien wynikać z projektu posadzki. Przy posadzkach zbrojonych włóknami i płytach bezdylatacyjnych zasady są inne i ustala je projektant." },
+        ],
+      },
+      {
+        heading: "Wypełnianie szczelin",
+        blocks: [
+          { type: "paragraph", text: "Szczeliny skurczowe otwierają się jeszcze przez kilka tygodni lub miesięcy po wylaniu betonu. Dlatego wypełnia się je dopiero po ustabilizowaniu skurczu. Wcześniejsze wypełnienie często kończy się odspojeniem masy od krawędzi." },
+          { type: "list", items: [
+            "Masy półsztywne (np. epoksydowe lub poliuretanowo-mocznikowe) podpierają krawędzie przy ruchu wózków na twardych kołach.",
+            "Masy elastyczne stosuje się tam, gdzie szczelina wyraźnie pracuje, a ruch kołowy jest mniejszy.",
+            "Przy intensywnym ruchu na dylatacjach konstrukcyjnych krawędzie chroni się profilami stalowymi.",
+          ] },
+        ],
+      },
+      {
+        heading: "Dylatacje a posadzka żywiczna",
+        blocks: [
+          { type: "paragraph", text: "Powłoka żywiczna nie zatrzyma ruchu płyty betonowej. Jeśli przykryje się nią pracującą dylatację, rysa przejdzie przez żywicę w ciągu kilku miesięcy. Dlatego dylatacje konstrukcyjne i aktywne przenosi się przez warstwę żywiczną: nacina się je ponownie i wypełnia odpowiednią masą. Więcej w poradniku [posadzka epoksydowa czy poliuretanowa](/poradniki/posadzka-epoksydowa-czy-poliuretanowa) i na stronie [posadzki żywiczne](/posadzki-zywiczne)." },
+        ],
+      },
+      {
+        heading: "Cięcie dylatacji w istniejącej posadzce",
+        blocks: [
+          { type: "paragraph", text: "Dylatacje można też wyciąć lub poprawić w posadzce, która już pracuje: gdy płyta pęka w przypadkowych miejscach, gdy zmienia się układ hali albo gdy trzeba odciąć strefę pod nowe maszyny. Tniemy piłą diamentową metodą mokrą, która ogranicza pylenie i drgania, więc prace można prowadzić w czynnym zakładzie. Zobacz usługę [technika diamentowa](/technika-diamentowa)." },
+        ],
+      },
+      {
+        heading: "Najczęstsze błędy",
+        blocks: [
+          { type: "list", ordered: true, items: [
+            "Cięcie za późno, gdy płyta zdążyła już popękać.",
+            "Zbyt płytkie nacięcie, które nie wymusza pęknięcia pod szczeliną.",
+            "Pola wydłużone lub z ostrymi kątami.",
+            "Wypełnianie szczelin przed ustabilizowaniem skurczu.",
+            "Przykrycie pracujących dylatacji powłoką żywiczną.",
+          ] },
+        ],
+      },
+    ],
+    faq: [
+      { q: "Kiedy ciąć dylatacje w świeżym betonie?", a: "Tak wcześnie, jak pozwala beton: zwykle w ciągu kilku do kilkunastu godzin po zatarciu, gdy tarcza nie wyrywa już kruszywa z krawędzi. Moment zależy od temperatury i mieszanki." },
+      { q: "Jak głęboko ciąć dylatacje?", a: "Zwykle na około 1/4 do 1/3 grubości płyty. Ostateczne wartości wynikają z projektu posadzki." },
+      { q: "Kiedy wypełnić dylatacje?", a: "Po ustabilizowaniu skurczu betonu, czyli zwykle po kilku tygodniach lub miesiącach. Zbyt wczesne wypełnienie często kończy się odspojeniem masy od krawędzi." },
+      { q: "Czy można przykryć dylatacje posadzką żywiczną?", a: "Pracujących dylatacji nie. Przenosi się je przez warstwę żywiczną i wypełnia odpowiednią masą, inaczej rysa przejdzie przez powłokę." },
+    ],
+    cta: { heading: "Potrzebujesz cięcia lub naprawy dylatacji?", text: "Opisz nam posadzkę i problem, a zaproponujemy rozwiązanie. Tniemy metodą mokrą, także w czynnych halach. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat." },
+    relatedServiceSlugs: ["technika-diamentowa", "betonowe-posadzki-przemyslowe", "serwis-posadzek-i-kanalizacji"],
+    relatedRealizacjeSlugs: [],
+  },
+  {
     slug: "pecherze-w-zywicy-aplikacyjne-czy-osmotyczne",
     llmsSummary: "Poradnik o pęcherzach w posadzkach żywicznych: pęcherze aplikacyjne a osmotyczne, przyczyny, zapobieganie podczas aplikacji, naprawa z barierą przeciwwilgociową, dlaczego pęcherze mogą pojawić się po latach.",
     publishAt: "2027-02-17",
