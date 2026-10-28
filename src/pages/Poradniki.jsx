@@ -206,7 +206,12 @@ function PoradnikDetail({ item }) {
                 mainEntityOfPage: canonicalUrl,
                 inLanguage: "pl",
                 ...(image ? { image } : {}),
-                author: { "@type": "Organization", name: "FLOWTEX Polska", url: "https://www.flowtex.pl/" },
+                author: {
+                  "@type": "Person",
+                  name: "Paweł Najduk",
+                  jobTitle: "Właściciel i dyrektor techniczny",
+                  worksFor: { "@type": "Organization", name: "FLOWTEX Polska", url: "https://www.flowtex.pl/" },
+                },
                 publisher: { "@type": "Organization", name: "FLOWTEX Polska", url: "https://www.flowtex.pl/" },
                 ...(services.length
                   ? { about: services.map((s) => ({ "@type": "Service", name: s.title, url: `https://www.flowtex.pl/${s.slug}` })) }
@@ -275,6 +280,7 @@ function PoradnikDetail({ item }) {
             <CalendarDays size={13} />
             {item.date}
           </span>
+          <span>Autor: Paweł Najduk, dyrektor techniczny</span>
         </div>
 
         <h1 className="ft-display text-3xl md:text-4xl mb-6" style={{ fontWeight: 800 }}>
