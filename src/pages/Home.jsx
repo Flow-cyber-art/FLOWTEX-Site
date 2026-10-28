@@ -48,7 +48,12 @@ const FAQ = [
   },
 ];
 
-const CERT_ICONS = [certIcon1, certIcon2, certIcon3, certIcon4];
+const CERT_ICONS = [
+  { src: certIcon1, alt: "Autoryzowany wykonawca systemów Flowcrete" },
+  { src: certIcon2, alt: "Autoryzowany wykonawca systemów Puraco" },
+  { src: certIcon3, alt: "Autoryzowany wykonawca systemów ACO" },
+  { src: certIcon4, alt: "Autoryzowany wykonawca systemów Polysto" },
+];
 
 const STATS = [
   { value: "2,4 mln m²", label: "wykonanych posadzek" },
@@ -161,10 +166,10 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>FLOWTEX Polska | Posadzki przemysłowe i żywiczne – projektowanie i wykonawstwo</title>
+        <title>Posadzki przemysłowe i żywiczne | FLOWTEX Polska</title>
         <meta
           name="description"
-          content="FLOWTEX Polska projektuje i wykonuje posadzki żywiczne oraz przemysłowe dla zakładów produkcyjnych, spożywczych i farmaceutycznych. Cięcie diamentowe, serwis i naprawa posadzek w całej Polsce."
+          content="Posadzki żywiczne i przemysłowe dla zakładów produkcyjnych, spożywczych i farmaceutycznych. Autoryzowany wykonawca Flowcrete. Wykonanie i serwis w całej Polsce."
         />
         <link rel="canonical" href="https://www.flowtex.pl/" />
         <script type="application/ld+json">
@@ -200,7 +205,7 @@ export default function Home() {
             >
               Posadzki przemysłowe • żywiczne • betonowe
             </div>
-            <h1
+            <p
               className="ft-display tracking-tight"
               style={{
                 color: COLORS.white,
@@ -211,8 +216,8 @@ export default function Home() {
               }}
             >
               Pewność pod każdą warstwą.
-            </h1>
-            <p
+            </p>
+            <h1
               className="mt-8 max-w-[700px] mx-auto"
               style={{
                 color: "rgba(255, 255, 255, 0.85)",
@@ -224,7 +229,7 @@ export default function Home() {
               Posadzki żywiczne i przemysłowe
               <br />
               dla wymagającego przemysłu.
-            </p>
+            </h1>
             <div className={`mt-11 flex flex-wrap gap-4 ${SHOW_LAYER_DIAGRAM ? "" : "justify-center"}`}>
               <a
                 href="#kontakt"
@@ -480,9 +485,9 @@ export default function Home() {
             <div className="relative w-40 h-40 sm:w-56 sm:h-56 md:w-[300px] md:h-[300px] flex-shrink-0">
               {CERT_ICONS.map((icon, i) => (
                 <img
-                  key={icon}
-                  src={icon}
-                  alt="Certyfikat autoryzowanego wykonawcy"
+                  key={icon.src}
+                  src={icon.src}
+                  alt={icon.alt}
                   width="300"
                   height="300"
                   loading="lazy"
