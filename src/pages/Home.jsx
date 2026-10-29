@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { COLORS, ACCENT_TEXT } from "../theme.js";
 import { Link, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Sparkles, Search } from "lucide-react";
+import { ArrowRight, Sparkles, Search, Phone } from "lucide-react";
 import { LayerStack, LAYERS } from "../components/LayerStack.jsx";
 import { HeroCarousel } from "../components/HeroCarousel.jsx";
 import { useReveal } from "../hooks/useReveal.js";
@@ -416,10 +416,10 @@ export default function Home() {
       <section id="narzedzia" ref={toolsRef} className="max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28">
         <div className={`mb-12 reveal ${toolsVisible ? "visible" : ""}`}>
           <div className="ft-mono text-xs ft-tracking-wide uppercase mb-3" style={{ color: COLORS.accent }}>
-            Sprawdź samodzielnie
+            Pomoc w wyborze
           </div>
           <h2 className="ft-display text-3xl md:text-4xl" style={{ fontWeight: 700 }}>
-            Dwa narzędzia, zanim zadzwonisz.
+            Nie wiesz, od czego zacząć? Sprawdź w 2 minuty.
           </h2>
         </div>
         <div className={`grid md:grid-cols-2 gap-6 reveal ${toolsVisible ? "visible" : ""}`}>
@@ -464,6 +464,16 @@ export default function Home() {
             </span>
           </Link>
         </div>
+        <p className="mt-8 text-base" style={{ color: COLORS.textOnLight }}>
+          Wolisz od razu porozmawiać?{" "}
+          <a
+            href="tel:+48507394552"
+            className="inline-flex items-center gap-1.5 font-semibold underline underline-offset-4 hover:opacity-80"
+            style={{ color: COLORS.textOnLight }}
+          >
+            <Phone size={15} /> Zadzwoń: 507 394 552
+          </a>
+        </p>
       </section>
 
       {/* CERTYFIKATY / DYSTRYBUCJA */}
