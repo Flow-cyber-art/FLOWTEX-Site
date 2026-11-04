@@ -8,9 +8,6 @@ import { HeroCarousel } from "../components/HeroCarousel.jsx";
 import { useReveal } from "../hooks/useReveal.js";
 import { SERVICES } from "../data/services.js";
 import certIcon1 from "../assets/certyfikaty/cert-1.webp";
-import certIcon2 from "../assets/certyfikaty/cert-2.webp";
-import certIcon3 from "../assets/certyfikaty/cert-3.webp";
-import certIcon4 from "../assets/certyfikaty/cert-4.webp";
 import pawelPhoto from "../assets/team/pawel-najduk.webp";
 
 const FAQ = [
@@ -50,9 +47,6 @@ const FAQ = [
 
 const CERT_ICONS = [
   { src: certIcon1, alt: "Autoryzowany wykonawca systemów Flowcrete" },
-  { src: certIcon2, alt: "Autoryzowany wykonawca systemów Puraco" },
-  { src: certIcon3, alt: "Autoryzowany wykonawca systemów ACO" },
-  { src: certIcon4, alt: "Autoryzowany wykonawca systemów Polysto" },
 ];
 
 const STATS = [
@@ -516,7 +510,7 @@ export default function Home() {
               </h2>
               <p className="text-base" style={{ color: COLORS.textOnLight }}>
                 FLOWTEX Polska jest autoryzowanym wykonawcą systemów posadzkowych
-                w technologiach: Flowcrete, Sika, Sto, Aco, Polysto.
+                w technologiach: Flowcrete i Sika.
               </p>
             </div>
           </div>
