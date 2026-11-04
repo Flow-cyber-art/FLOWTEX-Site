@@ -8,6 +8,7 @@ import { HeroCarousel } from "../components/HeroCarousel.jsx";
 import { useReveal } from "../hooks/useReveal.js";
 import { SERVICES } from "../data/services.js";
 import certIcon1 from "../assets/certyfikaty/cert-1.webp";
+import certIcon2 from "../assets/certyfikaty/cert-2.webp";
 import pawelPhoto from "../assets/team/pawel-najduk.webp";
 
 const FAQ = [
@@ -47,6 +48,7 @@ const FAQ = [
 
 const CERT_ICONS = [
   { src: certIcon1, alt: "Autoryzowany wykonawca systemów Flowcrete" },
+  { src: certIcon2, alt: "Autoryzowany wykonawca systemów Sika" },
 ];
 
 const STATS = [
