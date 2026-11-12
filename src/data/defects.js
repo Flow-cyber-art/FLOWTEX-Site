@@ -433,7 +433,7 @@ export const DEFECTS = [
     title: "Ścieranie i matowienie warstwy nawierzchniowej",
     intro: "Połysk i grubość warstwy wierzchniej stopniowo maleją w strefach najintensywniej eksploatowanych.",
     image: "flowtex-defect-scieranie.webp",
-    updated: "2026-11-12",
+    updated: "2026-08-27",
     explanation: "Ścieranie topcoatu jest procesem naturalnym, ale jego tempo mocno zależy od doboru systemu do realnych warunków — rodzaju kół wózków, materiału ściernego transportowanego na oponach i intensywności ruchu. Ten sam topcoat w dwóch różnych halach może zużyć się w zupełnie innym czasie.",
     causes: [
       "Naturalne zużycie eksploatacyjne w strefach o dużym natężeniu ruchu",
