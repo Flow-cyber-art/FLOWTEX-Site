@@ -2,9 +2,9 @@
 // i oznaczanie źródeł zapytań.
 //
 // Włączanie (zmienne środowiskowe, patrz .env.example i README):
-//   VITE_GTM_ID = GTM-XXXXXXX   -> ładuje kontener GTM; zdarzenia trafiają do
+//   GTM_ID = GTM-XXXXXXX   -> ładuje kontener GTM; zdarzenia trafiają do
 //                                  dataLayer jako { event: "nazwa", ...parametry }
-//   VITE_GA4_ID = G-XXXXXXXXXX  -> bez GTM: ładuje gtag.js i wysyła zdarzenia
+//   GA4_ID = G-XXXXXXXXXX  -> bez GTM: ładuje gtag.js i wysyła zdarzenia
 //                                  wprost do GA4 (nic nie trzeba konfigurować w GTM)
 // Jeśli ustawione są obie, używany jest GTM (żeby nie liczyć zdarzeń podwójnie).
 // Bez żadnej z nich strona działa bez analityki: nic się nie ładuje, a baner
@@ -15,8 +15,9 @@
 // analitycznych. Zgody reklamowe (ad_*) są zawsze odrzucone — strona nie
 // prowadzi remarketingu.
 
-const GTM_ID = import.meta.env.VITE_GTM_ID || "";
-const GA4_ID = import.meta.env.VITE_GA4_ID || "";
+// Stałe wstawiane w czasie budowania przez vite.config.js (zmienne GTM_ID, GA4_ID).
+const GTM_ID = typeof __GTM_ID__ !== "undefined" ? __GTM_ID__ : "";
+const GA4_ID = typeof __GA4_ID__ !== "undefined" ? __GA4_ID__ : "";
 export const ANALYTICS_ENABLED = Boolean(GTM_ID || GA4_ID);
 
 const CONSENT_KEY = "flowtex_cookie_consent"; // "granted" | "denied"

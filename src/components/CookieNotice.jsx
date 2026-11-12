@@ -4,7 +4,7 @@ import { COLORS } from "../theme.js";
 import { ANALYTICS_ENABLED, getConsent, setConsent } from "../utils/analytics.js";
 
 // Dwa tryby:
-//  1) Analityka wyłączona (brak VITE_GTM_ID / VITE_GA4_ID): zwykły komunikat
+//  1) Analityka wyłączona (brak GTM_ID / GA4_ID): zwykły komunikat
 //     informacyjny — strona używa tylko plików niezbędnych, więc zgoda nie
 //     jest wymagana. Zapamiętujemy wyłącznie fakt zamknięcia komunikatu.
 //  2) Analityka włączona: baner zgody z równorzędnymi przyciskami "Odrzuć"

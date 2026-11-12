@@ -18,9 +18,20 @@ function searchConsoleVerification(token) {
   };
 }
 
-export default defineConfig(({ isSsrBuild, mode }) => ({
+export default defineConfig(({ isSsrBuild, mode }) => {
+  // GTM_ID i GA4_ID są zmiennymi BEZ prefiksu VITE_: Vite nie wystawia ich
+  // automatycznie w import.meta.env, tylko wczytujemy je tu (z pliku .env lub
+  // zmiennych Vercela) i wstawiamy do kodu świadomie, jako stałe __GTM_ID__ /
+  // __GA4_ID__. Uwaga: identyfikator kontenera i tak trafia do przeglądarki
+  // (jest w adresie gtm.js), więc to porządek w konfiguracji, nie tajemnica.
+  const env = loadEnv(mode, process.cwd(), "");
+  return {
   plugins: [react(), searchConsoleVerification(loadEnv(mode, process.cwd(), "VITE_").VITE_GSC_VERIFICATION)],
-  define: { __BUILD_DATE__: JSON.stringify(BUILD_DATE) },
+  define: {
+    __BUILD_DATE__: JSON.stringify(BUILD_DATE),
+    __GTM_ID__: JSON.stringify(env.GTM_ID || ""),
+    __GA4_ID__: JSON.stringify(env.GA4_ID || ""),
+  },
   build: {
     rollupOptions: isSsrBuild
       ? {}
@@ -38,4 +49,5 @@ export default defineConfig(({ isSsrBuild, mode }) => ({
           },
         },
   },
-}));
+};
+});
