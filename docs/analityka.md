@@ -1,19 +1,20 @@
 # Analityka: GA4, GTM, Search Console
 
-Strona ładuje kontener Google Tag Manager **GTM-N44NN9NF** (wpisany jako wartość
-domyślna w `src/utils/analytics.js`). Kodu z ekranu „Zainstaluj ręcznie" w GTM
-**nie trzeba nigdzie wklejać** — strona wczytuje ten sam skrypt sama, po zgodzie
-użytkownika na cookies. Do działania pomiaru zostaje konfiguracja w GTM i GA4:
-wariant B poniżej.
+Strona wczytuje Google Tag Manager na podstawie zmiennej środowiskowej
+`VITE_GTM_ID`. Kodu z ekranu „Zainstaluj ręcznie" w GTM **nie trzeba nigdzie
+wklejać** — strona ładuje ten sam skrypt sama, po zgodzie użytkownika na cookies.
 
-Zmienne środowiskowe w Vercelu (Project → Settings → Environment Variables) są
-opcjonalne:
+Zmienne ustawia się w Vercelu: Project → Settings → Environment Variables
+(środowisko Production, opcjonalnie Preview), a potem trzeba uruchomić nowy deploy
+— wartości są wstawiane do kodu w czasie budowania.
 
 | Zmienna | Wartość | Kiedy |
 | --- | --- | --- |
-| `VITE_GTM_ID` | `GTM-XXXXXXX` albo `off` | Inny kontener; `off` wyłącza analitykę |
-| `VITE_GA4_ID` | `G-XXXXXXXXXX` | Tylko przy `VITE_GTM_ID=off`: samo GA4 bez GTM (wariant A) |
+| `VITE_GTM_ID` | `GTM-N44NN9NF` | Kontener FLOWTEX (wariant B) |
+| `VITE_GA4_ID` | `G-XXXXXXXXXX` | Zamiast GTM: samo GA4 (wariant A); pomijane, gdy jest `VITE_GTM_ID` |
 | `VITE_GSC_VERIFICATION` | kod z metatagu | Tylko przy weryfikacji Search Console metatagiem |
+
+Bez `VITE_GTM_ID` i `VITE_GA4_ID` nic się nie ładuje i strona działa bez analityki.
 
 Uwaga do testu instalacji w panelu Google: tag ładuje się dopiero po kliknięciu
 „Akceptuję" w banerze cookies, więc automatyczny test „wykryj tag" może go nie
@@ -23,7 +24,7 @@ znaleźć. Sprawdzaj w trybie podglądu GTM (Preview), po zaakceptowaniu cookies
 
 1. analytics.google.com → Administracja → Utwórz usługę → strumień danych „Sieć"
    dla `https://www.flowtex.pl`. Skopiuj identyfikator pomiaru `G-…`.
-2. W Vercelu ustaw `VITE_GTM_ID=off` oraz `VITE_GA4_ID=G-…` i uruchom deploy.
+2. W Vercelu ustaw `VITE_GA4_ID=G-…` (bez `VITE_GTM_ID`) i uruchom deploy.
 3. W GA4: Administracja → Zdarzenia → oznacz `generate_lead` jako **kluczowe
    zdarzenie**. Opcjonalnie także `click_phone` i `click_email`.
 4. W GA4: Administracja → Definicje niestandardowe → utwórz wymiary o zakresie
@@ -35,7 +36,7 @@ znaleźć. Sprawdzaj w trybie podglądu GTM (Preview), po zaakceptowaniu cookies
 
 ## Wariant B — Google Tag Manager (używany)
 
-1. Kontener GTM-N44NN9NF już istnieje i jest wczytywany przez stronę. Utwórz usługę
+1. W Vercelu ustaw `VITE_GTM_ID=GTM-N44NN9NF` i uruchom deploy. Utwórz usługę
    GA4 (analytics.google.com → strumień danych „Sieć") i skopiuj identyfikator `G-…`.
 2. Tag „Tag Google" z identyfikatorem `G-…`, reguła: Initialization – All Pages.
 3. Zmienne warstwy danych: `form_id`, `form_location`, `lead_context`, `lead_id`,
@@ -122,8 +123,8 @@ Małe litery, bez polskich znaków i spacji.
 
 ## Zgoda na cookies
 
-Gdy analityka jest włączona (domyślnie), komunikat o cookies ma postać
-banera z przyciskami „Odrzuć" i „Akceptuję", w stopce pojawia się link
+Po ustawieniu `VITE_GTM_ID` lub `VITE_GA4_ID` komunikat o cookies zamienia się
+w baner z przyciskami „Odrzuć" i „Akceptuję", w stopce pojawia się link
 „Ustawienia cookies", a Polityka Cookies opisuje Google Analytics.
 Przed zgodą i po odmowie do Google nie jest wysyłane żadne żądanie.
 
