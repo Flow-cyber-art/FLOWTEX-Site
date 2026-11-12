@@ -77,6 +77,33 @@ const template = inlineStylesheets(
   fs.readFileSync(path.join(distDir, "index.html"), "utf-8")
 );
 
+// Arkusze CSS tras ładowanych leniwie (narzędzia, formularz kontaktowy) Vite
+// dociąga dopiero razem z kodem JS danej trasy. W prerenderowanym HTML treść
+// jest więc przez chwilę nieostylowana, a po dociągnięciu CSS cały układ
+// "skacze" (CLS 0,5–1,0 na /dobor-posadzki i /katalog-wad przy wolnym łączu).
+// Dlatego style potrzebne danej podstronie wklejamy od razu do jej <head>.
+const assetFiles = fs.readdirSync(path.join(distDir, "assets"));
+const chunkCss = (name) =>
+  assetFiles
+    .filter((f) => f.startsWith(`${name}-`) && f.endsWith(".css"))
+    .map((f) => fs.readFileSync(path.join(distDir, "assets", f), "utf-8"))
+    .join("");
+const ROUTE_CSS = {
+  form: chunkCss("ContactForm"),
+  defects: chunkCss("DefectCatalog"),
+  selector: chunkCss("FloorSelector"),
+};
+
+function injectRouteCss(html, url) {
+  const parts = [];
+  if (url.startsWith("/katalog-wad")) parts.push(ROUTE_CSS.defects, ROUTE_CSS.form);
+  else if (url === "/dobor-posadzki") parts.push(ROUTE_CSS.selector, ROUTE_CSS.form);
+  else if (url !== "/" && !url.startsWith("/polityka-") && url !== "/poradniki" && url !== "/__404__")
+    parts.push(ROUTE_CSS.form); // usługi, realizacje, poradniki — sekcja z formularzem
+  const css = parts.join("");
+  return css ? html.replace("</head>", `<style data-route-css>${css}</style>\n  </head>`) : html;
+}
+
 function injectHelmet(html, helmet) {
   let out = html;
 
@@ -136,6 +163,7 @@ for (const url of routes) {
     `<div id="root">${appHtml}</div>`
   );
   html = injectHelmet(html, helmet);
+  html = injectRouteCss(html, url);
 
   const outPath =
     url === "/"

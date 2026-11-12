@@ -7,6 +7,7 @@ import { SERVICES, getServiceBySlug } from "../data/services.js";
 import { REALIZACJE } from "../data/realizacje.js";
 import { PORADNIKI } from "../data/poradniki.js";
 import NotFound from "./NotFound.jsx";
+import ContactSection from "../components/ContactSection.jsx";
 import { renderInline, stripInline } from "../utils/inline.jsx";
 
 // Automatyczne wczytanie zdjęć realizacji z src/assets/realizacje/.
@@ -139,18 +140,18 @@ export default function ServicePage() {
             className="ft-display mt-4"
             style={{ color: COLORS.white, fontSize: "clamp(2.2rem, 5vw, 3.4rem)", fontWeight: 800 }}
           >
-            {service.title}
+            {service.h1 || service.title}
           </h1>
           <p className="mt-4 max-w-2xl text-base md:text-lg" style={{ color: COLORS.mutedOnDark }}>
             {renderInline(service.intro)}
           </p>
-          <Link
-            to="/#kontakt"
+          <a
+            href="#kontakt"
             className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-sm ft-mono text-xs tracking-wider uppercase hover:opacity-90 transition"
             style={{ backgroundColor: COLORS.accent, color: ACCENT_TEXT, fontWeight: 600 }}
           >
             Zapytaj o wycenę <ArrowRight size={15} />
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -335,6 +336,9 @@ export default function ServicePage() {
           </div>
         </section>
       )}
+
+      {/* Formularz na stronie usługi — zapytanie bez przechodzenia na stronę główną */}
+      <ContactSection context={`Usługa — ${service.title}`} />
 
       {/* Pozostałe usługi — linkowanie wewnętrzne */}
       <section style={{ backgroundColor: COLORS.darkBg }}>

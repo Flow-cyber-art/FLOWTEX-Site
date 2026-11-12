@@ -2,6 +2,7 @@ import React from "react";
 import { COLORS, ACCENT_TEXT } from "../theme.js";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import ContactSection from "../components/ContactSection.jsx";
 import { ArrowRight, ArrowLeft, CalendarDays } from "lucide-react";
 import { PORADNIKI, getPoradnikBySlug } from "../data/poradniki.js";
 import { getServiceBySlug } from "../data/services.js";
@@ -98,10 +99,10 @@ function PoradnikiList() {
   return (
     <>
       <Helmet>
-        <title>Poradniki | FLOWTEX Polska</title>
+        <title>Poradniki o posadzkach przemysłowych | FLOWTEX Polska</title>
         <meta name="description" content={listMetaDescription} />
         <link rel="canonical" href={LIST_URL} />
-        <meta property="og:title" content="Poradniki | FLOWTEX Polska" />
+        <meta property="og:title" content="Poradniki o posadzkach przemysłowych | FLOWTEX Polska" />
         <meta property="og:description" content={listMetaDescription} />
         <meta property="og:url" content={LIST_URL} />
       </Helmet>
@@ -122,7 +123,7 @@ function PoradnikiList() {
             className="ft-display mt-4"
             style={{ color: COLORS.white, fontSize: "clamp(2.2rem, 5vw, 3.4rem)", fontWeight: 800 }}
           >
-            Poradniki
+            Poradniki o posadzkach przemysłowych
           </h1>
           <p className="mt-4 max-w-2xl text-base md:text-lg" style={{ color: COLORS.mutedOnDark }}>
             Praktyczna wiedza o posadzkach przemysłowych i żywicznych — jak wybrać system, czym różnią się rozwiązania i czego unikać.
@@ -360,27 +361,11 @@ function PoradnikDetail({ item }) {
         )}
       </article>
 
-      {item.cta && (
-        <section style={{ backgroundColor: COLORS.darkBg }}>
-          <div className="max-w-7xl mx-auto px-5 md:px-8 py-16 md:py-20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div className="max-w-2xl">
-              <h2 className="ft-display text-2xl md:text-3xl mb-2" style={{ color: COLORS.white, fontWeight: 700 }}>
-                {item.cta.heading}
-              </h2>
-              <p className="text-sm md:text-base" style={{ color: COLORS.mutedOnDark }}>
-                {item.cta.text}
-              </p>
-            </div>
-            <Link
-              to="/#kontakt"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-sm ft-mono text-xs tracking-wider uppercase hover:opacity-90 transition shrink-0"
-              style={{ backgroundColor: COLORS.accent, color: ACCENT_TEXT, fontWeight: 600 }}
-            >
-              Zapytaj o wycenę <ArrowRight size={15} />
-            </Link>
-          </div>
-        </section>
-      )}
+      <ContactSection
+        heading={item.cta?.heading || "Skonsultuj dobór systemu"}
+        text={item.cta?.text || "Opisz obiekt i warunki pracy posadzki — wrócimy z propozycją systemu i wyceną."}
+        context={`Poradnik — ${item.title}`}
+      />
 
       <div className="max-w-7xl mx-auto px-5 md:px-8 py-8">
         <Link

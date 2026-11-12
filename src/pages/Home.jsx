@@ -162,10 +162,10 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Posadzki przemysłowe i żywiczne | FLOWTEX Polska</title>
+        <title>Posadzki przemysłowe i żywiczne — wykonawca | FLOWTEX Polska</title>
         <meta
           name="description"
-          content="Posadzki żywiczne i przemysłowe dla zakładów produkcyjnych, spożywczych i farmaceutycznych. Autoryzowany wykonawca Flowcrete. Wykonanie i serwis w całej Polsce."
+          content="Posadzki żywiczne i przemysłowe dla zakładów spożywczych, farmacji, elektroniki, stref ESD i ATEX. Dobór systemu, wykonanie, pomiary. Wycena w całej Polsce."
         />
         <link rel="canonical" href="https://www.flowtex.pl/" />
         <script type="application/ld+json">
@@ -222,7 +222,7 @@ export default function Home() {
                 lineHeight: 1.6,
               }}
             >
-              Posadzki żywiczne i przemysłowe
+              Posadzki żywiczne i przemysłowe{" "}
               <br />
               dla wymagającego przemysłu.
             </h1>
