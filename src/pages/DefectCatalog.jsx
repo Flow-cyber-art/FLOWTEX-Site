@@ -5,21 +5,28 @@ import { ArrowLeft, ArrowRight, CircleAlert, CheckCircle2, Phone, Mail, HelpCirc
 import { COLORS } from "../theme.js";
 import { ContactForm } from "../components/ContactForm.jsx";
 import "../styles/defect-catalog.css";
-import { DEFECTS, AUTHOR } from "../data/defects.js";
+import { DEFECTS, AUTHOR, DEFECT_LINKS } from "../data/defects.js";
+import { getServiceBySlug } from "../data/services.js";
+import { getPoradnikBySlug } from "../data/poradniki.js";
 
 const IMAGE = "/images/flowtex/";
 
 function Detail({ defect }) {
   const canonicalUrl = `https://www.flowtex.pl/katalog-wad/${defect.id}`;
-  const metaDescription = `${defect.intro} Poznaj możliwe przyczyny i kierunek naprawy — bezpłatna wycena FLOWTEX Polska.`;
+  const metaDescription = `${defect.intro} Sprawdź możliwe przyczyny i sposób naprawy.`;
   const titleLower = defect.title.toLowerCase();
+  const links = DEFECT_LINKS[defect.id] || {};
+  const linkedServices = (links.services || []).map(getServiceBySlug).filter(Boolean);
+  const linkedDefects = (links.related || []).map((id) => DEFECTS.find((d) => d.id === id)).filter(Boolean);
+  const linkedGuide = links.guide ? getPoradnikBySlug(links.guide) : null;
+  const pageTitle = `${defect.title} — przyczyny i naprawa | FLOWTEX`;
 
   return <article className="defect-detail-page">
     <Helmet>
-      <title>{defect.title} — przyczyny i naprawa | FLOWTEX Polska</title>
+      <title>{pageTitle}</title>
       <meta name="description" content={metaDescription} />
       <link rel="canonical" href={canonicalUrl} />
-      <meta property="og:title" content={`${defect.title} — przyczyny i naprawa | FLOWTEX Polska`} />
+      <meta property="og:title" content={pageTitle} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:url" content={canonicalUrl} />
       <script type="application/ld+json">
@@ -106,6 +113,31 @@ function Detail({ defect }) {
           </div>
         </section>
       ) : null}
+      {(linkedServices.length > 0 || linkedGuide || linkedDefects.length > 0) ? (
+        <section className="defect-links">
+          {(linkedServices.length > 0 || linkedGuide) ? (
+            <div>
+              <p className="defect-panel-label">JAK TO NAPRAWIAMY</p>
+              <ul>
+                {linkedServices.map((service) => (
+                  <li key={service.slug}><Link to={`/${service.slug}`}>{service.title} <ArrowRight size={14} /></Link></li>
+                ))}
+                {linkedGuide ? <li><Link to={`/poradniki/${linkedGuide.slug}`}>Poradnik: {linkedGuide.title} <ArrowRight size={14} /></Link></li> : null}
+              </ul>
+            </div>
+          ) : null}
+          {linkedDefects.length > 0 ? (
+            <div>
+              <p className="defect-panel-label">POWIĄZANE WADY</p>
+              <ul>
+                {linkedDefects.map((item) => (
+                  <li key={item.id}><Link to={`/katalog-wad/${item.id}`}>{item.title} <ArrowRight size={14} /></Link></li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+        </section>
+      ) : null}
       <section id="defect-kontakt" className="defect-funnel defect-funnel-form">
         <div className="defect-funnel-copy">
           <p className="defect-kicker"><span>03</span> NASTĘPNY KROK</p>
@@ -116,7 +148,7 @@ function Detail({ defect }) {
             <a href="mailto:kontakt@flowtex.pl"><Mail size={16} /> kontakt@flowtex.pl</a>
           </div>
         </div>
-        <ContactForm prefillContext={`Katalog wad — ${defect.title}`} submitLabel="Poproś o bezpłatną wycenę" />
+        <ContactForm prefillContext={`Katalog wad — ${defect.title}`} submitLabel="Poproś o bezpłatną wycenę" formId="formularz_katalog_wad" />
       </section>
       <Link className="cross-tool-link" to="/dobor-posadzki">Planujesz nową posadzkę od podstaw? Skorzystaj z narzędzia doboru systemu <ArrowRight size={14} /></Link>
     </div>
@@ -129,10 +161,10 @@ export default function DefectCatalog() {
   if (defect) return <Detail defect={defect} />;
   return <div className="defect-catalog-page">
     <Helmet>
-      <title>Katalog wad posadzek przemysłowych — objawy, przyczyny, naprawa | FLOWTEX Polska</title>
+      <title>Wady posadzek przemysłowych — katalog i naprawa | FLOWTEX</title>
       <meta
         name="description"
-        content="Rozpoznaj problem widoczny na posadzce: pęknięcia, ubytki, odspojoną żywicę, pylenie i inne. 14 typów wad posadzek przemysłowych z przyczynami i kierunkiem naprawy — bezpłatna wycena FLOWTEX Polska."
+        content="14 typowych wad posadzek betonowych i żywicznych: objaw, możliwe przyczyny, kierunek naprawy. Opisz problem — przygotujemy bezpłatną wycenę."
       />
       <link rel="canonical" href="https://www.flowtex.pl/katalog-wad" />
       <meta property="og:title" content="Katalog wad posadzek przemysłowych | FLOWTEX Polska" />
@@ -184,7 +216,7 @@ export default function DefectCatalog() {
       <span>/</span>
       <span aria-current="page">Katalog wad</span>
     </nav>
-    <section className="defect-catalog-hero" style={{ backgroundImage: `linear-gradient(90deg, rgba(16,16,17,.96), rgba(27,27,29,.56)), url(${IMAGE}hero.webp)` }}><div><p className="defect-kicker light"><CircleAlert size={14} /> KATALOG WAD POSADZEK</p><h1>Najpierw objaw.<br /><em>Potem rozwiązanie.</em></h1><p>Wybierz problem, który widzisz na posadzce. Poznaj możliwe przyczyny, kierunki naprawy i przejdź do bezpłatnej wyceny.</p></div></section>
+    <section className="defect-catalog-hero" style={{ backgroundImage: `linear-gradient(90deg, rgba(16,16,17,.96), rgba(27,27,29,.56)), url(${IMAGE}hero.webp)` }}><div><p className="defect-kicker light"><CircleAlert size={14} /> 14 KART WAD</p><h1 className="hero-keyword">Katalog wad posadzek przemysłowych</h1><p className="hero-claim">Najpierw objaw.{" "}<br /><em>Potem rozwiązanie.</em></p><p>Wybierz problem, który widzisz na posadzce. Poznaj możliwe przyczyny, kierunki naprawy i przejdź do bezpłatnej wyceny.</p></div></section>
     <section className="defect-catalog-list"><div className="defect-section-head"><p className="defect-kicker"><span>01</span> KATALOG</p><h2>Wybierz wadę.</h2><p>Każda karta prowadzi do osobnego opisu problemu, jego możliwych powodów i sugestii rozwiązania.</p></div><div className="defect-grid">{DEFECTS.map((item) => <Link className="defect-card" to={`/katalog-wad/${item.id}`} key={item.id}><img className="defect-card-thumb" src={`${IMAGE}${item.image}`} alt={item.title} width="960" height="720" loading="lazy" decoding="async" /><div className="defect-card-footer"><span className="defect-card-no">{item.no}</span><span><strong>{item.title}</strong><small>{item.intro}</small></span><ArrowRight size={18} /></div></Link>)}</div></section>
   </div>;
 }

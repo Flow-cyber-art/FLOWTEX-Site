@@ -7,6 +7,8 @@ import { LayerStack, LAYERS } from "../components/LayerStack.jsx";
 import { HeroCarousel } from "../components/HeroCarousel.jsx";
 import { useReveal } from "../hooks/useReveal.js";
 import { SERVICES } from "../data/services.js";
+import { sendLead } from "../utils/lead.js";
+import { track } from "../utils/analytics.js";
 import certIcon1 from "../assets/certyfikaty/cert-1.webp";
 import certIcon2 from "../assets/certyfikaty/cert-2.webp";
 import pawelPhoto from "../assets/team/pawel-najduk.webp";
@@ -80,6 +82,12 @@ export default function Home() {
   const [sending, setSending] = useState(false);
   const [sendError, setSendError] = useState("");
   const [certIconIndex, setCertIconIndex] = useState(0);
+  const [formStarted, setFormStarted] = useState(false);
+  const handleFormStart = () => {
+    if (formStarted) return;
+    setFormStarted(true);
+    track("form_start", { form_id: "formularz_strona_glowna" });
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -123,36 +131,12 @@ export default function Home() {
     setSending(true);
     setSendError("");
 
-    const templateParams = {
-      name: form.name,
-      company: form.company,
-      email: form.email,
-      phone: form.phone,
-      message: form.message,
-    };
-
     try {
-      // @emailjs/browser jest potrzebny wyłącznie w momencie wysyłki
-      // formularza — ładujemy go dynamicznie zamiast dołączać do
-      // głównego bundla (mniej nieużywanego JS na starcie strony).
-      const { default: emailjs } = await import("@emailjs/browser");
-      await Promise.all([
-        emailjs.send(
-          import.meta.env.VITE_EMAILJS_SERVICE_ID,
-          import.meta.env.VITE_EMAILJS_TEMPLATE_ADMIN_ID,
-          templateParams,
-          { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
-        ),
-        emailjs.send(
-          import.meta.env.VITE_EMAILJS_SERVICE_ID,
-          import.meta.env.VITE_EMAILJS_TEMPLATE_CLIENT_ID,
-          templateParams,
-          { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
-        ),
-      ]);
+      await sendLead(form, { formId: "formularz_strona_glowna", context: contactContext });
       setSent(true);
     } catch (err) {
       console.error("Błąd wysyłki formularza kontaktowego:", err);
+      track("form_error", { form_id: "formularz_strona_glowna", error_type: "wysylka" });
       setSendError("Nie udało się wysłać wiadomości. Spróbuj ponownie lub napisz na kontakt@flowtex.pl.");
     } finally {
       setSending(false);
@@ -162,10 +146,10 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Posadzki przemysłowe i żywiczne | FLOWTEX Polska</title>
+        <title>Posadzki przemysłowe i żywiczne — wykonawca | FLOWTEX Polska</title>
         <meta
           name="description"
-          content="Posadzki żywiczne i przemysłowe dla zakładów produkcyjnych, spożywczych i farmaceutycznych. Autoryzowany wykonawca Flowcrete. Wykonanie i serwis w całej Polsce."
+          content="Posadzki żywiczne i przemysłowe dla zakładów spożywczych, farmacji, elektroniki, stref ESD i ATEX. Dobór systemu, wykonanie, pomiary. Wycena w całej Polsce."
         />
         <link rel="canonical" href="https://www.flowtex.pl/" />
         <script type="application/ld+json">
@@ -222,7 +206,7 @@ export default function Home() {
                 lineHeight: 1.6,
               }}
             >
-              Posadzki żywiczne i przemysłowe
+              Posadzki żywiczne i przemysłowe{" "}
               <br />
               dla wymagającego przemysłu.
             </h1>
@@ -574,7 +558,7 @@ export default function Home() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} className="bg-white rounded-sm p-6 md:p-8 space-y-4">
+          <form onSubmit={handleSubmit} onFocus={handleFormStart} className="bg-white rounded-sm p-6 md:p-8 space-y-4">
             {sent ? (
               <div className="py-10 text-center">
                 <div className="ft-display text-2xl mb-2" style={{ fontWeight: 700 }}>
@@ -589,6 +573,9 @@ export default function Home() {
                 <div className="grid grid-cols-2 gap-4">
                   <input
                     required
+                    name="name"
+                    autoComplete="name"
+                    aria-label="Imię i nazwisko"
                     placeholder="Imię i nazwisko"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -596,6 +583,9 @@ export default function Home() {
                     style={{ borderColor: COLORS.borderOnLight }}
                   />
                   <input
+                    name="company"
+                    autoComplete="organization"
+                    aria-label="Nazwa firmy"
                     placeholder="Nazwa firmy"
                     value={form.company}
                     onChange={(e) => setForm({ ...form, company: e.target.value })}
@@ -607,6 +597,9 @@ export default function Home() {
                   <input
                     required
                     type="email"
+                    name="email"
+                    autoComplete="email"
+                    aria-label="E-mail"
                     placeholder="E-mail"
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
@@ -614,6 +607,10 @@ export default function Home() {
                     style={{ borderColor: COLORS.borderOnLight }}
                   />
                   <input
+                    type="tel"
+                    name="phone"
+                    autoComplete="tel"
+                    aria-label="Telefon"
                     placeholder="Telefon"
                     value={form.phone}
                     onChange={(e) => setForm({ ...form, phone: e.target.value })}
@@ -623,6 +620,8 @@ export default function Home() {
                 </div>
                 <textarea
                   required
+                  name="message"
+                  aria-label="Wiadomość"
                   placeholder="Wiadomość"
                   rows={4}
                   value={form.message}

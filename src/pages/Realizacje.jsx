@@ -2,6 +2,7 @@ import React from "react";
 import { COLORS, ACCENT_TEXT } from "../theme.js";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import ContactSection from "../components/ContactSection.jsx";
 import { ArrowRight, ArrowLeft, CalendarDays } from "lucide-react";
 import { REALIZACJE, getRealizacjaBySlug } from "../data/realizacje.js";
 import { getServiceBySlug } from "../data/services.js";
@@ -48,7 +49,7 @@ function shortDescription(text, max = 155) {
 }
 
 const listMetaDescription =
-  "Realizacje FLOWTEX Polska — przegląd zrealizowanych inwestycji: posadzki przemysłowe, żywiczne i betonowe dla hal produkcyjnych i magazynowych. Sekcję uzupełniamy o kolejne wdrożenia.";
+  "Opisy wykonanych posadzek przemysłowych: przemysł spożywczy, farmacja, ESD, ATEX. Branża, metraż, zastosowany system i przebieg prac.";
 
 // "Sierpień 2026" -> "2026-08-01" (do pola datePublished w JSON-LD).
 const MONTHS_PL = {
@@ -71,14 +72,14 @@ function RealizacjeList() {
   return (
     <>
       <Helmet>
-        <title>Realizacje | FLOWTEX Polska</title>
+        <title>Realizacje posadzek przemysłowych — case studies | FLOWTEX</title>
         <meta name="description" content={listMetaDescription} />
         <link rel="canonical" href={LIST_URL} />
-        <meta property="og:title" content="Realizacje | FLOWTEX Polska" />
+        <meta property="og:title" content="Realizacje posadzek przemysłowych — case studies | FLOWTEX" />
         <meta property="og:description" content={listMetaDescription} />
         <meta property="og:url" content={LIST_URL} />
         {listImage && <meta property="og:image" content={listImage} />}
-        <meta name="twitter:title" content="Realizacje | FLOWTEX Polska" />
+        <meta name="twitter:title" content="Realizacje posadzek przemysłowych — case studies | FLOWTEX" />
         <meta name="twitter:description" content={listMetaDescription} />
         {listImage && <meta name="twitter:image" content={listImage} />}
         <script type="application/ld+json">
@@ -95,7 +96,7 @@ function RealizacjeList() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            name: "Realizacje | FLOWTEX Polska",
+            name: "Realizacje posadzek przemysłowych — case studies | FLOWTEX",
             description: listMetaDescription,
             url: LIST_URL,
             mainEntity: {
@@ -129,7 +130,7 @@ function RealizacjeList() {
             className="ft-display mt-4"
             style={{ color: COLORS.white, fontSize: "clamp(2.2rem, 5vw, 3.4rem)", fontWeight: 800 }}
           >
-            Realizacje
+            Realizacje posadzek przemysłowych
           </h1>
           <p className="mt-4 max-w-2xl text-base md:text-lg" style={{ color: COLORS.mutedOnDark }}>
             Wybrane inwestycje zrealizowane przez FLOWTEX Polska. Tę sekcję uzupełniamy sukcesywnie,
@@ -205,26 +206,13 @@ function RealizacjeList() {
         )}
       </section>
 
-      {/* CTA */}
-      <section style={{ backgroundColor: COLORS.darkBg }}>
-        <div className="max-w-7xl mx-auto px-5 md:px-8 py-16 md:py-20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div>
-            <h2 className="ft-display text-2xl md:text-3xl mb-2" style={{ color: COLORS.white, fontWeight: 700 }}>
-              Planujesz podobną inwestycję?
-            </h2>
-            <p className="text-sm md:text-base" style={{ color: COLORS.mutedOnDark }}>
-              Porozmawiajmy o posadzce dopasowanej do Twojej hali.
-            </p>
-          </div>
-          <Link
-            to="/#kontakt"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-sm ft-mono text-xs tracking-wider uppercase hover:opacity-90 transition shrink-0"
-            style={{ backgroundColor: COLORS.accent, color: ACCENT_TEXT, fontWeight: 600 }}
-          >
-            Zapytaj o wycenę <ArrowRight size={15} />
-          </Link>
-        </div>
-      </section>
+      {/* Formularz */}
+      <ContactSection
+        formId="formularz_realizacja"
+        heading="Planujesz podobną inwestycję?"
+        text="Opisz swój obiekt — przygotujemy propozycję systemu i wycenę."
+        context="Realizacje"
+      />
 
       {/* Powrót */}
       <div className="max-w-7xl mx-auto px-5 md:px-8 py-8">
@@ -246,7 +234,7 @@ function RealizacjaDetail({ item }) {
   const relatedService = item.relatedServiceSlug ? getServiceBySlug(item.relatedServiceSlug) : null;
   const metaDescription = shortDescription(item.paragraphs?.[0]);
   const relatedPoradniki = PORADNIKI.filter((p) => p.relatedRealizacjeSlugs?.includes(item.slug));
-  const pageTitle = `${item.title} | Realizacje FLOWTEX Polska`;
+  const pageTitle = item.metaTitle || `${item.title} | FLOWTEX`;
 
   // Ustrukturyzowane fakty (powierzchnia/branża/lokalizacja) jako
   // schema.org PropertyValue — czytelne wprost dla wyszukiwarek i modeli AI,
@@ -427,26 +415,13 @@ function RealizacjaDetail({ item }) {
         )}
       </article>
 
-      {/* CTA */}
-      <section style={{ backgroundColor: COLORS.darkBg }}>
-        <div className="max-w-7xl mx-auto px-5 md:px-8 py-16 md:py-20 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div>
-            <h2 className="ft-display text-2xl md:text-3xl mb-2" style={{ color: COLORS.white, fontWeight: 700 }}>
-              Planujesz podobną inwestycję?
-            </h2>
-            <p className="text-sm md:text-base" style={{ color: COLORS.mutedOnDark }}>
-              Porozmawiajmy o posadzce dopasowanej do Twojej hali.
-            </p>
-          </div>
-          <Link
-            to="/#kontakt"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-sm ft-mono text-xs tracking-wider uppercase hover:opacity-90 transition shrink-0"
-            style={{ backgroundColor: COLORS.accent, color: ACCENT_TEXT, fontWeight: 600 }}
-          >
-            Zapytaj o wycenę <ArrowRight size={15} />
-          </Link>
-        </div>
-      </section>
+      {/* Formularz */}
+      <ContactSection
+        formId="formularz_realizacja"
+        heading="Planujesz podobną inwestycję?"
+        text="Opisz swój obiekt — przygotujemy propozycję systemu i wycenę."
+        context={`Realizacja — ${item.title}`}
+      />
 
       {/* Powrót */}
       <div className="max-w-7xl mx-auto px-5 md:px-8 py-8">

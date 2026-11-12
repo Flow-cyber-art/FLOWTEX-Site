@@ -7,6 +7,7 @@
   - slug: unikalny identyfikator wpisu (używany jako #kotwica i do
     dopasowania zdjęcia w src/assets/case-studies/{slug}.webp)
   - title: tytuł realizacji
+  - metaTitle: (opcjonalnie) krótki tytuł do <title> (do ok. 60 znaków)
   - category: krótka etykieta branży/typu posadzki (wyświetlana jako tag)
   - date: miesiąc i rok (do sortowania/wyświetlenia, format "Miesiąc RRRR")
   - paragraphs: wstęp wpisu (BEZ nagłówka), każdy element tablicy = jeden akapit
@@ -31,6 +32,7 @@
 export const REALIZACJE = [
   {
     slug: "systemy-odbojowe-zaklad-przekasek-wroclaw-3400-m2",
+    metaTitle: "Odboje Polysto w zakładzie przekąsek, Wrocław | FLOWTEX",
     title: "Systemy odbojowe i zabezpieczenia ścian Polysto w zakładzie produkcji przekąsek i chipsów — Wrocław",
     category: "Systemy odbojowe",
     date: "Październik 2026",
@@ -96,6 +98,7 @@ export const REALIZACJE = [
   },
   {
     slug: "posadzka-antywybuchowa-atex-grojec-1420-m2",
+    metaTitle: "Posadzka ATEX 1420 m² pod Grójcem — realizacja | FLOWTEX",
     title: "Posadzka antywybuchowa ATEX — realizacja 1420 m² pod Grójcem",
     category: "Posadzki antywybuchowe ATEX",
     date: "Wrzesień 2026",
@@ -189,6 +192,7 @@ export const REALIZACJE = [
   },
   {
     slug: "posadzka-zywiczna-clean-room-farmacja-mazowieckie",
+    metaTitle: "Posadzka do clean roomu, farmacja, 340 m² | FLOWTEX",
     title: "Posadzka żywiczna do clean roomu dla przemysłu farmaceutycznego",
     category: "Przemysł farmaceutyczny",
     date: "Wrzesień 2026",
@@ -238,6 +242,7 @@ export const REALIZACJE = [
   },
   {
     slug: "posadzka-zywiczna-przemysl-spozywczy-840-m2-hiszpania",
+    metaTitle: "Posadzka żywiczna 840 m², przemysł spożywczy | FLOWTEX",
     title: "Posadzka żywiczna 840 m² dla przemysłu spożywczego",
     category: "Przemysł spożywczy",
     date: "Wrzesień 2026",
@@ -283,6 +288,7 @@ export const REALIZACJE = [
   },
   {
     slug: "zywica-schody-prefabrykowane-deckshield",
+    metaTitle: "Żywica antypoślizgowa na schodach — Deckshield | FLOWTEX",
     title: "Żywica antypoślizgowa na schodach prefabrykowanych — system Deckshield",
     category: "Schody przemysłowe",
     date: "Sierpień 2026",
@@ -348,6 +354,7 @@ export const REALIZACJE = [
   },
   {
     slug: "posadzka-esd-przemysl-elektroniczny-700-m2",
+    metaTitle: "Posadzka ESD 700 m², przemysł elektroniczny | FLOWTEX",
     title: "700 m² posadzki ESD dla przemysłu elektronicznego",
     category: "Posadzki ESD",
     date: "Sierpień 2026",
@@ -417,6 +424,7 @@ export const REALIZACJE = [
   },
   {
     slug: "posadzka-clean-room-szpital-warszawa",
+    metaTitle: "Posadzka żywiczna dla szpitala w Warszawie | FLOWTEX",
     title: "Posadzka żywiczna dla warszawskiego szpitala",
     category: "Sektor medyczny",
     date: "Sierpień 2026",
@@ -488,6 +496,7 @@ export const REALIZACJE = [
   },
   {
     slug: "wtryskarki-engel",
+    metaTitle: "Posadzka przemysłowa pod wtryskarki ENGEL | FLOWTEX",
     title: "Posadzka przemysłowa pod wtryskarki ENGEL",
     category: "Posadzki przemysłowe",
     date: "Sierpień 2026",

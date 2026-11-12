@@ -3,6 +3,7 @@ import { COLORS } from "../theme.js";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ArrowLeft } from "lucide-react";
+import { ANALYTICS_ENABLED } from "../utils/analytics.js";
 
 const SECTIONS = [
   {
@@ -15,8 +16,18 @@ const SECTIONS = [
   },
   {
     heading: "3. Jakich plików cookies używamy",
-    body: "Strona www.flowtex.pl w chwili obecnej nie wykorzystuje plików cookies analitycznych, statystycznych ani marketingowych i nie prowadzi profilowania użytkowników. Wykorzystywane mogą być wyłącznie pliki niezbędne do prawidłowego działania serwisu (tzw. cookies techniczne/funkcjonalne), na przykład zapamiętujące fakt zapoznania się z niniejszym komunikatem o cookies. Pliki te nie wymagają zgody użytkownika zgodnie z art. 173 ust. 3 ustawy Prawo telekomunikacyjne, ponieważ są niezbędne do świadczenia usługi wyraźnie żądanej przez użytkownika.",
+    body: ANALYTICS_ENABLED
+      ? "Strona www.flowtex.pl wykorzystuje dwa rodzaje plików. Po pierwsze, pliki niezbędne do działania serwisu — zapamiętanie Twojego wyboru w sprawie cookies; nie wymagają one zgody. Po drugie, wyłącznie po wyrażeniu przez Ciebie zgody w banerze cookies, pliki analityczne Google Analytics 4 (cookies _ga oraz _ga_*, przechowywane do 2 lat), ładowane bezpośrednio lub za pośrednictwem Google Tag Manager. Służą one do zbiorczych statystyk: liczby odwiedzin, źródeł wejść na stronę, przeglądanych podstron oraz wysłanych zapytań. Po wyrażeniu zgody zapamiętujemy także w pamięci przeglądarki źródło Twojej pierwszej wizyty (np. wyszukiwarka, kampania), aby dołączyć je do zapytania wysłanego przez formularz. Dostawcą narzędzi analitycznych jest Google Ireland Limited; dane mogą być przekazywane do Google LLC w USA na podstawie decyzji Komisji Europejskiej o odpowiednim stopniu ochrony (EU-U.S. Data Privacy Framework). Nie stosujemy cookies reklamowych ani remarketingu i nie prowadzimy profilowania. Do czasu wyrażenia zgody — oraz po jej odmowie — skrypty analityczne nie są w ogóle ładowane."
+      : "Strona www.flowtex.pl w chwili obecnej nie wykorzystuje plików cookies analitycznych, statystycznych ani marketingowych i nie prowadzi profilowania użytkowników. Wykorzystywane mogą być wyłącznie pliki niezbędne do prawidłowego działania serwisu (tzw. cookies techniczne/funkcjonalne), na przykład zapamiętujące fakt zapoznania się z niniejszym komunikatem o cookies. Pliki te nie wymagają zgody użytkownika zgodnie z art. 173 ust. 3 ustawy Prawo telekomunikacyjne, ponieważ są niezbędne do świadczenia usługi wyraźnie żądanej przez użytkownika.",
   },
+  ...(ANALYTICS_ENABLED
+    ? [
+        {
+          heading: "Zgoda i jej wycofanie",
+          body: "Zgodę na pliki analityczne wyrażasz lub jej odmawiasz w banerze wyświetlanym przy pierwszej wizycie. Decyzję możesz zmienić w każdej chwili, klikając „Ustawienia cookies” w stopce strony. Po wycofaniu zgody pliki cookies Google Analytics są usuwane, a skrypty analityczne nie są ładowane przy kolejnych wizytach. Odmowa zgody nie ogranicza korzystania ze strony.",
+        },
+      ]
+    : []),
   {
     heading: "4. Czcionki",
     body: "Strona wykorzystuje czcionki (Big Shoulders Display, IBM Plex Sans, IBM Plex Mono) hostowane samodzielnie, na własnym serwerze www.flowtex.pl — pliki czcionek NIE są pobierane z serwerów Google ani żadnego innego podmiotu zewnętrznego. Oznacza to, że wyświetlanie czcionek nie wiąże się z przesyłaniem adresu IP użytkownika do zewnętrznych dostawców.",

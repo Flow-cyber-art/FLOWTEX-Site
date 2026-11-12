@@ -5,6 +5,7 @@ import { Layers, Phone, Mail, Menu, X, ChevronDown, Wrench, Search, ListChecks }
 import { SERVICES } from "../data/services.js";
 import CookieNotice from "./CookieNotice.jsx";
 import ContactFab from "./ContactFab.jsx";
+import { ANALYTICS_ENABLED, openConsentSettings } from "../utils/analytics.js";
 
 const NAV_LINKS = [
   { href: "/#o-nas", label: "O nas" },
@@ -337,6 +338,11 @@ export default function Layout({ children }) {
             <Link to="/polityka-cookies" className="hover:opacity-80" style={{ color: COLORS.mutedOnDarkSecondary }}>
               Polityka Cookies
             </Link>
+            {ANALYTICS_ENABLED && (
+              <button type="button" onClick={openConsentSettings} className="hover:opacity-80" style={{ color: COLORS.mutedOnDarkSecondary }}>
+                Ustawienia cookies
+              </button>
+            )}
           </span>
         </div>
       </footer>

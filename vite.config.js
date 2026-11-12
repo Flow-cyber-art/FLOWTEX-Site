@@ -1,12 +1,25 @@
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
 
 // Dzień buildu (UTC) — poradniki z publishAt w przyszłości są wtedy ukryte
 // (patrz src/data/poradniki.js). BUILD_DATE pozwala to wymusić przy testach.
 const BUILD_DATE = process.env.BUILD_DATE || new Date().toISOString().slice(0, 10);
 
-export default defineConfig(({ isSsrBuild }) => ({
-  plugins: [react()],
+// Weryfikacja Google Search Console metatagiem: ustaw VITE_GSC_VERIFICATION
+// (sam kod z pola content) — tag trafi do <head> każdej podstrony. Jeśli
+// domena jest zweryfikowana przez DNS, zmienna nie jest potrzebna.
+function searchConsoleVerification(token) {
+  return {
+    name: "flowtex-gsc-verification",
+    transformIndexHtml() {
+      if (!token) return [];
+      return [{ tag: "meta", attrs: { name: "google-site-verification", content: token }, injectTo: "head" }];
+    },
+  };
+}
+
+export default defineConfig(({ isSsrBuild, mode }) => ({
+  plugins: [react(), searchConsoleVerification(loadEnv(mode, process.cwd(), "VITE_").VITE_GSC_VERIFICATION)],
   define: { __BUILD_DATE__: JSON.stringify(BUILD_DATE) },
   build: {
     rollupOptions: isSsrBuild

@@ -459,3 +459,25 @@ export const DEFECTS = [
     ],
   },
 ];
+
+// Powiązania kart wad z resztą serwisu (linkowanie wewnętrzne):
+//  - services: slugi usług z services.js, które realnie rozwiązują problem
+//  - related: id pokrewnych wad (te same przyczyny lub często występują razem)
+//  - guide: slug poradnika z poradniki.js rozwijającego temat (link pojawia
+//    się dopiero po dacie publikacji poradnika)
+export const DEFECT_LINKS = {
+  "peknieca": { services: ["serwis-posadzek-i-kanalizacji", "technika-diamentowa"], related: ["rysy-wloskowate", "dylatacje", "odspojenie-stykow"], guide: "pekajaca-posadzka-przemyslowa-jak-naprawic" },
+  "ubytki": { services: ["serwis-posadzek-i-kanalizacji"], related: ["dylatacje", "odspojenie-stykow", "matowienie"] },
+  "odspojenie-zywicy": { services: ["serwis-posadzek-i-kanalizacji", "posadzki-zywiczne"], related: ["pecherze", "ubytki", "cokoly"], guide: "odspojenie-zywicy-od-podloza-przyczyny-i-naprawa" },
+  "pylenie": { services: ["posadzki-zywiczne", "betonowe-posadzki-przemyslowe"], related: ["matowienie", "rysy-wloskowate", "ubytki"], guide: "dlaczego-posadzka-betonowa-pyli" },
+  "pecherze": { services: ["serwis-posadzek-i-kanalizacji", "posadzki-zywiczne"], related: ["odspojenie-zywicy", "przebarwienia", "pofaldowania"], guide: "pecherze-w-zywicy-aplikacyjne-czy-osmotyczne" },
+  "przebarwienia": { services: ["posadzki-zywiczne"], related: ["matowienie", "pecherze", "sliska-powierzchnia"] },
+  "pofaldowania": { services: ["serwis-posadzek-i-kanalizacji"], related: ["zastoiny-wody", "odspojenie-stykow", "pecherze"] },
+  "dylatacje": { services: ["serwis-posadzek-i-kanalizacji", "technika-diamentowa"], related: ["odspojenie-stykow", "peknieca", "ubytki"], guide: "ciecie-dylatacji-w-posadzce" },
+  "cokoly": { services: ["serwis-posadzek-i-kanalizacji", "systemy-odbojowe"], related: ["odspojenie-zywicy", "zastoiny-wody", "dylatacje"], guide: "uszkodzone-cokoly-higieniczne-naprawa" },
+  "zastoiny-wody": { services: ["serwis-posadzek-i-kanalizacji"], related: ["sliska-powierzchnia", "pofaldowania", "cokoly"], guide: "zastoiny-wody-na-posadzce-spadki-i-odwodnienie" },
+  "sliska-powierzchnia": { services: ["posadzki-zywiczne"], related: ["zastoiny-wody", "matowienie", "przebarwienia"], guide: "sliska-posadzka-jak-poprawic-antyposlizgowosc" },
+  "rysy-wloskowate": { services: ["serwis-posadzek-i-kanalizacji"], related: ["peknieca", "pylenie", "matowienie"] },
+  "odspojenie-stykow": { services: ["serwis-posadzek-i-kanalizacji", "technika-diamentowa"], related: ["dylatacje", "peknieca", "pofaldowania"] },
+  "matowienie": { services: ["posadzki-zywiczne"], related: ["pylenie", "sliska-powierzchnia", "przebarwienia"] },
+};

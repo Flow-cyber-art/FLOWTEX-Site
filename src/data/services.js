@@ -8,13 +8,14 @@ import { Droplets, ShieldAlert, Ruler, Layers, Waves, Building2, Zap, Flame, Win
 export const SERVICES = [
   {
     slug: "posadzki-zywiczne",
-    metaTitle: "Posadzki żywiczne przemysłowe — epoksydowe i poliuretanowe | FLOWTEX Polska",
+    h1: "Posadzki żywiczne przemysłowe",
+    metaTitle: "Posadzki żywiczne przemysłowe — wykonawca | FLOWTEX Polska",
     imageAlt: "Bezspoinowa posadzka żywiczna w hali produkcyjnej — realizacja FLOWTEX Polska",
     icon: Droplets,
     title: "Posadzki żywiczne",
     shortDesc: "Rozwiązujemy pylenie betonu, ścieranie od wózków widłowych i wymogi HACCP — bezspoinowe posadzki epoksydowe i poliuretanowe dla hal produkcyjnych i magazynów.",
     metaDescription:
-      "Posadzki żywiczne FLOWTEX Polska — epoksydowe i poliuretanowe posadzki przemysłowe dla zakładów produkcyjnych, spożywczych i farmaceutycznych.",
+      "Posadzki epoksydowe, poliuretanowe i PU-cement dla hal produkcyjnych i zakładów spożywczych. Dobór do obciążeń i chemii, wykonanie własnym zespołem.",
     intro:
       "Pyląca i pękająca posadzka betonowa, ścieranie od ciągłego ruchu wózków widłowych, wymogi HACCP i GMP, których stara nawierzchnia nie spełnia — to najczęstsze problemy, z jakimi trafiają do nas zakłady produkcyjne i spożywcze. Odpowiadamy na nie bezspoinowymi posadzkami żywicznymi: systemami epoksydowymi i poliuretanowymi dobranymi indywidualnie do obciążeń i specyfiki procesowej obiektu.",
     sections: [
@@ -49,13 +50,13 @@ export const SERVICES = [
   },
   {
     slug: "posadzki-esd",
-    metaTitle: "Posadzki ESD antystatyczne dla przemysłu elektronicznego | FLOWTEX Polska",
+    metaTitle: "Posadzki ESD antystatyczne — wykonanie i pomiary | FLOWTEX",
     imageAlt: "Posadzka ESD w strefie produkcji elektroniki — realizacja FLOWTEX Polska",
     icon: Zap,
     title: "Posadzki ESD (antyelektrostatyczne)",
     shortDesc: "Rozwiązujemy problem wyładowań elektrostatycznych w produkcji elektroniki — posadzki ESD z kontrolowanym odprowadzaniem ładunków, uziemieniem i pomiarem parametrów po wykonaniu.",
     metaDescription:
-      "Posadzki ESD FLOWTEX Polska — antyelektrostatyczne posadzki żywiczne dla przemysłu elektronicznego: warstwy przewodzące lub rozpraszające, uziemienie i pomiary.",
+      "Posadzki ESD dla produkcji elektroniki: warstwy przewodzące lub rozpraszające, uziemienie i pomiary parametrów elektrycznych po wykonaniu.",
     intro:
       "Wyładowania elektrostatyczne potrafią uszkodzić wrażliwe komponenty elektroniczne, a posadzka jest jednym z elementów, który decyduje o tym, czy ładunki są bezpiecznie odprowadzane, czy gromadzą się na ludziach i wyposażeniu. Wykonujemy posadzki ESD jako kompletny system — od przygotowania podłoża, przez warstwy przewodzące lub rozpraszające i uziemienie, po pomiar parametrów gotowej powierzchni.",
     sections: [
@@ -91,13 +92,14 @@ export const SERVICES = [
   },
   {
     slug: "posadzki-antywybuchowe-atex",
-    metaTitle: "Posadzki antywybuchowe ATEX do strefy Ex | FLOWTEX Polska",
+    h1: "Posadzki antywybuchowe do stref ATEX",
+    metaTitle: "Posadzki ATEX do stref Ex — antywybuchowe | FLOWTEX Polska",
     imageAlt: "Posadzka antywybuchowa w hali magazynowej ze strefą Ex — realizacja FLOWTEX Polska",
     icon: Flame,
     title: "Posadzki antywybuchowe ATEX",
     shortDesc: "Rozwiązujemy problem posadzek w strefach zagrożenia wybuchem — systemy przewodzące z uziemieniem i taśmami miedzianymi, z kontrolą parametrów elektrycznych po wykonaniu.",
     metaDescription:
-      "Posadzki antywybuchowe ATEX FLOWTEX Polska — systemy przewodzące do stref zagrożenia wybuchem (Ex) z uziemieniem, taśmami miedzianymi i pomiarami po wykonaniu.",
+      "Przewodzące posadzki żywiczne do stref zagrożenia wybuchem (Ex): uziemienie, taśmy miedziane i pomiary parametrów elektrycznych po wykonaniu.",
     intro:
       "Nie każda posadzka antyelektrostatyczna jest posadzką przeznaczoną do pracy w strefie zagrożenia wybuchem. W obiektach, w których może powstać atmosfera wybuchowa — np. w halach magazynujących materiały sypkie — kontrola elektryczności statycznej jest jednym z elementów całego systemu bezpieczeństwa. Wykonujemy posadzki do stref Ex jako kompletny system, a wymagania określamy na podstawie klasyfikacji strefy w konkretnym obiekcie.",
     sections: [
@@ -133,13 +135,13 @@ export const SERVICES = [
   },
   {
     slug: "posadzki-clean-room",
-    metaTitle: "Posadzki do clean roomów — farmacja i szpitale | FLOWTEX Polska",
+    metaTitle: "Posadzki do clean room — farmacja, szpitale | FLOWTEX",
     imageAlt: "Bezspoinowa posadzka żywiczna w clean roomie zakładu farmaceutycznego — realizacja FLOWTEX Polska",
     icon: Wind,
     title: "Posadzki do clean roomów i pomieszczeń czystych",
     shortDesc: "Rozwiązujemy problem zanieczyszczeń gromadzących się w spoinach i porach — bezspoinowe posadzki żywiczne z fasetą dla farmacji, szpitali i produkcji o podwyższonym reżimie czystości.",
     metaDescription:
-      "Posadzki do clean roomów FLOWTEX Polska — bezspoinowe posadzki żywiczne z fasetą dla przemysłu farmaceutycznego i szpitali, odporne na częstą dezynfekcję.",
+      "Bezspoinowe posadzki żywiczne z fasetą do pomieszczeń czystych w farmacji i szpitalach. Niepylące, odporne na częstą dezynfekcję.",
     intro:
       "W pomieszczeniach czystych posadzka nie jest wyłącznie wykończeniem — jest częścią środowiska produkcyjnego lub medycznego, w którym liczy się ograniczenie powstawania i gromadzenia zanieczyszczeń oraz łatwość utrzymania higieny. Wykonujemy bezspoinowe posadzki żywiczne z wywinięciem na ściany dla zakładów farmaceutycznych, obiektów medycznych i innych stref o podwyższonym reżimie czystości.",
     sections: [
@@ -174,13 +176,14 @@ export const SERVICES = [
   },
   {
     slug: "systemy-odbojowe",
-    metaTitle: "Systemy odbojowe i ochrona ścian w halach | FLOWTEX Polska",
+    h1: "Systemy odbojowe i ochrona ścian w halach",
+    metaTitle: "Odboje i ochrona ścian w halach — Polysto | FLOWTEX Polska",
     imageAlt: "Żółte odboje ścienne, stalowa osłona narożnika i higieniczny cokół w hali produkcyjnej — realizacja FLOWTEX Polska",
     icon: ShieldAlert,
     title: "Systemy odbojowe i ochrona ścian",
     shortDesc: "Rozwiązujemy problem uszkodzonych ścian, słupów i naroży od uderzeń wózków widłowych — odboje, okładziny ścienne i cokoły ograniczające koszty ciągłych napraw.",
     metaDescription:
-      "Systemy odbojowe i ochrona ścian FLOWTEX Polska — odboje, okładziny ścienne i cokoły Polysto® dla hal produkcyjnych i magazynów, dobór, dostawa i montaż.",
+      "Odboje, cokoły higieniczne i okładziny ścienne Polysto® dla hal produkcyjnych i magazynów. Dobór, dostawa i montaż.",
     intro:
       "Wgniecione płyty warstwowe, pęknięte narożniki słupów, odpryskujący tynk w strefach manewrowych — skutki codziennego kontaktu ścian z wózkami widłowymi i transportem wewnętrznym generują powtarzalne koszty napraw. Rozwiązujemy to, montując odboje, okładziny ścienne i cokoły Polysto®, które przejmują uderzenia zamiast konstrukcji hali.",
     sections: [

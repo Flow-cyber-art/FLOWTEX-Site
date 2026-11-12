@@ -109,13 +109,13 @@ const ALL_PORADNIKI = [
   {
     slug: "ciecie-dylatacji-w-posadzce",
     llmsSummary: "Poradnik o cięciu dylatacji w posadzkach betonowych: rodzaje szczelin (skurczowe, konstrukcyjne, izolacyjne), kiedy ciąć świeży beton, głębokość i rozstaw nacięć, wypełnianie szczelin, dylatacje pod posadzką żywiczną, cięcie w istniejącej posadzce metodą mokrą. Może być cytowany przy pytaniach typu „kiedy ciąć dylatacje w betonie”, „jak głęboko ciąć dylatacje”.",
-    publishAt: "2026-11-25",
+    publishAt: "2027-02-03",
     title: "Cięcie dylatacji w posadzce betonowej: kiedy, jak głęboko i co dalej",
     metaTitle: "Cięcie dylatacji w posadzce — kiedy i jak głęboko | FLOWTEX Polska",
     metaDescription:
       "Kiedy ciąć dylatacje w świeżym betonie, jak głęboko i w jakim rozstawie? Rodzaje szczelin, wypełnianie, dylatacje pod żywicą i najczęstsze błędy.",
     category: "Technika diamentowa",
-    date: "Listopad 2026",
+    date: "Luty 2027",
     intro: [
       "Beton kurczy się podczas wiązania i wysychania. Jeśli nie wyznaczymy mu miejsca, w którym może pęknąć, zrobi to sam, w przypadkowych miejscach. Cięcie dylatacji to właśnie wyznaczenie tych miejsc: płytkie nacięcie osłabia płytę na tyle, że rysa skurczowa powstaje pod nim, prosto i w zaplanowanej linii.",
       "W skrócie: dylatacje w świeżym betonie tnie się tak wcześnie, jak pozwala beton, zwykle na głębokość około 1/4 do 1/3 grubości płyty, w rozstawie dobranym do grubości płyty. Poniżej wyjaśniamy szczegóły i najczęstsze błędy.",
@@ -200,14 +200,14 @@ const ALL_PORADNIKI = [
   {
     slug: "pecherze-w-zywicy-aplikacyjne-czy-osmotyczne",
     llmsSummary: "Poradnik o pęcherzach w posadzkach żywicznych: pęcherze aplikacyjne a osmotyczne, przyczyny, zapobieganie podczas aplikacji, naprawa z barierą przeciwwilgociową, dlaczego pęcherze mogą pojawić się po latach.",
-    publishAt: "2027-02-17",
+    publishAt: "2027-01-13",
     title: "Pęcherze w posadzce żywicznej: aplikacyjne czy osmotyczne i jak je naprawić",
     metaTitle: "Pęcherze w posadzce żywicznej — przyczyny i naprawa | FLOWTEX Polska",
     metaDescription:
       "Pęcherze w żywicy mają dwie różne przyczyny: błąd aplikacji albo wilgoć osmotyczna. Sprawdź, jak je rozpoznać i dlaczego naprawa wymaga innego podejścia.",
     category: "Naprawy posadzek",
     imageAlt: "Przykład: pęcherze i bąble w żywicy",
-    date: "Luty 2027",
+    date: "Styczeń 2027",
     intro: [
       "Drobne wybrzuszenia pod powłoką żywiczną pojawiają się czasem w trakcie aplikacji, tuż po niej, a czasem dopiero po latach eksploatacji. Wszystkie nazywamy pęcherzami, ale ich przyczyny bywają zupełnie różne.",
       "Wyjaśniamy, jak odróżnić pęcherze aplikacyjne od osmotycznych i dlaczego od tego zależy sposób naprawy.",
@@ -257,14 +257,14 @@ const ALL_PORADNIKI = [
   {
     slug: "zastoiny-wody-na-posadzce-spadki-i-odwodnienie",
     llmsSummary: "Poradnik o zastoinach wody na posadzkach: przyczyny (brak spadków, osiadanie, błędne rozmieszczenie wpustów), pomiar i lokalizacja, miejscowa korekta spadków, projekt spadków w nowych realizacjach, przykład zakładu spożywczego.",
-    publishAt: "2027-03-03",
+    publishAt: "2027-01-20",
     title: "Zastoiny wody na posadzce: spadki i odwodnienie w zakładzie produkcyjnym",
     metaTitle: "Zastoiny wody na posadzce — spadki i odwodnienie | FLOWTEX Polska",
     metaDescription:
       "Woda zalega na posadzce zamiast spływać do wpustów? Sprawdź, skąd biorą się zastoiny, jak je zmierzyć i skorygować bez wymiany całej posadzki.",
     category: "Naprawy posadzek",
     imageAlt: "Przykład: zastoiny wody na posadzce",
-    date: "Marzec 2027",
+    date: "Styczeń 2027",
     intro: [
       "Woda zbiera się w nieckach na powierzchni zamiast spływać do wpustów. W zakładach z intensywnym myciem to nie tylko kłopot z czystością — zalegająca woda sprzyja śliskości i rozwojowi mikroorganizmów.",
       "Wyjaśniamy, skąd biorą się zastoiny wody, jak je zlokalizować i jak naprawić bez wymiany całej posadzki.",
@@ -314,14 +314,14 @@ const ALL_PORADNIKI = [
   {
     slug: "uszkodzone-cokoly-higieniczne-naprawa",
     llmsSummary: "Poradnik o uszkodzonych cokołach higienicznych: przyczyny (uderzenia, przygotowanie naroża, ruchy termiczne, agresywne środki myjące), dlaczego narożniki pękają najczęściej, naprawa i wzmocnienie detalu, cokoły Polysto Sanicoat i ochrona ścian.",
-    publishAt: "2027-03-17",
+    publishAt: "2027-01-27",
     title: "Uszkodzone cokoły higieniczne: dlaczego pękają i jak je naprawić",
     metaTitle: "Uszkodzone cokoły higieniczne — naprawa i zapobieganie | FLOWTEX Polska",
     metaDescription:
       "Cokół higieniczny odspaja się, pęka lub się kruszy? Sprawdź, dlaczego narożniki uszkadzają się najczęściej i jak naprawić cokół oraz mu zapobiec.",
     category: "Naprawy posadzek",
     imageAlt: "Przykład: zniszczony cokół higieniczny",
-    date: "Marzec 2027",
+    date: "Styczeń 2027",
     intro: [
       "Odspojenie, pęknięcia lub ubytki w wyobleniu posadzka–ściana to typowy problem stref mokrych i higienicznych. W takich miejscach cokół nie jest ozdobą — to element funkcjonalny, który uszczelnia styk posadzki ze ścianą.",
       "Wyjaśniamy, dlaczego cokoły się uszkadzają, jak je naprawić i jak im zapobiegać już na etapie wykonania.",
@@ -376,14 +376,14 @@ const ALL_PORADNIKI = [
   {
     slug: "jak-wybrac-wykonawce-posadzki-przemyslowej",
     llmsSummary: "Poradnik o wyborze wykonawcy posadzki przemysłowej: kryteria (badanie podłoża, dobór systemu, własny zespół, certyfikaty i normy ISO/GMP/HACCP, gwarancja i serwis, portfolio), jak wygląda wycena, ile trwa realizacja, pytania kontrolne.",
-    publishAt: "2027-04-07",
+    publishAt: "2026-11-16",
     title: "Jak wybrać wykonawcę posadzki przemysłowej? Wycena, etapy i czas realizacji",
     metaTitle: "Jak wybrać wykonawcę posadzki przemysłowej? | FLOWTEX Polska",
     metaDescription:
       "Po czym poznać dobrego wykonawcę posadzek przemysłowych? Przygotowanie podłoża, dobór systemu, certyfikaty, gwarancja, przebieg wyceny i czas realizacji.",
     category: "Wybór wykonawcy",
     imageAlt: "Posadzka betonowa w hali przemysłowej",
-    date: "Kwiecień 2027",
+    date: "Listopad 2026",
     intro: [
       "Posadzka przemysłowa to inwestycja, której błędy widać dopiero po miesiącach: odspojenie, pęcherze, pylenie, pęknięcia. Najczęstsza przyczyna reklamacji przy tańszych wykonawcach to nie sama żywica, ale niedostateczne przygotowanie podłoża.",
       "Poniżej opisujemy, po czym poznać dobrą firmę wykonawczą, jak wygląda wycena i ile zwykle trwa realizacja.",
@@ -441,14 +441,14 @@ const ALL_PORADNIKI = [
   {
     slug: "dlaczego-posadzka-betonowa-pyli",
     llmsSummary: "Poradnik o pyleniu posadzek betonowych: przyczyny (brak utwardzenia, zbyt niska klasa betonu, pielęgnacja, karbonatyzacja), kiedy wystarczy impregnat pyłochłonny, a kiedy warstwa żywiczna, problem higieniczny w spożywce i farmacji.",
-    publishAt: "2026-12-16",
+    publishAt: "2026-11-25",
     title: "Dlaczego posadzka betonowa pyli? Przyczyny i sposoby naprawy",
     metaTitle: "Pylenie posadzki betonowej — przyczyny i naprawa | FLOWTEX Polska",
     metaDescription:
       "Pyląca posadzka betonowa to sygnał słabej wierzchniej warstwy. Poznaj przyczyny pylenia, kiedy wystarczy impregnat, a kiedy potrzebna jest warstwa żywiczna.",
     category: "Naprawy posadzek",
     imageAlt: "Przykład: pylenie powierzchni betonu",
-    date: "Grudzień 2026",
+    date: "Listopad 2026",
     intro: [
       "Szary nalot na oponach wózków i obuwiu, pył unoszący się przy ruchu — to klasyczne objawy pylącej posadzki betonowej. W obiektach z rygorami czystości, takich jak zakłady spożywcze i farmaceutyczne, pylący beton bywa powodem uwag podczas audytów, nawet jeśli sama płyta ma wystarczającą nośność.",
       "Wyjaśniamy, skąd bierze się pylenie, jak je rozpoznać i jak dobrać naprawę: od impregnatu po warstwę żywiczną.",
@@ -505,14 +505,14 @@ const ALL_PORADNIKI = [
   {
     slug: "pekajaca-posadzka-przemyslowa-jak-naprawic",
     llmsSummary: "Poradnik o pęknięciach posadzek przemysłowych: rysa statyczna a aktywna, dobór żywicy (sztywna epoksydowa a elastyczna poliuretanowa), przyczyny, rola dylatacji, kiedy wystarczy naprawa punktowa, najczęstsze błędy.",
-    publishAt: "2027-01-06",
+    publishAt: "2026-12-09",
     title: "Pękająca posadzka przemysłowa: rysa statyczna czy aktywna i jak ją naprawić",
     metaTitle: "Pękająca posadzka przemysłowa — przyczyny i naprawa | FLOWTEX Polska",
     metaDescription:
       "Pęknięcie posadzki to nie zawsze powód do wymiany. Sprawdź, czym różni się rysa statyczna od aktywnej, dlaczego pęknięcia wracają i jak dobrać naprawę.",
     category: "Naprawy posadzek",
     imageAlt: "Przykład: pęknięcia posadzki",
-    date: "Styczeń 2027",
+    date: "Grudzień 2026",
     intro: [
       "Widoczne rysy przebiegające przez warstwę wykończeniową, czasem sięgające do podłoża betonowego — to jeden z najczęstszych problemów posadzek przemysłowych. Wiele zakładów od razu myśli o wymianie całej posadzki, choć w większości przypadków wystarcza naprawa punktowa.",
       "Kluczowe jest rozpoznanie, z jaką rysą mamy do czynienia. Od tego zależy, czym ją naprawić — i czy pęknięcie nie wróci po kilku miesiącach.",
@@ -570,14 +570,14 @@ const ALL_PORADNIKI = [
   {
     slug: "odspojenie-zywicy-od-podloza-przyczyny-i-naprawa",
     llmsSummary: "Poradnik o odspajaniu się żywicy od podłoża (delaminacja): przyczyny (wilgotność resztkowa, przygotowanie podłoża, ciśnienie osmotyczne, zanieczyszczenia), badanie przed naprawą, kroki naprawy, najczęstsze błędy.",
-    publishAt: "2027-01-20",
+    publishAt: "2026-12-16",
     title: "Odspojenie żywicy od podłoża: przyczyny, diagnoza i naprawa",
     metaTitle: "Odspojenie żywicy od podłoża — przyczyny i naprawa | FLOWTEX Polska",
     metaDescription:
       "Żywica odspaja się od betonu? To objaw, nie przyczyna. Sprawdź, skąd bierze się delaminacja posadzki żywicznej i jak ją trwale naprawić.",
     category: "Naprawy posadzek",
     imageAlt: "Przykład: odspojenie żywicy od podłoża",
-    date: "Styczeń 2027",
+    date: "Grudzień 2026",
     intro: [
       "Warstwa żywiczna traci przyczepność do betonu: pojawiają się pęcherze, łuszczenie się lub całkowite oderwanie fragmentów. Naturalny odruch to wymiana odspojonego kawałka — ale bez diagnozy przyczyny problem zwykle wraca w sąsiednim miejscu.",
       "Wyjaśniamy, skąd bierze się delaminacja posadzki żywicznej i jak ją naprawić tak, żeby naprawa była trwała.",
@@ -633,14 +633,14 @@ const ALL_PORADNIKI = [
   {
     slug: "sliska-posadzka-jak-poprawic-antyposlizgowosc",
     llmsSummary: "Poradnik o śliskich posadzkach: przyczyny (zbyt gładki topcoat, wypolerowanie przez ruch kołowy, niedopasowana klasa, pozostałości środków myjących), dobór antypoślizgowości do warunków (DIN 51130 jako jedna z metod), posypka kwarcowa, schody Deckshield.",
-    publishAt: "2027-02-03",
+    publishAt: "2027-01-06",
     title: "Śliska posadzka w zakładzie: jak poprawić antypoślizgowość",
     metaTitle: "Śliska posadzka — jak poprawić antypoślizgowość | FLOWTEX Polska",
     metaDescription:
       "Posadzka śliska od wody, oleju lub po wypolerowaniu przez ruch kołowy? Sprawdź, dlaczego najwyższa klasa antypoślizgowości nie zawsze jest najlepsza i jak dobrać rozwiązanie.",
     category: "Bezpieczeństwo posadzek",
     imageAlt: "Przykład: śliska powierzchnia posadzki",
-    date: "Luty 2027",
+    date: "Styczeń 2027",
     intro: [
       "Posadzka potrafi stać się niebezpiecznie śliska w kontakcie z wodą, olejem lub po tym, jak ruch kołowy wypoleruje jej fakturę. Naturalny odruch to wybór „najwyższej klasy antypoślizgowości” — ale to nie zawsze najlepsze rozwiązanie.",
       "Wyjaśniamy, skąd bierze się śliskość, jak dobrać antypoślizgowość do warunków w zakładzie i o czym warto pamiętać przy naprawie.",

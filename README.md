@@ -30,6 +30,12 @@ Do szybkiego podglądu bez prerenderingu służy `npm run build:client`.
 Vercel, automatycznie po pushu na `main` (konfiguracja w `vercel.json`).
 Zmienne `VITE_EMAILJS_*` ustaw w ustawieniach projektu na Vercelu.
 
+## Analityka
+
+GA4 / GTM, zgoda na cookies, zdarzenia leadów i oznaczanie źródeł zapytań są
+wbudowane w stronę i włączane zmienną `VITE_GTM_ID` (lub `VITE_GA4_ID`)
+ustawioną w Vercelu. Instrukcja: [docs/analityka.md](docs/analityka.md).
+
 ## Harmonogram publikacji poradników
 
 Poradnik z polem `publishAt: "RRRR-MM-DD"` w `src/data/poradniki.js` jest
@@ -69,5 +75,6 @@ Zdjęcia: `src/assets/realizacje/{slug-usługi}.webp` (zdjęcie na stronie usłu
     ├── components/       # Layout, formularz, karuzela, cookies...
     ├── data/             # services, realizacje, defects
     ├── pages/            # Home, ServicePage, Realizacje, narzędzia...
+    ├── utils/            # analytics.js (GTM/GA4, zgoda, źródła), lead.js (wysyłka formularzy)
     └── styles/
 ```
