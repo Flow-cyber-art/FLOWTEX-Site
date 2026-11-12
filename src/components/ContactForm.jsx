@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../styles/contact-form.css";
+import { sendLead } from "../utils/lead.js";
+import { track } from "../utils/analytics.js";
 
 /**
  * Wspólny formularz kontaktowy używany w narzędziach (dobór posadzki,
@@ -12,7 +14,7 @@ import "../styles/contact-form.css";
  *    (np. odpowiedzi z narzędzia doboru albo nazwa wybranej wady).
  *  - submitLabel: treść przycisku wysyłki.
  */
-export function ContactForm({ prefillContext = "", submitLabel = "Wyślij wiadomość" }) {
+export function ContactForm({ prefillContext = "", submitLabel = "Wyślij wiadomość", formId = "formularz_kontekstowy" }) {
   const [form, setForm] = useState({
     name: "",
     company: "",
@@ -25,6 +27,12 @@ export function ContactForm({ prefillContext = "", submitLabel = "Wyślij wiadom
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
   const [sendError, setSendError] = useState("");
+  const [started, setStarted] = useState(false);
+  const handleStart = () => {
+    if (started) return;
+    setStarted(true);
+    track("form_start", { form_id: formId });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -43,33 +51,12 @@ export function ContactForm({ prefillContext = "", submitLabel = "Wyślij wiadom
     setSending(true);
     setSendError("");
 
-    const templateParams = {
-      name: form.name,
-      company: form.company,
-      email: form.email,
-      phone: form.phone,
-      message: form.message,
-    };
-
     try {
-      const { default: emailjs } = await import("@emailjs/browser");
-      await Promise.all([
-        emailjs.send(
-          import.meta.env.VITE_EMAILJS_SERVICE_ID,
-          import.meta.env.VITE_EMAILJS_TEMPLATE_ADMIN_ID,
-          templateParams,
-          { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
-        ),
-        emailjs.send(
-          import.meta.env.VITE_EMAILJS_SERVICE_ID,
-          import.meta.env.VITE_EMAILJS_TEMPLATE_CLIENT_ID,
-          templateParams,
-          { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
-        ),
-      ]);
+      await sendLead(form, { formId, context: prefillContext });
       setSent(true);
     } catch (err) {
       console.error("Błąd wysyłki formularza kontaktowego:", err);
+      track("form_error", { form_id: formId, error_type: "wysylka" });
       setSendError("Nie udało się wysłać wiadomości. Spróbuj ponownie lub napisz na kontakt@flowtex.pl.");
     } finally {
       setSending(false);
@@ -86,15 +73,21 @@ export function ContactForm({ prefillContext = "", submitLabel = "Wyślij wiadom
   }
 
   return (
-    <form className="cf-form" onSubmit={handleSubmit}>
+    <form className="cf-form" onSubmit={handleSubmit} onFocus={handleStart}>
       <div className="cf-row">
         <input
           required
+          name="name"
+          autoComplete="name"
+          aria-label="Imię i nazwisko"
           placeholder="Imię i nazwisko"
           value={form.name}
           onChange={(e) => setForm({ ...form, name: e.target.value })}
         />
         <input
+          name="company"
+          autoComplete="organization"
+          aria-label="Nazwa firmy"
           placeholder="Nazwa firmy"
           value={form.company}
           onChange={(e) => setForm({ ...form, company: e.target.value })}
@@ -104,11 +97,18 @@ export function ContactForm({ prefillContext = "", submitLabel = "Wyślij wiadom
         <input
           required
           type="email"
+          name="email"
+          autoComplete="email"
+          aria-label="E-mail"
           placeholder="E-mail"
           value={form.email}
           onChange={(e) => setForm({ ...form, email: e.target.value })}
         />
         <input
+          type="tel"
+          name="phone"
+          autoComplete="tel"
+          aria-label="Telefon"
           placeholder="Telefon"
           value={form.phone}
           onChange={(e) => setForm({ ...form, phone: e.target.value })}
@@ -116,6 +116,8 @@ export function ContactForm({ prefillContext = "", submitLabel = "Wyślij wiadom
       </div>
       <textarea
         required
+        name="message"
+        aria-label="Wiadomość"
         placeholder="Wiadomość"
         rows={4}
         value={form.message}

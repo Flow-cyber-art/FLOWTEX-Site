@@ -208,6 +208,7 @@ function RealizacjeList() {
 
       {/* Formularz */}
       <ContactSection
+        formId="formularz_realizacja"
         heading="Planujesz podobną inwestycję?"
         text="Opisz swój obiekt — przygotujemy propozycję systemu i wycenę."
         context="Realizacje"
@@ -416,6 +417,7 @@ function RealizacjaDetail({ item }) {
 
       {/* Formularz */}
       <ContactSection
+        formId="formularz_realizacja"
         heading="Planujesz podobną inwestycję?"
         text="Opisz swój obiekt — przygotujemy propozycję systemu i wycenę."
         context={`Realizacja — ${item.title}`}

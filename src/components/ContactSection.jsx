@@ -15,6 +15,7 @@ export default function ContactSection({
   text = "Opisz obiekt: powierzchnię, lokalizację i warunki pracy posadzki. Wrócimy z propozycją systemu i wyceną.",
   context = "",
   submitLabel = "Wyślij zapytanie",
+  formId = "formularz_podstrona",
 }) {
   return (
     <section id={id} style={{ backgroundColor: COLORS.darkBg, scrollMarginTop: 88 }}>
@@ -38,7 +39,7 @@ export default function ContactSection({
             </a>
           </div>
         </div>
-        <ContactForm prefillContext={context} submitLabel={submitLabel} />
+        <ContactForm prefillContext={context} submitLabel={submitLabel} formId={formId} />
       </div>
     </section>
   );

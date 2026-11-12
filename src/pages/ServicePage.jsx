@@ -338,7 +338,7 @@ export default function ServicePage() {
       )}
 
       {/* Formularz na stronie usługi — zapytanie bez przechodzenia na stronę główną */}
-      <ContactSection context={`Usługa — ${service.title}`} />
+      <ContactSection formId="formularz_usluga" context={`Usługa — ${service.title}`} />
 
       {/* Pozostałe usługi — linkowanie wewnętrzne */}
       <section style={{ backgroundColor: COLORS.darkBg }}>

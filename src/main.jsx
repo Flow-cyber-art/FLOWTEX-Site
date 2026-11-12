@@ -4,6 +4,10 @@ import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import App from "./App.jsx";
 import "./index.css";
+import { initAnalytics } from "./utils/analytics.js";
+
+// Źródło wizyty, śledzenie kliknięć w telefon/e-mail i (po zgodzie) GTM/GA4.
+initAnalytics();
 
 // hydrateRoot (zamiast createRoot) — po wdrożeniu prerenderingu każda
 // podstrona trafia do przeglądarki jako gotowy, wypełniony treścią HTML

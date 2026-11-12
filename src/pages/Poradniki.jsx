@@ -362,6 +362,7 @@ function PoradnikDetail({ item }) {
       </article>
 
       <ContactSection
+        formId="formularz_poradnik"
         heading={item.cta?.heading || "Skonsultuj dobór systemu"}
         text={item.cta?.text || "Opisz obiekt i warunki pracy posadzki — wrócimy z propozycją systemu i wyceną."}
         context={`Poradnik — ${item.title}`}
