@@ -7,15 +7,21 @@
 //   VITE_GA4_ID = G-XXXXXXXXXX  -> bez GTM: ładuje gtag.js i wysyła zdarzenia
 //                                  wprost do GA4 (nic nie trzeba konfigurować w GTM)
 // Jeśli ustawione są obie, używany jest GTM (żeby nie liczyć zdarzeń podwójnie).
-// Bez żadnej z nich strona działa jak dotąd: nic się nie ładuje, baner cookies
-// pozostaje zwykłym komunikatem informacyjnym.
+// Domyślnie działa kontener GTM-N44NN9NF (patrz DEFAULT_GTM_ID niżej).
+// VITE_GTM_ID=off wyłącza analitykę: nic się nie ładuje, a baner cookies
+// jest zwykłym komunikatem informacyjnym.
 //
 // Zgoda: skrypty Google ładują się DOPIERO po kliknięciu "Akceptuję" w banerze.
 // Przed zgodą (i po odmowie) nie ma żadnych żądań do Google ani cookies
 // analitycznych. Zgody reklamowe (ad_*) są zawsze odrzucone — strona nie
 // prowadzi remarketingu.
 
-const GTM_ID = import.meta.env.VITE_GTM_ID || "";
+// Identyfikator kontenera GTM jest publiczny (widać go w kodzie każdej strony),
+// więc kontener FLOWTEX jest wartością domyślną. VITE_GTM_ID pozwala go
+// podmienić, a VITE_GTM_ID=off wyłącza analitykę (np. na środowisku testowym).
+const DEFAULT_GTM_ID = "GTM-N44NN9NF";
+const GTM_ENV = import.meta.env.VITE_GTM_ID;
+const GTM_ID = GTM_ENV === "off" ? "" : GTM_ENV || DEFAULT_GTM_ID;
 const GA4_ID = import.meta.env.VITE_GA4_ID || "";
 export const ANALYTICS_ENABLED = Boolean(GTM_ID || GA4_ID);
 

@@ -33,8 +33,8 @@ Zmienne `VITE_EMAILJS_*` ustaw w ustawieniach projektu na Vercelu.
 ## Analityka
 
 GA4 / GTM, zgoda na cookies, zdarzenia leadów i oznaczanie źródeł zapytań są
-wbudowane w stronę i włączane zmiennymi `VITE_GA4_ID` lub `VITE_GTM_ID`
-(oraz opcjonalnie `VITE_GSC_VERIFICATION`). Instrukcja: [docs/analityka.md](docs/analityka.md).
+wbudowane w stronę. Domyślnie ładowany jest kontener GTM-N44NN9NF (po zgodzie
+użytkownika); `VITE_GTM_ID=off` wyłącza analitykę. Instrukcja: [docs/analityka.md](docs/analityka.md).
 
 ## Harmonogram publikacji poradników
 
