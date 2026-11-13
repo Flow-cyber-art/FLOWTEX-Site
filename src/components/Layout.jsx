@@ -103,6 +103,67 @@ function NavDropdown({ label, icon: Icon, items, width = "w-72" }) {
   );
 }
 
+// Szerokie menu oferty: trzy grupy obok siebie, zamiast jednej długiej kolumny
+// (15 pozycji nie mieści się w pionie). Panel jest zakotwiczony do nagłówka
+// (sticky = punkt odniesienia), więc zajmuje szerokość strony, a nie przycisku.
+function OfferMegaMenu() {
+  const [open, setOpen] = useState(false);
+  const [branze, technologie, uslugi] = OFFER_GROUPS;
+  const link = (svc) => (
+    <li key={svc.slug} className="break-inside-avoid">
+      <Link
+        to={`/${svc.slug}`}
+        onClick={() => setOpen(false)}
+        className="block py-1.5 text-[15px] leading-snug hover:underline underline-offset-4"
+        style={{ color: COLORS.white }}
+      >
+        {svc.title}
+      </Link>
+    </li>
+  );
+  const heading = (label) => (
+    <div className="ft-mono text-[11px] uppercase tracking-[0.2em] mb-3 pb-2 border-b" style={{ color: COLORS.accent, borderColor: COLORS.darkBorder }}>
+      {label}
+    </div>
+  );
+  return (
+    <div onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
+      <button
+        type="button"
+        className="ft-mono text-xs tracking-wider uppercase flex items-center gap-1.5 px-3 py-1.5 rounded-sm transition-colors"
+        style={{ color: COLORS.accent, backgroundColor: open ? "rgba(226,167,59,0.12)" : "transparent" }}
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+      >
+        Oferta{" "}
+        <ChevronDown size={13} style={{ transform: open ? "rotate(180deg)" : "none", transition: "transform .15s" }} />
+      </button>
+      {open && (
+        <div
+          className="absolute left-0 right-0 top-full border-t shadow-2xl"
+          style={{ backgroundColor: COLORS.darkBg, borderColor: COLORS.darkBorder }}
+          role="menu"
+        >
+          <div className="max-w-7xl mx-auto px-8 py-7 grid grid-cols-4 gap-x-10">
+            <div>
+              {heading(branze.label)}
+              <ul>{branze.items.map(link)}</ul>
+            </div>
+            <div>
+              {heading(technologie.label)}
+              <ul>{technologie.items.map(link)}</ul>
+            </div>
+            <div className="col-span-2">
+              {heading(uslugi.label)}
+              <ul className="columns-2 gap-x-10">{uslugi.items.map(link)}</ul>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function Layout({ children }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [cookieBannerVisible, setCookieBannerVisible] = useState(false);
@@ -189,7 +250,7 @@ export default function Layout({ children }) {
       {/* NAV */}
       <header className="sticky top-0 z-50" style={{ backgroundColor: COLORS.darkBg }}>
         <div className="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="flex items-center gap-2" style={{ color: COLORS.white }}>
+          <Link to="/" className="flex items-center gap-2 whitespace-nowrap shrink-0" style={{ color: COLORS.white }}>
             {/* Uwaga: w palecie ACME accent == darkBg (celowo, wg oryginalnej
                 strony wzorcowej), więc po ewentualnym przełączeniu z powrotem
                 na ACME ta ikona/napis "Polska" znów zleją się z tłem — to
@@ -201,15 +262,15 @@ export default function Layout({ children }) {
             </span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8">
-            <NavDropdown label="Oferta" items={OFFER_LINKS} width="w-96" />
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-8">
+            <OfferMegaMenu />
             <NavDropdown label="Narzędzia" icon={Wrench} items={TOOL_LINKS} />
             {NAV_LINKS.map((l) => (
               <NavLink
                 key={l.href}
                 href={l.href}
                 label={l.label}
-                className="ft-mono text-xs tracking-wider uppercase hover:opacity-70 transition-opacity"
+                className="ft-mono text-xs tracking-wider uppercase hover:opacity-70 transition-opacity whitespace-nowrap"
                 style={{ color: COLORS.mutedOnDark }}
               />
             ))}
@@ -222,7 +283,7 @@ export default function Layout({ children }) {
             </Link>
           </nav>
 
-          <div className="flex items-center gap-4 md:hidden">
+          <div className="flex items-center gap-4 lg:hidden">
             <button
               style={{ color: COLORS.white }}
               onClick={() => setMenuOpen((v) => !v)}
@@ -234,7 +295,7 @@ export default function Layout({ children }) {
         </div>
 
         {menuOpen && (
-          <div className="md:hidden px-5 pb-5 flex flex-col items-end text-right gap-4" style={{ backgroundColor: COLORS.darkBg, maxHeight: "calc(100dvh - 4rem)", overflowY: "auto", overscrollBehavior: "contain" }}>
+          <div className="lg:hidden px-5 pb-5 flex flex-col items-end text-right gap-4" style={{ backgroundColor: COLORS.darkBg, maxHeight: "calc(100dvh - 4rem)", overflowY: "auto", overscrollBehavior: "contain" }}>
             <div className="w-full flex flex-col items-end gap-2.5 pb-3 mb-1" style={{ borderBottom: `1px solid ${COLORS.darkBorder}` }}>
               <span className="ft-mono text-xs uppercase tracking-wide" style={{ color: COLORS.accent }}>Oferta</span>
               {OFFER_LINKS.map((t) =>
