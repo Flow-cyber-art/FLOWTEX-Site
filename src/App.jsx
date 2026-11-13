@@ -21,6 +21,9 @@ const NotFound = lazy(() => import("./pages/NotFound.jsx"));
 const Poradniki = lazy(() => import("./pages/Poradniki.jsx"));
 const DefectCatalog = lazy(() => import("./pages/DefectCatalog.jsx"));
 const FloorSelector = lazy(() => import("./pages/FloorSelector.jsx"));
+const Kontakt = lazy(() => import("./pages/Kontakt.jsx"));
+const OFirmie = lazy(() => import("./pages/OFirmie.jsx"));
+const Dziekujemy = lazy(() => import("./pages/Dziekujemy.jsx"));
 
 export default function App() {
   return (
@@ -38,6 +41,9 @@ export default function App() {
           <Route path="/katalog-wad" element={<DefectCatalog />} />
           <Route path="/katalog-wad/:defectId" element={<DefectCatalog />} />
           <Route path="/dobor-posadzki" element={<FloorSelector />} />
+          <Route path="/kontakt" element={<Kontakt />} />
+          <Route path="/o-firmie" element={<OFirmie />} />
+          <Route path="/dziekujemy" element={<Dziekujemy />} />
           <Route path="/:slug" element={<ServicePage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

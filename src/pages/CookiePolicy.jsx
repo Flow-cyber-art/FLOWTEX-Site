@@ -56,6 +56,7 @@ export default function CookiePolicy() {
           content="Polityka plików cookies FLOWTEX Polska — informacje o wykorzystywanych plikach cookies i zasobach zewnętrznych na stronie www.flowtex.pl."
         />
         <link rel="canonical" href="https://www.flowtex.pl/polityka-cookies" />
+        <meta property="og:url" content="https://www.flowtex.pl/polityka-cookies" />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
 

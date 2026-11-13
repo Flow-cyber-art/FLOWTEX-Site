@@ -24,10 +24,12 @@ function describeTouch(t) {
  * do klienta (bez tego bloku). Po sukcesie zgłasza zdarzenie `generate_lead`.
  *
  * @param form    { name, company, email, phone, message }
- * @param options { formId, context } — formId rozróżnia formularze w raportach,
- *                context to np. nazwa usługi lub wady (bez danych osobowych)
+ * @param options { formId, context, trackParams } — formId rozróżnia formularze w
+ *                raportach, context to np. nazwa usługi lub wady, trackParams to
+ *                dodatkowe parametry zdarzenia (rodzaj, branża, przedział
+ *                powierzchni) — wszystko bez danych osobowych
  */
-export async function sendLead(form, { formId, context = "" } = {}) {
+export async function sendLead(form, { formId, context = "", trackParams = {} } = {}) {
   const id = leadId();
   const { session, first } = getAttribution();
   const pageUrl = window.location.href.split("#")[0];
@@ -74,6 +76,7 @@ export async function sendLead(form, { formId, context = "" } = {}) {
     lead_id: id,
     lead_source: session?.source || "",
     lead_medium: session?.medium || "",
+    ...trackParams,
   });
   return id;
 }

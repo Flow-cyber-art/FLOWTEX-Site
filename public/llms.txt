@@ -12,13 +12,15 @@ Polsce, a także realizacje międzynarodowe.
 Nazwa: FLOWTEX Polska to firma wykonawcza (wykonawca posadzek), a nie
 producent materiałów. Nie należy jej mylić z produktem posadzkowym
 „Flowtex FR” marki Flowcrete. FLOWTEX Polska jest autoryzowanym
-wykonawcą systemów Flowcrete, Sika, Sto, ACO i Polysto.
+wykonawcą systemów Flowcrete i Sika.
 
 Kluczowe fakty:
-- Ponad 20 lat doświadczenia w branży, ponad 2,4 mln m² wykonanych posadzek,
-  ponad 180 obsłużonych zakładów, realizacje w 7 krajach.
+- Ponad 20 lat doświadczenia zespołu w branży, ponad 2,4 mln m² wykonanych
+  posadzek, ponad 180 obsłużonych zakładów, realizacje w 7 krajach. Ten
+  dorobek powstał w ACME Group, której właścicielem był Paweł Najduk;
+  FLOWTEX Polska to nowa marka tego samego zespołu.
 - Za stronę techniczną realizacji odpowiada Paweł Najduk, właściciel
-  i dyrektor techniczny.
+  i dyrektor techniczny FLOWTEX Polska (wcześniej właściciel ACME Group).
 - Pracuje bezpośrednio dla inwestorów oraz jako podwykonawca generalnych
   wykonawców; przed wejściem na budowę przygotowuje opis technologii
   (system, przygotowanie podłoża, warstwy, zużycie materiałów, detale).
@@ -28,6 +30,12 @@ Kluczowe fakty:
 ## Usługi
 
 - [Posadzki żywiczne](https://www.flowtex.pl/posadzki-zywiczne): Bezspoinowe posadzki epoksydowe i poliuretanowe dla hal produkcyjnych, magazynów oraz zakładów spożywczych (odporność na tłuszcze, kwasy, mycie parowe) i farmaceutycznych (systemy antystatyczne, zgodność z GMP i ISO).
+- [Posadzki dla przemysłu spożywczego](https://www.flowtex.pl/posadzki-dla-przemyslu-spozywczego): Strefy w zakładzie spożywczym (mokra produkcja, chłodnie, magazyny), kierunki doboru systemu (poliuretan-cement, poliuretan, epoksyd), spadki, cokoły higieniczne i ochrona ścian; praca etapowa w działającym zakładzie.
+- [Posadzki dla przemysłu farmaceutycznego](https://www.flowtex.pl/posadzki-dla-przemyslu-farmaceutycznego): Bezspoinowe posadzki z fasetą dla stref czystych, produkcji i obiektów medycznych w kontekście ISO 14644 i EU GMP Aneks 1; warianty ESD.
+- [Renowacja i naprawa posadzek przemysłowych](https://www.flowtex.pl/renowacja-posadzek-przemyslowych): Objawy (pylenie, pęknięcia, odspojenie żywicy, pęcherze, ubytki, dylatacje), przyczyny i kierunki naprawy; naprawa punktowa a renowacja podłoża.
+- [Posadzki epoksydowe](https://www.flowtex.pl/posadzki-epoksydowe): Kiedy wybrać epoksyd, rodzaje systemów, ograniczenia (sztywność, UV, szok termiczny), porównanie z poliuretanem.
+- [Posadzki poliuretanowe i PU-cement](https://www.flowtex.pl/posadzki-poliuretanowe): Poliuretan do chłodni i stref o zmiennej temperaturze, poliuretan-cement do mycia gorącą wodą i parą, porównanie.
+- [Posadzki do hal produkcyjnych i magazynów](https://www.flowtex.pl/posadzki-do-hal-produkcyjnych-i-magazynow): Beton (nośność) i żywica (powierzchnia), kiedy wystarczy beton, utwardzanie, zbrojenie, dylatacje.
 - [Posadzki ESD (antyelektrostatyczne)](https://www.flowtex.pl/posadzki-esd): Posadzki żywiczne ESD dla przemysłu elektronicznego — warstwy przewodzące lub rozpraszające, uziemienie i pomiar parametrów elektrycznych po wykonaniu.
 - [Posadzki antywybuchowe ATEX](https://www.flowtex.pl/posadzki-antywybuchowe-atex): Systemy przewodzące do stref zagrożenia wybuchem (Ex) — przygotowanie podłoża, uziemienie, taśmy miedziane, kontrola parametrów; różnica między posadzką ESD a posadzką do strefy Ex.
 - [Posadzki do clean roomów i pomieszczeń czystych](https://www.flowtex.pl/posadzki-clean-room): Bezspoinowe posadzki żywiczne z fasetą dla przemysłu farmaceutycznego i obiektów medycznych, w kontekście norm ISO 14644 i EU GMP Aneks 1.
@@ -66,6 +74,8 @@ Kluczowe fakty:
 ## Firma
 
 - [Strona główna](https://www.flowtex.pl/): Oferta, certyfikaty, realizacje, FAQ i dane kontaktowe FLOWTEX Polska.
+- [O firmie](https://www.flowtex.pl/o-firmie): Kim jest FLOWTEX Polska, dorobek zespołu (ACME Group), autoryzacje Flowcrete i Sika, sposób pracy, obszar działania i dane firmy.
+- [Kontakt i wycena](https://www.flowtex.pl/kontakt): Formularz zapytania ofertowego (rodzaj posadzki, branża, powierzchnia, lokalizacja, termin), telefon, e-mail, adres i godziny pracy.
 - [Polityka prywatności](https://www.flowtex.pl/polityka-prywatnosci): Zasady przetwarzania danych osobowych.
 - [Polityka cookies](https://www.flowtex.pl/polityka-cookies): Informacje o plikach cookies stosowanych na stronie.
 

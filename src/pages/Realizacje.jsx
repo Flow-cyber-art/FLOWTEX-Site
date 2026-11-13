@@ -3,6 +3,7 @@ import { COLORS, ACCENT_TEXT } from "../theme.js";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import ContactSection from "../components/ContactSection.jsx";
+import { TYPE_BY_SERVICE } from "../components/ContactForm.jsx";
 import { ArrowRight, ArrowLeft, CalendarDays } from "lucide-react";
 import { REALIZACJE, getRealizacjaBySlug } from "../data/realizacje.js";
 import { getServiceBySlug } from "../data/services.js";
@@ -276,8 +277,9 @@ function RealizacjaDetail({ item }) {
                 url: canonicalUrl,
                 mainEntityOfPage: canonicalUrl,
                 ...(image ? { image } : {}),
-                author: { "@type": "Organization", name: "FLOWTEX Polska" },
-                publisher: { "@type": "Organization", name: "FLOWTEX Polska" },
+                dateModified: toISODate(item.date),
+                author: { "@id": "https://www.flowtex.pl/#author-pawel-najduk" },
+                publisher: { "@id": "https://www.flowtex.pl/#organization" },
                 ...(relatedService
                   ? { about: { "@type": "Service", name: relatedService.title, url: `https://www.flowtex.pl/${relatedService.slug}` } }
                   : {}),
@@ -421,6 +423,7 @@ function RealizacjaDetail({ item }) {
         heading="Planujesz podobną inwestycję?"
         text="Opisz swój obiekt — przygotujemy propozycję systemu i wycenę."
         context={`Realizacja — ${item.title}`}
+        defaultType={TYPE_BY_SERVICE[item.relatedServiceSlug] || ""}
       />
 
       {/* Powrót */}

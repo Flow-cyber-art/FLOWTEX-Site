@@ -42,7 +42,7 @@ znaleźć. Sprawdzaj w trybie podglądu GTM (Preview), po zaakceptowaniu cookies
 3. Zmienne warstwy danych: `form_id`, `form_location`, `lead_context`, `lead_id`,
    `link_location`, `mode`, `top_result`, `lead_source`, `lead_medium`, `page_path`.
 4. Reguła „Zdarzenie niestandardowe" z wyrażeniem regularnym:
-   `^(generate_lead|click_phone|click_email|form_start|form_error|selector_start|selector_complete)$`
+   `^(generate_lead|click_phone|click_email|form_start|form_step|form_error|selector_start|selector_complete)$`
 5. Tag „GA4 – zdarzenie", nazwa zdarzenia `{{Event}}`, parametry ze zmiennych
    z punktu 3, reguła z punktu 4.
 6. Kroki 3–5 z wariantu A (kluczowe zdarzenie, wymiary, pomiar zaawansowany).
@@ -61,14 +61,23 @@ kliknięciu „Akceptuję". W GTM nie trzeba dodawać szablonu zgody.
 2. Mapy witryn → dodaj `https://www.flowtex.pl/sitemap.xml`.
 3. GA4 → Administracja → Połączenia z usługami → Search Console → połącz.
 
+## Strona „Dziękujemy"
+
+Po poprawnej wysyłce formularza użytkownik trafia na `/dziekujemy` (strona z
+`noindex`, poza mapą witryny). W GA4 widać ją jako odsłonę, więc można zbudować
+cel lub zdarzenie na podstawie adresu strony jako dodatek do `generate_lead`.
+Jeśli wysyłka się nie uda, formularz pokazuje link „wyślij to samo e-mailem"
+z gotową treścią zapytania.
+
 ## Zdarzenia wysyłane przez stronę
 
 | Zdarzenie | Kiedy | Parametry |
 | --- | --- | --- |
-| `generate_lead` | Poprawna wysyłka formularza | `form_id`, `form_location`, `lead_context`, `lead_id`, `lead_source`, `lead_medium` |
+| `generate_lead` | Poprawna wysyłka formularza | `form_id`, `form_location`, `lead_context`, `lead_id`, `lead_source`, `lead_medium`, `request_type`, `industry`, `area_range` |
 | `click_phone` | Kliknięcie numeru telefonu | `link_location` |
 | `click_email` | Kliknięcie adresu e-mail | `link_location` |
 | `form_start` | Pierwsze wejście w pole formularza | `form_id` |
+| `form_step` | Przejście do kroku 2 formularza (dane kontaktowe) | `form_id`, `step` |
 | `form_error` | Nieudana wysyłka | `form_id`, `error_type` |
 | `selector_start` | Start narzędzia doboru | `mode` (`quick` / `precision`) |
 | `selector_complete` | Wynik narzędzia doboru | `mode`, `top_result` |
@@ -77,7 +86,7 @@ Każde zdarzenie ma też `page_path`. Żadne nie zawiera danych osobowych.
 
 Wartości `form_id`: `formularz_strona_glowna`, `formularz_usluga`,
 `formularz_realizacja`, `formularz_poradnik`, `formularz_katalog_wad`,
-`formularz_dobor_posadzki`.
+`formularz_dobor_posadzki`, `formularz_kontakt`, `formularz_o_firmie`.
 
 Wartości `link_location`: `naglowek`, `stopka`, `przycisk_mobilny`, identyfikator
 sekcji (np. `kontakt`, `narzedzia`) albo `tresc`.

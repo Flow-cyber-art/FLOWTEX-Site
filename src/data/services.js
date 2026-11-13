@@ -1,11 +1,12 @@
 import { Droplets, ShieldAlert, Ruler, Layers, Waves, Building2, Zap, Flame, Wind } from "lucide-react";
+import { SERVICE_PAGES } from "./service-pages.js";
 
 /*
   Każdy wpis = jedna usługa = jedna podstrona pod adresem /{slug}.
   Nowa usługa automatycznie trafia do menu, strony głównej, sitemap i
   prerenderingu. Zdjęcie na stronie usługi: src/assets/realizacje/{slug}.webp.
 */
-export const SERVICES = [
+const CORE = [
   {
     slug: "posadzki-zywiczne",
     h1: "Posadzki żywiczne przemysłowe",
@@ -22,6 +23,22 @@ export const SERVICES = [
       {
         heading: "Rodzaje posadzek żywicznych",
         body: "Posadzki epoksydowe sprawdzają się tam, gdzie liczy się odporność na obciążenia mechaniczne i chemikalia — w magazynach, halach produkcyjnych i laboratoriach. Tworzą twardą, szczelną powłokę łatwą w utrzymaniu czystości. Posadzki poliuretanowe są bardziej elastyczne i lepiej znoszą wahania temperatury, dlatego stosuje się je w chłodniach, magazynach spożywczych i pomieszczeniach o zmiennych warunkach cieplnych. Dobieramy system żywiczny indywidualnie, na podstawie obciążeń, chemii procesowej i wymagań higienicznych konkretnego obiektu.",
+      },
+      {
+        heading: "Epoksyd, poliuretan i PU-cement: porównanie",
+        body: "Wszystkie trzy grupy dają bezspoinową, łatwą w utrzymaniu powierzchnię, ale zachowują się inaczej pod obciążeniem, w kontakcie z chemią i przy zmianach temperatury.",
+        table: {
+          head: ["", "Epoksyd", "Poliuretan", "Poliuretan-cement"],
+          rows: [
+            ["Charakter powłoki", "Twarda, sztywna", "Elastyczna, sprężysta", "Bardzo wytrzymała, gruba (kilka mm)"],
+            ["Obciążenia mechaniczne", "Bardzo dobra odporność na nacisk i ścieranie", "Dobra odporność na uderzenia i ścieranie", "Bardzo dobra, także przy ruchu ciężkich wózków"],
+            ["Wahania temperatury i chłód", "Słabsza: sztywna powłoka gorzej znosi szoki termiczne", "Dobra: sprawdza się w chłodniach", "Bardzo dobra: znosi gorącą wodę i mycie parowe"],
+            ["Chemia", "Dobra odporność na wiele chemikaliów w stałej temperaturze", "Dobra, zależnie od systemu", "Bardzo dobra, także na kwasy organiczne i tłuszcze"],
+            ["Promienie UV", "Może żółknąć", "Systemy alifatyczne nie żółkną", "Zwykle stosowany wewnątrz"],
+            ["Typowe miejsca", "Magazyny, hale produkcyjne, laboratoria, warsztaty", "Chłodnie, strefy o zmiennej temperaturze", "Zakłady mięsne, mleczarnie, przetwórnie, kuchnie przemysłowe"],
+          ],
+        },
+        note: "Dokładne parametry zależą od konkretnego systemu i grubości warstwy, dlatego zawsze weryfikujemy je w karcie technicznej producenta. Szczegóły: [posadzki epoksydowe](/posadzki-epoksydowe), [posadzki poliuretanowe](/posadzki-poliuretanowe), [posadzki dla przemysłu spożywczego](/posadzki-dla-przemyslu-spozywczego) i [posadzki do hal i magazynów](/posadzki-do-hal-produkcyjnych-i-magazynow).",
       },
       {
         heading: "Zastosowanie w różnych branżach",
@@ -69,6 +86,22 @@ export const SERVICES = [
         body: "Posadzki ESD stosujemy w halach produkcji i montażu elektroniki, strefach EPA, laboratoriach oraz magazynach komponentów wrażliwych na wyładowania. Przykładem jest nasza realizacja 700 m² posadzki ESD dla strefy produkcji elektroniki. Posadzki ESD są też spokrewnione z [posadzkami do stref zagrożenia wybuchem](/posadzki-antywybuchowe-atex), ale cel zastosowania jest inny — dlatego w strefach Ex wymagania określamy osobno (zobacz: [posadzki antywybuchowe ATEX](/posadzki-antywybuchowe-atex)).",
       },
       {
+        heading: "ESD czy ATEX: porównanie",
+        body: "Oba rozwiązania łączy kontrolowane odprowadzanie ładunków, ale cel jest inny, a jedno nie zastępuje automatycznie drugiego.",
+        table: {
+          head: ["", "Posadzka ESD", "Posadzka do strefy Ex (ATEX)"],
+          rows: [
+            ["Główny cel", "Ochrona wrażliwej elektroniki przed wyładowaniami", "Ograniczanie potencjalnych źródeł zapłonu"],
+            ["Typowe miejsce", "Produkcja i montaż elektroniki, strefy EPA", "Hale z pyłami lub materiałami sypkimi, strefy zagrożenia wybuchem"],
+            ["Punkt odniesienia", "Wymagania strefy ochrony elektroniki", "Klasyfikacja strefy Ex konkretnego obiektu"],
+            ["Układ", "Podłoże, warstwy przewodzące lub rozpraszające, uziemienie", "Podłoże, warstwa odprowadzająca, uziemienie, taśmy miedziane"],
+            ["Kontrola", "Pomiar parametrów po wykonaniu i w eksploatacji", "Pomiar parametrów po wykonaniu, dokumentacja"],
+            ["Czy jedno zastępuje drugie?", "Nie automatycznie", "Nie automatycznie"],
+          ],
+        },
+        note: "Więcej w poradniku [posadzka ESD a antywybuchowa](/poradniki/posadzka-esd-a-antywybuchowa).",
+      },
+      {
         heading: "Pomiary i dokumentacja",
         body: "Po zakończeniu prac sprawdzamy parametry elektryczne wykonanej posadzki, ponieważ nieprawidłowo wykonany detal — np. połączenie warstwy przewodzącej z uziemieniem — może wpłynąć na działanie całego systemu, nawet jeśli powierzchnia wygląda poprawnie. Pomiary i dokumentacja pozwalają zweryfikować, czy system osiągnął wymagane parametry, a późniejsza kontrola w trakcie eksploatacji pozwala utrzymać je na właściwym poziomie.",
       },
@@ -112,6 +145,21 @@ export const SERVICES = [
         body: "W środowisku ESD głównym celem jest ochrona wrażliwej elektroniki przed wyładowaniami. W strefie zagrożenia wybuchem kontrola elektryczności statycznej jest natomiast jednym ze sposobów ograniczania potencjalnych źródeł zapłonu. Oba rodzaje posadzek (zobacz też [posadzki ESD](/posadzki-esd)) łączy kontrolowane odprowadzanie ładunków, ale określenie „posadzka antyelektrostatyczna” nie powinno być automatycznie traktowane jako synonim posadzki do strefy Ex — wymagania trzeba określić na podstawie warunków i klasyfikacji konkretnego obiektu.",
       },
       {
+        heading: "ATEX czy ESD: porównanie",
+        table: {
+          head: ["", "Posadzka ESD", "Posadzka do strefy Ex (ATEX)"],
+          rows: [
+            ["Główny cel", "Ochrona wrażliwej elektroniki przed wyładowaniami", "Ograniczanie potencjalnych źródeł zapłonu"],
+            ["Typowe miejsce", "Produkcja i montaż elektroniki, strefy EPA", "Hale z pyłami lub materiałami sypkimi, strefy zagrożenia wybuchem"],
+            ["Punkt odniesienia", "Wymagania strefy ochrony elektroniki", "Klasyfikacja strefy Ex konkretnego obiektu"],
+            ["Układ", "Podłoże, warstwy przewodzące lub rozpraszające, uziemienie", "Podłoże, warstwa odprowadzająca, uziemienie, taśmy miedziane"],
+            ["Kontrola", "Pomiar parametrów po wykonaniu i w eksploatacji", "Pomiar parametrów po wykonaniu, dokumentacja"],
+            ["Czy jedno zastępuje drugie?", "Nie automatycznie", "Nie automatycznie"],
+          ],
+        },
+        note: "Więcej w poradniku [posadzka ESD a antywybuchowa](/poradniki/posadzka-esd-a-antywybuchowa).",
+      },
+      {
         heading: "Pomiary i odbiór",
         body: "Przy dużych powierzchniach ważne jest zachowanie powtarzalnych parametrów na całym wykonanym obszarze. Po zakończeniu prac kontrolujemy parametry elektryczne gotowej posadzki, a pomiary i dokumentacja pozwalają zweryfikować, czy system osiągnął wymagane parametry. Przykładem jest nasza realizacja 1420 m² posadzki antywybuchowej w hali magazynującej materiały sypkie pod Grójcem.",
       },
@@ -148,6 +196,21 @@ export const SERVICES = [
       {
         heading: "Wymagania stawiane posadzce",
         body: "Wymagania dotyczące kontroli czystości środowiska określają m.in. normy serii ISO 14644, a w procesach wymagających warunków aseptycznych — wytyczne EU GMP Aneks 1. Przekładają się one na cechy posadzki: musi być bezpyłowa, nie może generować ani zatrzymywać cząstek, powinna być pozbawiona porów i odporna na częstą, intensywną dezynfekcję środkami chemicznymi. Dlatego system dobieramy na podstawie analizy warunków pracy konkretnego pomieszczenia, a nie wyłącznie wyglądu czy odporności mechanicznej.",
+      },
+      {
+        heading: "Wymagania i ich skutki dla posadzki",
+        table: {
+          head: ["Wymaganie pomieszczenia", "Co oznacza dla posadzki"],
+          rows: [
+            ["Ograniczenie cząstek w powietrzu", "Powierzchnia bezpyłowa, która nie generuje ani nie zatrzymuje cząstek"],
+            ["Brak miejsc gromadzenia zanieczyszczeń", "System bezspoinowy, bez fug i szczelin"],
+            ["Brak siedlisk drobnoustrojów", "Powierzchnia pozbawiona porów"],
+            ["Częsta dezynfekcja", "Odporność na intensywne środki chemiczne"],
+            ["Trudne do czyszczenia połączenie ściana–podłoga", "Faseta, czyli wywinięcie posadzki na ściany"],
+            ["Codzienne utrzymanie czystości", "Gładka, jednolita powierzchnia"],
+          ],
+        },
+        note: "Dla farmacji przygotowaliśmy osobny opis: [posadzki dla przemysłu farmaceutycznego](/posadzki-dla-przemyslu-farmaceutycznego). Jak dobrać posadzkę krok po kroku: [jaka posadzka do clean roomu](/poradniki/jaka-posadzka-do-clean-roomu).",
       },
       {
         heading: "Bezspoinowość i faseta",
@@ -368,6 +431,16 @@ export const SERVICES = [
       { q: "Od czego zaczyna się projekt fitoutowy?", a: "Od wizji lokalnej, podczas której rozpoznajemy specyfikę obiektu, wymagania techniczne i harmonogram funkcjonowania firmy. Dzięki temu planujemy kolejność prac i minimalizujemy zakłócenia w bieżącej działalności klienta." },
     ],
   },
+];
+
+// Usługi główne (kafelki "Nasza oferta", sekcja "pozostałe usługi") oraz wszystkie
+// strony razem z branżowymi i technologicznymi (routing, sitemap, stopka).
+export const CORE_SERVICES = CORE;
+export const SERVICES = [...CORE, ...SERVICE_PAGES];
+export const OFFER_GROUPS = [
+  { label: "Branże", items: SERVICE_PAGES.filter((s) => s.group === "branza") },
+  { label: "Technologie", items: SERVICE_PAGES.filter((s) => s.group === "technologia") },
+  { label: "Usługi", items: CORE },
 ];
 
 export function getServiceBySlug(slug) {

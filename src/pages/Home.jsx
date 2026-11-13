@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { COLORS, ACCENT_TEXT } from "../theme.js";
 import { Link, useSearchParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Sparkles, Search, Phone } from "lucide-react";
+import { ArrowRight, Sparkles, Search, Phone, Utensils, FlaskConical, Cpu, Flame, Warehouse, Wrench, MapPin } from "lucide-react";
 import { LayerStack, LAYERS } from "../components/LayerStack.jsx";
 import { HeroCarousel } from "../components/HeroCarousel.jsx";
 import { useReveal } from "../hooks/useReveal.js";
-import { SERVICES } from "../data/services.js";
-import { sendLead } from "../utils/lead.js";
-import { track } from "../utils/analytics.js";
+import { CORE_SERVICES as SERVICES } from "../data/services.js";
+import { REALIZACJE } from "../data/realizacje.js";
+import { ContactForm } from "../components/ContactForm.jsx";
 import certIcon1 from "../assets/certyfikaty/cert-1.webp";
 import certIcon2 from "../assets/certyfikaty/cert-2.webp";
 import pawelPhoto from "../assets/team/pawel-najduk.webp";
@@ -31,8 +31,8 @@ const FAQ = [
     a: "Tak, realizujemy projekty na terenie całej Polski, a nasze doświadczenie obejmuje również realizacje międzynarodowe.",
   },
   {
-    q: "Jakie certyfikaty i normy spełniają Wasze posadzki?",
-    a: "Nasze realizacje spełniają wymogi norm jakościowych i higienicznych stawianych obiektom przemysłowym, w tym standardy zgodne z ISO oraz wymogi GMP i HACCP dla branży spożywczej i farmaceutycznej.",
+    q: "Jakie autoryzacje i dokumenty macie do posadzek?",
+    a: "FLOWTEX Polska jest autoryzowanym wykonawcą systemów Flowcrete i Sika. Przed wejściem na budowę przygotowujemy opis technologii: system, przygotowanie podłoża, warstwy, zużycie materiałów i detale. W posadzkach ESD i ATEX po wykonaniu kontrolujemy parametry elektryczne. System dobieramy pod wymagania higieniczne obiektu (HACCP, GMP), a o szczegóły dokumentacji dla Twojego obiektu zapytaj w wycenie.",
   },
   {
     q: "Jak wygląda proces wyceny posadzki przemysłowej?",
@@ -40,17 +40,41 @@ const FAQ = [
   },
   {
     q: "Kto odpowiada za stronę techniczną realizacji w FLOWTEX Polska?",
-    a: "Za stroną techniczną każdej realizacji osobiście odpowiada Paweł Najduk, właściciel FLOWTEX Polska z ponad 20-letnim doświadczeniem w branży posadzek przemysłowych i żywicznych oraz setkami zrealizowanych inwestycji w Polsce i za granicą.",
+    a: "Za stroną techniczną każdej realizacji osobiście odpowiada Paweł Najduk, właściciel FLOWTEX Polska z ponad 20-letnim doświadczeniem w branży posadzek przemysłowych i żywicznych, zdobytym wcześniej jako właściciel ACME Group.",
   },
   {
     q: "Jakie doświadczenie ma zespół FLOWTEX Polska?",
-    a: "Zespół FLOWTEX Polska dysponuje ponad 20-letnim doświadczeniem w branży, na koncie ma setki zrealizowanych inwestycji o łącznej powierzchni ponad 2,4 mln m² w 7 krajach, dla ponad 180 zakładów przemysłowych, produkcyjnych, spożywczych i farmaceutycznych.",
+    a: "Zespół FLOWTEX Polska dysponuje ponad 20-letnim doświadczeniem w branży. Na jego koncie jest ponad 2,4 mln m² wykonanych posadzek w 7 krajach, dla ponad 180 zakładów przemysłowych, produkcyjnych, spożywczych i farmaceutycznych. Ten dorobek powstał w ACME Group, której właścicielem był Paweł Najduk; FLOWTEX Polska to nowa marka tego samego zespołu.",
   },
 ];
 
 const CERT_ICONS = [
   { src: certIcon1, alt: "Autoryzowany wykonawca systemów Flowcrete" },
   { src: certIcon2, alt: "Autoryzowany wykonawca systemów Sika" },
+];
+
+// Kafelki wejścia według branży/obiektu — linki do stron branżowych i usług.
+const INDUSTRIES = [
+  { icon: Utensils, title: "Przemysł spożywczy", text: "Higiena, mycie, chemia procesowa, spadki i odwodnienia.", href: "/posadzki-dla-przemyslu-spozywczego", cta: "Zobacz ofertę" },
+  { icon: FlaskConical, title: "Farmacja i clean room", text: "Bezspoinowe posadzki z fasetą do stref czystych i obiektów medycznych.", href: "/posadzki-dla-przemyslu-farmaceutycznego", cta: "Zobacz ofertę" },
+  { icon: Cpu, title: "Elektronika i strefy ESD", text: "Kontrolowane odprowadzanie ładunków, uziemienie i pomiary parametrów.", href: "/posadzki-esd", cta: "Zobacz ofertę" },
+  { icon: Flame, title: "Strefy zagrożenia wybuchem (ATEX)", text: "Systemy przewodzące z uziemieniem i kontrolą parametrów po wykonaniu.", href: "/posadzki-antywybuchowe-atex", cta: "Zobacz ofertę" },
+  { icon: Warehouse, title: "Hale produkcyjne i magazyny", text: "Posadzki betonowe i żywiczne dobrane do obciążeń wózków i maszyn.", href: "/posadzki-do-hal-produkcyjnych-i-magazynow", cta: "Zobacz ofertę" },
+  { icon: Wrench, title: "Renowacja i naprawy", text: "Pylenie, pęknięcia, odspojenia, uszkodzone dylatacje i cokoły.", href: "/renowacja-posadzek-przemyslowych", cta: "Zobacz ofertę" },
+];
+
+// Trzy najnowsze realizacje (najnowsze są na górze tablicy w realizacje.js).
+const FEATURED_CASES = REALIZACJE.slice(0, 3);
+const caseImageModules = import.meta.glob("../assets/case-studies/*.{jpg,jpeg,png,webp}", { eager: true, import: "default" });
+const CASE_IMAGES = Object.fromEntries(
+  Object.entries(caseImageModules).map(([path, src]) => [path.split("/").pop().replace(/\.[^.]+$/, ""), src])
+);
+
+// Poradniki widoczne na stronie głównej (tylko opublikowane).
+const FEATURED_GUIDES = [
+  { href: "/poradniki/jaka-posadzka-do-zakladu-spozywczego", title: "Jaka posadzka do zakładu spożywczego?" },
+  { href: "/poradniki/posadzka-esd-a-antywybuchowa", title: "Posadzka ESD a antywybuchowa — czym się różnią" },
+  { href: "/poradniki/posadzka-epoksydowa-czy-poliuretanowa", title: "Posadzka epoksydowa czy poliuretanowa?" },
 ];
 
 const STATS = [
@@ -69,33 +93,9 @@ export default function Home() {
   const [searchParams] = useSearchParams();
   const contactContext = searchParams.get("kontakt") || "";
   const [activeLayer, setActiveLayer] = useState(null);
-  const [form, setForm] = useState({
-    name: "",
-    company: "",
-    email: "",
-    phone: "",
-    message: contactContext ? `Kontekst zapytania: ${contactContext}\n\n` : "",
-    consent: false,
-    website: "", // honeypot — pole niewidoczne dla ludzi, wypełniane tylko przez boty
-  });
-  const [sent, setSent] = useState(false);
-  const [sending, setSending] = useState(false);
-  const [sendError, setSendError] = useState("");
   const [certIconIndex, setCertIconIndex] = useState(0);
-  const [formStarted, setFormStarted] = useState(false);
-  const handleFormStart = () => {
-    if (formStarted) return;
-    setFormStarted(true);
-    track("form_start", { form_id: "formularz_strona_glowna" });
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCertIconIndex((i) => (i + 1) % CERT_ICONS.length);
-    }, 2500);
-    return () => clearInterval(interval);
-  }, []);
-
+  const [industriesRef, industriesVisible] = useReveal();
+  const [casesRef, casesVisible] = useReveal();
   const [aboutRef, aboutVisible] = useReveal();
   const [statsRef, statsVisible] = useReveal();
   const [offerRef, offerVisible] = useReveal();
@@ -113,35 +113,6 @@ export default function Home() {
     }, 1800);
     return () => clearInterval(id);
   }, []);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    // Honeypot: jeśli to pole jest wypełnione, to najpewniej bot — udajemy sukces i nic nie wysyłamy.
-    if (form.website) {
-      setSent(true);
-      return;
-    }
-
-    if (!form.consent) {
-      setSendError("Zaznacz zgodę na przetwarzanie danych osobowych, aby wysłać wiadomość.");
-      return;
-    }
-
-    setSending(true);
-    setSendError("");
-
-    try {
-      await sendLead(form, { formId: "formularz_strona_glowna", context: contactContext });
-      setSent(true);
-    } catch (err) {
-      console.error("Błąd wysyłki formularza kontaktowego:", err);
-      track("form_error", { form_id: "formularz_strona_glowna", error_type: "wysylka" });
-      setSendError("Nie udało się wysłać wiadomości. Spróbuj ponownie lub napisz na kontakt@flowtex.pl.");
-    } finally {
-      setSending(false);
-    }
-  };
 
   return (
     <>
@@ -180,52 +151,58 @@ export default function Home() {
         >
           <div>
             <div
-              className="text-sm font-semibold uppercase mb-9"
+              className="text-sm font-semibold uppercase mb-7"
               style={{ color: "rgba(243, 243, 243, 0.8)", letterSpacing: "0.25em" }}
             >
-              Posadzki przemysłowe • żywiczne • betonowe
+              Wykonawca posadzek przemysłowych • cała Polska
             </div>
-            <p
-              className="ft-display tracking-tight"
+            <h1
+              className="ft-display tracking-tight max-w-4xl mx-auto"
               style={{
                 color: COLORS.white,
-                fontSize: "clamp(2.5rem, 5.5vw, 4rem)",
+                fontSize: "clamp(2.1rem, 5vw, 3.6rem)",
                 fontWeight: 800,
-                lineHeight: 1.05,
+                lineHeight: 1.08,
                 textShadow: `0 2px 16px ${COLORS.darkBg}99`,
               }}
             >
-              Pewność pod każdą warstwą.
-            </p>
-            <h1
-              className="mt-8 max-w-[700px] mx-auto"
+              Posadzki żywiczne i przemysłowe dla zakładów, w których posadzka musi przejść audyt
+            </h1>
+            <p
+              className="mt-7 max-w-[760px] mx-auto"
               style={{
-                color: "rgba(255, 255, 255, 0.85)",
-                fontSize: "clamp(1.05rem, 2.2vw, 1.5rem)",
+                color: "rgba(255, 255, 255, 0.88)",
+                fontSize: "clamp(1.02rem, 2vw, 1.3rem)",
                 fontWeight: 400,
                 lineHeight: 1.6,
               }}
             >
-              Posadzki żywiczne i przemysłowe{" "}
-              <br />
-              dla wymagającego przemysłu.
-            </h1>
-            <div className={`mt-11 flex flex-wrap gap-4 ${SHOW_LAYER_DIAGRAM ? "" : "justify-center"}`}>
+              Przemysł spożywczy, farmacja, elektronika, strefy ESD i ATEX, clean room. Dobieramy system
+              do obciążeń, chemii i wymagań higienicznych, a w strefach ESD i ATEX potwierdzamy
+              parametry pomiarami.
+            </p>
+            <div className={`mt-10 flex flex-wrap gap-4 ${SHOW_LAYER_DIAGRAM ? "" : "justify-center"}`}>
               <a
                 href="#kontakt"
-                className="h-14 inline-flex items-center gap-2 px-9 rounded-sm ft-mono text-xs tracking-wider uppercase hover:opacity-90 transition"
+                className="h-14 inline-flex items-center gap-2 px-8 rounded-sm ft-mono text-xs tracking-wider uppercase hover:opacity-90 transition"
                 style={{ backgroundColor: COLORS.accent, color: ACCENT_TEXT, fontWeight: 600 }}
               >
-                Wycena projektu <ArrowRight size={15} />
+                Zamów wizję lokalną i wycenę <ArrowRight size={15} />
               </a>
-              <a
-                href="#oferta"
-                className="h-14 inline-flex items-center gap-2 px-9 rounded-sm ft-mono text-xs tracking-wider uppercase border ft-outline-btn transition"
+              <Link
+                to="/realizacje"
+                className="h-14 inline-flex items-center gap-2 px-8 rounded-sm ft-mono text-xs tracking-wider uppercase border ft-outline-btn transition"
                 style={{ borderColor: COLORS.ctaBorder, color: COLORS.white }}
               >
-                Zobacz ofertę
-              </a>
+                Zobacz realizacje
+              </Link>
             </div>
+            <p className="mt-6 text-sm" style={{ color: "rgba(243, 243, 243, 0.75)" }}>
+              Realizacje w całej Polsce · Wycena po oględzinach obiektu lub analizie dokumentacji
+            </p>
+            <p className="ft-display mt-8 text-xl" style={{ color: COLORS.accent, fontWeight: 700 }}>
+              Pewność pod każdą warstwą.
+            </p>
           </div>
 
           {SHOW_LAYER_DIAGRAM && (
@@ -257,76 +234,106 @@ export default function Home() {
             </div>
           ))}
         </div>
+        <p className="max-w-7xl mx-auto px-5 md:px-8 pb-8 text-sm" style={{ color: COLORS.mutedOnLight }}>
+          Dorobek zespołu zdobyty w ACME Group, której właścicielem był Paweł Najduk. FLOWTEX Polska to
+          nowa marka tego samego zespołu.
+        </p>
       </section>
 
-      {/* O NAS */}
-      <section id="o-nas" ref={aboutRef} className="max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28">
-        <div className={`grid md:grid-cols-12 gap-10 reveal ${aboutVisible ? "visible" : ""}`}>
-          <div className="md:col-span-4">
-            <div className="ft-mono text-xs ft-tracking-wide uppercase mb-3" style={{ color: COLORS.accent }}>
-              O firmie
-            </div>
-            <h2 className="ft-display text-3xl md:text-4xl" style={{ fontWeight: 700 }}>
-              Ponad 20 lat doświadczenia. Nowy rozdział tej samej historii.
-            </h2>
+      {/* BRANŻE — wejście dla klienta według typu obiektu */}
+      <section id="branze" ref={industriesRef} className="max-w-7xl mx-auto px-5 md:px-8 py-16 md:py-24">
+        <div className={`mb-10 reveal ${industriesVisible ? "visible" : ""}`}>
+          <div className="ft-mono text-xs ft-tracking-wide uppercase mb-3" style={{ color: COLORS.accent }}>
+            Dla jakich obiektów
           </div>
-          <div className="md:col-span-8 space-y-5 text-base md:text-lg" style={{ color: COLORS.textOnLight }}>
-            <p>
-              FLOWTEX Polska powstała z przekonania, że najwyższa jakość rodzi się z doświadczenia,
-              odpowiedzialności i bliskiej współpracy z klientem. Choć marka jest nowa, stoi za nią
-              ponad dwudziestoletnie doświadczenie zdobywane podczas realizacji setek tysięcy metrów
-              kwadratowych posadzek przemysłowych w Polsce i za granicą.
-            </p>
-            <p>
-              Specjalizujemy się w projektowaniu i wykonywaniu posadzek żywicznych dla zakładów
-              produkcyjnych, magazynów, centrów logistycznych oraz obiektów przemysłu spożywczego,
-              farmaceutycznego i chemicznego. Każdą realizację rozpoczynamy od dokładnej analizy
-              potrzeb inwestora i warunków pracy posadzki. Dzięki temu dobieramy rozwiązania, które
-              nie tylko spełniają wymagania techniczne, ale przede wszystkim zapewniają wieloletnią
-              trwałość.
-            </p>
-            <p>
-              W FLOWTEX Polska wierzymy, że najlepszą reklamą są realizacje, które po wielu latach
-              nadal spełniają swoją funkcję. To właśnie dlatego nasi klienci wracają do nas przy
-              kolejnych inwestycjach i polecają nas dalej.
-            </p>
-            <p style={{ fontWeight: 600 }}>
-              FLOWTEX Polska. Ponad 20 lat doświadczenia. Rodzinna odpowiedzialność. Nowoczesne
-              rozwiązania dla przemysłu.
-            </p>
-          </div>
+          <h2 className="ft-display text-3xl md:text-4xl" style={{ fontWeight: 700 }}>
+            Posadzki dla branż o najwyższych wymaganiach
+          </h2>
         </div>
+        <div className={`grid sm:grid-cols-2 lg:grid-cols-3 gap-5 reveal ${industriesVisible ? "visible" : ""}`}>
+          {INDUSTRIES.map((item) => {
+            const Icon = item.icon;
+            return (
+              <Link
+                key={item.title}
+                to={item.href}
+                className="ft-tile group block p-6 md:p-7 border transition"
+                style={{ borderColor: COLORS.borderOnLight, backgroundColor: COLORS.lightBg }}
+              >
+                <Icon size={26} style={{ color: COLORS.accent }} />
+                <h3 className="ft-display text-xl mt-4 mb-2" style={{ fontWeight: 700, color: COLORS.textOnLight }}>
+                  {item.title}
+                </h3>
+                <p className="text-sm mb-3" style={{ color: COLORS.mutedOnLight }}>{item.text}</p>
+                <span
+                  className="ft-mono text-xs uppercase tracking-wide inline-flex items-center gap-1 group-hover:gap-2 transition-all"
+                  style={{ color: COLORS.textOnLight, fontWeight: 600 }}
+                >
+                  {item.cta} <ArrowRight size={13} />
+                </span>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
 
-        <div
-          className="mt-12 md:mt-16 flex flex-col sm:flex-row overflow-hidden"
-          style={{ backgroundColor: COLORS.lightBg, border: `1px solid ${COLORS.borderOnLight}` }}
-        >
-          <div className="sm:w-64 md:w-80 flex-shrink-0">
-            <img
-              src={pawelPhoto}
-              alt="Paweł Najduk, właściciel i dyrektor techniczny FLOWTEX Polska"
-              width="700"
-              height="875"
-              loading="lazy"
-              decoding="async"
-              className="w-full h-72 sm:h-full object-cover"
-              style={{ objectPosition: "50% 15%" }}
-            />
+      {/* WYBRANE REALIZACJE */}
+      <section id="realizacje" ref={casesRef} style={{ backgroundColor: COLORS.lightBg }}>
+        <div className="max-w-7xl mx-auto px-5 md:px-8 py-16 md:py-24">
+          <div className={`mb-10 flex flex-wrap items-end justify-between gap-4 reveal ${casesVisible ? "visible" : ""}`}>
+            <div>
+              <div className="ft-mono text-xs ft-tracking-wide uppercase mb-3" style={{ color: COLORS.accent }}>
+                Referencje
+              </div>
+              <h2 className="ft-display text-3xl md:text-4xl" style={{ fontWeight: 700 }}>
+                Wybrane realizacje
+              </h2>
+            </div>
+            <Link
+              to="/realizacje"
+              className="ft-mono text-xs uppercase tracking-wide inline-flex items-center gap-2 hover:opacity-80"
+              style={{ color: COLORS.textOnLight, fontWeight: 600 }}
+            >
+              Wszystkie realizacje <ArrowRight size={14} />
+            </Link>
           </div>
-          <div className="p-6 md:p-8 flex flex-col justify-center">
-            <div className="ft-display text-xl md:text-2xl" style={{ fontWeight: 700 }}>
-              Paweł Najduk
-            </div>
-            <div className="ft-mono text-xs uppercase ft-tracking-wide mb-3" style={{ color: COLORS.textOnLight }}>
-              Właściciel i dyrektor techniczny
-            </div>
-            <p className="text-sm md:text-base leading-relaxed" style={{ color: COLORS.mutedOnLight }}>
-              Osobiście nadzoruje techniczną stronę każdej realizacji FLOWTEX Polska — od doboru
-              systemu posadzkowego, przez przygotowanie podłoża, po odbiór końcowy inwestycji.
-              Doświadczenie budował m.in. jako współwłaściciel firmy ACME Polska, odpowiedzialny za
-              stronę techniczną realizowanych tam projektów. Rozpoznawalna postać w branży, ceniona
-              za rzetelne doradztwo techniczne przy doborze systemów posadzkowych.
-            </p>
+          <div className={`grid md:grid-cols-3 gap-6 reveal ${casesVisible ? "visible" : ""}`}>
+            {FEATURED_CASES.map((item) => (
+              <Link
+                key={item.slug}
+                to={`/realizacje/${item.slug}`}
+                className="group block bg-white border overflow-hidden"
+                style={{ borderColor: COLORS.borderOnLight }}
+              >
+                {CASE_IMAGES[item.slug] && (
+                  <img
+                    src={CASE_IMAGES[item.slug]}
+                    alt={item.location ? `${item.title} — ${item.location}` : item.title}
+                    width="1200"
+                    height="630"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full object-cover transition group-hover:opacity-90"
+                    style={{ aspectRatio: "16 / 9" }}
+                  />
+                )}
+                <div className="p-5 md:p-6">
+                  <div className="ft-mono text-xs uppercase tracking-wide mb-3" style={{ color: COLORS.accent, fontWeight: 600 }}>
+                    {item.category}
+                  </div>
+                  <h3 className="ft-display text-xl mb-3" style={{ fontWeight: 700, color: COLORS.textOnLight }}>
+                    {item.title}
+                  </h3>
+                  <p className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm" style={{ color: COLORS.mutedOnLight }}>
+                    {item.areaSqm ? <span>{item.areaSqm.toLocaleString("pl-PL")} m²</span> : null}
+                    {item.location ? (
+                      <span className="inline-flex items-center gap-1"><MapPin size={13} />{item.location}</span>
+                    ) : null}
+                    <span>{item.date}</span>
+                  </p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -339,7 +346,7 @@ export default function Home() {
               Nasza oferta
             </div>
             <h2 className="ft-display text-3xl md:text-4xl" style={{ color: COLORS.white, fontWeight: 700 }}>
-              Od cięcia betonu po gotową posadzkę
+              Od przygotowania podłoża po gotową posadzkę
             </h2>
           </div>
           <div
@@ -454,6 +461,98 @@ export default function Home() {
             <Phone size={15} /> Zadzwoń: 507 394 552
           </a>
         </p>
+        <div className="mt-10 pt-8 border-t" style={{ borderColor: COLORS.borderOnLight }}>
+          <div className="ft-mono text-xs ft-tracking-wide uppercase mb-4" style={{ color: COLORS.accent }}>
+            Z poradnika
+          </div>
+          <ul className="grid md:grid-cols-3 gap-4">
+            {FEATURED_GUIDES.map((g) => (
+              <li key={g.href}>
+                <Link
+                  to={g.href}
+                  className="flex items-center justify-between gap-3 p-4 border hover:opacity-80 transition"
+                  style={{ borderColor: COLORS.borderOnLight, fontWeight: 600 }}
+                >
+                  <span>{g.title}</span>
+                  <ArrowRight size={16} className="shrink-0" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* O NAS */}
+      <section id="o-nas" ref={aboutRef} className="max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28">
+        <div className={`grid md:grid-cols-12 gap-10 reveal ${aboutVisible ? "visible" : ""}`}>
+          <div className="md:col-span-4">
+            <div className="ft-mono text-xs ft-tracking-wide uppercase mb-3" style={{ color: COLORS.accent }}>
+              O firmie
+            </div>
+            <h2 className="ft-display text-3xl md:text-4xl" style={{ fontWeight: 700 }}>
+              Ponad 20 lat doświadczenia. Nowy rozdział tej samej historii.
+            </h2>
+          </div>
+          <div className="md:col-span-8 space-y-5 text-base md:text-lg" style={{ color: COLORS.textOnLight }}>
+            <p>
+              FLOWTEX Polska powstała z przekonania, że najwyższa jakość rodzi się z doświadczenia,
+              odpowiedzialności i bliskiej współpracy z klientem. Choć marka jest nowa, stoi za nią
+              ponad dwudziestoletnie doświadczenie zespołu: ponad 2,4 mln m² wykonanych posadzek
+              przemysłowych w Polsce i za granicą, dla ponad 180 zakładów w 7 krajach. Ten dorobek
+              powstał w ACME Group, której właścicielem był Paweł Najduk.
+            </p>
+            <p>
+              Specjalizujemy się w projektowaniu i wykonywaniu posadzek żywicznych dla zakładów
+              produkcyjnych, magazynów, centrów logistycznych oraz obiektów przemysłu spożywczego,
+              farmaceutycznego i chemicznego. Każdą realizację rozpoczynamy od dokładnej analizy
+              potrzeb inwestora i warunków pracy posadzki. Dzięki temu dobieramy rozwiązania, które
+              nie tylko spełniają wymagania techniczne, ale przede wszystkim zapewniają wieloletnią
+              trwałość.
+            </p>
+            <p>
+              W FLOWTEX Polska wierzymy, że najlepszą reklamą są realizacje, które po wielu latach
+              nadal spełniają swoją funkcję. To właśnie dlatego nasi klienci wracają do nas przy
+              kolejnych inwestycjach i polecają nas dalej.
+            </p>
+            <p style={{ fontWeight: 600 }}>
+              FLOWTEX Polska. Ponad 20 lat doświadczenia. Rodzinna odpowiedzialność. Nowoczesne
+              rozwiązania dla przemysłu.
+            </p>
+          </div>
+        </div>
+
+        <div
+          className="mt-12 md:mt-16 flex flex-col sm:flex-row overflow-hidden"
+          style={{ backgroundColor: COLORS.lightBg, border: `1px solid ${COLORS.borderOnLight}` }}
+        >
+          <div className="sm:w-64 md:w-80 flex-shrink-0">
+            <img
+              src={pawelPhoto}
+              alt="Paweł Najduk, właściciel i dyrektor techniczny FLOWTEX Polska"
+              width="700"
+              height="875"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-72 sm:h-full object-cover"
+              style={{ objectPosition: "50% 15%" }}
+            />
+          </div>
+          <div className="p-6 md:p-8 flex flex-col justify-center">
+            <div className="ft-display text-xl md:text-2xl" style={{ fontWeight: 700 }}>
+              Paweł Najduk
+            </div>
+            <div className="ft-mono text-xs uppercase ft-tracking-wide mb-3" style={{ color: COLORS.textOnLight }}>
+              Właściciel i dyrektor techniczny
+            </div>
+            <p className="text-sm md:text-base leading-relaxed" style={{ color: COLORS.mutedOnLight }}>
+              Osobiście nadzoruje techniczną stronę każdej realizacji FLOWTEX Polska — od doboru
+              systemu posadzkowego, przez przygotowanie podłoża, po odbiór końcowy inwestycji.
+              Doświadczenie budował jako właściciel ACME Group, odpowiedzialny za
+              stronę techniczną realizowanych tam projektów. Rozpoznawalna postać w branży, ceniona
+              za rzetelne doradztwo techniczne przy doborze systemów posadzkowych.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* CERTYFIKATY / DYSTRYBUCJA */}
@@ -461,14 +560,15 @@ export default function Home() {
         <div className={`grid md:grid-cols-2 gap-12 reveal ${certVisible ? "visible" : ""}`}>
           <div>
             <div className="ft-mono text-xs ft-tracking-wide uppercase mb-3" style={{ color: COLORS.accent }}>
-              Certyfikaty
+              Dokumentacja
             </div>
             <h2 className="ft-display text-3xl mb-4" style={{ fontWeight: 700 }}>
-              Zgodność z normami branżowymi
+              Opis technologii przed budową, pomiary po wykonaniu
             </h2>
             <p className="text-base" style={{ color: COLORS.textOnLight }}>
-              Nasze realizacje spełniają wymogi jakościowe i higieniczne stawiane obiektom
-              przemysłowym, spożywczym i farmaceutycznym.
+              Przed wejściem na budowę przygotowujemy opis technologii: system, przygotowanie podłoża,
+              warstwy, zużycie materiałów i detale. W posadzkach ESD i ATEX po wykonaniu kontrolujemy
+              parametry elektryczne.
             </p>
           </div>
           <div className="flex items-center gap-6 md:gap-8">
@@ -489,7 +589,7 @@ export default function Home() {
             </div>
             <div>
               <div className="ft-mono text-xs ft-tracking-wide uppercase mb-3" style={{ color: COLORS.accent }}>
-                Certyfikacja
+                Autoryzacje
               </div>
               <h2 className="ft-display text-3xl mb-4" style={{ fontWeight: 700 }}>
                 Autoryzowany wykonawca
@@ -546,7 +646,7 @@ export default function Home() {
               Kontakt
             </div>
             <h2 className="ft-display text-3xl md:text-4xl mb-6" style={{ fontWeight: 700, color: COLORS.white }}>
-              Porozmawiajmy o Twoim projekcie
+              Opisz obiekt — wrócimy z propozycją systemu i wyceną
             </h2>
             <div className="space-y-4 ft-mono text-sm" style={{ color: COLORS.mutedOnDark }}>
               <div className="flex items-center gap-3">FLOWTEX Polska</div>
@@ -558,134 +658,7 @@ export default function Home() {
             </div>
           </div>
 
-          <form onSubmit={handleSubmit} onFocus={handleFormStart} className="bg-white rounded-sm p-6 md:p-8 space-y-4">
-            {sent ? (
-              <div className="py-10 text-center">
-                <div className="ft-display text-2xl mb-2" style={{ fontWeight: 700 }}>
-                  Dziękujemy!
-                </div>
-                <p className="text-sm" style={{ color: COLORS.mutedOnLight }}>
-                  Wiadomość została wysłana. Odezwiemy się wkrótce.
-                </p>
-              </div>
-            ) : (
-              <>
-                <div className="grid grid-cols-2 gap-4">
-                  <input
-                    required
-                    name="name"
-                    autoComplete="name"
-                    aria-label="Imię i nazwisko"
-                    placeholder="Imię i nazwisko"
-                    value={form.name}
-                    onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="border px-3 py-2 text-sm rounded-sm outline-none focus:ring-2"
-                    style={{ borderColor: COLORS.borderOnLight }}
-                  />
-                  <input
-                    name="company"
-                    autoComplete="organization"
-                    aria-label="Nazwa firmy"
-                    placeholder="Nazwa firmy"
-                    value={form.company}
-                    onChange={(e) => setForm({ ...form, company: e.target.value })}
-                    className="border px-3 py-2 text-sm rounded-sm outline-none focus:ring-2"
-                    style={{ borderColor: COLORS.borderOnLight }}
-                  />
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <input
-                    required
-                    type="email"
-                    name="email"
-                    autoComplete="email"
-                    aria-label="E-mail"
-                    placeholder="E-mail"
-                    value={form.email}
-                    onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    className="border px-3 py-2 text-sm rounded-sm outline-none focus:ring-2"
-                    style={{ borderColor: COLORS.borderOnLight }}
-                  />
-                  <input
-                    type="tel"
-                    name="phone"
-                    autoComplete="tel"
-                    aria-label="Telefon"
-                    placeholder="Telefon"
-                    value={form.phone}
-                    onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                    className="border px-3 py-2 text-sm rounded-sm outline-none focus:ring-2"
-                    style={{ borderColor: COLORS.borderOnLight }}
-                  />
-                </div>
-                <textarea
-                  required
-                  name="message"
-                  aria-label="Wiadomość"
-                  placeholder="Wiadomość"
-                  rows={4}
-                  value={form.message}
-                  onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  className="w-full border px-3 py-2 text-sm rounded-sm outline-none focus:ring-2"
-                  style={{ borderColor: COLORS.borderOnLight }}
-                />
-
-                {/* Honeypot — pole ukryte przed ludźmi (CSS + tabIndex), boty często je wypełniają */}
-                <input
-                  type="text"
-                  name="website"
-                  value={form.website}
-                  onChange={(e) => setForm({ ...form, website: e.target.value })}
-                  tabIndex={-1}
-                  autoComplete="off"
-                  style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
-                  aria-hidden="true"
-                />
-
-                <label className="flex items-start gap-3 text-xs" style={{ color: COLORS.mutedOnLight }}>
-                  <input
-                    type="checkbox"
-                    required
-                    checked={form.consent}
-                    onChange={(e) => setForm({ ...form, consent: e.target.checked })}
-                    className="mt-0.5 flex-shrink-0"
-                  />
-                  <span>
-                    Wyrażam zgodę na przetwarzanie moich danych osobowych podanych w formularzu
-                    kontaktowym przez FLOWTEX Polska Paweł Najduk z siedzibą w Ciółkowie Małym,
-                    w celu udzielenia odpowiedzi na moje zapytanie drogą telefoniczną lub mailową. Mam
-                    świadomość, że podanie danych jest dobrowolne, ale niezbędne do realizacji
-                    powyższego celu. Więcej informacji na temat przetwarzania danych osobowych, w tym
-                    przysługujących mi praw, znajduje się w{" "}
-                    <a
-                      href="https://www.flowtex.pl/polityka-prywatnosci"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline"
-                      style={{ color: COLORS.ctaBorder }}
-                    >
-                      Polityce Prywatności.
-                    </a>{" "}
-                    (wymagane)
-                  </span>
-                </label>
-
-                {sendError && (
-                  <p className="text-sm" style={{ color: "#B91C1C" }}>
-                    {sendError}
-                  </p>
-                )}
-                <button
-                  type="submit"
-                  disabled={sending}
-                  className="w-full py-3 rounded-sm ft-mono text-xs tracking-wider uppercase disabled:opacity-60"
-                  style={{ backgroundColor: COLORS.accent, color: ACCENT_TEXT, fontWeight: 600 }}
-                >
-                  {sending ? "Wysyłanie..." : "Wyślij wiadomość"}
-                </button>
-              </>
-            )}
-          </form>
+          <ContactForm prefillContext={contactContext} formId="formularz_strona_glowna" defaultType="Nowa posadzka" />
         </div>
       </section>
     </>

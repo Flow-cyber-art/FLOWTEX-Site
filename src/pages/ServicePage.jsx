@@ -3,11 +3,12 @@ import { COLORS, ACCENT_TEXT } from "../theme.js";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, Check, ArrowLeft } from "lucide-react";
-import { SERVICES, getServiceBySlug } from "../data/services.js";
+import { CORE_SERVICES, getServiceBySlug } from "../data/services.js";
 import { REALIZACJE } from "../data/realizacje.js";
 import { PORADNIKI } from "../data/poradniki.js";
 import NotFound from "./NotFound.jsx";
 import ContactSection from "../components/ContactSection.jsx";
+import { TYPE_BY_SERVICE, INDUSTRY_BY_SERVICE } from "../components/ContactForm.jsx";
 import { renderInline, stripInline } from "../utils/inline.jsx";
 
 // Automatyczne wczytanie zdjęć realizacji z src/assets/realizacje/.
@@ -38,10 +39,12 @@ export default function ServicePage() {
   }
 
   const Icon = service.icon;
-  const realizationImage = REALIZATION_IMAGES[service.slug];
-  const relatedRealizacje = REALIZACJE.filter((r) => r.relatedServiceSlug === service.slug);
+  const realizationImage = REALIZATION_IMAGES[service.imageSlug || service.slug];
+  const relatedRealizacje = REALIZACJE.filter(
+    (r) => r.relatedServiceSlug === service.slug || service.relatedRealizacjeSlugs?.includes(r.slug)
+  );
   const relatedPoradniki = PORADNIKI.filter((p) => p.relatedServiceSlugs?.includes(service.slug));
-  const otherServices = SERVICES.filter((s) => s.slug !== service.slug);
+  const otherServices = CORE_SERVICES.filter((s) => s.slug !== service.slug);
   const remainder = otherServices.length % 3;
   const ctaSpan = remainder === 0 ? 3 : 3 - remainder;
   const pageTitle = service.metaTitle || `${service.title} | FLOWTEX Polska`;
@@ -82,13 +85,7 @@ export default function ServicePage() {
             name: service.title,
             serviceType: service.title,
             description: service.metaDescription,
-            provider: {
-              "@type": "LocalBusiness",
-              name: "FLOWTEX Polska",
-              url: "https://www.flowtex.pl/",
-              telephone: "+48507394552",
-              email: "kontakt@flowtex.pl",
-            },
+            provider: { "@id": "https://www.flowtex.pl/#organization" },
             areaServed: "PL",
             url: canonicalUrl,
             ...(ogImage ? { image: ogImage } : {}),
@@ -143,7 +140,7 @@ export default function ServicePage() {
             {service.h1 || service.title}
           </h1>
           <p className="mt-4 max-w-2xl text-base md:text-lg" style={{ color: COLORS.mutedOnDark }}>
-            {renderInline(service.intro)}
+            {renderInline(service.intro, true)}
           </p>
           <a
             href="#kontakt"
@@ -196,9 +193,56 @@ export default function ServicePage() {
               </h2>
             </div>
             <div className="md:col-span-8">
-              <p className="text-base md:text-lg" style={{ color: COLORS.textOnLight }}>
-                {renderInline(sec.body)}
-              </p>
+              {sec.body && (
+                <p className="text-base md:text-lg" style={{ color: COLORS.textOnLight }}>
+                  {renderInline(sec.body)}
+                </p>
+              )}
+              {sec.items && (
+                <ul className="mt-4 space-y-3">
+                  {sec.items.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <Check size={18} className="mt-1 shrink-0" style={{ color: COLORS.accent }} />
+                      <span className="text-base" style={{ color: COLORS.textOnLight }}>{renderInline(item)}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {sec.table && (
+                <div className="mt-6 overflow-x-auto border" style={{ borderColor: COLORS.borderOnLight }}>
+                  <table className="w-full text-left text-sm md:text-base border-collapse">
+                    <thead>
+                      <tr style={{ backgroundColor: COLORS.lightBg }}>
+                        {sec.table.head.map((h, i) => (
+                          <th key={i} scope="col" className="px-4 py-3 ft-mono text-xs uppercase tracking-wide align-bottom" style={{ color: COLORS.mutedOnLight, borderBottom: `1px solid ${COLORS.borderOnLight}` }}>
+                            {h}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {sec.table.rows.map((row, ri) => (
+                        <tr key={ri}>
+                          {row.map((cell, ci) => (
+                            <td
+                              key={ci}
+                              className="px-4 py-3 align-top"
+                              style={{ color: COLORS.textOnLight, borderTop: ri ? `1px solid ${COLORS.borderOnLight}` : undefined, fontWeight: ci === 0 ? 600 : 400 }}
+                            >
+                              {renderInline(cell)}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+              {sec.note && (
+                <p className="mt-5 text-sm md:text-base" style={{ color: COLORS.mutedOnLight }}>
+                  {renderInline(sec.note)}
+                </p>
+              )}
             </div>
           </div>
         </section>
@@ -338,7 +382,7 @@ export default function ServicePage() {
       )}
 
       {/* Formularz na stronie usługi — zapytanie bez przechodzenia na stronę główną */}
-      <ContactSection formId="formularz_usluga" context={`Usługa — ${service.title}`} />
+      <ContactSection formId="formularz_usluga" context={`Usługa — ${service.title}`} defaultType={TYPE_BY_SERVICE[service.slug] || ""} defaultIndustry={INDUSTRY_BY_SERVICE[service.slug] || ""} />
 
       {/* Pozostałe usługi — linkowanie wewnętrzne */}
       <section style={{ backgroundColor: COLORS.darkBg }}>

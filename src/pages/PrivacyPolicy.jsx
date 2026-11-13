@@ -49,6 +49,7 @@ export default function PrivacyPolicy() {
           content="Polityka prywatności FLOWTEX Polska — informacje o przetwarzaniu danych osobowych podanych w formularzu kontaktowym."
         />
         <link rel="canonical" href="https://www.flowtex.pl/polityka-prywatnosci" />
+        <meta property="og:url" content="https://www.flowtex.pl/polityka-prywatnosci" />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
 

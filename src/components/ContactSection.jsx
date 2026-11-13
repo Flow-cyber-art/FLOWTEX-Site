@@ -12,10 +12,12 @@ import { ContactForm } from "./ContactForm.jsx";
 export default function ContactSection({
   id = "kontakt",
   heading = "Zapytaj o wycenę",
-  text = "Opisz obiekt: powierzchnię, lokalizację i warunki pracy posadzki. Wrócimy z propozycją systemu i wyceną.",
+  text = "Odpowiedz na kilka pytań o obiekt, a wrócimy z propozycją systemu i wyceną. Wolisz porozmawiać? Zadzwoń lub napisz.",
   context = "",
   submitLabel = "Wyślij zapytanie",
   formId = "formularz_podstrona",
+  defaultType = "",
+  defaultIndustry = "",
 }) {
   return (
     <section id={id} style={{ backgroundColor: COLORS.darkBg, scrollMarginTop: 88 }}>
@@ -39,7 +41,7 @@ export default function ContactSection({
             </a>
           </div>
         </div>
-        <ContactForm prefillContext={context} submitLabel={submitLabel} formId={formId} />
+        <ContactForm prefillContext={context} submitLabel={submitLabel} formId={formId} defaultType={defaultType} defaultIndustry={defaultIndustry} />
       </div>
     </section>
   );
