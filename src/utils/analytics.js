@@ -58,6 +58,7 @@ export function setConsent(value) {
   writeStorage(CONSENT_KEY, value);
   if (value === "granted") {
     loadAnalytics();
+    loadApollo();
     persistFirstTouch();
   } else {
     writeStorage(ATTRIBUTION_KEY, null);
@@ -120,6 +121,26 @@ function loadAnalytics() {
     gtag("config", GA4_ID);
     injectScript(`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(GA4_ID)}`);
   }
+}
+
+/* ------------------------------------------------------------------ */
+/* Apollo.io — rozpoznawanie firm odwiedzających stronę                */
+/* ------------------------------------------------------------------ */
+
+// Tracker Apollo ładuje się wyłącznie po zgodzie na pliki analityczne,
+// tak samo jak GTM/GA4 (patrz setConsent i initAnalytics).
+const APOLLO_APP_ID = "6af75b6cb1d63a0018530188";
+let apolloLoaded = false;
+
+function loadApollo() {
+  if (!isBrowser || apolloLoaded || !ANALYTICS_ENABLED) return;
+  apolloLoaded = true;
+  const s = document.createElement("script");
+  s.src = `https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=${Math.random().toString(36).substring(7)}`;
+  s.async = true;
+  s.defer = true;
+  s.onload = () => window.trackingFunctions?.onLoad({ appId: APOLLO_APP_ID });
+  document.head.appendChild(s);
 }
 
 /* ------------------------------------------------------------------ */
@@ -223,6 +244,7 @@ export function initAnalytics() {
   sessionTouch = detectTouch();
   if (getConsent() === "granted") {
     loadAnalytics();
+    loadApollo();
     persistFirstTouch();
   }
   document.addEventListener("click", (e) => {
