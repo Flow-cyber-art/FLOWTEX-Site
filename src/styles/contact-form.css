@@ -27,3 +27,4 @@
 .cf-back{border:1px solid #d8d6ce;background:#fff;color:#272728;font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;padding:15px 16px;border-radius:2px;cursor:pointer}
 .cf-back:hover{border-color:#aa8038}
 .cf-done a{color:#8a6a29;text-decoration:underline}
+.cf-error a{color:#8a6a29;text-decoration:underline;font-weight:600}

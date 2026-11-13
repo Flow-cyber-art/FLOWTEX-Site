@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { COLORS, ACCENT_TEXT } from "../theme.js";
 import { Link } from "react-router-dom";
-import { Layers, Phone, Mail, Menu, X, ChevronDown, Wrench, Search, ListChecks } from "lucide-react";
-import { SERVICES } from "../data/services.js";
+import { Layers, Phone, Mail, Menu, X, ChevronDown, Wrench, Search, ListChecks, Linkedin, Facebook, MapPin } from "lucide-react";
+import { OFFER_GROUPS } from "../data/services.js";
 import CookieNotice from "./CookieNotice.jsx";
 import ContactFab from "./ContactFab.jsx";
 import { ANALYTICS_ENABLED, openConsentSettings } from "../utils/analytics.js";
@@ -10,12 +10,15 @@ import { ANALYTICS_ENABLED, openConsentSettings } from "../utils/analytics.js";
 const NAV_LINKS = [
   { href: "/realizacje", label: "Realizacje" },
   { href: "/poradniki", label: "Poradniki" },
-  { href: "/#o-nas", label: "O nas" },
+  { href: "/o-firmie", label: "O firmie" },
   { href: "/kontakt", label: "Kontakt" },
 ];
 
 // Usługi w menu (z services.js) — każda usługa jest dostępna z nawigacji.
-const OFFER_LINKS = SERVICES.map((svc) => ({ href: `/${svc.slug}`, label: svc.title }));
+const OFFER_LINKS = OFFER_GROUPS.flatMap((g) => [
+  { heading: g.label },
+  ...g.items.map((svc) => ({ href: `/${svc.slug}`, label: svc.title })),
+]);
 
 // Narzędzia interaktywne wydzielone z płaskiej listy do osobnego, wyróżnionego
 // menu — to nasz najmocniejszy element konwersji, więc nie może ginąć
@@ -66,6 +69,13 @@ function NavDropdown({ label, icon: Icon, items, width = "w-72" }) {
           <div className="rounded-sm overflow-hidden border shadow-xl" style={{ backgroundColor: COLORS.darkBg, borderColor: COLORS.darkBorder }}>
             {items.map((t) => {
               const ItemIcon = t.icon;
+              if (t.heading) {
+                return (
+                  <div key={t.heading} className="px-4 pt-3 pb-1.5 ft-mono text-[10px] uppercase tracking-[0.2em]" style={{ color: COLORS.mutedOnDarkSecondary, borderBottom: `1px solid ${COLORS.darkBorder}` }}>
+                    {t.heading}
+                  </div>
+                );
+              }
               return (
                 <Link
                   key={t.href}
@@ -192,7 +202,7 @@ export default function Layout({ children }) {
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
-            <NavDropdown label="Oferta" items={OFFER_LINKS} width="w-80" />
+            <NavDropdown label="Oferta" items={OFFER_LINKS} width="w-96" />
             <NavDropdown label="Narzędzia" icon={Wrench} items={TOOL_LINKS} />
             {NAV_LINKS.map((l) => (
               <NavLink
@@ -227,11 +237,17 @@ export default function Layout({ children }) {
           <div className="md:hidden px-5 pb-5 flex flex-col items-end text-right gap-4" style={{ backgroundColor: COLORS.darkBg, maxHeight: "calc(100dvh - 4rem)", overflowY: "auto", overscrollBehavior: "contain" }}>
             <div className="w-full flex flex-col items-end gap-2.5 pb-3 mb-1" style={{ borderBottom: `1px solid ${COLORS.darkBorder}` }}>
               <span className="ft-mono text-xs uppercase tracking-wide" style={{ color: COLORS.accent }}>Oferta</span>
-              {OFFER_LINKS.map((t) => (
-                <Link key={t.href} to={t.href} onClick={() => setMenuOpen(false)} className="ft-mono text-sm tracking-wider uppercase" style={{ color: COLORS.white }}>
-                  {t.label}
-                </Link>
-              ))}
+              {OFFER_LINKS.map((t) =>
+                t.heading ? (
+                  <span key={t.heading} className="ft-mono text-[10px] uppercase tracking-[0.2em] mt-2" style={{ color: COLORS.mutedOnDarkSecondary }}>
+                    {t.heading}
+                  </span>
+                ) : (
+                  <Link key={t.href} to={t.href} onClick={() => setMenuOpen(false)} className="ft-mono text-sm tracking-wider uppercase" style={{ color: COLORS.white }}>
+                    {t.label}
+                  </Link>
+                )
+              )}
             </div>
             <div className="w-full flex flex-col items-end gap-2.5 pb-3 mb-1" style={{ borderBottom: `1px solid ${COLORS.darkBorder}` }}>
               <span className="ft-mono text-xs uppercase tracking-wide flex items-center gap-2" style={{ color: COLORS.accent }}>
@@ -295,12 +311,19 @@ export default function Layout({ children }) {
               Nasze usługi
             </div>
             <ul className="space-y-2 text-sm" style={{ color: COLORS.mutedOnDark }}>
-              {SERVICES.map((s) => (
-                <li key={s.slug}>
-                  <Link to={`/${s.slug}`} className="hover:opacity-80 transition-opacity">
-                    {s.title}
-                  </Link>
-                </li>
+              {OFFER_GROUPS.map((g) => (
+                <React.Fragment key={g.label}>
+                  <li className="ft-mono text-[10px] uppercase tracking-[0.2em] pt-2" style={{ color: COLORS.mutedOnDarkSecondary }}>
+                    {g.label}
+                  </li>
+                  {g.items.map((s) => (
+                    <li key={s.slug}>
+                      <Link to={`/${s.slug}`} className="hover:opacity-80 transition-opacity">
+                        {s.title}
+                      </Link>
+                    </li>
+                  ))}
+                </React.Fragment>
               ))}
             </ul>
           </div>
@@ -335,6 +358,20 @@ export default function Layout({ children }) {
             <ul className="space-y-2 text-sm" style={{ color: COLORS.mutedOnDark }}>
               <li>+48 507 394 552</li>
               <li>kontakt@flowtex.pl</li>
+              <li>
+                <Link to="/o-firmie" className="hover:opacity-80 transition-opacity">O firmie</Link>
+              </li>
+              <li className="pt-2 flex items-center gap-4">
+                <a href="https://www.linkedin.com/company/flowtex-polska/" target="_blank" rel="noopener noreferrer" aria-label="FLOWTEX Polska na LinkedIn" className="hover:opacity-80 transition-opacity">
+                  <Linkedin size={18} style={{ color: COLORS.white }} />
+                </a>
+                <a href="https://www.facebook.com/FlowtexPolska" target="_blank" rel="noopener noreferrer" aria-label="FLOWTEX Polska na Facebooku" className="hover:opacity-80 transition-opacity">
+                  <Facebook size={18} style={{ color: COLORS.white }} />
+                </a>
+                <a href="https://www.google.com/maps/place/?q=place_id:ChIJNacXGtWMHkcRj4L0IyaJbmc" target="_blank" rel="noopener noreferrer" aria-label="FLOWTEX Polska w Mapach Google i opinie" className="hover:opacity-80 transition-opacity">
+                  <MapPin size={18} style={{ color: COLORS.white }} />
+                </a>
+              </li>
               <li>
                 <Link to="/kontakt" className="hover:opacity-80 transition-opacity" style={{ color: COLORS.white }}>
                   Formularz zapytania ofertowego

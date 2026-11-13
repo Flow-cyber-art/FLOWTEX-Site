@@ -11,6 +11,7 @@
 // PRZED buildem Vite, bo nie zależy od niczego poza plikami w src/data.
 
 import fs from "node:fs";
+import { execSync } from "node:child_process";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -24,6 +25,28 @@ const { PORADNIKI } = await import(path.join(root, "src/data/poradniki.js"));
 
 const HOST = "https://www.flowtex.pl";
 const today = new Date().toISOString().slice(0, 10);
+
+// lastmod z historii gita (data ostatniej zmiany plików, z których powstaje
+// strona). Google bierze lastmod pod uwagę tylko wtedy, gdy jest wiarygodny,
+// więc gdy historii nie ma (płytki klon na CI) pole jest pomijane, zamiast
+// wpisywać datę buildu dla wszystkich adresów.
+function isShallow() {
+  try {
+    return execSync("git rev-parse --is-shallow-repository", { cwd: root, stdio: ["ignore", "pipe", "ignore"] }).toString().trim() !== "false";
+  } catch {
+    return true;
+  }
+}
+const SHALLOW = isShallow();
+function gitDate(...files) {
+  if (SHALLOW) return undefined;
+  try {
+    const out = execSync(`git log -1 --format=%cs -- ${files.join(" ")}`, { cwd: root, stdio: ["ignore", "pipe", "ignore"] }).toString().trim();
+    return out || undefined;
+  } catch {
+    return undefined;
+  }
+}
 
 // "Sierpień 2026" -> "2026-08-01". Realizacje mają w danych prawdziwą datę
 // publikacji, więc dla nich lastmod nie musi (i nie powinien) być zawsze
@@ -54,23 +77,28 @@ const PRIORITY_OVERRIDES = {
 // sitemap: nie ma sensu prosić Google o indeksację strony, którą i tak
 // sam odrzuci).
 const staticRoutes = [
-  { path: "/", changefreq: "monthly" },
-  { path: "/realizacje", changefreq: "weekly" },
-  { path: "/poradniki", changefreq: "weekly" },
-  { path: "/katalog-wad", changefreq: "monthly" },
-  { path: "/dobor-posadzki", changefreq: "monthly" },
-  { path: "/kontakt", changefreq: "yearly" },
+  { path: "/", changefreq: "monthly", lastmod: gitDate("src/pages/Home.jsx") },
+  { path: "/realizacje", changefreq: "weekly", lastmod: gitDate("src/data/realizacje.js") },
+  { path: "/poradniki", changefreq: "weekly", lastmod: gitDate("src/data/poradniki.js") },
+  { path: "/katalog-wad", changefreq: "monthly", lastmod: gitDate("src/data/defects.js") },
+  { path: "/dobor-posadzki", changefreq: "monthly", lastmod: gitDate("src/pages/FloorSelector.jsx") },
+  { path: "/kontakt", changefreq: "yearly", lastmod: gitDate("src/pages/Kontakt.jsx") },
+  { path: "/o-firmie", changefreq: "yearly", lastmod: gitDate("src/pages/OFirmie.jsx") },
 ];
 
+const servicesDate = gitDate("src/data/services.js");
+const servicePagesDate = gitDate("src/data/service-pages.js");
 const serviceRoutes = SERVICES.map((s) => ({
   path: `/${s.slug}`,
   changefreq: "monthly",
+  lastmod: s.group ? servicePagesDate : servicesDate,
 }));
 
 const defectRoutes = DEFECTS.map((d) => ({
   path: `/katalog-wad/${d.id}`,
   changefreq: "monthly",
   priority: 0.7,
+  lastmod: d.updated,
 }));
 
 const realizacjaRoutes = REALIZACJE.map((r) => ({
@@ -94,8 +122,7 @@ const body = routes
     const priority = r.priority ?? PRIORITY_OVERRIDES[r.path] ?? 0.8;
     return `  <url>
     <loc>${HOST}${r.path}</loc>
-    <lastmod>${r.lastmod ?? today}</lastmod>
-    <changefreq>${r.changefreq}</changefreq>
+${r.lastmod ? `    <lastmod>${r.lastmod}</lastmod>\n` : ""}    <changefreq>${r.changefreq}</changefreq>
     <priority>${priority.toFixed(1)}</priority>
   </url>`;
   })

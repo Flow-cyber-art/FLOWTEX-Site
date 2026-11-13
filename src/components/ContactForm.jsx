@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/contact-form.css";
 import { sendLead } from "../utils/lead.js";
 import { track } from "../utils/analytics.js";
@@ -24,6 +25,19 @@ export const TYPE_BY_SERVICE = {
   "betonowe-posadzki-przemyslowe": "Nowa posadzka",
   "serwis-posadzek-i-kanalizacji": "Renowacja lub naprawa posadzki",
   "technika-diamentowa": "Renowacja lub naprawa posadzki",
+  "renowacja-posadzek-przemyslowych": "Renowacja lub naprawa posadzki",
+  "posadzki-dla-przemyslu-spozywczego": "Nowa posadzka",
+  "posadzki-dla-przemyslu-farmaceutycznego": "Nowa posadzka",
+  "posadzki-epoksydowe": "Nowa posadzka",
+  "posadzki-poliuretanowe": "Nowa posadzka",
+  "posadzki-do-hal-produkcyjnych-i-magazynow": "Nowa posadzka",
+};
+export const INDUSTRY_BY_SERVICE = {
+  "posadzki-dla-przemyslu-spozywczego": "Przemysł spożywczy",
+  "posadzki-dla-przemyslu-farmaceutycznego": "Przemysł farmaceutyczny",
+  "posadzki-esd": "Przemysł elektroniczny",
+  "posadzki-clean-room": "Przemysł farmaceutyczny",
+  "posadzki-do-hal-produkcyjnych-i-magazynow": "Magazyn lub logistyka",
 };
 const INDUSTRIES = [
   "Przemysł spożywczy",
@@ -54,11 +68,14 @@ export function ContactForm({
   submitLabel = "Wyślij zapytanie",
   formId = "formularz_kontekstowy",
   defaultType = "",
+  defaultIndustry = "",
 }) {
+  const navigate = useNavigate();
   const [step, setStep] = useState(1);
+  const [mailtoHref, setMailtoHref] = useState("");
   const [form, setForm] = useState({
     type: defaultType,
-    industry: "",
+    industry: defaultIndustry,
     area: "",
     location: "",
     timeline: "",
@@ -124,7 +141,7 @@ export function ContactForm({
     setSendError("");
 
     try {
-      await sendLead(
+      const leadId = await sendLead(
         { name: form.name, company: form.company, email: form.email, phone: form.phone, message: buildMessage() },
         {
           formId,
@@ -132,11 +149,14 @@ export function ContactForm({
           trackParams: { request_type: form.type, industry: form.industry, area_range: form.area },
         }
       );
-      setSent(true);
+      navigate("/dziekujemy", { state: { leadId } });
     } catch (err) {
       console.error("Błąd wysyłki formularza kontaktowego:", err);
       track("form_error", { form_id: formId, error_type: "wysylka" });
-      setSendError("Nie udało się wysłać zapytania. Spróbuj ponownie lub napisz na kontakt@flowtex.pl.");
+      // Zapasowa droga: gotowy e-mail z treścią zapytania, żeby zgłoszenie nie przepadło.
+      const body = `${buildMessage()}\n\nImię i nazwisko: ${form.name}\nFirma: ${form.company}\nTelefon: ${form.phone}\nE-mail: ${form.email}`;
+      setMailtoHref(`mailto:kontakt@flowtex.pl?subject=${encodeURIComponent("Zapytanie ze strony flowtex.pl")}&body=${encodeURIComponent(body.slice(0, 1500))}`);
+      setSendError("Nie udało się wysłać zapytania.");
     } finally {
       setSending(false);
     }
@@ -260,7 +280,16 @@ export function ContactForm({
             </span>
           </label>
 
-          {sendError && <p className="cf-error">{sendError}</p>}
+          {sendError && (
+            <p className="cf-error">
+              {sendError}{" "}
+              {mailtoHref ? (
+                <>
+                  Spróbuj ponownie albo <a href={mailtoHref}>wyślij to samo e-mailem</a> (treść jest już wpisana).
+                </>
+              ) : null}
+            </p>
+          )}
 
           <div className="cf-actions">
             <button type="button" className="cf-back" onClick={() => setStep(1)}>← Wróć</button>

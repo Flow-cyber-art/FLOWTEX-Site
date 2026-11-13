@@ -51,6 +51,7 @@ Settings → Git → Deploy Hooks, gałąź `main`). Test lokalny:
 | Co | Plik |
 | --- | --- |
 | Usługi (każda = podstrona `/{slug}`) | `src/data/services.js` |
+| Strony branżowe i technologiczne (spożywka, farmacja, renowacja, epoksyd, poliuretan, hale) | `src/data/service-pages.js` |
 | Realizacje (`/realizacje/{slug}`) | `src/data/realizacje.js` |
 | Katalog wad (`/katalog-wad/{id}`) | `src/data/defects.js` |
 | Strona główna, FAQ | `src/pages/Home.jsx` |

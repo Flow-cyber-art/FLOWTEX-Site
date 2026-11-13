@@ -3,15 +3,48 @@
   "outputDirectory": "dist",
   "framework": "vite",
   "redirects": [
-    { "source": "/wspolpraca.html", "destination": "/", "permanent": true },
-    { "source": "/plytki-ceramiczne", "destination": "/", "permanent": true },
-    { "source": "/katalog-wad/rysy-wlosowate", "destination": "/katalog-wad/rysy-wloskowate", "permanent": true }
+    {
+      "source": "/wspolpraca.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/plytki-ceramiczne",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/katalog-wad/rysy-wlosowate",
+      "destination": "/katalog-wad/rysy-wloskowate",
+      "permanent": true
+    }
   ],
   "headers": [
     {
       "source": "/llms.txt",
       "headers": [
-        { "key": "Content-Type", "value": "text/markdown; charset=utf-8" }
+        {
+          "key": "Content-Type",
+          "value": "text/markdown; charset=utf-8"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/fonts/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     }
   ]

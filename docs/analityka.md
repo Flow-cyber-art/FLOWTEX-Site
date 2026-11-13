@@ -61,6 +61,14 @@ kliknięciu „Akceptuję". W GTM nie trzeba dodawać szablonu zgody.
 2. Mapy witryn → dodaj `https://www.flowtex.pl/sitemap.xml`.
 3. GA4 → Administracja → Połączenia z usługami → Search Console → połącz.
 
+## Strona „Dziękujemy"
+
+Po poprawnej wysyłce formularza użytkownik trafia na `/dziekujemy` (strona z
+`noindex`, poza mapą witryny). W GA4 widać ją jako odsłonę, więc można zbudować
+cel lub zdarzenie na podstawie adresu strony jako dodatek do `generate_lead`.
+Jeśli wysyłka się nie uda, formularz pokazuje link „wyślij to samo e-mailem"
+z gotową treścią zapytania.
+
 ## Zdarzenia wysyłane przez stronę
 
 | Zdarzenie | Kiedy | Parametry |
@@ -78,7 +86,7 @@ Każde zdarzenie ma też `page_path`. Żadne nie zawiera danych osobowych.
 
 Wartości `form_id`: `formularz_strona_glowna`, `formularz_usluga`,
 `formularz_realizacja`, `formularz_poradnik`, `formularz_katalog_wad`,
-`formularz_dobor_posadzki`, `formularz_kontakt`.
+`formularz_dobor_posadzki`, `formularz_kontakt`, `formularz_o_firmie`.
 
 Wartości `link_location`: `naglowek`, `stopka`, `przycisk_mobilny`, identyfikator
 sekcji (np. `kontakt`, `narzedzia`) albo `tresc`.

@@ -4,7 +4,9 @@ import { COLORS } from "../theme.js";
 
 // Prosty parser linków [tekst](/ścieżka) — treść poradników trzyma linki
 // wewnętrzne jako zwykły tekst, a tu zamieniamy je na <Link> (SPA).
-export function renderInline(text) {
+// Domyślnie linki mają ciemniejszy odcień (czytelny na jasnym tle, kontrast WCAG AA);
+// onDark=true daje jasny akcent do użycia na ciemnych sekcjach.
+export function renderInline(text, onDark = false) {
   const parts = [];
   const re = /\[([^\]]+)\]\(([^)]+)\)/g;
   let last = 0;
@@ -13,7 +15,7 @@ export function renderInline(text) {
   while ((m = re.exec(text)) !== null) {
     if (m.index > last) parts.push(text.slice(last, m.index));
     const href = m[2];
-    const linkStyle = { color: COLORS.accent, fontWeight: 600, textDecoration: "underline" };
+    const linkStyle = { color: onDark ? COLORS.accent : "#7A5C1E", fontWeight: 600, textDecoration: "underline" };
     parts.push(
       href.startsWith("/#") ? (
         <a key={i++} href={href} style={linkStyle}>{m[1]}</a>

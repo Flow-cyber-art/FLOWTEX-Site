@@ -103,7 +103,7 @@ const ALL_PORADNIKI = [
       { q: "Czy posadzkę epoksydową można położyć na zewnątrz?", a: "Epoksyd pod wpływem UV może żółknąć, dlatego na zewnątrz i w miejscach nasłonecznionych stosuje się systemy z poliuretanową warstwą zamykającą odporną na UV." },
     ],
     cta: { heading: "Nie wiesz, który system wybrać?", text: "Opisz nam obciążenia, temperaturę i chemię w hali, a dobierzemy system i przygotujemy wycenę. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat." },
-    relatedServiceSlugs: ["posadzki-zywiczne"],
+    relatedServiceSlugs: ["posadzki-zywiczne", "posadzki-epoksydowe", "posadzki-poliuretanowe"],
     relatedRealizacjeSlugs: ["posadzka-zywiczna-przemysl-spozywczy-840-m2-hiszpania", "zywica-schody-prefabrykowane-deckshield"],
   },
   {
@@ -251,7 +251,7 @@ const ALL_PORADNIKI = [
       { q: "Czy pęcherze trzeba naprawiać od razu, czy mogą poczekać?", a: "Nieleczone pęcherze pękają pod obciążeniem i przyspieszają dalszą delaminację wokół uszkodzenia, więc lepiej nie zwlekać, zwłaszcza w strefach ruchu kołowego." },
     ],
     cta: { heading: "Masz pęcherze na posadzce?", text: "Opisz nam, kiedy się pojawiły i gdzie — ustalimy przyczynę i zaproponujemy naprawę. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat." },
-    relatedServiceSlugs: ["posadzki-zywiczne", "serwis-posadzek-i-kanalizacji"],
+    relatedServiceSlugs: ["posadzki-zywiczne", "serwis-posadzek-i-kanalizacji", "renowacja-posadzek-przemyslowych"],
     relatedRealizacjeSlugs: [],
   },
   {
@@ -308,7 +308,7 @@ const ALL_PORADNIKI = [
       { q: "Dlaczego woda zbiera się tylko w jednym miejscu hali?", a: "Zwykle wskazuje to na lokalne osiadanie podłoża albo błąd wykonawczy przy układaniu warstwy wyrównującej w tej konkretnej strefie." },
     ],
     cta: { heading: "Zalega Ci woda na posadzce?", text: "Opisz nam strefę i sposób mycia — zmierzymy spadki i zaproponujemy korektę. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat." },
-    relatedServiceSlugs: ["serwis-posadzek-i-kanalizacji", "posadzki-zywiczne"],
+    relatedServiceSlugs: ["serwis-posadzek-i-kanalizacji", "posadzki-zywiczne", "renowacja-posadzek-przemyslowych"],
     relatedRealizacjeSlugs: ["posadzka-zywiczna-przemysl-spozywczy-840-m2-hiszpania"],
   },
   {
@@ -370,7 +370,7 @@ const ALL_PORADNIKI = [
       { q: "Czy uszkodzony cokół to problem tylko estetyczny?", a: "Nie — w strefach mokrych i higienicznych to element funkcjonalny, uszczelniający styk posadzka-ściana. Jego uszkodzenie sprzyja zaleganiu wody i zabrudzeń w szczelinie." },
     ],
     cta: { heading: "Masz uszkodzone cokoły w hali?", text: "Opisz nam strefę, rodzaj uszkodzeń i sposób mycia — zaproponujemy naprawę i wzmocnienie detalu. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat." },
-    relatedServiceSlugs: ["serwis-posadzek-i-kanalizacji", "systemy-odbojowe"],
+    relatedServiceSlugs: ["serwis-posadzek-i-kanalizacji", "systemy-odbojowe", "renowacja-posadzek-przemyslowych"],
     relatedRealizacjeSlugs: [],
   },
   {
@@ -499,7 +499,7 @@ const ALL_PORADNIKI = [
       { q: "Dlaczego beton pyli, mimo że płyta jest nośna?", a: "Pylenie dotyczy wierzchniej warstwy, która może być słabsza niż reszta płyty z powodu braku utwardzenia powierzchniowego, złej pielęgnacji lub karbonatyzacji." },
     ],
     cta: { heading: "Pyli Ci posadzka w hali?", text: "Opisz nam obiekt, obciążenia i wymagania higieniczne — ocenimy stan podłoża i zaproponujemy naprawę. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat." },
-    relatedServiceSlugs: ["posadzki-zywiczne", "betonowe-posadzki-przemyslowe"],
+    relatedServiceSlugs: ["posadzki-zywiczne", "betonowe-posadzki-przemyslowe", "renowacja-posadzek-przemyslowych"],
     relatedRealizacjeSlugs: [],
   },
   {
@@ -564,7 +564,7 @@ const ALL_PORADNIKI = [
       { q: "Dlaczego pęknięcie wraca po naprawie?", a: "Najczęściej zastosowano sztywną żywicę w rysie aktywnej albo nie zdiagnozowano przyczyny pęknięcia." },
     ],
     cta: { heading: "Pęka Ci posadzka w hali?", text: "Opisz nam rysy, obciążenia i układ dylatacji — ocenimy ich charakter i zaproponujemy naprawę. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat." },
-    relatedServiceSlugs: ["serwis-posadzek-i-kanalizacji", "technika-diamentowa"],
+    relatedServiceSlugs: ["serwis-posadzek-i-kanalizacji", "technika-diamentowa", "renowacja-posadzek-przemyslowych"],
     relatedRealizacjeSlugs: [],
   },
   {
@@ -627,7 +627,7 @@ const ALL_PORADNIKI = [
       { q: "Czy wystarczy wymienić odspojony fragment?", a: "Nie, jeśli nie zdiagnozowano źródła wilgoci lub zanieczyszczenia — problem zwykle wraca w sąsiadującej strefie." },
     ],
     cta: { heading: "Odspaja Ci się żywica?", text: "Opisz nam miejsce, stan posadzki i warunki w hali — zaczniemy od diagnostyki i dopiero wtedy zaproponujemy naprawę. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat." },
-    relatedServiceSlugs: ["posadzki-zywiczne", "serwis-posadzek-i-kanalizacji"],
+    relatedServiceSlugs: ["posadzki-zywiczne", "serwis-posadzek-i-kanalizacji", "renowacja-posadzek-przemyslowych"],
     relatedRealizacjeSlugs: [],
   },
   {
@@ -832,7 +832,7 @@ const ALL_PORADNIKI = [
       heading: "Planujesz posadzkę do magazynu?",
       text: "Opisz nam obciążenia, rodzaj ruchu i wymagania obiektu — pomożemy dobrać rozwiązanie. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat.",
     },
-    relatedServiceSlugs: ["betonowe-posadzki-przemyslowe", "posadzki-zywiczne"],
+    relatedServiceSlugs: ["betonowe-posadzki-przemyslowe", "posadzki-zywiczne", "posadzki-do-hal-produkcyjnych-i-magazynow"],
     relatedRealizacjeSlugs: [],
   },
   {
@@ -1116,7 +1116,7 @@ const ALL_PORADNIKI = [
       heading: "Planujesz posadzkę do pomieszczenia czystego?",
       text: "Opisz nam przeznaczenie pomieszczenia, klasę czystości i stan podłoża — przeanalizujemy warunki i zaproponujemy rozwiązanie. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat.",
     },
-    relatedServiceSlugs: ["posadzki-clean-room", "posadzki-zywiczne"],
+    relatedServiceSlugs: ["posadzki-clean-room", "posadzki-zywiczne", "posadzki-dla-przemyslu-farmaceutycznego"],
     relatedRealizacjeSlugs: [
       "posadzka-zywiczna-clean-room-farmacja-mazowieckie",
       "posadzka-clean-room-szpital-warszawa",
@@ -1271,7 +1271,7 @@ const ALL_PORADNIKI = [
       heading: "Planujesz posadzkę w zakładzie spożywczym?",
       text: "Opisz nam strefy, procesy i sposób mycia — przeanalizujemy warunki i zaproponujemy rozwiązanie. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat.",
     },
-    relatedServiceSlugs: ["posadzki-zywiczne", "systemy-odbojowe"],
+    relatedServiceSlugs: ["posadzki-zywiczne", "systemy-odbojowe", "posadzki-dla-przemyslu-spozywczego"],
     relatedRealizacjeSlugs: [
       "posadzka-zywiczna-przemysl-spozywczy-840-m2-hiszpania",
       "systemy-odbojowe-zaklad-przekasek-wroclaw-3400-m2",

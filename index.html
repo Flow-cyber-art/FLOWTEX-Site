@@ -55,11 +55,13 @@
     />
     <meta name="twitter:image" content="https://www.flowtex.pl/og-image.jpg" />
 
-    <!-- Dane strukturalne: firma (do uzupełnienia prawdziwymi danymi) -->
+    <!-- Dane strukturalne: firma. Jedna encja z @id (#organization) i jedna osoba (#author-pawel-najduk) —
+         pozostałe bloki na podstronach odwołują się do nich przez @id. -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
+        "@id": "https://www.flowtex.pl/#organization",
         "name": "FLOWTEX Polska",
         "alternateName": "FLOWTEX",
         "legalName": "FLOWTEX Polska Paweł Najduk",
@@ -99,13 +101,8 @@
             "closes": "14:00"
           }
         ],
-        "areaServed": "PL",
-        "priceRange": "$$",
-        "founder": {
-          "@type": "Person",
-          "name": "Paweł Najduk",
-          "jobTitle": "Właściciel i dyrektor techniczny"
-        },
+        "areaServed": { "@type": "Country", "name": "Polska" },
+        "founder": { "@id": "https://www.flowtex.pl/#author-pawel-najduk" },
         "sameAs": [
           "https://www.facebook.com/FlowtexPolska",
           "https://www.linkedin.com/company/flowtex-polska/",
@@ -114,27 +111,33 @@
       }
     </script>
 
-    <!-- Dane strukturalne: katalog usług -->
+    <!-- Dane strukturalne: katalog usług (wyłącznie usługi, które mają własne podstrony) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Service",
         "serviceType": "Posadzki przemysłowe i żywiczne",
-        "provider": { "@type": "LocalBusiness", "name": "FLOWTEX Polska" },
-        "areaServed": "PL",
+        "provider": { "@id": "https://www.flowtex.pl/#organization" },
+        "areaServed": { "@type": "Country", "name": "Polska" },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Usługi FLOWTEX Polska",
           "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Posadzki żywiczne" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Posadzki dla przemysłu spożywczego" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Posadzki farmaceutyczne" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Posadzki ESD (antyelektrostatyczne)" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Posadzki antywybuchowe ATEX" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Posadzki do clean roomów i pomieszczeń czystych" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Technika diamentowa – cięcie i wiercenie" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Serwis posadzek i kanalizacji" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fitout obiektów przemysłowych" } }
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Posadzki żywiczne przemysłowe", "url": "https://www.flowtex.pl/posadzki-zywiczne" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Posadzki dla przemysłu spożywczego", "url": "https://www.flowtex.pl/posadzki-dla-przemyslu-spozywczego" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Posadzki dla przemysłu farmaceutycznego", "url": "https://www.flowtex.pl/posadzki-dla-przemyslu-farmaceutycznego" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Posadzki ESD (antyelektrostatyczne)", "url": "https://www.flowtex.pl/posadzki-esd" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Posadzki antywybuchowe ATEX", "url": "https://www.flowtex.pl/posadzki-antywybuchowe-atex" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Posadzki do clean roomów i pomieszczeń czystych", "url": "https://www.flowtex.pl/posadzki-clean-room" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Renowacja i naprawa posadzek przemysłowych", "url": "https://www.flowtex.pl/renowacja-posadzek-przemyslowych" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Posadzki epoksydowe", "url": "https://www.flowtex.pl/posadzki-epoksydowe" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Posadzki poliuretanowe i poliuretanowo-cementowe", "url": "https://www.flowtex.pl/posadzki-poliuretanowe" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Posadzki do hal produkcyjnych i magazynów", "url": "https://www.flowtex.pl/posadzki-do-hal-produkcyjnych-i-magazynow" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Systemy odbojowe i ochrona ścian", "url": "https://www.flowtex.pl/systemy-odbojowe" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Technika diamentowa – cięcie i wiercenie", "url": "https://www.flowtex.pl/technika-diamentowa" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Betonowe posadzki przemysłowe", "url": "https://www.flowtex.pl/betonowe-posadzki-przemyslowe" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Serwis posadzek i kanalizacji", "url": "https://www.flowtex.pl/serwis-posadzek-i-kanalizacji" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fitout obiektów przemysłowych", "url": "https://www.flowtex.pl/fitout" } }
           ]
         }
       }
@@ -150,13 +153,10 @@
       {
         "@context": "https://schema.org",
         "@type": "Person",
+        "@id": "https://www.flowtex.pl/#author-pawel-najduk",
         "name": "Paweł Najduk",
         "jobTitle": "Właściciel i dyrektor techniczny",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "FLOWTEX Polska",
-          "url": "https://www.flowtex.pl/"
-        },
+        "worksFor": { "@id": "https://www.flowtex.pl/#organization" },
         "description": "Właściciel FLOWTEX Polska odpowiedzialny za techniczną stronę realizacji, z ponad 20-letnim doświadczeniem w branży posadzek przemysłowych i żywicznych, zdobytym wcześniej jako właściciel ACME Group (ponad 2,4 mln m² wykonanych posadzek, ponad 180 zakładów, 7 krajów).",
         "knowsAbout": ["Posadzki przemysłowe", "Posadzki żywiczne", "Technika diamentowa", "Posadzki dla przemysłu spożywczego i farmaceutycznego"]
       }

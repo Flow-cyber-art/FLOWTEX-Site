@@ -6,7 +6,7 @@ import { ArrowRight, Sparkles, Search, Phone, Utensils, FlaskConical, Cpu, Flame
 import { LayerStack, LAYERS } from "../components/LayerStack.jsx";
 import { HeroCarousel } from "../components/HeroCarousel.jsx";
 import { useReveal } from "../hooks/useReveal.js";
-import { SERVICES } from "../data/services.js";
+import { CORE_SERVICES as SERVICES } from "../data/services.js";
 import { REALIZACJE } from "../data/realizacje.js";
 import { ContactForm } from "../components/ContactForm.jsx";
 import certIcon1 from "../assets/certyfikaty/cert-1.webp";
@@ -53,16 +53,14 @@ const CERT_ICONS = [
   { src: certIcon2, alt: "Autoryzowany wykonawca systemów Sika" },
 ];
 
-// Kafelki wejścia według branży/obiektu. Linki prowadzą wyłącznie do stron,
-// które istnieją i są opublikowane (poradnik o zakładach spożywczych ma datę
-// publikacji 2026-10-27; gdy powstanie osobna strona branżowa, podmień href).
+// Kafelki wejścia według branży/obiektu — linki do stron branżowych i usług.
 const INDUSTRIES = [
-  { icon: Utensils, title: "Przemysł spożywczy", text: "Higiena, mycie, chemia procesowa, spadki i odwodnienia.", href: "/poradniki/jaka-posadzka-do-zakladu-spozywczego", cta: "Jak dobrać posadzkę" },
-  { icon: FlaskConical, title: "Farmacja i clean room", text: "Bezspoinowe posadzki z fasetą do stref czystych i obiektów medycznych.", href: "/posadzki-clean-room", cta: "Zobacz ofertę" },
+  { icon: Utensils, title: "Przemysł spożywczy", text: "Higiena, mycie, chemia procesowa, spadki i odwodnienia.", href: "/posadzki-dla-przemyslu-spozywczego", cta: "Zobacz ofertę" },
+  { icon: FlaskConical, title: "Farmacja i clean room", text: "Bezspoinowe posadzki z fasetą do stref czystych i obiektów medycznych.", href: "/posadzki-dla-przemyslu-farmaceutycznego", cta: "Zobacz ofertę" },
   { icon: Cpu, title: "Elektronika i strefy ESD", text: "Kontrolowane odprowadzanie ładunków, uziemienie i pomiary parametrów.", href: "/posadzki-esd", cta: "Zobacz ofertę" },
   { icon: Flame, title: "Strefy zagrożenia wybuchem (ATEX)", text: "Systemy przewodzące z uziemieniem i kontrolą parametrów po wykonaniu.", href: "/posadzki-antywybuchowe-atex", cta: "Zobacz ofertę" },
-  { icon: Warehouse, title: "Hale produkcyjne i magazyny", text: "Posadzki betonowe i żywiczne dobrane do obciążeń wózków i maszyn.", href: "/betonowe-posadzki-przemyslowe", cta: "Zobacz ofertę" },
-  { icon: Wrench, title: "Renowacja i naprawy", text: "Pylenie, pęknięcia, odspojenia, uszkodzone dylatacje i cokoły.", href: "/serwis-posadzek-i-kanalizacji", cta: "Zobacz ofertę" },
+  { icon: Warehouse, title: "Hale produkcyjne i magazyny", text: "Posadzki betonowe i żywiczne dobrane do obciążeń wózków i maszyn.", href: "/posadzki-do-hal-produkcyjnych-i-magazynow", cta: "Zobacz ofertę" },
+  { icon: Wrench, title: "Renowacja i naprawy", text: "Pylenie, pęknięcia, odspojenia, uszkodzone dylatacje i cokoły.", href: "/renowacja-posadzek-przemyslowych", cta: "Zobacz ofertę" },
 ];
 
 // Trzy najnowsze realizacje (najnowsze są na górze tablicy w realizacje.js).

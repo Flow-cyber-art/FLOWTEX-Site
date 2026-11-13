@@ -17,6 +17,7 @@ export default function ContactSection({
   submitLabel = "Wyślij zapytanie",
   formId = "formularz_podstrona",
   defaultType = "",
+  defaultIndustry = "",
 }) {
   return (
     <section id={id} style={{ backgroundColor: COLORS.darkBg, scrollMarginTop: 88 }}>
@@ -40,7 +41,7 @@ export default function ContactSection({
             </a>
           </div>
         </div>
-        <ContactForm prefillContext={context} submitLabel={submitLabel} formId={formId} defaultType={defaultType} />
+        <ContactForm prefillContext={context} submitLabel={submitLabel} formId={formId} defaultType={defaultType} defaultIndustry={defaultIndustry} />
       </div>
     </section>
   );

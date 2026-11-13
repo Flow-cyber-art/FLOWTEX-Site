@@ -277,8 +277,9 @@ function RealizacjaDetail({ item }) {
                 url: canonicalUrl,
                 mainEntityOfPage: canonicalUrl,
                 ...(image ? { image } : {}),
-                author: { "@type": "Organization", name: "FLOWTEX Polska" },
-                publisher: { "@type": "Organization", name: "FLOWTEX Polska" },
+                dateModified: toISODate(item.date),
+                author: { "@id": "https://www.flowtex.pl/#author-pawel-najduk" },
+                publisher: { "@id": "https://www.flowtex.pl/#organization" },
                 ...(relatedService
                   ? { about: { "@type": "Service", name: relatedService.title, url: `https://www.flowtex.pl/${relatedService.slug}` } }
                   : {}),
