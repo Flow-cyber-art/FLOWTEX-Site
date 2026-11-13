@@ -8,6 +8,7 @@ import { REALIZACJE } from "../data/realizacje.js";
 import { PORADNIKI } from "../data/poradniki.js";
 import NotFound from "./NotFound.jsx";
 import ContactSection from "../components/ContactSection.jsx";
+import { TYPE_BY_SERVICE } from "../components/ContactForm.jsx";
 import { renderInline, stripInline } from "../utils/inline.jsx";
 
 // Automatyczne wczytanie zdjęć realizacji z src/assets/realizacje/.
@@ -338,7 +339,7 @@ export default function ServicePage() {
       )}
 
       {/* Formularz na stronie usługi — zapytanie bez przechodzenia na stronę główną */}
-      <ContactSection formId="formularz_usluga" context={`Usługa — ${service.title}`} />
+      <ContactSection formId="formularz_usluga" context={`Usługa — ${service.title}`} defaultType={TYPE_BY_SERVICE[service.slug] || ""} />
 
       {/* Pozostałe usługi — linkowanie wewnętrzne */}
       <section style={{ backgroundColor: COLORS.darkBg }}>

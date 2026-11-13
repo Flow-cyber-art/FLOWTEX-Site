@@ -148,7 +148,7 @@ function Detail({ defect }) {
             <a href="mailto:kontakt@flowtex.pl"><Mail size={16} /> kontakt@flowtex.pl</a>
           </div>
         </div>
-        <ContactForm prefillContext={`Katalog wad — ${defect.title}`} submitLabel="Poproś o bezpłatną wycenę" formId="formularz_katalog_wad" />
+        <ContactForm prefillContext={`Katalog wad — ${defect.title}`} submitLabel="Poproś o bezpłatną wycenę" formId="formularz_katalog_wad" defaultType="Renowacja lub naprawa posadzki" />
       </section>
       <Link className="cross-tool-link" to="/dobor-posadzki">Planujesz nową posadzkę od podstaw? Skorzystaj z narzędzia doboru systemu <ArrowRight size={14} /></Link>
     </div>

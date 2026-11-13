@@ -12,13 +12,15 @@ Polsce, a także realizacje międzynarodowe.
 Nazwa: FLOWTEX Polska to firma wykonawcza (wykonawca posadzek), a nie
 producent materiałów. Nie należy jej mylić z produktem posadzkowym
 „Flowtex FR” marki Flowcrete. FLOWTEX Polska jest autoryzowanym
-wykonawcą systemów Flowcrete, Sika, Sto, ACO i Polysto.
+wykonawcą systemów Flowcrete i Sika.
 
 Kluczowe fakty:
-- Ponad 20 lat doświadczenia w branży, ponad 2,4 mln m² wykonanych posadzek,
-  ponad 180 obsłużonych zakładów, realizacje w 7 krajach.
+- Ponad 20 lat doświadczenia zespołu w branży, ponad 2,4 mln m² wykonanych
+  posadzek, ponad 180 obsłużonych zakładów, realizacje w 7 krajach. Ten
+  dorobek powstał w ACME Group, której właścicielem był Paweł Najduk;
+  FLOWTEX Polska to nowa marka tego samego zespołu.
 - Za stronę techniczną realizacji odpowiada Paweł Najduk, właściciel
-  i dyrektor techniczny.
+  i dyrektor techniczny FLOWTEX Polska (wcześniej właściciel ACME Group).
 - Pracuje bezpośrednio dla inwestorów oraz jako podwykonawca generalnych
   wykonawców; przed wejściem na budowę przygotowuje opis technologii
   (system, przygotowanie podłoża, warstwy, zużycie materiałów, detale).
@@ -66,6 +68,7 @@ Kluczowe fakty:
 ## Firma
 
 - [Strona główna](https://www.flowtex.pl/): Oferta, certyfikaty, realizacje, FAQ i dane kontaktowe FLOWTEX Polska.
+- [Kontakt i wycena](https://www.flowtex.pl/kontakt): Formularz zapytania ofertowego (rodzaj posadzki, branża, powierzchnia, lokalizacja, termin), telefon, e-mail, adres i godziny pracy.
 - [Polityka prywatności](https://www.flowtex.pl/polityka-prywatnosci): Zasady przetwarzania danych osobowych.
 - [Polityka cookies](https://www.flowtex.pl/polityka-cookies): Informacje o plikach cookies stosowanych na stronie.
 

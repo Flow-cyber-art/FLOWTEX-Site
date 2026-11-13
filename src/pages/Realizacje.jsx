@@ -3,6 +3,7 @@ import { COLORS, ACCENT_TEXT } from "../theme.js";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import ContactSection from "../components/ContactSection.jsx";
+import { TYPE_BY_SERVICE } from "../components/ContactForm.jsx";
 import { ArrowRight, ArrowLeft, CalendarDays } from "lucide-react";
 import { REALIZACJE, getRealizacjaBySlug } from "../data/realizacje.js";
 import { getServiceBySlug } from "../data/services.js";
@@ -421,6 +422,7 @@ function RealizacjaDetail({ item }) {
         heading="Planujesz podobną inwestycję?"
         text="Opisz swój obiekt — przygotujemy propozycję systemu i wycenę."
         context={`Realizacja — ${item.title}`}
+        defaultType={TYPE_BY_SERVICE[item.relatedServiceSlug] || ""}
       />
 
       {/* Powrót */}

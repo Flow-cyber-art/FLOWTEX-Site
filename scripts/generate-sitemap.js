@@ -46,6 +46,7 @@ const PRIORITY_OVERRIDES = {
   "/posadzki-zywiczne": 0.9,
   "/dobor-posadzki": 0.9,
   "/katalog-wad": 0.9,
+  "/kontakt": 0.8,
 };
 
 // Statyczne trasy publiczne (bez polityk — te mają noindex, patrz
@@ -58,6 +59,7 @@ const staticRoutes = [
   { path: "/poradniki", changefreq: "weekly" },
   { path: "/katalog-wad", changefreq: "monthly" },
   { path: "/dobor-posadzki", changefreq: "monthly" },
+  { path: "/kontakt", changefreq: "yearly" },
 ];
 
 const serviceRoutes = SERVICES.map((s) => ({
