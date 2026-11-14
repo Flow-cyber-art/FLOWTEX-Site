@@ -14,12 +14,6 @@ const NAV_LINKS = [
   { href: "/kontakt", label: "Kontakt" },
 ];
 
-// Usługi w menu (z services.js) — każda usługa jest dostępna z nawigacji.
-const OFFER_LINKS = OFFER_GROUPS.flatMap((g) => [
-  { heading: g.label },
-  ...g.items.map((svc) => ({ href: `/${svc.slug}`, label: svc.title })),
-]);
-
 // Narzędzia interaktywne wydzielone z płaskiej listy do osobnego, wyróżnionego
 // menu — to nasz najmocniejszy element konwersji, więc nie może ginąć
 // pomiędzy zwykłymi linkami ("Certyfikaty" połączone z sekcją #certyfikaty
@@ -164,6 +158,26 @@ function OfferMegaMenu() {
   );
 }
 
+// Sekcja zwijana w menu mobilnym — krótka lista zamiast 15 pozycji naraz.
+function MobileAccordion({ label, icon, children }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border-b" style={{ borderColor: COLORS.darkBorder }}>
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className="w-full flex items-center justify-between py-4 ft-mono text-sm tracking-wider uppercase"
+        style={{ color: COLORS.accent }}
+      >
+        <span className="flex items-center gap-2">{icon}{label}</span>
+        <ChevronDown size={18} style={{ transform: open ? "rotate(180deg)" : "none", transition: "transform .15s" }} />
+      </button>
+      {open && <div className="pb-2">{children}</div>}
+    </div>
+  );
+}
+
 export default function Layout({ children }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [cookieBannerVisible, setCookieBannerVisible] = useState(false);
@@ -295,56 +309,62 @@ export default function Layout({ children }) {
         </div>
 
         {menuOpen && (
-          <div className="lg:hidden px-5 pb-5 flex flex-col items-end text-right gap-4" style={{ backgroundColor: COLORS.darkBg, maxHeight: "calc(100dvh - 4rem)", overflowY: "auto", overscrollBehavior: "contain" }}>
-            <div className="w-full flex flex-col items-end gap-2.5 pb-3 mb-1" style={{ borderBottom: `1px solid ${COLORS.darkBorder}` }}>
-              <span className="ft-mono text-xs uppercase tracking-wide" style={{ color: COLORS.accent }}>Oferta</span>
-              {OFFER_LINKS.map((t) =>
-                t.heading ? (
-                  <span key={t.heading} className="ft-mono text-[10px] uppercase tracking-[0.2em] mt-2" style={{ color: COLORS.mutedOnDarkSecondary }}>
-                    {t.heading}
-                  </span>
-                ) : (
-                  <Link key={t.href} to={t.href} onClick={() => setMenuOpen(false)} className="ft-mono text-sm tracking-wider uppercase" style={{ color: COLORS.white }}>
-                    {t.label}
-                  </Link>
-                )
-              )}
-            </div>
-            <div className="w-full flex flex-col items-end gap-2.5 pb-3 mb-1" style={{ borderBottom: `1px solid ${COLORS.darkBorder}` }}>
-              <span className="ft-mono text-xs uppercase tracking-wide flex items-center gap-2" style={{ color: COLORS.accent }}>
-                <Wrench size={13} /> Narzędzia
-              </span>
+          <div className="lg:hidden px-5 pb-6 flex flex-col text-left" style={{ backgroundColor: COLORS.darkBg, maxHeight: "calc(100dvh - 4rem)", overflowY: "auto", overscrollBehavior: "contain" }}>
+            <MobileAccordion label="Oferta">
+              {OFFER_GROUPS.map((g) => (
+                <div key={g.label} className="mb-4 last:mb-1">
+                  <div className="ft-mono text-[10px] uppercase tracking-[0.2em] mb-1" style={{ color: COLORS.mutedOnDarkSecondary }}>
+                    {g.label}
+                  </div>
+                  {g.items.map((svc) => (
+                    <Link
+                      key={svc.slug}
+                      to={`/${svc.slug}`}
+                      onClick={() => setMenuOpen(false)}
+                      className="block py-2.5 text-[15px] leading-snug"
+                      style={{ color: COLORS.white }}
+                    >
+                      {svc.title}
+                    </Link>
+                  ))}
+                </div>
+              ))}
+            </MobileAccordion>
+            <MobileAccordion label="Narzędzia" icon={<Wrench size={14} />}>
               {TOOL_LINKS.map((t) => (
                 <Link
                   key={t.href}
                   to={t.href}
                   onClick={() => setMenuOpen(false)}
-                  className="ft-mono text-sm tracking-wider uppercase"
+                  className="block py-2.5 text-[15px] leading-snug"
                   style={{ color: COLORS.white }}
                 >
                   {t.label}
+                  <span className="block text-xs mt-0.5" style={{ color: COLORS.mutedOnDarkSecondary }}>{t.desc}</span>
                 </Link>
               ))}
-            </div>
+            </MobileAccordion>
             {NAV_LINKS.map((l) => (
               <NavLink
                 key={l.href}
                 href={l.href}
                 label={l.label}
                 onClick={() => setMenuOpen(false)}
-                className="ft-mono text-sm tracking-wider uppercase"
-                style={{ color: COLORS.mutedOnDark }}
+                className="ft-mono text-sm tracking-wider uppercase py-4 border-b"
+                style={{ color: COLORS.white, borderColor: COLORS.darkBorder }}
               />
             ))}
-            <Link to="/kontakt" onClick={() => setMenuOpen(false)} className="ft-mono text-sm uppercase tracking-wider px-4 py-2 rounded-sm" style={{ backgroundColor: COLORS.accent, color: ACCENT_TEXT, fontWeight: 600 }}>
+            <Link to="/kontakt" onClick={() => setMenuOpen(false)} className="ft-mono text-sm uppercase tracking-wider px-4 py-3 rounded-sm text-center mt-5" style={{ backgroundColor: COLORS.accent, color: ACCENT_TEXT, fontWeight: 600 }}>
               Wycena
             </Link>
-            <a href="tel:+48507394552" className="ft-mono text-sm" style={{ color: COLORS.white }}>
-              +48 507 394 552
-            </a>
-            <a href="mailto:kontakt@flowtex.pl" className="ft-mono text-sm" style={{ color: COLORS.white }}>
-              kontakt@flowtex.pl
-            </a>
+            <div className="flex flex-col gap-1 mt-4">
+              <a href="tel:+48507394552" className="ft-mono text-sm py-2" style={{ color: COLORS.mutedOnDark }}>
+                +48 507 394 552
+              </a>
+              <a href="mailto:kontakt@flowtex.pl" className="ft-mono text-sm py-2" style={{ color: COLORS.mutedOnDark }}>
+                kontakt@flowtex.pl
+              </a>
+            </div>
           </div>
         )}
       </header>
