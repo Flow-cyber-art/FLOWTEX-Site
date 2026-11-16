@@ -139,6 +139,38 @@ export default function Home() {
         </script>
       </Helmet>
 
+      <div className="flex flex-col">
+      {/* KONTAKT — w kodzie HTML jest pierwszą sekcją, ale wizualnie (order-last)
+          zostaje na dole strony. Dzięki temu formularz z atrybutami WebMCP jest
+          blisko początku dokumentu: narzędzia i agenci AI, które czytają tylko
+          początek dużego HTML-a, nadal go znajdą. */}
+      <section id="kontakt" ref={contactRef} className="order-last" style={{ backgroundColor: COLORS.darkBg }}>
+        <div
+          className={`max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28 grid md:grid-cols-2 gap-12 reveal ${
+            contactVisible ? "visible" : ""
+          }`}
+        >
+          <div>
+            <div className="ft-mono text-xs ft-tracking-wide uppercase mb-3" style={{ color: COLORS.white }}>
+              Kontakt
+            </div>
+            <h2 className="ft-display text-3xl md:text-4xl mb-6" style={{ fontWeight: 700, color: COLORS.white }}>
+              Opisz obiekt — wrócimy z propozycją systemu i wyceną
+            </h2>
+            <div className="space-y-4 ft-mono text-sm" style={{ color: COLORS.mutedOnDark }}>
+              <div className="flex items-center gap-3">FLOWTEX Polska</div>
+              <div className="flex items-center gap-3">Paweł Najduk</div>
+              <div className="flex items-center gap-3">NIP: 7621744781</div>
+              <div className="flex items-center gap-3">Ciółkowo Małe 32, 07-215 Ciółkowo Małe</div>
+              <div className="flex items-center gap-3">tel. +48 507 394 552</div>
+              <div className="flex items-center gap-3">kontakt@flowtex.pl</div>
+            </div>
+          </div>
+
+          <ContactForm prefillContext={contactContext} formId="formularz_strona_glowna" defaultType="Nowa posadzka" />
+        </div>
+      </section>
+
       {/* HERO */}
       <section className="relative overflow-hidden" style={{ backgroundColor: COLORS.darkBg }}>
         <HeroCarousel />
@@ -241,7 +273,7 @@ export default function Home() {
       </section>
 
       {/* BRANŻE — wejście dla klienta według typu obiektu */}
-      <section id="branze" ref={industriesRef} className="max-w-7xl mx-auto px-5 md:px-8 py-16 md:py-24">
+      <section id="branze" ref={industriesRef} className="w-full max-w-7xl mx-auto px-5 md:px-8 py-16 md:py-24">
         <div className={`mb-10 reveal ${industriesVisible ? "visible" : ""}`}>
           <div className="ft-mono text-xs ft-tracking-wide uppercase mb-3" style={{ color: COLORS.accent }}>
             Dla jakich obiektów
@@ -400,7 +432,7 @@ export default function Home() {
       </section>
 
       {/* NARZĘDZIA — promocja dwóch interaktywnych narzędzi + wewnętrzne linkowanie */}
-      <section id="narzedzia" ref={toolsRef} className="max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28">
+      <section id="narzedzia" ref={toolsRef} className="w-full max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28">
         <div className={`mb-12 reveal ${toolsVisible ? "visible" : ""}`}>
           <div className="ft-mono text-xs ft-tracking-wide uppercase mb-3" style={{ color: COLORS.accent }}>
             Pomoc w wyborze
@@ -483,7 +515,7 @@ export default function Home() {
       </section>
 
       {/* O NAS */}
-      <section id="o-nas" ref={aboutRef} className="max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28">
+      <section id="o-nas" ref={aboutRef} className="w-full max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28">
         <div className={`grid md:grid-cols-12 gap-10 reveal ${aboutVisible ? "visible" : ""}`}>
           <div className="md:col-span-4">
             <div className="ft-mono text-xs ft-tracking-wide uppercase mb-3" style={{ color: COLORS.accent }}>
@@ -556,7 +588,7 @@ export default function Home() {
       </section>
 
       {/* CERTYFIKATY / DYSTRYBUCJA */}
-      <section id="certyfikaty" ref={certRef} className="max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28">
+      <section id="certyfikaty" ref={certRef} className="w-full max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28">
         <div className={`grid md:grid-cols-2 gap-12 reveal ${certVisible ? "visible" : ""}`}>
           <div>
             <div className="ft-mono text-xs ft-tracking-wide uppercase mb-3" style={{ color: COLORS.accent }}>
@@ -604,7 +636,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" ref={faqRef} className="max-w-4xl mx-auto px-5 md:px-8 py-20 md:py-28">
+      <section id="faq" ref={faqRef} className="w-full max-w-4xl mx-auto px-5 md:px-8 py-20 md:py-28">
         <div className={`reveal ${faqVisible ? "visible" : ""}`}>
           <div className="ft-mono text-xs ft-tracking-wide uppercase mb-3" style={{ color: COLORS.accent }}>
             FAQ
@@ -633,34 +665,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* KONTAKT */}
-      <section id="kontakt" ref={contactRef} style={{ backgroundColor: COLORS.darkBg }}>
-        <div
-          className={`max-w-7xl mx-auto px-5 md:px-8 py-20 md:py-28 grid md:grid-cols-2 gap-12 reveal ${
-            contactVisible ? "visible" : ""
-          }`}
-        >
-          <div>
-            <div className="ft-mono text-xs ft-tracking-wide uppercase mb-3" style={{ color: COLORS.white }}>
-              Kontakt
-            </div>
-            <h2 className="ft-display text-3xl md:text-4xl mb-6" style={{ fontWeight: 700, color: COLORS.white }}>
-              Opisz obiekt — wrócimy z propozycją systemu i wyceną
-            </h2>
-            <div className="space-y-4 ft-mono text-sm" style={{ color: COLORS.mutedOnDark }}>
-              <div className="flex items-center gap-3">FLOWTEX Polska</div>
-              <div className="flex items-center gap-3">Paweł Najduk</div>
-              <div className="flex items-center gap-3">NIP: 7621744781</div>
-              <div className="flex items-center gap-3">Ciółkowo Małe 32, 07-215 Ciółkowo Małe</div>
-              <div className="flex items-center gap-3">tel. +48 507 394 552</div>
-              <div className="flex items-center gap-3">kontakt@flowtex.pl</div>
-            </div>
-          </div>
-
-          <ContactForm prefillContext={contactContext} formId="formularz_strona_glowna" defaultType="Nowa posadzka" />
-        </div>
-      </section>
+      </div>
     </>
   );
 }
