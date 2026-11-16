@@ -74,6 +74,15 @@
         "image": "https://www.flowtex.pl/og-image.jpg",
         "telephone": "+48507394552",
         "email": "kontakt@flowtex.pl",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "telephone": "+48507394552",
+          "email": "kontakt@flowtex.pl",
+          "url": "https://www.flowtex.pl/kontakt",
+          "areaServed": "PL",
+          "availableLanguage": ["pl", "en"]
+        },
         "taxID": "7621744781",
         "address": {
           "@type": "PostalAddress",
@@ -112,14 +121,41 @@
       }
     </script>
 
+    <!-- Dane strukturalne: serwis WWW (powiązany z firmą przez @id) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://www.flowtex.pl/#website",
+        "name": "FLOWTEX Polska",
+        "url": "https://www.flowtex.pl/",
+        "inLanguage": "pl-PL",
+        "description": "Posadzki przemysłowe i żywiczne — oferta, realizacje, poradniki i katalog wad posadzek.",
+        "publisher": { "@id": "https://www.flowtex.pl/#organization" }
+      }
+    </script>
+
     <!-- Dane strukturalne: katalog usług (wyłącznie usługi, które mają własne podstrony) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Service",
+        "@id": "https://www.flowtex.pl/#uslugi",
+        "name": "Wykonawstwo posadzek przemysłowych i żywicznych",
+        "description": "Projektowanie, wykonanie i renowacja posadzek żywicznych i przemysłowych dla zakładów produkcyjnych, spożywczych, farmaceutycznych, magazynów i stref ESD/ATEX — od badania podłoża po warstwę zamykającą.",
+        "url": "https://www.flowtex.pl/",
         "serviceType": "Posadzki przemysłowe i żywiczne",
         "provider": { "@id": "https://www.flowtex.pl/#organization" },
         "areaServed": { "@type": "Country", "name": "Polska" },
+        "offers": {
+          "@type": "Offer",
+          "name": "Wycena posadzki przemysłowej",
+          "description": "Bezpłatna wycena indywidualna po analizie obiektu: dobór systemu, przygotowanie podłoża, warstwy i harmonogram prac. Cena zależy od powierzchni, stanu podłoża i wymagań technicznych.",
+          "url": "https://www.flowtex.pl/kontakt",
+          "availability": "https://schema.org/InStock",
+          "areaServed": { "@type": "Country", "name": "Polska" },
+          "seller": { "@id": "https://www.flowtex.pl/#organization" }
+        },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Usługi FLOWTEX Polska",
