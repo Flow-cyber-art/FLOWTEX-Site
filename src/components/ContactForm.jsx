@@ -193,7 +193,7 @@ export function ContactForm({
         <>
           <label className="cf-field">
             <span>Czego dotyczy zapytanie</span>
-            <select required name="request_type" value={form.type} onChange={set("type")}>
+            <select required name="request_type" toolparamdescription="Czego dotyczy zapytanie: wybierz jedną z opcji listy (np. nowa posadzka, renowacja)." value={form.type} onChange={set("type")}>
               <option value="" disabled>Wybierz…</option>
               {REQUEST_TYPES.map((o) => <option key={o}>{o}</option>)}
             </select>
@@ -201,14 +201,14 @@ export function ContactForm({
           <div className="cf-row">
             <label className="cf-field">
               <span>Branża lub typ obiektu</span>
-              <select required name="industry" value={form.industry} onChange={set("industry")}>
+              <select required name="industry" toolparamdescription="Branża lub typ obiektu klienta: wybierz jedną z opcji listy." value={form.industry} onChange={set("industry")}>
                 <option value="" disabled>Wybierz…</option>
                 {INDUSTRIES.map((o) => <option key={o}>{o}</option>)}
               </select>
             </label>
             <label className="cf-field">
               <span>Powierzchnia</span>
-              <select required name="area" value={form.area} onChange={set("area")}>
+              <select required name="area" toolparamdescription="Przybliżona powierzchnia posadzki: wybierz przedział z listy." value={form.area} onChange={set("area")}>
                 <option value="" disabled>Wybierz…</option>
                 {AREAS.map((o) => <option key={o}>{o}</option>)}
               </select>
@@ -217,18 +217,18 @@ export function ContactForm({
           <div className="cf-row">
             <label className="cf-field">
               <span>Lokalizacja (miejscowość lub województwo)</span>
-              <input required name="location" autoComplete="address-level2" value={form.location} onChange={set("location")} />
+              <input required name="location" toolparamdescription="Miejscowość lub województwo, w którym jest obiekt." autoComplete="address-level2" value={form.location} onChange={set("location")} />
             </label>
             <label className="cf-field">
               <span>Planowany termin (opcjonalnie)</span>
-              <select name="timeline" value={form.timeline} onChange={set("timeline")}>
+              <select name="timeline" toolparamdescription="Planowany termin prac (opcjonalnie): wybierz z listy albo zostaw puste." value={form.timeline} onChange={set("timeline")}>
                 <option value="">Nie podaję</option>
                 {TIMELINES.map((o) => <option key={o}>{o}</option>)}
               </select>
             </label>
           </div>
           <label className="cf-consent">
-            <input type="checkbox" checked={form.running} onChange={set("running")} />
+            <input type="checkbox" name="running" toolparamdescription="Zaznacz, jeśli zakład pracuje w trakcie prac i trzeba je prowadzić etapami lub w weekendy." checked={form.running} onChange={set("running")} />
             <span>Obiekt jest w ruchu — prace muszą iść etapami lub w weekendy</span>
           </label>
           <button type="submit" className="cf-submit">Dalej</button>
@@ -238,32 +238,34 @@ export function ContactForm({
           <div className="cf-row">
             <label className="cf-field">
               <span>Imię i nazwisko</span>
-              <input required name="name" autoComplete="name" value={form.name} onChange={set("name")} />
+              <input required name="name" toolparamdescription="Imię i nazwisko osoby kontaktowej." autoComplete="name" value={form.name} onChange={set("name")} />
             </label>
             <label className="cf-field">
               <span>Firma</span>
-              <input required name="company" autoComplete="organization" value={form.company} onChange={set("company")} />
+              <input required name="company" toolparamdescription="Nazwa firmy lub zakładu." autoComplete="organization" value={form.company} onChange={set("company")} />
             </label>
           </div>
           <div className="cf-row">
             <label className="cf-field">
               <span>E-mail</span>
-              <input required type="email" name="email" autoComplete="email" value={form.email} onChange={set("email")} />
+              <input required type="email" name="email" toolparamdescription="Adres e-mail do odpowiedzi z wyceną." autoComplete="email" value={form.email} onChange={set("email")} />
             </label>
             <label className="cf-field">
               <span>Telefon</span>
-              <input required type="tel" name="phone" autoComplete="tel" value={form.phone} onChange={set("phone")} />
+              <input required type="tel" name="phone" toolparamdescription="Numer telefonu do kontaktu." autoComplete="tel" value={form.phone} onChange={set("phone")} />
             </label>
           </div>
           <label className="cf-field">
             <span>Opis (opcjonalnie): obciążenia, chemia, problemy z obecną posadzką</span>
-            <textarea name="message" rows={4} value={form.message} onChange={set("message")} />
+            <textarea name="message" toolparamdescription="Opis (opcjonalnie): obciążenia, chemia, temperatura, problemy z obecną posadzką." rows={4} value={form.message} onChange={set("message")} />
           </label>
 
-          {/* Honeypot — pole ukryte przed ludźmi, boty często je wypełniają */}
+          {/* Honeypot — pole ukryte przed ludźmi, boty często je wypełniają.
+              Agent AI (WebMCP) widzi je jako parametr, stąd opis „zostaw puste”. */}
           <input
             type="text"
             name="website"
+            toolparamdescription="Pole techniczne. Zawsze zostaw puste — wypełnienie powoduje odrzucenie zapytania jako spam."
             value={form.website}
             onChange={set("website")}
             tabIndex={-1}
@@ -273,7 +275,7 @@ export function ContactForm({
           />
 
           <label className="cf-consent">
-            <input type="checkbox" required checked={form.consent} onChange={set("consent")} />
+            <input type="checkbox" name="consent" required toolparamdescription="Zgoda na przetwarzanie danych osobowych w celu odpowiedzi na zapytanie — wymagana; zaznacz tylko za wyraźną zgodą użytkownika." checked={form.consent} onChange={set("consent")} />
             <span>
               Wyrażam zgodę na przetwarzanie moich danych osobowych podanych w formularzu
               kontaktowym przez FLOWTEX Polska Paweł Najduk z siedzibą w Ciółkowie Małym, w celu
