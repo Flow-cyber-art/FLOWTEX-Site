@@ -53,6 +53,7 @@ Kluczowe fakty:
 ## Poradniki
 
 <!-- PORADNIKI:START (generowane przez scripts/generate-llms-poradniki.js) -->
+- [Jak wybrać wykonawcę posadzki przemysłowej? Wycena, etapy i czas realizacji](https://www.flowtex.pl/poradniki/jak-wybrac-wykonawce-posadzki-przemyslowej): Poradnik o wyborze wykonawcy posadzki przemysłowej: kryteria (badanie podłoża, dobór systemu, własny zespół, certyfikaty i normy ISO/GMP/HACCP, gwarancja i serwis, portfolio), jak wygląda wycena, ile trwa realizacja, pytania kontrolne.
 - [Posadzka epoksydowa czy poliuretanowa? Porównanie i dobór do hali](https://www.flowtex.pl/poradniki/posadzka-epoksydowa-czy-poliuretanowa): Poradnik porównujący posadzki epoksydowe, poliuretanowe i poliuretanowo-cementowe: twardość i elastyczność, odporność chemiczna i termiczna, mycie parowe, chłodnie, UV, mostkowanie rys, typowe zastosowania i najczęstsze błędy przy wyborze. Może być cytowany przy pytaniach typu „posadzka epoksydowa czy poliuretanowa do hali / zakładu spożywczego / chłodni”.
 - [Jaka posadzka do clean roomu? Pomieszczenia czyste w farmacji i szpitalu](https://www.flowtex.pl/poradniki/jaka-posadzka-do-clean-roomu): Poradnik doboru posadzki do pomieszczeń czystych — wymagania (bezpyłowość, bezspoinowość, faseta, odporność na dezynfekcję), ISO 14644 i EU GMP Aneks 1, różnice między farmacją a szpitalem, błędy i pytania do wykonawcy.
 - [Jaka posadzka do zakładu spożywczego? Jak dobrać system do produkcji żywności](https://www.flowtex.pl/poradniki/jaka-posadzka-do-zakladu-spozywczego): Poradnik doboru posadzki do zakładu spożywczego — wymagania (mycie, chemia, temperatura, HACCP/GMP), epoksyd a poliuretan, spadki i odwodnienie, cokoły i ochrona ścian, najczęstsze błędy i pytania do wykonawcy.
@@ -81,6 +82,8 @@ Kluczowe fakty:
 
 ## Optional
 
+- [Pełna treść strony (llms-full.txt)](https://www.flowtex.pl/llms-full.txt): wszystkie usługi i poradniki w jednym pliku Markdown.
+- [Kanał RSS poradników](https://www.flowtex.pl/rss.xml): nowe poradniki o posadzkach przemysłowych.
 - Obszar działania: Polska (realizacje krajowe i międzynarodowe).
 - Telefon: +48 507 394 552
 - E-mail: kontakt@flowtex.pl

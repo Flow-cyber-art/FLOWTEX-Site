@@ -175,7 +175,15 @@ export function ContactForm({
   }
 
   return (
-    <form className="cf-form" onSubmit={handleSubmit} onFocus={handleStart}>
+    // toolname/tooldescription: deklaratywne WebMCP — agent AI w przeglądarce
+    // widzi ten formularz jako narzędzie „wyślij zapytanie ofertowe”.
+    <form
+      className="cf-form"
+      onSubmit={handleSubmit}
+      onFocus={handleStart}
+      toolname="zapytanie_ofertowe_posadzka"
+      tooldescription="Wysyła do FLOWTEX Polska zapytanie ofertowe o wykonanie lub naprawę posadzki przemysłowej. Formularz ma dwa kroki: 1) obiekt — rodzaj zapytania, branża, powierzchnia, lokalizacja, termin; 2) kontakt — imię i nazwisko, firma, e-mail, telefon, opis i zgoda na przetwarzanie danych."
+    >
       <div className="cf-steps" aria-hidden="true">
         <span className={step === 1 ? "is-active" : "is-done"}>1. Obiekt</span>
         <span className={step === 2 ? "is-active" : ""}>2. Kontakt</span>
