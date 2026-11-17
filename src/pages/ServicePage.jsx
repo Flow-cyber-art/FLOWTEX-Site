@@ -8,6 +8,8 @@ import { REALIZACJE } from "../data/realizacje.js";
 import { PORADNIKI } from "../data/poradniki.js";
 import NotFound from "./NotFound.jsx";
 import ContactSection from "../components/ContactSection.jsx";
+import Opinie from "../components/Opinie.jsx";
+import { getOpinieForService } from "../data/opinie.js";
 import { TYPE_BY_SERVICE, INDUSTRY_BY_SERVICE } from "../components/ContactForm.jsx";
 import { renderInline, stripInline } from "../utils/inline.jsx";
 
@@ -311,6 +313,9 @@ export default function ServicePage() {
           </div>
         </section>
       )}
+
+      {/* Opinie klientów z Google przypisane do tej usługi */}
+      <Opinie items={getOpinieForService(service.slug)} heading="Co mówią klienci" />
 
       {/* Powiązane realizacje — linkowanie wewnętrzne do case studies */}
       {relatedRealizacje.length > 0 && (

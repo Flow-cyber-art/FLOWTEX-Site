@@ -5,6 +5,8 @@ import { Helmet } from "react-helmet-async";
 import { ArrowRight, Sparkles, Search, Phone, Utensils, FlaskConical, Cpu, Flame, Warehouse, Wrench, MapPin } from "lucide-react";
 import { LayerStack, LAYERS } from "../components/LayerStack.jsx";
 import { HeroCarousel } from "../components/HeroCarousel.jsx";
+import Opinie from "../components/Opinie.jsx";
+import { OPINIE } from "../data/opinie.js";
 import { useReveal } from "../hooks/useReveal.js";
 import { CORE_SERVICES as SERVICES } from "../data/services.js";
 import { REALIZACJE } from "../data/realizacje.js";
@@ -634,6 +636,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* OPINIE z Google */}
+      <Opinie items={OPINIE} />
 
       {/* FAQ */}
       <section id="faq" ref={faqRef} className="w-full max-w-4xl mx-auto px-5 md:px-8 py-20 md:py-28">
