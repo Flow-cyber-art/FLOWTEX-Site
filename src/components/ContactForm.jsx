@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/contact-form.css";
 import { sendLead } from "../utils/lead.js";
@@ -94,30 +94,65 @@ export function ContactForm({
   const [started, setStarted] = useState(false);
   const set = (key) => (e) => setForm({ ...form, [key]: e.target.type === "checkbox" ? e.target.checked : e.target.value });
 
+  // Agent AI (WebMCP) wypełnia pola i wysyła natywne zdarzenie "change".
+  // React dla checkboxów nasłuchuje kliknięć, więc bez tego zaznaczenie
+  // zrobione przez agenta nie trafia do stanu i przy kolejnym renderze znika.
+  const formRef = useRef(null);
+  useEffect(() => {
+    const el = formRef.current;
+    if (!el) return undefined;
+    const onNativeChange = (e) => {
+      const t = e.target;
+      if (!t?.name) return;
+      const key = t.name === "request_type" ? "type" : t.name;
+      const value = t.type === "checkbox" ? t.checked : t.value;
+      setForm((prev) => (key in prev && prev[key] !== value ? { ...prev, [key]: value } : prev));
+    };
+    el.addEventListener("change", onNativeChange);
+    return () => el.removeEventListener("change", onNativeChange);
+  }, [sent]);
+
   const handleStart = () => {
     if (started) return;
     setStarted(true);
     track("form_start", { form_id: formId });
   };
 
-  const buildMessage = () => {
+  // Wartości odczytane prosto z pól formularza (DOM). Agent AI w przeglądarce
+  // (WebMCP) wypełnia pola bez zdarzeń, które React śledzi — np. zaznaczony
+  // przez agenta checkbox nie trafia do stanu, choć na ekranie jest zaznaczony.
+  // Dlatego przy każdym „Dalej”/„Wyślij” uzgadniamy stan z tym, co widać w polach.
+  const readFields = (formEl) => {
+    const out = {};
+    for (const el of formEl.elements) {
+      if (!el.name) continue;
+      const key = el.name === "request_type" ? "type" : el.name;
+      if (!(key in form)) continue;
+      out[key] = el.type === "checkbox" ? el.checked : el.value;
+    }
+    return out;
+  };
+
+  const buildMessage = (f) => {
     const lines = [
-      form.message.trim(),
+      f.message.trim(),
       prefillContext ? `Kontekst zapytania: ${prefillContext}` : "",
       "",
       "--- Dane o obiekcie ---",
-      `Czego dotyczy: ${form.type}`,
-      `Branża: ${form.industry}`,
-      `Powierzchnia: ${form.area}`,
-      `Lokalizacja: ${form.location}`,
-      `Termin: ${form.timeline || "nie podano"}`,
-      `Obiekt w ruchu (praca etapami lub w weekendy): ${form.running ? "tak" : "nie podano"}`,
+      `Czego dotyczy: ${f.type}`,
+      `Branża: ${f.industry}`,
+      `Powierzchnia: ${f.area}`,
+      `Lokalizacja: ${f.location}`,
+      `Termin: ${f.timeline || "nie podano"}`,
+      `Obiekt w ruchu (praca etapami lub w weekendy): ${f.running ? "tak" : "nie podano"}`,
     ];
     return lines.filter((l, i) => l !== "" || i === 2).join("\n");
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const f = { ...form, ...readFields(e.currentTarget) };
+    setForm(f);
 
     if (step === 1) {
       setStep(2);
@@ -126,13 +161,13 @@ export function ContactForm({
       return;
     }
 
-    if (form.website) {
+    if (f.website) {
       // Bot — udajemy sukces, nic nie wysyłamy.
       setSent(true);
       return;
     }
 
-    if (!form.consent) {
+    if (!f.consent) {
       setSendError("Zaznacz zgodę na przetwarzanie danych osobowych, aby wysłać zapytanie.");
       return;
     }
@@ -142,11 +177,11 @@ export function ContactForm({
 
     try {
       const leadId = await sendLead(
-        { name: form.name, company: form.company, email: form.email, phone: form.phone, message: buildMessage() },
+        { name: f.name, company: f.company, email: f.email, phone: f.phone, message: buildMessage(f) },
         {
           formId,
           context: prefillContext,
-          trackParams: { request_type: form.type, industry: form.industry, area_range: form.area },
+          trackParams: { request_type: f.type, industry: f.industry, area_range: f.area },
         }
       );
       navigate("/dziekujemy", { state: { leadId } });
@@ -154,7 +189,7 @@ export function ContactForm({
       console.error("Błąd wysyłki formularza kontaktowego:", err);
       track("form_error", { form_id: formId, error_type: "wysylka" });
       // Zapasowa droga: gotowy e-mail z treścią zapytania, żeby zgłoszenie nie przepadło.
-      const body = `${buildMessage()}\n\nImię i nazwisko: ${form.name}\nFirma: ${form.company}\nTelefon: ${form.phone}\nE-mail: ${form.email}`;
+      const body = `${buildMessage(f)}\n\nImię i nazwisko: ${f.name}\nFirma: ${f.company}\nTelefon: ${f.phone}\nE-mail: ${f.email}`;
       setMailtoHref(`mailto:kontakt@flowtex.pl?subject=${encodeURIComponent("Zapytanie ze strony flowtex.pl")}&body=${encodeURIComponent(body.slice(0, 1500))}`);
       setSendError("Nie udało się wysłać zapytania.");
     } finally {
@@ -178,6 +213,7 @@ export function ContactForm({
     // toolname/tooldescription: deklaratywne WebMCP — agent AI w przeglądarce
     // widzi ten formularz jako narzędzie „wyślij zapytanie ofertowe”.
     <form
+      ref={formRef}
       className="cf-form"
       onSubmit={handleSubmit}
       onFocus={handleStart}
