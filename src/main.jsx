@@ -9,6 +9,12 @@ import { initAnalytics } from "./utils/analytics.js";
 // Źródło wizyty, śledzenie kliknięć w telefon/e-mail i (po zgodzie) GTM/GA4.
 initAnalytics();
 
+// Narzędzia WebMCP dla agentów AI (dobór posadzki, katalog wad) — kod jest
+// pobierany tylko w przeglądarkach, które obsługują WebMCP.
+if (typeof document !== "undefined" && "modelContext" in document) {
+  import("./utils/webmcp.js").then((m) => m.registerWebMcpTools()).catch(() => {});
+}
+
 // hydrateRoot (zamiast createRoot) — po wdrożeniu prerenderingu każda
 // podstrona trafia do przeglądarki jako gotowy, wypełniony treścią HTML
 // (wygenerowany przez scripts/prerender.js). React "przejmuje" ten HTML
