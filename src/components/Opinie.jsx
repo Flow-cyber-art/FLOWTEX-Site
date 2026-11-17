@@ -37,6 +37,17 @@ export default function Opinie({ items, heading = "Opinie klientów" }) {
               className="p-5 md:p-6 rounded-sm"
               style={{ border: `1px solid ${COLORS.borderOnLight}` }}
             >
+              {o.rating && (
+                <div
+                  className="text-base mb-2 tracking-widest"
+                  style={{ color: COLORS.accent }}
+                  role="img"
+                  aria-label={`Ocena ${o.rating} na 5`}
+                >
+                  {"★".repeat(o.rating)}
+                  <span style={{ color: COLORS.borderOnLight }}>{"★".repeat(5 - o.rating)}</span>
+                </div>
+              )}
               <blockquote className="text-base" style={{ color: COLORS.textOnLight }}>
                 „{o.text}”
               </blockquote>
