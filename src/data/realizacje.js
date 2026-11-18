@@ -31,6 +31,82 @@
 */
 export const REALIZACJE = [
   {
+    slug: "serwis-posadzki-przy-odplywach-zaklad-spozywczy-mazowieckie",
+    metaTitle: "Serwis posadzki przy odpływach przed audytem | FLOWTEX",
+    title: "Odspojona posadzka przy odpływach w zakładzie spożywczym — serwis przed audytem",
+    category: "Serwis posadzek",
+    date: "Listopad 2026",
+    industry: "Przemysł spożywczy — produkcja żywności",
+    location: "woj. mazowieckie",
+    paragraphs: [
+      "Odspojenie posadzki przy wpustach i odpływach rzadko ma jedną przyczynę. W tej realizacji były trzy: powtarzające się cykle termiczne podczas mycia gorącą wodą, uszkodzone obrzeże przy wpuście bez prawidłowego zakończenia i zakotwienia systemu oraz niewystarczający spadek, który powodował zastoje wody. Samo położenie nowej warstwy na tym podłożu rozwiązałoby problem tylko na kilka miesięcy.",
+    ],
+    sections: [
+      {
+        heading: "Wyzwanie",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Zakład produkcyjny zgłosił odspajanie się posadzki w strefie odpływów na kilka dni przed zaplanowanym audytem odbiorcy. Pozostawienie usterki groziło uwagami podczas kontroli, a pełne skucie strefy oznaczałoby długi przestój produkcji.",
+          },
+        ],
+      },
+      {
+        heading: "Jak wyglądał serwis posadzki krok po kroku?",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              { label: "Diagnoza", text: "opukanie posadzki i wyznaczenie rzeczywistego zasięgu odspojenia, większego niż widoczne uszkodzenia." },
+              { label: "Usunięcie uszkodzonych fragmentów", text: "wraz z przygotowaniem podłoża." },
+              { label: "Odbudowa obrzeża przy wpuście", text: "prawidłowe osadzenie i zakotwienie systemu." },
+              { label: "Korekta spadku", text: "szybkowiążącą zaprawą naprawczą." },
+              { label: "Naprawa warstwy posadzkowej", text: "w systemie PU-cement klienta, z wyoblonymi cokolikami przy ścianach." },
+              { label: "Planowanie kolejności prac", text: "tak, aby ograniczyć przestój do minimum." },
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "Efekt: posadzka została oddana do użytkowania przed terminem audytu, a podczas audytu nie zgłoszono uwag do naprawionej strefy.",
+          },
+        ],
+      },
+      {
+        heading: "Parametry realizacji",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              { label: "Branża", text: "produkcja żywności." },
+              { label: "Zakres", text: "serwis i naprawa posadzki przy odpływach." },
+              { label: "Lokalizacja", text: "województwo mazowieckie." },
+              { label: "Czas prac", text: "2 dni." },
+              { label: "System", text: "PU-cement klienta." },
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "Realizację nadzorował Paweł Najduk, właściciel i dyrektor techniczny FLOWTEX Polska. Więcej o objawach i przyczynach znajdziesz w katalogu wad (/katalog-wad).",
+          },
+        ],
+      },
+      {
+        heading: "Najczęściej zadawane pytania",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              { label: "Czy można naprawić odspojoną posadzkę bez zatrzymywania całej hali?", text: "Często tak. Po zdiagnozowaniu rzeczywistego zasięgu uszkodzenia prace można ograniczyć do konkretnej strefy i zaplanować tak, by zminimalizować przestój." },
+              { label: "Dlaczego posadzka odspaja się przy odpływach?", text: "Najczęstsze przyczyny to cykle termiczne przy myciu gorącą wodą, niewłaściwe zakończenie systemu przy wpuście i zbyt mały spadek, który powoduje zaleganie wody." },
+              { label: "Skąd wiadomo, jak duży jest rzeczywisty zasięg odspojenia?", text: "Widoczne uszkodzenia zwykle pokazują tylko część problemu. Zasięg odspojenia sprawdza się m.in. przez opukanie posadzki." },
+            ],
+          },
+        ],
+      },
+    ],
+    relatedServiceSlug: "serwis-posadzek-i-kanalizacji",
+  },
+  {
     slug: "systemy-odbojowe-zaklad-przekasek-wroclaw-3400-m2",
     metaTitle: "Odboje Polysto w zakładzie przekąsek, Wrocław | FLOWTEX",
     title: "Systemy odbojowe i zabezpieczenia ścian Polysto w zakładzie produkcji przekąsek i chipsów — Wrocław",
