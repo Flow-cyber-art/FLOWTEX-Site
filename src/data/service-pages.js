@@ -176,7 +176,7 @@ export const SERVICE_PAGES = [
     shortDesc:
       "Rozwiązujemy pylenie, pęknięcia, ubytki i odspojenia — naprawa punktowa lub renowacja podłoża zamiast wymiany całej posadzki.",
     intro:
-      "Pylący beton, pęknięcia, odspojona żywica pod wózkami, wykruszone dylatacje i uszkodzone cokoły to usterki, które rzadko czekają na dogodny termin remontu. Naprawiamy i renowujemy posadzki betonowe i żywiczne: od napraw punktowych po renowację podłoża, w wielu przypadkach bez zatrzymywania całego zakładu.",
+      "Pylący beton, pęknięcia, odspojona żywica pod wózkami, wykruszone dylatacje, klawiszujące styki płyt i uszkodzone cokoły to usterki, które rzadko czekają na dogodny termin remontu. Naprawiamy i renowujemy posadzki betonowe i żywiczne: od napraw punktowych po renowację podłoża, w wielu przypadkach bez zatrzymywania całego zakładu.",
     sections: [
       {
         heading: "Najczęstsze objawy i kierunek naprawy",
@@ -190,6 +190,7 @@ export const SERVICE_PAGES = [
             ["[Pęcherze w żywicy](/katalog-wad/pecherze)", "Powietrze z porowatego podłoża, zbyt gruba warstwa, wilgoć w podłożu (osmoza)", "Usunięcie uszkodzonej warstwy, badanie wilgotności, bariera przeciwwilgociowa przed odtworzeniem systemu"],
             ["[Ubytki i wykruszenia](/katalog-wad/ubytki)", "Uderzenia, słabe podłoże, słabe związanie warstwy, korozja zbrojenia", "Usunięcie osłabionego materiału do zdrowego podłoża, naprawa zaprawą PCC lub systemem żywicznym"],
             ["[Uszkodzone dylatacje](/katalog-wad/dylatacje)", "Wypełnienie o zbyt małej elastyczności, ruch konstrukcji, brak profilu, zabrudzona szczelina", "Rozpoznanie typu szczeliny, oczyszczenie i ponowne wypełnienie masą dobraną do ruchu"],
+            ["[Klawiszowanie płyt](/katalog-wad/odspojenie-stykow)", "Różnice w osiadaniu sąsiednich pól, brak lub uszkodzone łączniki (dyble), przeciążenie krawędzi płyty przez ruch kołowy", "Ocena stanu łączników i nośności krawędzi, następnie naprawa krawędzi i odtworzenie wypełnienia spoiny"],
           ],
         },
         note: "Ten sam objaw może mieć kilka przyczyn, dlatego przed wyborem technologii sprawdzamy podłoże, sposób użytkowania i warunki w obiekcie. Opisy mają charakter poglądowy i nie zastępują oględzin.",
@@ -203,6 +204,10 @@ export const SERVICE_PAGES = [
         body: "Uzupełniamy i naprawiamy dylatacje ograniczające niekontrolowane pękanie posadzki, a także naprawiamy lub wymieniamy uszkodzone cokoły w strefach narażonych na uderzenia i wilgoć. Poszerzanie i cięcie szczelin wykonujemy techniką diamentową (zobacz [technika diamentowa](/technika-diamentowa)).",
       },
       {
+        heading: "Klawiszowanie płyt i uszkodzone krawędzie",
+        body: "Klawiszowanie na styku płyt to sygnał, że łączniki przenoszące obciążenia między sąsiednimi polami przestały pracować prawidłowo albo nigdy nie zostały prawidłowo wykonane. Ruch kołowy przez taki styk przyspiesza degradację krawędzi, dlatego przed naprawą oceniamy stan łączników i nośność krawędzi, a w newralgicznych strefach warto ograniczyć ruch wózków do czasu naprawy. Szczegóły w katalogu wad: [uszkodzenie i różnica poziomów na stykach płyt betonowych](/katalog-wad/odspojenie-stykow).",
+      },
+      {
         heading: "Prace w działającym zakładzie",
         body: "Prace planujemy po wizji lokalnej, tak aby jak najmniej zakłócać bieżącą pracę zakładu, a w wielu przypadkach prowadzimy je etapami. Serwis planujemy tak, by przygotować strefy produkcyjne do audytów i ograniczyć ryzyko nieplanowanych przestojów. Usługi dotyczące kanalizacji zakładowej (kamerowanie i udrażnianie) opisujemy na stronie [serwis posadzek i kanalizacji](/serwis-posadzek-i-kanalizacji).",
       },
@@ -212,6 +217,7 @@ export const SERVICE_PAGES = [
       "Renowacja odspojonej żywicy i spękanego betonu",
       "Impregnacja i wzmocnienie pylących powierzchni betonowych",
       "Naprawa i uzupełnianie dylatacji, naprawa lub wymiana cokołów",
+      "Naprawa klawiszujących płyt i uszkodzonych krawędzi na stykach pól",
       "Prace etapowe w działającym zakładzie",
     ],
     closing:
@@ -220,6 +226,7 @@ export const SERVICE_PAGES = [
       { q: "Czy uszkodzoną posadzkę trzeba wymieniać w całości?", a: "Nie zawsze. Zamiast wymiany całej powierzchni punktowo wzmacniamy i uzupełniamy uszkodzone miejsca, co pozwala ograniczyć koszty i czas przestoju." },
       { q: "Jak ustalacie, czym naprawić pęknięcie?", a: "Najpierw rozpoznajemy charakter rysy. Dla rys aktywnych stosuje się elastyczne wypełnienie poliuretanowe, a dla rys statycznych sztywną iniekcję żywicą epoksydową. Dobór następuje wyłącznie po ocenie rodzaju i przyczyny rysy." },
       { q: "Czy odspojoną żywicę wystarczy ponownie zalać?", a: "Nie. Przed naprawą trzeba zbadać wilgotność i nośność podłoża, usunąć odspojoną warstwę do zdrowego betonu i dopiero wtedy ponownie wykonać system zgodnie z kartą techniczną." },
+      { q: "Co to znaczy, że płyty betonowe klawiszują i czy można to naprawić?", a: "To potoczne określenie sytuacji, w której jedna płyta ugina się pod obciążeniem niezależnie od sąsiedniej, bo łączniki między nimi nie przenoszą już obciążeń równomiernie. Naprawę krawędzi poprzedza ocena stanu łączników i nośności krawędzi, a w newralgicznych strefach warto ograniczyć ruch wózków do czasu naprawy." },
       { q: "Czy naprawy można prowadzić w działającym zakładzie?", a: "W wielu przypadkach tak. Prace planujemy po wizji lokalnej, tak aby jak najmniej zakłócać bieżącą pracę zakładu, i prowadzimy je etapami." },
     ],
   },

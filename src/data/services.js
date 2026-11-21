@@ -362,33 +362,32 @@ const CORE = [
     title: "Serwis posadzek i kanalizacji",
     shortDesc: "Rozwiązujemy odspojenia żywicy, spękany beton i niedrożną kanalizację zakładową — zanim staną się powodem nieplanowanego przestoju lub uwagi podczas audytu.",
     metaDescription:
-      "Serwis posadzek i kanalizacji FLOWTEX Polska — naprawa uszkodzeń betonu i żywicy, kamerowanie oraz udrażnianie ciągów kanalizacyjnych.",
+      "Serwis kanalizacji zakładowej FLOWTEX Polska — kamerowanie i udrażnianie ciągów kanalizacyjnych oraz serwis posadzek w działającym zakładzie.",
     intro:
-      "Odspojona żywica pod wózkiem widłowym, spękany beton w strefie mokrej, powtarzające się zatory w kanalizacji zakładowej — takie usterki rzadko czekają na dogodny termin remontu. Serwisujemy istniejące posadzki i instalacje kanalizacyjne: od napraw punktowych i renowacji uszkodzonego betonu, po kamerowanie i udrażnianie rur, zanim usterka przerodzi się w nieplanowany przestój lub uwagę podczas audytu.",
+      "Powtarzające się zatory w kanalizacji zakładowej, niedrożne odpływy, spękany beton w strefie mokrej — takie usterki rzadko czekają na dogodny termin remontu. Serwisujemy instalacje kanalizacyjne i posadzki w czynnym zakładzie: kamerowanie i udrażnianie rur, zanim usterka przerodzi się w nieplanowany przestój lub uwagę podczas audytu.",
     sections: [
-      {
-        heading: "Naprawy posadzek i renowacja betonu",
-        body: "Usuwamy odpryski, ubytki mechaniczne oraz uszkodzenia dylatacji, a przy poważniejszych zniszczeniach przeprowadzamy renowację podłoża — w tym naprawę odspojonej lub spękanej warstwy żywicznej i betonowej. Zamiast wymiany całej powierzchni, punktowo wzmacniamy i uzupełniamy uszkodzone miejsca, co pozwala ograniczyć koszty i czas przestoju.",
-      },
       {
         heading: "Serwis kanalizacji",
         body: "Wykonujemy kamerowanie ciągów kanalizacyjnych, dzięki czemu można precyzyjnie zdiagnozować przyczynę niedrożności lub nieszczelności przed podjęciem prac naprawczych. Udrażnianie rur prowadzimy metodą mechaniczną lub chemiczną, dobraną do charakteru osadu, tak aby efekt był trwały, a nie tylko doraźny.",
       },
       {
-        heading: "Dylatacje i cokoły",
-        body: "Uzupełniamy i naprawiamy dylatacje ograniczające niekontrolowane pękanie posadzki, a także naprawiamy lub wymieniamy uszkodzone cokoły w strefach narażonych na uderzenia i wilgoć. Prace prowadzimy tak, aby jak najmniej zakłócać bieżącą pracę zakładu.",
+        heading: "Naprawy posadzek",
+        body: "Naprawę pęknięć, ubytków, dylatacji, cokołów i odspojonej żywicy oraz renowację podłoża opisujemy na osobnej stronie: [renowacja i naprawa posadzek przemysłowych](/renowacja-posadzek-przemyslowych). Tutaj skupiamy się na serwisie kanalizacji zakładowej.",
+      },
+      {
+        heading: "Serwis w działającym zakładzie",
+        body: "Prace prowadzimy tak, aby jak najmniej zakłócać bieżącą pracę zakładu. Serwis planujemy tak, by przygotować strefy produkcyjne do audytów i ograniczyć ryzyko nieplanowanych przestojów.",
       },
     ],
     highlights: [
-      "Naprawa ubytków, odprysków i uszkodzeń mechanicznych posadzki",
-      "Renowacja odspojonej żywicy i spękanego betonu",
-      "Kamerowanie i udrażnianie ciągów kanalizacyjnych",
-      "Naprawa i uzupełnianie dylatacji, naprawa lub wymiana cokołów",
+      "Kamerowanie ciągów kanalizacyjnych",
+      "Udrażnianie rur metodą mechaniczną lub chemiczną",
+      "Serwis w czynnym zakładzie, planowany pod audyty",
     ],
     closing:
       "Serwis planujemy tak, by przygotować strefy produkcyjne do audytów i ograniczyć ryzyko nieplanowanych przestojów.",
     faq: [
-      { q: "Czy uszkodzoną posadzkę trzeba wymieniać w całości?", a: "Nie zawsze. Zamiast wymiany całej powierzchni punktowo wzmacniamy i uzupełniamy uszkodzone miejsca, co pozwala ograniczyć koszty i czas przestoju." },
+      { q: "Gdzie opisane są naprawy posadzek?", a: "Naprawę pęknięć, ubytków, dylatacji i odspojonej żywicy oraz renowację podłoża opisujemy na stronie [renowacja i naprawa posadzek przemysłowych](/renowacja-posadzek-przemyslowych)." },
       { q: "Jak diagnozujecie problemy z kanalizacją zakładową?", a: "Wykonujemy kamerowanie ciągów kanalizacyjnych, dzięki czemu można precyzyjnie zdiagnozować przyczynę niedrożności lub nieszczelności przed podjęciem prac naprawczych." },
       { q: "Jak udrażniacie rury?", a: "Metodą mechaniczną lub chemiczną, dobraną do charakteru osadu, tak aby efekt był trwały, a nie tylko doraźny." },
     ],
