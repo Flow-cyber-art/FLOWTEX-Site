@@ -31,6 +31,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.flowtex.pl/protokol-odbioru-posadzki</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.flowtex.pl/kontakt</loc>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>

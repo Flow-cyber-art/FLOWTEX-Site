@@ -22,6 +22,7 @@ const Poradniki = lazy(() => import("./pages/Poradniki.jsx"));
 const DefectCatalog = lazy(() => import("./pages/DefectCatalog.jsx"));
 const FloorSelector = lazy(() => import("./pages/FloorSelector.jsx"));
 const DewPoint = lazy(() => import("./pages/DewPoint.jsx"));
+const ProtokolOdbioru = lazy(() => import("./pages/ProtokolOdbioru.jsx"));
 const Kontakt = lazy(() => import("./pages/Kontakt.jsx"));
 const OFirmie = lazy(() => import("./pages/OFirmie.jsx"));
 const Dziekujemy = lazy(() => import("./pages/Dziekujemy.jsx"));
@@ -43,6 +44,7 @@ export default function App() {
           <Route path="/katalog-wad/:defectId" element={<DefectCatalog />} />
           <Route path="/dobor-posadzki" element={<FloorSelector />} />
           <Route path="/kalkulator-punktu-rosy" element={<DewPoint />} />
+          <Route path="/protokol-odbioru-posadzki" element={<ProtokolOdbioru />} />
           <Route path="/kontakt" element={<Kontakt />} />
           <Route path="/o-firmie" element={<OFirmie />} />
           <Route path="/dziekujemy" element={<Dziekujemy />} />

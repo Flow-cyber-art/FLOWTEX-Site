@@ -21,6 +21,15 @@
   ],
   "headers": [
     {
+      "source": "/pliki/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex"
+        }
+      ]
+    },
+    {
       "source": "/llms.txt",
       "headers": [
         {

@@ -108,7 +108,7 @@ const ALL_PORADNIKI = [
           },
           {
             type: "paragraph",
-            text: "Umowa o roboty budowlane wiąże inwestora z wykonawcą. Producent materiału nie jest jej stroną tylko dlatego, że dostarczył produkt, więc jego rolą jest zwykle konsultacja techniczna, a nie rozstrzyganie wyniku odbioru. Wykonawca działa na podstawie dokumentacji i ustaleń z inwestorem i nie jest w stanie odgadnąć niewypowiedzianych oczekiwań."
+            text: "Umowa o roboty budowlane wiąże inwestora z wykonawcą. Producent materiału nie jest jej stroną tylko dlatego, że dostarczył produkt, więc jego rolą jest zwykle konsultacja techniczna, a nie rozstrzyganie wyniku odbioru. Wykonawca działa na podstawie dokumentacji i ustaleń z inwestorem i nie jest w stanie odgadnąć niewypowiedzianych oczekiwań. Wzór protokołu z listą kontrolną możesz [pobrać tutaj](/protokol-odbioru-posadzki)."
           }
         ]
       }

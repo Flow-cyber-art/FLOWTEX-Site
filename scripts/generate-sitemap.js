@@ -83,6 +83,7 @@ const staticRoutes = [
   { path: "/katalog-wad", changefreq: "monthly", lastmod: gitDate("src/data/defects.js") },
   { path: "/dobor-posadzki", changefreq: "monthly", lastmod: gitDate("src/pages/FloorSelector.jsx") },
   { path: "/kalkulator-punktu-rosy", changefreq: "yearly", lastmod: gitDate("src/pages/DewPoint.jsx") },
+  { path: "/protokol-odbioru-posadzki", changefreq: "yearly", lastmod: gitDate("src/pages/ProtokolOdbioru.jsx") },
   { path: "/kontakt", changefreq: "yearly", lastmod: gitDate("src/pages/Kontakt.jsx") },
   { path: "/o-firmie", changefreq: "yearly", lastmod: gitDate("src/pages/OFirmie.jsx") },
 ];

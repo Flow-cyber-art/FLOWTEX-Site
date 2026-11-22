@@ -80,3 +80,77 @@ export async function sendLead(form, { formId, context = "", trackParams = {} } 
   });
   return id;
 }
+
+/**
+ * Wysyłka materiału do pobrania (lead magnet): mail do firmy z danymi osoby
+ * i, jeśli skonfigurowano szablon VITE_EMAILJS_TEMPLATE_MATERIAL_ID, mail do
+ * osoby z linkiem do pliku. Zwraca { id, emailed } — emailed=false oznacza, że
+ * szablon wiadomości z linkiem nie jest jeszcze skonfigurowany w EmailJS.
+ *
+ * @param form    { name, company, email }
+ * @param options { formId, resourceName, resourceUrl }
+ */
+export async function sendMaterialLead(form, { formId, resourceName, resourceUrl }) {
+  const id = leadId();
+  const { session, first } = getAttribution();
+  const pageUrl = window.location.href.split("#")[0];
+  const sameTouch = !first || !session || (first.date === session.date && first.landing === session.landing && first.source === session.source);
+  const sourceBlock = [
+    "",
+    "--- Źródło zgłoszenia (dodane automatycznie) ---",
+    `Numer zgłoszenia: ${id}`,
+    `Wysłano ze strony: ${pageUrl}`,
+    `Źródło wizyty: ${describeTouch(session)}`,
+    ...(sameTouch ? [] : [`Pierwsza wizyta: ${describeTouch(first)}`]),
+  ].join("\n");
+
+  const downloadUrl = new URL(resourceUrl, window.location.origin).href;
+  const base = {
+    name: form.name,
+    company: form.company,
+    email: form.email,
+    phone: "",
+    lead_id: id,
+    lead_source: session?.source || "",
+    lead_medium: session?.medium || "",
+    lead_campaign: session?.campaign || "",
+    lead_landing_page: session?.landing || "",
+    lead_page_url: pageUrl,
+    lead_first_source: first ? `${first.source} / ${first.medium}` : "",
+    resource_name: resourceName,
+    download_url: downloadUrl,
+  };
+
+  const { default: emailjs } = await import("@emailjs/browser");
+  const opts = { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY };
+  const service = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const materialTemplate = import.meta.env.VITE_EMAILJS_TEMPLATE_MATERIAL_ID;
+
+  // Powiadomienie dla firmy jest najważniejsze: dzięki niemu lead nie przepada.
+  await emailjs.send(
+    service,
+    import.meta.env.VITE_EMAILJS_TEMPLATE_ADMIN_ID,
+    { ...base, message: `Pobranie materiału: ${resourceName}\n${sourceBlock}` },
+    opts
+  );
+
+  let emailed = false;
+  if (materialTemplate) {
+    try {
+      await emailjs.send(service, materialTemplate, { ...base, message: `Materiał do pobrania: ${resourceName}` }, opts);
+      emailed = true;
+    } catch (err) {
+      console.error("Nie udało się wysłać maila z materiałem:", err);
+    }
+  }
+
+  track("generate_lead", {
+    form_id: formId,
+    form_location: window.location.pathname,
+    lead_context: resourceName.slice(0, 100),
+    lead_id: id,
+    lead_source: session?.source || "",
+    lead_medium: session?.medium || "",
+  });
+  return { id, emailed };
+}
