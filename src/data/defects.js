@@ -458,6 +458,137 @@ export const DEFECTS = [
       },
     ],
   },
+  {
+    id: "lepka-powierzchnia",
+    no: "15",
+    tag: "utwardzanie",
+    title: "Lepka lub niedoutwardzona powierzchnia",
+    intro: "Powierzchnia żywicy pozostaje tłusta, lepka lub miękka mimo upływu czasu przewidzianego na utwardzenie.",
+    image: "flowtex-defect-lepka.webp",
+    updated: "2026-11-22",
+    explanation: "Lepka powierzchnia ma kilka różnych przyczyn i trzeba je odróżnić. Cienki, tłusty nalot na powierzchni (amine blush) tworzy się na niektórych żywicach epoksydowych w wilgoci i chłodzie i zwykle da się go usunąć, a sama warstwa pod spodem jest utwardzona. Prawdziwe niedoutwardzenie, czyli miękki lub gumowaty materiał na całej grubości, wynika z błędu w proporcjach, mieszaniu lub warunkach i wymaga innej naprawy. Przed decyzją ocenia się, czy problem dotyczy samej powierzchni, czy całej warstwy.",
+    causes: [
+      "Zbyt niska temperatura podłoża lub materiału w trakcie utwardzania",
+      "Wilgoć i skraplanie pary na powierzchni (zbyt mała odległość od punktu rosy)",
+      "Nieprawidłowe proporcje składników lub niedokładne wymieszanie",
+      "Samodzielne dodawanie rozcieńczalnika lub zmiana receptury poza kartą techniczną",
+      "Wyłączenie ogrzewania przed zakończeniem utwardzania"
+    ],
+    solutions: [
+      "Ustalenie, czy nieprawidłowość dotyczy samej powierzchni (nalot), czy całej grubości warstwy",
+      "Usunięcie nalotu sposobem zalecanym dla danego systemu przed kolejną warstwą",
+      "Przy niedoutwardzeniu na całej grubości: usunięcie warstwy i ponowna aplikacja po wyeliminowaniu przyczyny",
+      "Kontrola temperatury, wilgotności i punktu rosy oraz dokumentowanie warunków do końca utwardzania"
+    ],
+    faq: [
+      {
+        question: "Co to jest amine blush?",
+        answer: "Cienki, tłusty lub lepki nalot na powierzchni niektórych żywic epoksydowych, powstający w wilgoci i chłodzie podczas utwardzania. Osłabia przyczepność kolejnej warstwy, więc trzeba go usunąć."
+      },
+      {
+        question: "Czy lepka żywica sama się utwardzi z czasem?",
+        answer: "Niekoniecznie. Jeśli przyczyną są nieprawidłowe proporcje lub zbyt niska temperatura, utwardzenie może nigdy nie dojść do końca. Trzeba ocenić stan warstwy, zanim zapadnie decyzja o naprawie."
+      }
+    ]
+  },
+  {
+    id: "roznica-odcieni",
+    no: "16",
+    tag: "kolor",
+    title: "Różnica odcieni na posadzce",
+    intro: "Poszczególne pola lub pasy posadzki mają zauważalnie inny odcień, mimo że wykonano je z tego samego koloru.",
+    image: "flowtex-defect-odcien.webp",
+    updated: "2026-11-22",
+    explanation: "Różnica odcienia nie zawsze jest wadą wykonawczą. Częstą przyczyną są różne partie produkcyjne materiału lub pigmentu, zmienna grubość warstwy, warunki aplikacji oraz oświetlenie, w którym ocenia się powierzchnię. To samo zestawienie kolorów może wyglądać inaczej przy dwóch źródłach światła (metameryzm). Dlatego ocena wymaga uzgodnionego wzorca i powtarzalnych warunków oględzin.",
+    causes: [
+      "Różne partie produkcyjne materiału lub pigmentu",
+      "Zmienna grubość i krycie warstwy",
+      "Różnice w sposobie aplikacji i łączeniu pól",
+      "Odmienne warunki temperatury i wilgotności w trakcie utwardzania",
+      "Zróżnicowana chłonność podłoża"
+    ],
+    solutions: [
+      "Porównanie z uzgodnionym wzorcem w ustalonych warunkach oświetlenia",
+      "Ustalenie numerów partii materiału i dokumentacji aplikacji",
+      "Przy potrzebie korekty: wykonanie warstwy wyrównującej kolor w całej strefie, a nie punktowo",
+      "Na przyszłość: materiał z jednej partii, próbka wzorcowa i zapis dopuszczalnych odchyleń w umowie"
+    ],
+    faq: [
+      {
+        question: "Czy różnica odcienia jest wadą?",
+        answer: "Niekoniecznie. Zależy to od rodzaju systemu, uzgodnionego standardu wizualnego i umowy. Dlatego dopuszczalne odchylenia warto ustalić przed pracami."
+      },
+      {
+        question: "Czy można ujednolicić kolor bez wymiany posadzki?",
+        answer: "Często tak, przez wykonanie nowej warstwy nawierzchniowej w całej strefie po ocenie podłoża i przyczepności. Punktowe poprawki zwykle pozostawiają widoczne różnice."
+      }
+    ]
+  },
+  {
+    id: "zoltnienie",
+    no: "17",
+    tag: "UV",
+    title: "Żółknięcie i zmiana koloru powierzchni",
+    intro: "Jasne lub bezbarwne warstwy z czasem zmieniają kolor na bardziej żółty, szczególnie w miejscach nasłonecznionych.",
+    image: "flowtex-defect-zoltnienie.webp",
+    updated: "2026-11-22",
+    explanation: "Zmiana koloru wynika głównie z podatności spoiwa na promieniowanie UV. Poliuretany aromatyczne i wiele epoksydów jest podatnych na żółknięcie, a poliuretany alifatyczne mają znacznie lepszą stabilność koloru. Bezbarwny lakier może ograniczyć wpływ UV, ale nie zmienia chemii warstw pod spodem. Zmiana barwy nie zawsze jest wadą, jeśli system nie był przeznaczony do długiej ekspozycji na światło.",
+    causes: [
+      "Ekspozycja na światło słoneczne (przeszklenia, bramy, rampy)",
+      "Użycie spoiwa niestabilnego na UV w miejscu o dużym nasłonecznieniu",
+      "Brak warstwy zamykającej o odpowiedniej odporności na UV",
+      "Wpływ ciepła i długiego czasu ekspozycji"
+    ],
+    solutions: [
+      "Ocena, czy zmiana jest cechą materiału, czy skutkiem błędnego doboru systemu do ekspozycji",
+      "Wykonanie nowej warstwy nawierzchniowej stabilnej na UV po przygotowaniu powierzchni",
+      "Dobór systemu całościowo do rzeczywistej ekspozycji, a nie tylko lakieru wierzchniego",
+      "W strefach silnie nasłonecznionych: rozważenie osłon lub innego materiału"
+    ],
+    faq: [
+      {
+        question: "Czy posadzka epoksydowa żółknie?",
+        answer: "Może, zwłaszcza przy ekspozycji na światło słoneczne. Skala zależy od formulacji i konstrukcji systemu."
+      },
+      {
+        question: "Czy lakier UV zapobiegnie żółknięciu?",
+        answer: "Może je ograniczyć, ale nie zmienia chemii warstw pod spodem i nie gwarantuje stabilności koloru."
+      }
+    ]
+  },
+  {
+    id: "kratery-pinhole",
+    no: "18",
+    tag: "pory",
+    title: "Kratery, pinhole i mikropustki",
+    intro: "Na powierzchni żywicy widoczne są drobne otwory, kratery lub punkty, często w całym polu aplikacji.",
+    image: "flowtex-defect-kratery.webp",
+    updated: "2026-11-22",
+    explanation: "Najczęstszym mechanizmem jest uwalnianie powietrza i pary z porów betonu po aplikacji, gdy temperatura podłoża rośnie. Powietrze unosi się przez jeszcze płynną żywicę i zostawia mikropustki. Dlatego problemowi zapobiega się przez właściwe zamknięcie porów (grunt, masa podkładowa) i kontrolę temperatury, a nie przez zmianę samej żywicy. Wady tej nie należy mylić z pęcherzami osmotycznymi, które mają inny mechanizm.",
+    causes: [
+      "Powietrze i para z porów betonu (outgassing) przy rosnącej temperaturze podłoża",
+      "Niedostatecznie zagruntowane lub niedomknięte pory",
+      "Zbyt szybka aplikacja kolejnej warstwy na niewystarczająco przygotowane podłoże",
+      "Wilgoć w podłożu lub zanieczyszczenia powierzchni",
+      "Nieprawidłowe napowietrzenie materiału przy mieszaniu"
+    ],
+    solutions: [
+      "Ocena, czy wada ma charakter aplikacyjny, czy związany z wilgocią podłoża",
+      "Przeszlifowanie powierzchni i wykonanie warstwy zamykającej pory (scratchcoat) przed kolejną warstwą",
+      "Kontrola temperatury podłoża, materiału i otoczenia oraz punktu rosy w trakcie aplikacji",
+      "Pomiar wilgotności podłoża przed ponowną aplikacją"
+    ],
+    faq: [
+      {
+        question: "Skąd biorą się pinhole w posadzce żywicznej?",
+        answer: "Najczęściej z powietrza i pary uwalnianych z porów betonu po aplikacji. Zapobiega im odpowiednie zamknięcie porów gruntem lub masą podkładową i stabilne warunki temperatury."
+      },
+      {
+        question: "Czy pinhole to to samo co pęcherze osmotyczne?",
+        answer: "Nie. Pinhole to drobne otwory po uciekającym powietrzu, a pęcherze osmotyczne wynikają z wilgoci i ciśnienia pod powłoką, więc wymagają innej naprawy."
+      }
+    ]
+  },
 ];
 
 // Powiązania kart wad z resztą serwisu (linkowanie wewnętrzne):
@@ -480,4 +611,8 @@ export const DEFECT_LINKS = {
   "rysy-wloskowate": { services: ["renowacja-posadzek-przemyslowych", "serwis-posadzek-i-kanalizacji"], related: ["peknieca", "pylenie", "matowienie"] },
   "odspojenie-stykow": { services: ["renowacja-posadzek-przemyslowych", "serwis-posadzek-i-kanalizacji", "technika-diamentowa"], related: ["dylatacje", "peknieca", "pofaldowania"] },
   "matowienie": { services: ["renowacja-posadzek-przemyslowych", "posadzki-zywiczne"], related: ["pylenie", "sliska-powierzchnia", "przebarwienia"] },
+  "lepka-powierzchnia": {"services": ["renowacja-posadzek-przemyslowych", "posadzki-zywiczne"], "related": ["pecherze", "przebarwienia", "odspojenie-zywicy"], "guide": "przyczepnosc-miedzywarstwowa-okno-przemalowania"},
+  "roznica-odcieni": {"services": ["renowacja-posadzek-przemyslowych", "posadzki-zywiczne"], "related": ["przebarwienia", "zoltnienie", "matowienie"], "guide": "roznice-odcieni-posadzki-zywicznej-partie"},
+  "zoltnienie": {"services": ["renowacja-posadzek-przemyslowych", "posadzki-zywiczne"], "related": ["przebarwienia", "roznica-odcieni", "matowienie"], "guide": "zoltnienie-posadzki-zywicznej-uv"},
+  "kratery-pinhole": {"services": ["renowacja-posadzek-przemyslowych", "posadzki-zywiczne"], "related": ["pecherze", "odspojenie-zywicy", "lepka-powierzchnia"], "guide": "przygotowanie-podloza-pod-zywice-pull-off"},
 };
