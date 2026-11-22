@@ -433,7 +433,7 @@ export const DEFECTS = [
     title: "Ścieranie i matowienie warstwy nawierzchniowej",
     intro: "Połysk i grubość warstwy wierzchniej stopniowo maleją w strefach najintensywniej eksploatowanych.",
     image: "flowtex-defect-scieranie.webp",
-    updated: "2026-08-27",
+    updated: "2026-11-22",
     explanation: "Ścieranie topcoatu jest procesem naturalnym, ale jego tempo mocno zależy od doboru systemu do realnych warunków — rodzaju kół wózków, materiału ściernego transportowanego na oponach i intensywności ruchu. Ten sam topcoat w dwóch różnych halach może zużyć się w zupełnie innym czasie.",
     causes: [
       "Naturalne zużycie eksploatacyjne w strefach o dużym natężeniu ruchu",
@@ -471,7 +471,7 @@ export const DEFECT_LINKS = {
   "odspojenie-zywicy": { services: ["renowacja-posadzek-przemyslowych", "serwis-posadzek-i-kanalizacji", "posadzki-zywiczne"], related: ["pecherze", "ubytki", "cokoly"], guide: "odspojenie-zywicy-od-podloza-przyczyny-i-naprawa" },
   "pylenie": { services: ["renowacja-posadzek-przemyslowych", "posadzki-zywiczne", "betonowe-posadzki-przemyslowe"], related: ["matowienie", "rysy-wloskowate", "ubytki"], guide: "dlaczego-posadzka-betonowa-pyli" },
   "pecherze": { services: ["renowacja-posadzek-przemyslowych", "serwis-posadzek-i-kanalizacji", "posadzki-zywiczne"], related: ["odspojenie-zywicy", "przebarwienia", "pofaldowania"], guide: "pecherze-w-zywicy-aplikacyjne-czy-osmotyczne" },
-  "przebarwienia": { services: ["renowacja-posadzek-przemyslowych", "posadzki-zywiczne"], related: ["matowienie", "pecherze", "sliska-powierzchnia"] },
+  "przebarwienia": { services: ["renowacja-posadzek-przemyslowych", "posadzki-zywiczne"], related: ["matowienie", "pecherze", "sliska-powierzchnia"], guide: "roznice-odcieni-posadzki-zywicznej-partie" },
   "pofaldowania": { services: ["renowacja-posadzek-przemyslowych", "serwis-posadzek-i-kanalizacji"], related: ["zastoiny-wody", "odspojenie-stykow", "pecherze"] },
   "dylatacje": { services: ["renowacja-posadzek-przemyslowych", "serwis-posadzek-i-kanalizacji", "technika-diamentowa"], related: ["odspojenie-stykow", "peknieca", "ubytki"], guide: "ciecie-dylatacji-w-posadzce" },
   "cokoly": { services: ["renowacja-posadzek-przemyslowych", "serwis-posadzek-i-kanalizacji", "systemy-odbojowe"], related: ["odspojenie-zywicy", "zastoiny-wody", "dylatacje"], guide: "uszkodzone-cokoly-higieniczne-naprawa" },

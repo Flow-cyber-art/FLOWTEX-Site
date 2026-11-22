@@ -29,6 +29,30 @@ const FAQ = [
     a: "Czas realizacji zależy od metrażu i liczby warstw, zwykle od kilku dni do kilku tygodni. Uwzględniamy czas na przygotowanie podłoża, gruntowanie, aplikację warstwy żywicznej oraz jej utwardzanie.",
   },
   {
+    q: "Czy posadzkę żywiczną można układać zimą?",
+    a: "Tak, jeśli da się zapewnić warunki wymagane przez kartę techniczną systemu: odpowiednią temperaturę podłoża i materiału, dopuszczalną wilgotność oraz bezpieczny margines od punktu rosy. Samo dogrzanie powietrza w hali nie wystarcza, bo masywny beton nagrzewa się wolniej. Do ogrzewania zwykle stosuje się nagrzewnice elektryczne, a nie urządzenia spalające paliwo bez odprowadzenia spalin, bo te dodają do hali parę wodną.",
+  },
+  {
+    q: "Po jakim czasie posadzka żywiczna jest w pełni obciążalna?",
+    a: "Zależy od systemu i temperatury. Inny jest czas do wejścia pieszego, inny do kolejnej warstwy, a inny do pełnego obciążenia i kontaktu z chemią. W niskiej temperaturze każdy z tych etapów się wydłuża, a sucha powierzchnia nie oznacza pełnego utwardzenia. Terminy podajemy dla konkretnego systemu i warunków obiektu.",
+  },
+  {
+    q: "Czy posadzka żywiczna musi mieć dylatacje?",
+    a: "Dylatacje konstrukcyjne w podłożu trzeba odtworzyć w posadzce, bo żywica nie zatrzyma pracy konstrukcji ani skurczu betonu. Zamknięcie aktywnej szczeliny sztywną warstwą kończy się zwykle pęknięciem w tym samym miejscu. Szczeliny skurczowe, robocze i izolacyjne wymagają osobnej obróbki.",
+  },
+  {
+    q: "Czy po 28 dniach można układać posadzkę żywiczną na betonie?",
+    a: "Nie ma takiej gwarancji. 28 dni dotyczy wytrzymałości betonu, a nie jego wysuszenia. O gotowości decyduje pomiar wilgotności odpowiednią metodą, np. metodą CM, oraz wymagania wybranego systemu. Test folii jest tylko sygnałem ostrzegawczym i nie zastępuje pomiaru.",
+  },
+  {
+    q: "Jak wygląda odbiór posadzki żywicznej?",
+    a: "Odbiór to sprawdzenie zgodności robót z dokumentacją, umową i wymaganiami systemu, a nie tylko ocena wyglądu. Obejmuje m.in. stan i ciągłość powierzchni, równość, spadki, dylatacje, a przy odpowiednich wymaganiach także grubość, przyczepność, antypoślizgowość lub parametry elektryczne. Kryteria warto ustalić przed pracami, a wyniki zapisać w protokole.",
+  },
+  {
+    q: "Czy starą posadzkę można odnowić zamiast wymieniać?",
+    a: "Tak, jeśli system zachował przyczepność, nie ma rozległych odspojeń, a podłoże jest stabilne. Renowacja wymaga usunięcia osłabionych fragmentów, przygotowania powierzchni i oceny zgodności z nowym materiałem. Przykrycie odspajającej się powłoki problemu nie rozwiązuje. Decyzję poprzedza diagnostyka, np. próba przyczepności i ocena wilgotności.",
+  },
+  {
     q: "Czy FLOWTEX Polska realizuje projekty w całej Polsce?",
     a: "Tak, realizujemy projekty na terenie całej Polski, a nasze doświadczenie obejmuje również realizacje międzynarodowe.",
   },
