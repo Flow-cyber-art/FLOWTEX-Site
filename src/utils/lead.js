@@ -85,7 +85,7 @@ export async function sendLead(form, { formId, context = "", trackParams = {} } 
  * Wysyłka materiału do pobrania (lead magnet): mail do firmy z danymi osoby
  * i, jeśli skonfigurowano szablon VITE_EMAILJS_TEMPLATE_MATERIAL_ID, mail do
  * osoby z linkiem do pliku. Zwraca { id, emailed } — emailed=false oznacza, że
- * szablon wiadomości z linkiem nie jest jeszcze skonfigurowany w EmailJS.
+ * nie udało się wysłać maila z linkiem (np. brak szablonu w EmailJS).
  *
  * @param form    { name, company, email }
  * @param options { formId, resourceName, resourceUrl }
@@ -124,7 +124,10 @@ export async function sendMaterialLead(form, { formId, resourceName, resourceUrl
   const { default: emailjs } = await import("@emailjs/browser");
   const opts = { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY };
   const service = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-  const materialTemplate = import.meta.env.VITE_EMAILJS_TEMPLATE_MATERIAL_ID;
+  // Osobny szablon na materiały jest opcjonalny (darmowy plan EmailJS ma limit
+// 2 szablonów); bez niego link idzie szablonem potwierdzenia dla klienta,
+// a link do pliku trafia do zmiennej {{message}}.
+const materialTemplate = import.meta.env.VITE_EMAILJS_TEMPLATE_MATERIAL_ID || import.meta.env.VITE_EMAILJS_TEMPLATE_CLIENT_ID;
 
   // Powiadomienie dla firmy jest najważniejsze: dzięki niemu lead nie przepada.
   await emailjs.send(
@@ -137,7 +140,7 @@ export async function sendMaterialLead(form, { formId, resourceName, resourceUrl
   let emailed = false;
   if (materialTemplate) {
     try {
-      await emailjs.send(service, materialTemplate, { ...base, message: `Materiał do pobrania: ${resourceName}` }, opts);
+      await emailjs.send(service, materialTemplate, { ...base, message: `Materiał do pobrania: ${resourceName}\nLink do pliku: ${downloadUrl}` }, opts);
       emailed = true;
     } catch (err) {
       console.error("Nie udało się wysłać maila z materiałem:", err);
