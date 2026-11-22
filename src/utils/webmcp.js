@@ -4,12 +4,19 @@
 //
 // - dobierz_posadzke: ta sama logika co /dobor-posadzki (src/data/floor-selector.js)
 // - znajdz_wade_posadzki: wyszukiwanie w katalogu wad (src/data/defects.js)
-// Oba narzędzia tylko odczytują dane (readOnlyHint) i niczego nie wysyłają.
+// - oblicz_punkt_rosy: kalkulator punktu rosy (src/utils/dewpoint.js, ta sama
+//   logika co /kalkulator-punktu-rosy)
+// - znajdz_poradnik: wyszukiwanie w opublikowanych poradnikach (zaplanowane
+//   poradniki są ukryte tak samo jak na stronie)
+// - protokol_odbioru_info: opis i adresy protokołu odbioru posadzki (PDF)
+// Wszystkie narzędzia tylko odczytują dane (readOnlyHint) i niczego nie wysyłają.
 // Formularz zapytania ofertowego jest osobnym narzędziem (atrybuty toolname
 // w ContactForm.jsx).
 
 import { QUICK_KEYS, STEPS, matchScores } from "../data/floor-selector.js";
 import { DEFECTS } from "../data/defects.js";
+import { PORADNIKI } from "../data/poradniki.js";
+import { assessDewPoint } from "./dewpoint.js";
 
 const HOST = "https://www.flowtex.pl";
 const CONTACT = `Wycena i konsultacja: ${HOST}/kontakt, tel. +48 507 394 552, kontakt@flowtex.pl.`;
@@ -166,6 +173,73 @@ function znajdzWade(rawArgs) {
   ].join("\n\n");
 }
 
+// ---------- oblicz_punkt_rosy ----------
+
+const num = (v) => (v === undefined || v === null || v === "" ? NaN : Number(String(v).replace(",", ".")));
+
+function obliczPunktRosy(rawArgs) {
+  const a = parseArgs(rawArgs);
+  const r = assessDewPoint({
+    t: num(a.temperatura_powietrza),
+    h: num(a.wilgotnosc_wzgledna),
+    s: num(a.temperatura_podloza),
+    m: num(a.wymagany_margines),
+    mn: num(a.min_temperatura_podloza),
+    mx: num(a.max_wilgotnosc),
+  });
+  if (r.state === "empty") {
+    return `Podaj temperaturę powietrza (°C), wilgotność względną (%) i temperaturę podłoża (°C). Kalkulator: ${HOST}/kalkulator-punktu-rosy.`;
+  }
+  if (r.state === "error") return `${r.msg} Kalkulator: ${HOST}/kalkulator-punktu-rosy.`;
+  const verdict = { ok: "margines zachowany", warn: "margines za mały lub niespełnione wymaganie karty", stop: "ryzyko kondensacji — nie zaczynaj aplikacji" }[r.level];
+  return [
+    `Punkt rosy: ${r.dp.toFixed(1)}°C (powietrze ${r.t}°C, wilgotność ${r.h}%).`,
+    `Temperatura podłoża: ${r.s}°C, odstęp od punktu rosy: ${r.gap.toFixed(1)}°C (wymagany co najmniej ${r.need}°C).`,
+    `Ocena: ${verdict}.`,
+    ...r.notes,
+    "Wynik orientacyjny: wiążące są wymagania karty technicznej systemu i pomiar kalibrowanym miernikiem na obiekcie.",
+    `Kalkulator: ${HOST}/kalkulator-punktu-rosy. Poradnik: ${HOST}/poradniki/posadzka-zywiczna-zima-temperatura-punkt-rosy. ${CONTACT}`,
+  ].join("\n");
+}
+
+// ---------- znajdz_poradnik ----------
+
+const GUIDE_INDEX = PORADNIKI.map((p) => ({
+  p,
+  fields: [
+    [new Set(words(`${p.title} ${p.category || ""}`)), 3],
+    [new Set(words(`${p.metaDescription || ""} ${p.llmsSummary || ""}`)), 2],
+  ],
+}));
+
+function znajdzPoradnik(rawArgs) {
+  const a = parseArgs(rawArgs);
+  const q = String(a.temat || "").slice(0, 300);
+  const stems = expand([...new Set(words(q).map(stem))].filter((s) => !STOP.has(s)));
+  const ranked = GUIDE_INDEX.map((e) => ({ p: e.p, s: stems.length ? score(e, stems) : 0 }))
+    .filter((h) => h.s > 0)
+    .sort((x, y) => y.s - x.s)
+    .slice(0, 4);
+  const fmt = (p) => `- ${p.title} — ${HOST}/poradniki/${p.slug}\n  ${p.metaDescription || p.llmsSummary || ""}`;
+  if (!ranked.length) {
+    return `Nie znaleziono poradnika dla tego tematu. Wszystkie poradniki (${PORADNIKI.length}):\n${PORADNIKI.map(fmt).join("\n")}\n\nLista: ${HOST}/poradniki. ${CONTACT}`;
+  }
+  return `Pasujące poradniki FLOWTEX Polska:\n${ranked.map((h) => fmt(h.p)).join("\n")}\n\nPełna lista: ${HOST}/poradniki. ${CONTACT}`;
+}
+
+// ---------- protokol_odbioru_info ----------
+
+function protokolInfo() {
+  return [
+    "Protokół odbioru posadzki żywicznej — wzór do wypełnienia (PDF, 3 strony A4): dane obiektu i systemu, warunki aplikacji, kontrola podłoża, kontrola powierzchni (wygląd, przyczepność, grubość), dokumentacja, wynik odbioru i podpisy stron.",
+    `Strona z formularzem (materiał wysyłany na e-mail): ${HOST}/protokol-odbioru-posadzki`,
+    `Bezpośredni plik PDF: ${HOST}/pliki/protokol-odbioru-posadzki-zywicznej.pdf`,
+    `Poradnik o odbiorze: ${HOST}/poradniki/odbior-posadzki-zywicznej-co-sprawdzic`,
+    "Wzór ma charakter pomocniczy i nie zastępuje umowy ani wymagań karty technicznej systemu.",
+    CONTACT,
+  ].join("\n");
+}
+
 // ---------- rejestracja ----------
 
 export function registerWebMcpTools() {
@@ -197,6 +271,45 @@ export function registerWebMcpTools() {
       },
       annotations: { readOnlyHint: true },
       execute: znajdzWade,
+    },
+    {
+      name: "oblicz_punkt_rosy",
+      description:
+        "Oblicza punkt rosy i margines bezpieczeństwa przed aplikacją posadzki żywicznej na podstawie temperatury powietrza, wilgotności względnej i temperatury podłoża. Zwraca ocenę: margines zachowany, za mały albo ryzyko kondensacji. Wynik orientacyjny — wiążąca jest karta techniczna systemu.",
+      inputSchema: {
+        type: "object",
+        properties: {
+          temperatura_powietrza: { type: "number", description: "Temperatura powietrza w °C (-40 do 60)." },
+          wilgotnosc_wzgledna: { type: "number", description: "Wilgotność względna powietrza w % (1–100)." },
+          temperatura_podloza: { type: "number", description: "Temperatura podłoża (betonu) w °C." },
+          wymagany_margines: { type: "number", description: "Wymagany odstęp temperatury podłoża od punktu rosy w °C; domyślnie 3." },
+          min_temperatura_podloza: { type: "number", description: "Opcjonalnie: minimalna temperatura podłoża z karty technicznej, °C." },
+          max_wilgotnosc: { type: "number", description: "Opcjonalnie: maksymalna wilgotność względna z karty technicznej, %." },
+        },
+        required: ["temperatura_powietrza", "wilgotnosc_wzgledna", "temperatura_podloza"],
+      },
+      annotations: { readOnlyHint: true },
+      execute: obliczPunktRosy,
+    },
+    {
+      name: "znajdz_poradnik",
+      description:
+        "Wyszukuje w poradnikach FLOWTEX Polska o posadzkach żywicznych i przemysłowych (odbiór, wilgoć w betonie, przyczepność, ESD, normy, wady, zima) artykuł pasujący do tematu i zwraca tytuły z adresami i krótkim opisem.",
+      inputSchema: {
+        type: "object",
+        properties: { temat: { type: "string", description: "Temat lub pytanie, np. „test folii wilgoć w betonie” albo „odbiór posadzki”." } },
+        required: ["temat"],
+      },
+      annotations: { readOnlyHint: true },
+      execute: znajdzPoradnik,
+    },
+    {
+      name: "protokol_odbioru_info",
+      description:
+        "Zwraca opis i adresy wzoru protokołu odbioru posadzki żywicznej (PDF do wypełnienia) oraz poradnika o odbiorze. Niczego nie wysyła ani nie zapisuje; pobranie wysyłanego e-mailem pliku odbywa się przez formularz na stronie.",
+      inputSchema: { type: "object", properties: {} },
+      annotations: { readOnlyHint: true },
+      execute: protokolInfo,
     },
   ];
   for (const t of tools) {

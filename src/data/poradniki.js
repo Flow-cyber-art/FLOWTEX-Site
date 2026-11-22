@@ -2652,7 +2652,37 @@ const TODAY =
     ? __BUILD_DATE__
     : (typeof process !== "undefined" && process.env?.BUILD_DATE) || new Date().toISOString().slice(0, 10);
 
-export const PORADNIKI = ALL_PORADNIKI.filter((p) => !p.publishAt || p.publishAt <= TODAY).sort((a, b) =>
+const VISIBLE = ALL_PORADNIKI.filter((p) => !p.publishAt || p.publishAt <= TODAY);
+
+// Link w tekście do poradnika, który jeszcze nie jest opublikowany, zamieniamy
+// na zwykły tekst (bez linku), żeby nie prowadził do błędu 404. W dniu
+// publikacji docelowego poradnika link pojawia się sam przy kolejnym buildzie.
+const HIDDEN_SLUGS = new Set(ALL_PORADNIKI.filter((p) => !VISIBLE.includes(p)).map((p) => p.slug));
+const unlinkHidden = (s) =>
+  typeof s === "string"
+    ? s.replace(/\[([^\]]+)\]\(\/poradniki\/([^)\/#?]+)\/?\)/g, (m, label, slug) => (HIDDEN_SLUGS.has(slug) ? label : m))
+    : s;
+
+function withVisibleLinks(p) {
+  if (!HIDDEN_SLUGS.size) return p;
+  return {
+    ...p,
+    intro: Array.isArray(p.intro) ? p.intro.map(unlinkHidden) : unlinkHidden(p.intro),
+    sections: (p.sections || []).map((sec) => ({
+      ...sec,
+      blocks: (sec.blocks || []).map((b) => {
+        if (b.type === "paragraph") return { ...b, text: unlinkHidden(b.text) };
+        if (b.type === "list") return { ...b, items: b.items.map(unlinkHidden) };
+        if (b.type === "table") return { ...b, rows: b.rows.map((r) => r.map(unlinkHidden)) };
+        return b;
+      }),
+    })),
+    faq: (p.faq || []).map((f) => ({ ...f, a: unlinkHidden(f.a) })),
+    cta: p.cta ? { ...p.cta, text: unlinkHidden(p.cta.text) } : p.cta,
+  };
+}
+
+export const PORADNIKI = VISIBLE.map(withVisibleLinks).sort((a, b) =>
   (b.publishAt || "").localeCompare(a.publishAt || "")
 );
 

@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from "react";
+import { assessDewPoint } from "../utils/dewpoint.js";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { CheckCircle2, AlertTriangle, XCircle, ArrowRight, Thermometer } from "lucide-react";
@@ -14,14 +15,6 @@ const PAGE_URL = "https://www.flowtex.pl/kalkulator-punktu-rosy";
 const TITLE = "Kalkulator punktu rosy dla posadzek żywicznych | FLOWTEX Polska";
 const DESCRIPTION =
   "Oblicz punkt rosy i margines bezpieczeństwa przed aplikacją posadzki żywicznej. Podaj temperaturę powietrza, wilgotność i temperaturę podłoża, a sprawdzisz ryzyko skraplania wilgoci.";
-
-const MAGNUS_A = 17.62;
-const MAGNUS_B = 243.12;
-
-export function dewPoint(tempC, rhPercent) {
-  const gamma = Math.log(rhPercent / 100) + (MAGNUS_A * tempC) / (MAGNUS_B + tempC);
-  return (MAGNUS_B * gamma) / (MAGNUS_A - gamma);
-}
 
 function parse(v) {
   if (v === "" || v == null) return NaN;
@@ -92,20 +85,7 @@ export default function DewPoint() {
     const m = parse(margin);
     const mn = parse(minSub);
     const mx = parse(maxRh);
-    if ([t, h, s].some(Number.isNaN)) return { state: "empty" };
-    if (h <= 0 || h > 100) return { state: "error", msg: "Wilgotność względna musi mieścić się w przedziale 1–100%." };
-    if (t < -40 || t > 60 || s < -40 || s > 60) return { state: "error", msg: "Kalkulator działa w zakresie temperatur od -40 do 60°C." };
-    const dp = dewPoint(t, h);
-    const need = Number.isNaN(m) || m < 0 ? 3 : m;
-    const gap = s - dp;
-    const notes = [];
-    if (!Number.isNaN(mn) && s < mn) notes.push(`Temperatura podłoża (${s.toFixed(1)}°C) jest niższa od minimum z karty technicznej (${mn}°C).`);
-    if (!Number.isNaN(mx) && h > mx) notes.push(`Wilgotność względna (${h}%) przekracza maksimum z karty technicznej (${mx}%).`);
-    let level = "ok";
-    if (gap <= 0) level = "stop";
-    else if (gap < need) level = "warn";
-    if (notes.length && level === "ok") level = "warn";
-    return { state: "ok", dp, gap, need, level, notes, t, h, s };
+    return assessDewPoint({ t, h, s, m, mn, mx });
   }, [air, rh, substrate, margin, minSub, maxRh]);
 
   const verdict = {

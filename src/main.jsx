@@ -9,7 +9,7 @@ import { initAnalytics } from "./utils/analytics.js";
 // Źródło wizyty, śledzenie kliknięć w telefon/e-mail i (po zgodzie) GTM/GA4.
 initAnalytics();
 
-// Narzędzia WebMCP dla agentów AI (dobór posadzki, katalog wad) — kod jest
+// Narzędzia WebMCP dla agentów AI (dobór posadzki, katalog wad, punkt rosy, poradniki, protokół odbioru) — kod jest
 // pobierany tylko w przeglądarkach, które obsługują WebMCP.
 if (typeof document !== "undefined" && "modelContext" in document) {
   import("./utils/webmcp.js").then((m) => m.registerWebMcpTools()).catch(() => {});
