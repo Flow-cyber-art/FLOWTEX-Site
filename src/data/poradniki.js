@@ -21,6 +21,164 @@
 */
 const ALL_PORADNIKI = [
   {
+    slug: "posadzka-zywiczna-zima-temperatura-punkt-rosy",
+    publishAt: "2026-11-30",
+    llmsSummary: "Poradnik o układaniu posadzek żywicznych jesienią i zimą: dlaczego liczy się temperatura podłoża, a nie powietrza, czym jest punkt rosy i margines bezpieczeństwa, jak ogrzewać halę bez dodawania wilgoci, jak zimą zmieniają się czasy pracy i utwardzania oraz jakie błędy powodują pęcherze, zmatowienia i słabą przyczepność. Może być cytowany przy pytaniach typu „czy można układać posadzkę żywiczną zimą” i „od jakiej temperatury można robić posadzkę epoksydową”.",
+    title: "Posadzka żywiczna zimą — temperatura podłoża, punkt rosy i ogrzewanie hali",
+    metaTitle: "Posadzka żywiczna zimą: temperatura, punkt rosy | FLOWTEX Polska",
+    metaDescription:
+      "Czy można układać posadzkę żywiczną zimą? Wyjaśniamy rolę temperatury podłoża, punktu rosy, ogrzewania i wentylacji oraz najczęstsze błędy przy aplikacji w chłodnej porze roku.",
+    category: "Posadzki żywiczne",
+    imageAlt: "Posadzka żywiczna układana w ogrzewanej hali przemysłowej — FLOWTEX Polska",
+    date: "Listopad 2026",
+    intro: [
+      "Posadzkę żywiczną można wykonać także jesienią i zimą, ale w chłodnej porze roku margines błędu jest mniejszy. Żywica nie „schnie”, tylko reaguje chemicznie, a tempo tej reakcji, lepkość materiału i zachowanie wilgoci w betonie zależą od temperatury i wilgotności.",
+      "Krótko: nie ma jednej temperatury, od której „można robić żywicę”. Decydują wymagania konkretnego systemu z karty technicznej, temperatura podłoża, wilgotność powietrza i podłoża oraz odległość od punktu rosy. Poniżej wyjaśniamy, co kontrolować przed aplikacją, w jej trakcie i po niej.",
+    ],
+    sections: [
+      {
+        heading: "Temperatura podłoża ważniejsza niż temperatura powietrza",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Dogrzanie hali nagrzewnicą szybko podnosi temperaturę powietrza, ale masywna płyta betonowa nagrzewa się znacznie wolniej. Na rozgrzanej hali beton może więc nadal być chłodny i właśnie jego temperaturę oraz temperaturę nieutwardzonego materiału trzeba mierzyć. Ocena „na odczucie” nie wystarcza.",
+          },
+          {
+            type: "paragraph",
+            text: "Tak samo ważna jest temperatura samych komponentów. Materiał przechowywany lub transportowany w niskiej temperaturze jest gęstszy, trudniej się miesza i rozprowadza, a reakcja przebiega inaczej niż zakłada karta techniczna.",
+          },
+        ],
+      },
+      {
+        heading: "Punkt rosy: kiedy na betonie skrapla się wilgoć",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Punkt rosy to temperatura, w której para wodna z powietrza zaczyna się skraplać. Jeśli powierzchnia podłoża lub świeżej powłoki jest zbyt blisko tej temperatury, na jej powierzchni może pojawić się niewidoczna warstwa wilgoci. Skutkiem bywa zmatowienie, lepka lub nierówno utwardzona powierzchnia, a także słabsza przyczepność kolejnych warstw.",
+          },
+          {
+            type: "paragraph",
+            text: "Wiele systemów wymaga, aby temperatura podłoża była o kilka stopni wyższa od punktu rosy (częsty zapis to co najmniej 3°C). Dokładny margines zawsze wynika z karty technicznej wybranego materiału. Punkt rosy wylicza się z temperatury i wilgotności względnej powietrza, a przy zmianach pogody i nocnym wychładzaniu hali trzeba go kontrolować w ciągu doby, a nie tylko rano.",
+          },
+          {
+            type: "list",
+            items: [
+              "wilgotność względna powietrza, wilgotność podłoża i ryzyko kondensacji to trzy odrębne parametry,",
+              "każdy z nich sprawdza się osobno, odpowiednią metodą pomiarową,",
+              "warunki kontroluje się przed aplikacją, w jej trakcie i po niej, do czasu utwardzenia.",
+            ],
+          },
+        ],
+      },
+      {
+        heading: "Ogrzewanie i wentylacja hali",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Urządzenia spalające paliwo bez odprowadzenia spalin (nagrzewnice gazowe, olejowe) oddają do hali parę wodną i produkty spalania. W chłodnej hali to wystarczy, aby podnieść wilgotność i zwiększyć ryzyko skraplania. Jeśli ogrzewanie jest potrzebne, producenci systemów zwykle wskazują nagrzewnice elektryczne z nadmuchem ciepłego powietrza albo urządzenia z odprowadzeniem spalin na zewnątrz.",
+          },
+          {
+            type: "paragraph",
+            text: "Wentylacja musi pasować do technologii. W systemach, które wydzielają lotne składniki, trzeba uwzględnić bezpieczeństwo pracy i zabezpieczenie stanowiska. Ogrzewanie nie powinno być też wyłączane zbyt wcześnie, bo utwardzanie trwa dłużej, niż sugeruje sucha powierzchnia.",
+          },
+        ],
+      },
+      {
+        heading: "Jak chłód zmienia czasy pracy i utwardzania",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "W niskiej temperaturze reakcja zwalnia: wydłuża się czas utwardzania i czas do wejścia na posadzkę, a czas użycia wymieszanego materiału bywa dłuższy niż latem. W wysokiej temperaturze jest odwrotnie. Warto rozróżniać cztery etapy, które często są mylone:",
+          },
+          {
+            type: "list",
+            items: [
+              "czas przydatności wymieszanego materiału do aplikacji,",
+              "czas do wejścia i ruchu pieszego,",
+              "czas do nałożenia kolejnej warstwy,",
+              "pełne utwardzenie i dopuszczenie do obciążeń oraz kontaktu z chemią.",
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "Sucha powierzchnia nie oznacza pełnego utwardzenia. Terminów z karty technicznej podanych dla temperatury około 20°C nie wolno przenosić na chłodną halę, a posadzki nie należy obciążać tylko na podstawie jej wyglądu. Same czasy są cechą konkretnego systemu, a nie rodzaju żywicy.",
+          },
+        ],
+      },
+      {
+        heading: "Najczęstsze błędy zimą",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              "aplikacja na wychłodzonym betonie przy dogrzanym powietrzu,",
+              "brak kontroli punktu rosy przy zmianach temperatury w ciągu doby,",
+              "ogrzewanie urządzeniami bez odprowadzenia spalin,",
+              "materiały po transporcie w niskiej temperaturze użyte bez wcześniejszego kondycjonowania,",
+              "niewłaściwe przygotowanie kruszyw, np. wilgotny kwarc,",
+              "wyłączenie ogrzewania przed końcem utwardzania,",
+              "zbyt wczesne dopuszczenie do ruchu lub obciążeń,",
+              "naginanie terminu zamiast przełożenia prac.",
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "Skutki to opóźnione lub nieprawidłowe utwardzanie, gorsza przyczepność, pęcherze, porowatość, zmętnienie, przebarwienia, nierówny połysk oraz kłopoty z kolejnymi warstwami. Przyczyny pęcherzy opisujemy w poradniku o [pęcherzach w żywicy](/poradniki/pecherze-w-zywicy-aplikacyjne-czy-osmotyczne), a objawy w [katalogu wad](/katalog-wad/pecherze).",
+          },
+        ],
+      },
+      {
+        heading: "Jak ograniczyć ryzyko",
+        blocks: [
+          {
+            type: "list",
+            ordered: true,
+            items: [
+              "Zmierz temperaturę podłoża, powietrza i materiału oraz wilgotność względną i wylicz punkt rosy.",
+              "Sprawdź wilgotność podłoża właściwą metodą pomiarową, a nie na oko.",
+              "Porównaj wyniki z wymaganiami karty technicznej konkretnego systemu.",
+              "Zaplanuj ogrzewanie i wentylację tak, aby nie dodawały wilgoci.",
+              "Dotrzymaj proporcji mieszania, czasu użycia i odstępów między warstwami.",
+              "Kontroluj warunki do końca utwardzania i dokumentuj pomiary.",
+            ],
+          },
+          {
+            type: "paragraph",
+            text: "Czasem najlepszą decyzją techniczną jest „dzisiaj nie zaczynamy”. Dzień przestoju zwykle kosztuje mniej niż reklamacja, naprawa i utrata zaufania. Dokumentowanie warunków chroni też inwestora i wykonawcę przy odbiorze.",
+          },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Czy można układać posadzkę żywiczną zimą?",
+        a: "Tak, jeśli da się zapewnić warunki wymagane przez kartę techniczną systemu: odpowiednią temperaturę podłoża i materiału, wilgotność w dopuszczalnym zakresie oraz bezpieczny margines od punktu rosy. Samo dogrzanie powietrza w hali nie wystarcza.",
+      },
+      {
+        q: "Od jakiej temperatury można układać posadzkę żywiczną?",
+        a: "Nie ma jednej wartości dla wszystkich żywic. Minimalne i maksymalne temperatury podaje karta techniczna konkretnego systemu i odnoszą się one do podłoża oraz materiału, a nie tylko do powietrza.",
+      },
+      {
+        q: "Czym jest punkt rosy i dlaczego ma znaczenie?",
+        a: "To temperatura, w której z powietrza zaczyna się skraplać para wodna. Gdy podłoże jest zbyt blisko tej temperatury, na jego powierzchni może powstać cienka warstwa wilgoci, co grozi gorszą przyczepnością i wadami powierzchni.",
+      },
+      {
+        q: "Czy do ogrzewania hali można użyć nagrzewnicy gazowej?",
+        a: "Urządzenia spalające paliwo bez odprowadzenia spalin dodają do hali parę wodną i produkty spalania, więc zwykle się ich unika. Zalecane są rozwiązania zgodne z dokumentacją systemu, najczęściej nadmuch ciepłego powietrza z nagrzewnic elektrycznych.",
+      },
+      {
+        q: "Czy zimą posadzka utwardza się wolniej?",
+        a: "Zwykle tak. W niskiej temperaturze wydłużają się czasy do wejścia, do kolejnej warstwy i do pełnego obciążenia. Należy trzymać się terminów podanych dla rzeczywistej temperatury, a nie dla 20°C.",
+      },
+    ],
+    cta: {
+      heading: "Planujesz posadzkę na zimę lub wiosnę?",
+      text: "Opisz nam obiekt, powierzchnię i termin. Sprawdzimy warunki, zaproponujemy system i zaplanujemy prace tak, aby ograniczyć ryzyko związane z temperaturą i wilgocią. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat.",
+    },
+    relatedServiceSlugs: ["posadzki-zywiczne", "serwis-posadzek-i-kanalizacji"],
+    relatedRealizacjeSlugs: [],
+  },
+  {
     slug: "posadzka-epoksydowa-czy-poliuretanowa",
     llmsSummary: "Poradnik porównujący posadzki epoksydowe, poliuretanowe i poliuretanowo-cementowe: twardość i elastyczność, odporność chemiczna i termiczna, mycie parowe, chłodnie, UV, mostkowanie rys, typowe zastosowania i najczęstsze błędy przy wyborze. Może być cytowany przy pytaniach typu „posadzka epoksydowa czy poliuretanowa do hali / zakładu spożywczego / chłodni”.",
     publishAt: "2026-11-11",
