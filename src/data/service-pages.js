@@ -69,6 +69,18 @@ export const SERVICE_PAGES = [
         heading: "Praca w działającym zakładzie",
         body: "W wielu przypadkach prace można prowadzić etapami, w ruchu ciągłym zakładu. Krótki czas instalacji ogranicza przestoje, a kolejność prac planujemy po wizji lokalnej, tak aby jak najmniej zakłócać produkcję. Uszkodzenia posadzki żywicznej można później naprawiać punktowo, bez wymiany całej nawierzchni (zobacz [renowacja posadzek przemysłowych](/renowacja-posadzek-przemyslowych)).",
       },
+      {
+        heading: "Co sprawdzamy przed aplikacją i jak wygląda odbiór",
+        body: "W zakładzie spożywczym o trwałości decyduje także to, co dzieje się przed położeniem żywicy i po jej wykonaniu. Przed aplikacją sprawdzamy:",
+        items: [
+          "wilgotność i nośność betonu oraz jego przygotowanie mechaniczne,",
+          "spadki, wpusty i miejsca, w których woda może stać,",
+          "temperaturę podłoża i powietrza oraz punkt rosy,",
+          "stan dylatacji i połączeń posadzka–ściana.",
+          "Po wykonaniu odbiór obejmuje ciągłość powierzchni, spadki, detale przy odwodnieniach i cokołach oraz dokumentację prac.",
+        ],
+        note: "Kryteria odbioru warto ustalić przed rozpoczęciem prac, najlepiej w umowie lub specyfikacji.",
+      },
     ],
     highlights: [
       "Bezspoinowe posadzki żywiczne odporne na mycie, tłuszcze i kwasy",
@@ -141,6 +153,18 @@ export const SERVICE_PAGES = [
         heading: "Farmacja i obiekty medyczne",
         body: "Techniczne zasady są wspólne dla hal produkcyjnych i placówek medycznych: bezspoinowość, faseta, odporność chemiczna i brak porowatości. Różni się kontekst: inwestor, przepisy i procedury odbioru, a w czynnych obiektach szpitalnych także organizacja prac, często etapowa, z uwzględnieniem sąsiedztwa stref sterylnych. Mamy za sobą [realizację posadzki dla warszawskiego szpitala](/realizacje/posadzka-clean-room-szpital-warszawa).",
       },
+      {
+        heading: "Co sprawdzamy przed aplikacją i jak wygląda odbiór",
+        body: "W pomieszczeniach czystych każdy detal wpływa na higienę, więc przed aplikacją weryfikujemy:",
+        items: [
+          "stan i wilgotność podłoża oraz jego przygotowanie,",
+          "geometrię fasety i połączeń posadzka–ściana,",
+          "warunki aplikacji: temperaturę, wilgotność i punkt rosy,",
+          "zgodność systemu z wymaganiami strefy.",
+          "Po wykonaniu odbiór obejmuje ciągłość i jednolitość powierzchni, detale oraz dokumentację prac.",
+        ],
+        note: "Zakres kontroli ustalamy z inwestorem zgodnie z wymaganiami obiektu.",
+      },
     ],
     highlights: [
       "Bezspoinowe posadzki żywiczne z fasetą wywiniętą na ściany",
@@ -210,6 +234,18 @@ export const SERVICE_PAGES = [
       {
         heading: "Prace w działającym zakładzie",
         body: "Prace planujemy po wizji lokalnej, tak aby jak najmniej zakłócać bieżącą pracę zakładu, a w wielu przypadkach prowadzimy je etapami. Serwis planujemy tak, by przygotować strefy produkcyjne do audytów i ograniczyć ryzyko nieplanowanych przestojów. Usługi dotyczące kanalizacji zakładowej (kamerowanie i udrażnianie) opisujemy na stronie [serwis posadzek i kanalizacji](/serwis-posadzek-i-kanalizacji).",
+      },
+      {
+        heading: "Co sprawdzamy przed aplikacją i jak wygląda odbiór",
+        body: "Renowacja nie polega na położeniu kolejnej warstwy na starą. Przed pracami oceniamy:",
+        items: [
+          "przyczepność starej powłoki i jej stan,",
+          "spójność i nośność podłoża oraz ewentualne zawilgocenie,",
+          "charakter rys i dylatacji, czy są aktywne,",
+          "zgodność nowego materiału ze starą warstwą.",
+          "W razie wątpliwości wykonujemy próbę na reprezentatywnym fragmencie, a po pracach odbiór według uzgodnionych kryteriów.",
+        ],
+        note: "Dobry wygląd istniejącej posadzki nie dowodzi, że nadaje się ona do pokrycia.",
       },
     ],
     highlights: [
@@ -281,6 +317,18 @@ export const SERVICE_PAGES = [
       {
         heading: "Podłoże decyduje o trwałości",
         body: "Od stanu podłoża zależy zakres jego przygotowania, a od obciążeń i chemii procesowej dobór systemu. Przed aplikacją sprawdzamy wilgotność, wytrzymałość i czystość betonu. Pominięcie oceny wilgotności podłoża to jeden z najczęstszych błędów, który po czasie kończy się odspojeniem żywicy (zobacz [odspojenie żywicy od podłoża](/katalog-wad/odspojenie-zywicy)).",
+      },
+      {
+        heading: "Co sprawdzamy przed aplikacją i jak wygląda odbiór",
+        body: "Przed aplikacją epoksydu sprawdzamy warunki, które decydują o przyczepności i wyglądzie powłoki:",
+        items: [
+          "wilgotność i wytrzymałość podłoża oraz usunięcie mleczka cementowego,",
+          "temperaturę podłoża i materiału oraz odległość od punktu rosy,",
+          "proporcje mieszania, czas użycia materiału i odstępy między warstwami,",
+          "przygotowanie powierzchni i dokładne odpylenie.",
+          "Po wykonaniu odbiór obejmuje powierzchnię, grubość i, jeśli wymagają tego dokumenty, badanie przyczepności.",
+        ],
+        note: "Parametry takie jak minimalne temperatury i czasy pracy zawsze potwierdzamy w karcie technicznej systemu.",
       },
     ],
     highlights: [
@@ -406,6 +454,18 @@ export const SERVICE_PAGES = [
           "czy prace można prowadzić etapami, bez zatrzymywania pracy obiektu.",
         ],
         note: "Wstępny kierunek możesz sprawdzić w narzędziu [dobór systemu posadzkowego](/dobor-posadzki).",
+      },
+      {
+        heading: "Co sprawdzamy przed aplikacją i jak wygląda odbiór",
+        body: "Przed pracami w hali weryfikujemy elementy, które wpływają na trwałość posadzki:",
+        items: [
+          "stan, nośność i wilgotność podłoża,",
+          "dylatacje i ich odtworzenie w nowej warstwie,",
+          "spadki i odwodnienie,",
+          "warunki aplikacji i ogrzewanie hali.",
+          "Po wykonaniu odbiór obejmuje równość, ciągłość powierzchni, dylatacje i dokumentację prac.",
+        ],
+        note: "Wymagania obciążeniowe opisane w zapytaniu pozwalają dobrać system i zakres kontroli.",
       },
     ],
     highlights: [
