@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { FileText, CheckCircle2, ArrowRight } from "lucide-react";
@@ -6,6 +6,7 @@ import "../styles/contact-form.css";
 import { COLORS } from "../theme.js";
 import { sendMaterialLead } from "../utils/lead.js";
 import { track } from "../utils/analytics.js";
+import { checkSendAllowed, markSent } from "../utils/antispam.js";
 
 const PAGE_URL = "https://www.flowtex.pl/protokol-odbioru-posadzki";
 const FILE_URL = "/pliki/protokol-odbioru-posadzki-zywicznej.pdf";
@@ -27,6 +28,7 @@ export default function ProtokolOdbioru() {
   const [status, setStatus] = useState("idle"); // idle | sending | done
   const [error, setError] = useState("");
   const [emailed, setEmailed] = useState(false);
+  const openedAt = useRef(Date.now()); // do kontroli czasu wypełnienia (antyspam)
   const set = (k) => (e) => setF({ ...f, [k]: e.target.type === "checkbox" ? e.target.checked : e.target.value });
 
   const submit = async (e) => {
@@ -39,6 +41,12 @@ export default function ProtokolOdbioru() {
       setError("Zaznacz zgodę na przetwarzanie danych osobowych, aby pobrać materiał.");
       return;
     }
+    const guard = checkSendAllowed(openedAt.current);
+    if (!guard.ok) {
+      if (guard.reason === "too_fast") setStatus("done"); // bot: udajemy sukces
+      else setError(guard.message);
+      return;
+    }
     setStatus("sending");
     setError("");
     try {
@@ -46,6 +54,7 @@ export default function ProtokolOdbioru() {
         { name: f.name.trim(), company: f.company.trim(), email: f.email.trim() },
         { formId: "protokol-odbioru", resourceName: RESOURCE, resourceUrl: FILE_URL }
       );
+      markSent();
       setEmailed(res.emailed);
       setStatus("done");
     } catch (err) {

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../styles/contact-form.css";
 import { sendLead } from "../utils/lead.js";
 import { track } from "../utils/analytics.js";
+import { checkSendAllowed, markSent } from "../utils/antispam.js";
 
 // Wartości list wyboru. Etykiety trafiają do maila w czytelnej formie;
 // do GA4 idą te same wartości (bez danych osobowych).
@@ -98,6 +99,7 @@ export function ContactForm({
   // React dla checkboxów nasłuchuje kliknięć, więc bez tego zaznaczenie
   // zrobione przez agenta nie trafia do stanu i przy kolejnym renderze znika.
   const formRef = useRef(null);
+  const openedAt = useRef(Date.now()); // do kontroli czasu wypełnienia (antyspam)
   useEffect(() => {
     const el = formRef.current;
     if (!el) return undefined;
@@ -172,6 +174,17 @@ export function ContactForm({
       return;
     }
 
+    const guard = checkSendAllowed(openedAt.current);
+    if (!guard.ok) {
+      if (guard.reason === "too_fast") {
+        // Wysłane podejrzanie szybko (bot) — udajemy sukces, nic nie wysyłamy.
+        setSent(true);
+      } else {
+        setSendError(guard.message);
+      }
+      return;
+    }
+
     setSending(true);
     setSendError("");
 
@@ -184,6 +197,7 @@ export function ContactForm({
           trackParams: { request_type: f.type, industry: f.industry, area_range: f.area },
         }
       );
+      markSent();
       navigate("/dziekujemy", { state: { leadId } });
     } catch (err) {
       console.error("Błąd wysyłki formularza kontaktowego:", err);
