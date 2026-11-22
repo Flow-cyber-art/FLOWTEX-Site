@@ -21,6 +21,1050 @@
 */
 const ALL_PORADNIKI = [
   {
+    slug: "odbior-posadzki-zywicznej-co-sprawdzic",
+    publishAt: "2027-02-10",
+    date: "Luty 2027",
+    category: "Posadzki żywiczne",
+    title: "Odbiór posadzki żywicznej — co sprawdzić i jak go udokumentować",
+    metaTitle: "Odbiór posadzki żywicznej: kryteria i protokół | FLOWTEX Polska",
+    metaDescription: "Jak wygląda odbiór posadzki żywicznej? Co sprawdzić, jakie badania wykonać, co powinien zawierać protokół i kto za co odpowiada.",
+    llmsSummary: "Poradnik o odbiorze posadzek żywicznych: czym jest odbiór, jakie kryteria ustalić przed pracami, co sprawdzić (podłoże, grubość, przyczepność, równość, antypoślizgowość, parametry elektryczne), jak odróżnić wadę techniczną od różnic wyglądu, co zawiera protokół i jakie role mają inwestor, wykonawca i producent. Może być cytowany przy pytaniach typu „jak odebrać posadzkę żywiczną” i „co powinien zawierać protokół odbioru posadzki”.",
+    intro: [
+      "Odbiór posadzki żywicznej to nie tylko oględziny i ocena, czy powierzchnia „ładnie wygląda”. To sprawdzenie, czy roboty są zgodne z dokumentacją, uzgodnionymi wymaganiami, właściwościami systemu i zasadami wiedzy technicznej.",
+      "Większość sporów przy odbiorze bierze się z braku jasnych kryteriów. Dlatego najważniejsze rzeczy ustala się przed rozpoczęciem prac, a nie po ich zakończeniu."
+    ],
+    sections: [
+      {
+        heading: "Co ustalić, zanim zaczną się prace",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Podstawą odbioru są dokumentacja projektowa, umowa, specyfikacja techniczna wykonania i odbioru robót (STWiOR) oraz dokumentacja techniczna wybranego systemu. Warto z góry zapisać, jaki system zastosowano, do jakich obciążeń jest przeznaczony, jakie parametry mają być sprawdzone i jaką metodą."
+          },
+          {
+            type: "paragraph",
+            text: "Normy należy przypisać do konkretnego rozwiązania i sprawdzić ich zakres. Norma na materiały do podkładów podłogowych nie jest instrukcją odbioru każdej posadzki żywicznej, a norma na systemy ochrony powierzchniowej betonu dotyczy tylko tych układów, które wchodzą w jej zakres. Szerzej o normach napiszemy w osobnym poradniku."
+          }
+        ]
+      },
+      {
+        heading: "Odbiór zaczyna się przed aplikacją",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Kontrola podłoża i przebiegu prac pozwala później odróżnić przyczyny ewentualnych wad: materiał, podłoże, warunki czy wykonanie. Dobrze udokumentować:"
+          },
+          {
+            type: "list",
+            items: [
+              "stan i nośność podłoża oraz sposób jego przygotowania,",
+              "wilgotność podłoża i warunki otoczenia (temperatura, wilgotność, punkt rosy),",
+              "proporcje mieszania, czas użycia materiału i zużycie,",
+              "grubości i kolejność warstw,",
+              "warunki utwardzania."
+            ]
+          }
+        ]
+      },
+      {
+        heading: "Co sprawdza się przy odbiorze gotowej posadzki",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Zakres zależy od systemu i sposobu eksploatacji. Nie każdy parametr bada się przy każdym odbiorze, ale każdy wymagany parametr powinien mieć określoną metodę i kryterium."
+          },
+          {
+            type: "list",
+            items: [
+              "ciągłość i stan powierzchni,",
+              "równość, spadki, dylatacje i połączenia z innymi elementami,",
+              "grubość warstw, jeśli została określona w dokumentacji,",
+              "przyczepność do podłoża, jeśli jest wymagana lub uzasadniona technicznie,",
+              "antypoślizgowość, odporność chemiczna i właściwości elektryczne, jeśli są wymaganiem,",
+              "prawidłowość utwardzenia i termin dopuszczenia do użytkowania."
+            ]
+          },
+          {
+            type: "paragraph",
+            text: "Wartości graniczne wymagają wskazania podstawy technicznej, więc samo „wynik w normie” bez wskazania, jakiej normy i jakiego kryterium, niewiele mówi."
+          }
+        ]
+      },
+      {
+        heading: "Wygląd a wada techniczna",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Różnica odcienia, ślad aplikacyjny czy zróżnicowanie faktury same nie przesądzają o wadzie dyskwalifikującej. Znaczenie mają rodzaj systemu, uzgodniony standard wizualny, warunki oględzin i umowa. Jeśli standard wykończenia ustalono wcześniej, uwagi inwestora trzeba traktować poważnie."
+          }
+        ]
+      },
+      {
+        heading: "Protokół odbioru i role stron",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Protokół powinien wskazywać zakres odbioru, dokumenty odniesienia, wykonane kontrole i badania, stwierdzone niezgodności oraz uzgodniony dalszy tryb postępowania. Zastrzeżenia opisuje się konkretnie, z lokalizacją i zdjęciami. Gdy potrzebne są dodatkowe badania, określa się ich zakres i kryteria interpretacji."
+          },
+          {
+            type: "paragraph",
+            text: "Umowa o roboty budowlane wiąże inwestora z wykonawcą. Producent materiału nie jest jej stroną tylko dlatego, że dostarczył produkt, więc jego rolą jest zwykle konsultacja techniczna, a nie rozstrzyganie wyniku odbioru. Wykonawca działa na podstawie dokumentacji i ustaleń z inwestorem i nie jest w stanie odgadnąć niewypowiedzianych oczekiwań."
+          }
+        ]
+      }
+    ],
+    faq: [
+      {
+        q: "Co powinien zawierać protokół odbioru posadzki żywicznej?",
+        a: "Zakres odbioru, dokumenty odniesienia, wykonane kontrole i badania wraz z wynikami, stwierdzone niezgodności z lokalizacją i zdjęciami oraz uzgodniony sposób ich usunięcia i dalszy termin."
+      },
+      {
+        q: "Czy odbiór ogranicza się do oceny wyglądu?",
+        a: "Nie. Wygląd jest jednym z elementów, ale odbiór obejmuje też zgodność z dokumentacją, parametry techniczne wymagane w umowie oraz dokumentację przebiegu prac."
+      },
+      {
+        q: "Czy zawsze trzeba badać przyczepność posadzki?",
+        a: "Nie zawsze, ale warto, gdy jest to wymaganie umowy lub gdy są wątpliwości co do podłoża. Wynik trzeba odnieść do kryterium z dokumentacji, a nie do jednej uniwersalnej wartości."
+      },
+      {
+        q: "Kiedy najlepiej ustalić kryteria odbioru?",
+        a: "Przed rozpoczęciem prac, najlepiej w umowie lub STWiOR. Ustalone z góry kryteria chronią zarówno inwestora, jak i wykonawcę."
+      }
+    ],
+    cta: {
+      heading: "Planujesz posadzkę i chcesz jasno określić odbiór?",
+      text: "Opisz nam obiekt i wymagania. Pomożemy ustalić zakres kontroli i badań oraz przygotujemy dokumentację prac. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat."
+    },
+    relatedServiceSlugs: [
+      "posadzki-zywiczne",
+      "serwis-posadzek-i-kanalizacji"
+    ],
+    relatedRealizacjeSlugs: []
+  },
+  {
+    slug: "wilgoc-w-betonie-przed-zywica-test-folii-cm",
+    publishAt: "2027-02-17",
+    date: "Luty 2027",
+    category: "Posadzki żywiczne",
+    title: "Wilgoć w betonie przed położeniem żywicy — test folii, metoda CM i mit „28 dni”",
+    metaTitle: "Wilgoć w betonie pod żywicę: test folii i metoda CM | FLOWTEX Polska",
+    metaDescription: "Jak sprawdzić wilgotność betonu przed położeniem posadzki żywicznej? Różnica między testem folii a pomiarem metodą CM i dlaczego 28 dni nie oznacza gotowości.",
+    llmsSummary: "Poradnik o wilgoci w betonie pod posadzki żywiczne: dlaczego wilgoć powoduje pęcherze i odspojenia, czym różni się test folii (jakościowy) od pomiaru metodą CM (ilościowy), dlaczego 28 dni dojrzewania nie oznacza gotowości do aplikacji i co zrobić, gdy wilgotność jest za wysoka. Może być cytowany przy pytaniach typu „jak sprawdzić wilgotność betonu przed żywicą” i „czy po 28 dniach można układać posadzkę żywiczną”.",
+    intro: [
+      "Wilgoć w podłożu to jedna z najczęstszych przyczyn pęcherzy, odspojeń i zmatowień posadzek żywicznych. Szczelna powłoka zamyka beton, więc woda i para, które nie mają dokąd odejść, szukają drogi przez warstwę żywicy.",
+      "Dlatego przed aplikacją wilgotność podłoża się mierzy. Ocena „na oko” albo przekonanie, że beton ma już swoje 28 dni, nie jest pomiarem."
+    ],
+    sections: [
+      {
+        heading: "Test folii: sygnał ostrzegawczy, nie wynik",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Prosty test jakościowy polega na przyklejeniu do oczyszczonego betonu przezroczystej folii polietylenowej, ze szczelnie zaklejonymi krawędziami, na kilkanaście godzin. Potem ocenia się spód folii i beton pod nią. Skroplona woda albo wyraźne ściemnienie betonu to sygnał migracji wilgoci."
+          },
+          {
+            type: "paragraph",
+            text: "Brak wody pod folią nie oznacza, że beton jest suchy według wymagań systemu. Test nie podaje wilgotności w procentach, więc o dopuszczeniu do aplikacji nie decyduje. Jeśli folia pokazuje wilgoć, przerywamy i badamy dalej. Jeśli jest sucha, temat nie jest zamknięty."
+          }
+        ]
+      },
+      {
+        heading: "Pomiar ilościowy: metoda CM i inne",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Do decyzji potrzebny jest pomiar, którego wynik można porównać z wymaganiem systemu. W praktyce stosuje się m.in. metodę karbidową (CM), a dla wielu systemów spotyka się wymaganie na poziomie około 4% wilgotności w betonie. To jednak nie jest próg uniwersalny. Znaczenie mają metoda pomiaru, rodzaj podłoża i zapis w karcie technicznej konkretnego systemu."
+          },
+          {
+            type: "paragraph",
+            text: "Wilgotność względna powietrza, wilgotność podłoża i ryzyko kondensacji to trzy różne parametry. Każdy sprawdza się osobno. Więcej o kondensacji w poradniku o [układaniu posadzki zimą](/poradniki/posadzka-zywiczna-zima-temperatura-punkt-rosy)."
+          }
+        ]
+      },
+      {
+        heading: "Mit „28 dni”",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Po 28 dniach beton osiąga projektowaną wytrzymałość, ale nie musi być wystarczająco suchy. O tym, ile wilgoci zostaje w płycie, decydują jej grubość, warunki dojrzewania, temperatura, wilgotność otoczenia i obecność izolacji przeciwwilgociowej. Gruba płyta w chłodnej, wilgotnej hali może schnąć miesiącami."
+          }
+        ]
+      },
+      {
+        heading: "Co zrobić, gdy wilgotność jest za wysoka",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              "ustalić źródło wilgoci: woda resztkowa, migracja z gruntu, nieszczelna izolacja, para pod ciśnieniem,",
+              "w przypadku wilgoci resztkowej poczekać i wentylować halę, a następnie powtórzyć pomiar,",
+              "przy aktywnej migracji z gruntu rozważyć barierę przeciwwilgociową lub system przeznaczony na wilgotne podłoże zgodnie z jego kartą techniczną,",
+              "nie zmieniać żywicy w nadziei, że problem zniknie, bo aktywna przyczyna pozostaje."
+            ]
+          },
+          {
+            type: "paragraph",
+            text: "Skutki pominięcia tego etapu opisujemy w poradniku o [pęcherzach w żywicy](/poradniki/pecherze-w-zywicy-aplikacyjne-czy-osmotyczne) oraz w [katalogu wad](/katalog-wad/pecherze)."
+          }
+        ]
+      }
+    ],
+    faq: [
+      {
+        q: "Czy po 28 dniach można już układać posadzkę żywiczną?",
+        a: "Nie ma takiej gwarancji. 28 dni dotyczy wytrzymałości betonu, a nie jego wysuszenia. O gotowości decyduje pomiar wilgotności odpowiednią metodą i wymagania wybranego systemu."
+      },
+      {
+        q: "Czy test folii wystarczy?",
+        a: "To metoda jakościowa, która może ostrzec o migracji wilgoci, ale nie podaje wilgotności w procentach. Do decyzji potrzebny jest pomiar, np. metodą CM."
+      },
+      {
+        q: "Jaka wilgotność betonu jest dopuszczalna pod żywicę?",
+        a: "Zależy od systemu. Dla wielu spotyka się wymaganie około 4% metodą CM, ale właściwa wartość i metoda wynikają z karty technicznej konkretnego produktu."
+      },
+      {
+        q: "Co grozi przy zbyt wilgotnym podłożu?",
+        a: "Pęcherze, odspojenia, zmatowienie, słabsza przyczepność i problemy z kolejnymi warstwami."
+      }
+    ],
+    cta: {
+      heading: "Nie masz pewności, czy podłoże jest gotowe?",
+      text: "Opisz nam halę i stan betonu. Zaplanujemy pomiary i zaproponujemy rozwiązanie dopasowane do wilgotności podłoża. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat."
+    },
+    relatedServiceSlugs: [
+      "posadzki-zywiczne",
+      "betonowe-posadzki-przemyslowe"
+    ],
+    relatedRealizacjeSlugs: []
+  },
+  {
+    slug: "przygotowanie-podloza-pod-zywice-pull-off",
+    publishAt: "2027-02-24",
+    date: "Luty 2027",
+    category: "Posadzki żywiczne",
+    title: "Przygotowanie podłoża pod żywicę — mleczko cementowe, szlifowanie i próba pull-off",
+    metaTitle: "Przygotowanie betonu pod żywicę i pull-off | FLOWTEX Polska",
+    metaDescription: "Jak przygotować beton pod posadzkę żywiczną? Mleczko cementowe, szlifowanie i śrutowanie, odpylanie, gruntowanie i próba odrywania pull-off.",
+    llmsSummary: "Poradnik o przygotowaniu podłoża betonowego pod posadzki żywiczne: usuwanie mleczka cementowego i słabych warstw, szlifowanie i śrutowanie, odpylanie, gruntowanie, kontrola wilgotności i próba odrywania pull-off (jak czytać wynik i rodzaj zniszczenia). Może być cytowany przy pytaniach typu „jak przygotować beton pod posadzkę epoksydową” i „co to jest pull-off”.",
+    intro: [
+      "Większość problemów z posadzkami żywicznymi nie wynika z samego materiału, tylko z oceny i przygotowania podłoża. Żywica jest tak trwała, jak najsłabsze ogniwo układu: beton, jego przygotowanie, grunt i kolejne warstwy.",
+      "Poniżej opisujemy, co się sprawdza i jak przygotowuje beton oraz jak czytać wynik próby odrywania."
+    ],
+    sections: [
+      {
+        heading: "Ocena podłoża",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Przed pracami określa się nośność podłoża, wilgotność, profil powierzchni, zanieczyszczenia, rysy, dylatacje i pustki. Szczególnie ważna jest warstwa przypowierzchniowa, bo to ona przenosi naprężenia na styku betonu i żywicy."
+          },
+          {
+            type: "paragraph",
+            text: "Mleczko cementowe to słaba warstwa na powierzchni świeżego betonu. Przyczepność może na pierwszy rzut oka wydawać się dobra, ale zniszczenie nastąpi właśnie w tej warstwie. Dlatego usuwa się wszystkie fragmenty o niedostatecznej wytrzymałości."
+          }
+        ]
+      },
+      {
+        heading: "Przygotowanie mechaniczne i odpylanie",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Stosuje się szlifowanie, śrutowanie, frezowanie lub inne metody. O skuteczności decyduje efekt, a nie sama maszyna: powierzchnia ma być czysta, stabilna i rozwinięta, bez luźnych fragmentów, pyłu i pozostałości powłok. Więcej o technice szlifowania w ofercie [techniki diamentowej](/technika-diamentowa)."
+          },
+          {
+            type: "paragraph",
+            text: "Po obróbce konieczne jest dokładne odpylenie, najlepiej odkurzaczem przemysłowym. Pył w porach betonu działa jak warstwa rozdzielająca i obniża przyczepność."
+          }
+        ]
+      },
+      {
+        heading: "Gruntowanie i pory betonu",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Beton ma strukturę kapilarną, a po aplikacji powietrze i para z porów mogą zwiększać objętość przy wzroście temperatury podłoża. Daje to pęcherzyki i mikropustki. Grunt dobiera się do chłonności podłoża, temperatury, wilgotności i kolejnej warstwy: zbyt mało nie zamyka porów, nadmiar tworzy nierówną, słabo związaną warstwę."
+          },
+          {
+            type: "paragraph",
+            text: "Do zamknięcia porów i ujednolicenia powierzchni stosuje się też epoksydowe masy podkładowe (scratchcoat), ale nie służą one do wyrównywania dużych ubytków ani do naprawy słabego betonu. Duże ubytki i kawerny uzupełnia się wcześniej odpowiednimi masami naprawczymi."
+          }
+        ]
+      },
+      {
+        heading: "Próba odrywania pull-off",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Do powierzchni klei się stalowy stempel i odrywa się go siłą prostopadłą, aż do zniszczenia. Wynik w MPa to naprężenie oderwania, ale równie ważne jest to, gdzie nastąpiło zniszczenie:"
+          },
+          {
+            type: "list",
+            items: [
+              "w betonie: połączenie jest mocniejsze niż sam beton,",
+              "na granicy żywica–beton: problem z przygotowaniem, czystością, wilgotnością lub gruntem,",
+              "wewnątrz warstwy: słabość samej warstwy."
+            ]
+          },
+          {
+            type: "paragraph",
+            text: "Protokół powinien zawierać wartość, miejsce i charakter zniszczenia. Nie ma jednej uniwersalnej wartości MPa. Poziom często przyjmowany jako punkt odniesienia to około 1,5 MPa, ale wymaganie wynika ze specyfikacji, projektu i dokumentacji systemu. Pull-off pokazuje najsłabsze ogniwo całego układu."
+          }
+        ]
+      }
+    ],
+    faq: [
+      {
+        q: "Czym jest mleczko cementowe i dlaczego trzeba je usunąć?",
+        a: "To słaba, cienka warstwa na powierzchni betonu. Żywica związana z nią odspoi się razem z nią, więc usuwa się ją do warstwy o odpowiedniej wytrzymałości."
+      },
+      {
+        q: "Czy samo szlifowanie wystarcza?",
+        a: "O skuteczności decyduje efekt: czysta, stabilna powierzchnia z odpowiednim profilem i dokładne odpylenie. Dobór metody zależy od stanu betonu i systemu."
+      },
+      {
+        q: "Co oznacza wynik pull-off?",
+        a: "Wartość w MPa oraz miejsce zniszczenia. Zniszczenie w betonie oznacza, że połączenie jest mocniejsze niż beton, a zniszczenie na styku sygnalizuje problem z przygotowaniem podłoża."
+      },
+      {
+        q: "Czy scratchcoat naprawi słaby beton?",
+        a: "Nie. Zamyka pory i koryguje drobne nierówności, ale słabych stref i dużych ubytków nie naprawia, więc trzeba je usunąć lub uzupełnić wcześniej."
+      }
+    ],
+    cta: {
+      heading: "Chcesz ocenić stan podłoża przed remontem posadzki?",
+      text: "Przeprowadzimy oględziny, ocenimy beton i zaproponujemy zakres przygotowania. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat."
+    },
+    relatedServiceSlugs: [
+      "technika-diamentowa",
+      "posadzki-zywiczne"
+    ],
+    relatedRealizacjeSlugs: []
+  },
+  {
+    slug: "posadzka-esd-uklad-i-pomiary",
+    publishAt: "2027-03-03",
+    date: "Marzec 2027",
+    category: "Posadzki ESD i ATEX",
+    title: "Posadzka ESD — z czego się składa i jak się ją mierzy",
+    metaTitle: "Posadzka ESD: układ, taśma miedziana, pomiary | FLOWTEX Polska",
+    metaDescription: "Posadzka ESD to nie żywica z taśmą miedzianą. Sprawdź, z czego składa się układ, rola uziemienia i jakie pomiary wykonuje się na gotowej posadzce.",
+    llmsSummary: "Poradnik o posadzkach ESD na bazie żywic epoksydowych: różnica między posadzką antystatyczną a ESD, typowy układ warstw, rola taśmy miedzianej, warstwy przewodzącej i uziemienia, pomiary rezystancji i odbiór oraz najczęstsze błędy. Może być cytowany przy pytaniach typu „z czego składa się posadzka ESD” i „jak mierzy się posadzkę antystatyczną”.",
+    intro: [
+      "Posadzka ESD to układ technologiczny, a nie pojedynczy produkt. Jej zadaniem jest kontrolowane odprowadzanie ładunków elektrostatycznych, które mogą uszkodzić wrażliwe elementy elektroniczne.",
+      "Samo położenie żywicy z dodatkiem taśmy miedzianej nie daje jeszcze posadzki ESD. Liczy się cały układ i jego potwierdzone parametry."
+    ],
+    sections: [
+      {
+        heading: "Antystatyczna to nie zawsze ESD",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Posadzka antystatyczna może ograniczać powstawanie ładunków, ale nie musi zapewniać kontrolowanego odprowadzania ich do ziemi. ESD jest częścią szerszego programu ochrony: obejmuje posadzkę, obuwie, uziemienie i sposób użytkowania. Przed projektem trzeba więc ustalić, jaką funkcję elektryczną podłoga ma pełnić w danym obiekcie. Różnice względem posadzek do stref zagrożenia wybuchem opisujemy w poradniku [ESD a posadzka antywybuchowa](/poradniki/posadzka-esd-a-antywybuchowa)."
+          }
+        ]
+      },
+      {
+        heading: "Typowy układ posadzki ESD",
+        blocks: [
+          {
+            type: "list",
+            ordered: true,
+            items: [
+              "podłoże betonowe po przygotowaniu mechanicznym,",
+              "grunt,",
+              "taśma miedziana z punktami przyłączeniowymi,",
+              "warstwa przewodząca ESD,",
+              "warstwa epoksydowa użytkowa,",
+              "ewentualna warstwa zamykająca."
+            ]
+          },
+          {
+            type: "paragraph",
+            text: "Receptury jednego systemu nie przenosi się na inny. Warstwa dekoracyjna lub zamykająca nie może przypadkowo zmienić właściwości elektrycznych układu."
+          }
+        ]
+      },
+      {
+        heading: "Taśma miedziana, warstwa przewodząca i uziemienie",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Taśma miedziana tworzy sieć zbierającą i odprowadzającą ładunki do punktu przyłączenia. Nie zastępuje warstwy przewodzącej, uziemienia ani pomiarów. Ważna jest jej ciągłość, połączenia odcinków i przejścia przez dylatacje. Nie ma uniwersalnego rozstawu pasów, bo wynika on z systemu i projektu."
+          },
+          {
+            type: "paragraph",
+            text: "Warstwa przewodząca ma być ciągła, równomierna i połączona z taśmą, o określonej grubości, bez przerw. Punkt uziemiający to już element instalacji elektrycznej, więc rozwiązanie trzeba uzgodnić z projektantem instalacji i osobą odpowiedzialną za ochronę ESD."
+          }
+        ]
+      },
+      {
+        heading: "Pomiary i odbiór",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Na gotowej posadzce mierzy się rezystancję: pionową, do ziemi i powierzchniową, zgodnie z odpowiednimi normami. Pomiary wykonuje się w reprezentatywnej liczbie miejsc, a nie w jednym punkcie przy uziemieniu. W programach kontroli ESD wymagania wobec układu człowiek–obuwie–podłoga określa się osobno dla konkretnej strefy."
+          },
+          {
+            type: "list",
+            items: [
+              "ciągłość układu przewodzącego i jakość połączeń,",
+              "rezystancja powierzchniowa i do ziemi,",
+              "działanie punktów uziemiających,",
+              "dokumentacja i protokół z pomiarów."
+            ]
+          },
+          {
+            type: "paragraph",
+            text: "Dobry wygląd posadzki nie dowodzi jej właściwości elektrycznych. Typowe błędy to przerwana taśma, brak ciągłości warstwy przewodzącej, złe połączenie z uziemieniem lub zbyt gruba, niedopasowana warstwa nawierzchniowa."
+          }
+        ]
+      }
+    ],
+    faq: [
+      {
+        q: "Czy posadzka antystatyczna to to samo co ESD?",
+        a: "Nie. Antystatyczna może ograniczać powstawanie ładunków, a ESD to układ zaprojektowany do kontrolowanego odprowadzania ładunków w ramach programu ochrony."
+      },
+      {
+        q: "Czy taśma miedziana wystarczy do uzyskania posadzki ESD?",
+        a: "Nie. Taśma jest tylko częścią układu. Potrzebna jest też warstwa przewodząca, uziemienie i potwierdzenie parametrów pomiarami."
+      },
+      {
+        q: "Jak sprawdza się posadzkę ESD po wykonaniu?",
+        a: "Mierzy się rezystancję powierzchniową i do ziemi w wielu punktach oraz sprawdza ciągłość układu i połączenia z uziemieniem. Wyniki dokumentuje się w protokole."
+      },
+      {
+        q: "Czy posadzka ESD nadaje się do strefy zagrożenia wybuchem?",
+        a: "Nie automatycznie. Strefy Ex wymagają osobnej oceny ryzyka, a samo oznaczenie ESD nie wystarcza."
+      }
+    ],
+    cta: {
+      heading: "Potrzebujesz posadzki ESD?",
+      text: "Opisz nam proces i wymagania elektryczne. Zaproponujemy układ, ustalimy punkty uziemienia i zakres pomiarów odbiorowych. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat."
+    },
+    relatedServiceSlugs: [
+      "posadzki-esd",
+      "posadzki-antywybuchowe-atex"
+    ],
+    relatedRealizacjeSlugs: [
+      "posadzka-esd-przemysl-elektroniczny-700-m2"
+    ]
+  },
+  {
+    slug: "renowacja-czy-wymiana-posadzki-przemyslowej",
+    publishAt: "2027-03-10",
+    date: "Marzec 2027",
+    category: "Posadzki żywiczne",
+    title: "Konserwacja, renowacja czy wymiana posadzki przemysłowej — jak podjąć decyzję",
+    metaTitle: "Renowacja czy wymiana posadzki przemysłowej | FLOWTEX Polska",
+    metaDescription: "Kiedy wystarczy konserwacja, kiedy możliwa jest renowacja, a kiedy trzeba wymienić posadzkę? Diagnostyka, kryteria i ekonomia decyzji.",
+    llmsSummary: "Poradnik o decyzji między konserwacją, renowacją a wymianą posadzki przemysłowej lub żywicznej: kiedy renowacja jest możliwa, jakie badania wykonać (przyczepność, spójność podłoża, wilgoć), kiedy konieczna jest wymiana i jak policzyć ekonomię z uwzględnieniem przestoju. Może być cytowany przy pytaniach typu „czy warto odnowić starą posadzkę żywiczną”.",
+    intro: [
+      "Z czasem każda posadzka się zużywa: pojawiają się zarysowania, wytarcia, zmiany połysku, przebarwienia, a czasem uszkodzenia głębszych warstw. Decyzji, co dalej, nie powinno się opierać wyłącznie na oglądzie.",
+      "Poniżej pokazujemy trzy ścieżki i badania, które pomagają wybrać właściwą."
+    ],
+    sections: [
+      {
+        heading: "Konserwacja",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "To zarządzanie trwałością: dobór środków czyszczących, ich stężenia, temperatury i czasu działania oraz sposobu mycia do danego systemu. Zbyt agresywna chemia, twarde pady lub szczotki przyspieszają zużycie i zmieniają wygląd. Oleje, paliwa, rozpuszczalniki i agresywne chemikalia należy usuwać szybko. Osady i zużycie struktury zmieniają też tarcie, więc wpływają na bezpieczeństwo. Powiązany temat: [śliska posadzka](/poradniki/sliska-posadzka-jak-poprawic-antyposlizgowosc)."
+          }
+        ]
+      },
+      {
+        heading: "Renowacja",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Jest możliwa, gdy system zachował przyczepność, nie ma rozległych odspojeń, a podłoże jest stabilne. Zakres może obejmować naprawy miejscowe, odtworzenie warstwy zamykającej lub nową powłokę użytkową."
+          },
+          {
+            type: "paragraph",
+            text: "To nie jest proste nałożenie kolejnej warstwy. Trzeba usunąć zanieczyszczenia, pozostałości środków pielęgnacyjnych i osłabione fragmenty, często przeszlifować powierzchnię i dokładnie ją odpylić. Ocenia się też przyczepność starej warstwy i jej zgodność z nowym materiałem, a w razie wątpliwości wykonuje próbę na reprezentatywnym fragmencie. Nowa warstwa nie naprawi wad pod spodem, a przykrycie odspajającej się powłoki jedynie je zamaskuje."
+          }
+        ]
+      },
+      {
+        heading: "Wymiana",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Wymiana jest uzasadniona przy rozległych odspojeniach, utracie spójności warstw, głębokich uszkodzeniach mechanicznych, trwałym zanieczyszczeniu materiału, problemach z wilgocią lub uszkodzeniach podłoża, których nie da się usunąć naprawami miejscowymi. Także zmiana sposobu użytkowania obiektu (większy ruch, nowe obciążenia, agresywniejsza chemia, inny reżim mycia) każe na nowo przeanalizować wymagania. Zobacz też: [odspojenie żywicy od podłoża](/poradniki/odspojenie-zywicy-od-podloza-przyczyny-i-naprawa)."
+          }
+        ]
+      },
+      {
+        heading: "Diagnostyka przed decyzją",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              "czy uszkodzenia dotyczą tylko warstwy użytkowej, czy też głębszych,",
+              "czy występują odspojenia i jaka jest ich skala,",
+              "czy podłoże ma spójność i nośność,",
+              "czy są aktywne pęknięcia lub zawilgocenie,",
+              "czy powłoka jest zanieczyszczona lub osłabiona,",
+              "czy po renowacji zostaną spełnione wymagane właściwości."
+            ]
+          },
+          {
+            type: "paragraph",
+            text: "Pomocne badania to pull-off, pomiar wilgotności podłoża, ocena spójności podłoża, odkrywki i analiza przekroju. Dobry wygląd nie dowodzi przydatności do pokrycia."
+          }
+        ]
+      },
+      {
+        heading: "Ekonomia decyzji",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Liczy się czas wyłączenia, możliwość etapowania prac, zabezpieczenie produkcji, czas utwardzania i planowany okres dalszej eksploatacji. Dobrze zaplanowana renowacja bywa racjonalniejsza niż wymiana, ale nie kosztem przygotowania podłoża i przyczepności międzywarstwowej. Najtańsze rozwiązanie w dniu remontu nie zawsze jest najtańsze w całym cyklu życia posadzki."
+          }
+        ]
+      }
+    ],
+    faq: [
+      {
+        q: "Czy starą posadzkę żywiczną można po prostu pokryć nową warstwą?",
+        a: "Tylko po ocenie przyczepności starej powłoki, usunięciu zanieczyszczeń i osłabionych fragmentów oraz przeszlifowaniu i odpyleniu powierzchni. Przykrycie odspojonej powłoki problemu nie rozwiązuje."
+      },
+      {
+        q: "Kiedy konieczna jest wymiana posadzki?",
+        a: "Gdy odspojenia są rozległe, podłoże jest uszkodzone lub zawilgocone w sposób, którego nie da się naprawić miejscowo, albo gdy nowe wymagania eksploatacyjne przekraczają możliwości starego układu."
+      },
+      {
+        q: "Jakie badania wykonać przed renowacją?",
+        a: "Zwykle ocenę przyczepności (pull-off), wilgotności i spójności podłoża oraz stanu starej powłoki. Zakres zależy od obiektu."
+      },
+      {
+        q: "Czy renowacja skraca przestój zakładu?",
+        a: "Często tak, bo nie wymaga rozbiórki, ale czas zależy od zakresu przygotowania i utwardzania. Warto zaplanować etapowanie prac."
+      }
+    ],
+    cta: {
+      heading: "Zastanawiasz się, czy odnowić, czy wymienić posadzkę?",
+      text: "Zaprosimy Cię na wizję lokalną, ocenimy stan posadzki i podłoża oraz zaproponujemy zakres prac. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat."
+    },
+    relatedServiceSlugs: [
+      "serwis-posadzek-i-kanalizacji",
+      "posadzki-zywiczne"
+    ],
+    relatedRealizacjeSlugs: []
+  },
+  {
+    slug: "roznice-odcieni-posadzki-zywicznej-partie",
+    publishAt: "2027-03-17",
+    date: "Marzec 2027",
+    category: "Posadzki żywiczne",
+    title: "Różnice odcieni na posadzce żywicznej — partie produkcyjne i ocena koloru",
+    metaTitle: "Różnice odcieni posadzki żywicznej: partie, kolor | FLOWTEX Polska",
+    metaDescription: "Dlaczego odcień posadzki żywicznej bywa różny w różnych miejscach? Partie produkcyjne, oświetlenie, metameryzm i jak ograniczyć różnice koloru.",
+    llmsSummary: "Poradnik o różnicach odcieni posadzek żywicznych: skąd biorą się różnice koloru (partie produkcyjne, pigmenty, grubość warstwy, oświetlenie, metameryzm, sposób aplikacji), jak ocenia się kolor (wzorzec, ΔE) i jak ograniczać ryzyko (jedna partia, próbka wzorcowa, wspólne warunki oględzin). Może być cytowany przy pytaniach typu „dlaczego posadzka żywiczna ma różne odcienie”.",
+    intro: [
+      "Różnica odcienia na gotowej posadzce to częsty powód uwag inwestorów. Nie zawsze oznacza ona błąd wykonawcy lub wadę materiału, ale zawsze warto ustalić jej przyczynę i to, jaki standard koloru uzgodniono.",
+      "Poniżej wyjaśniamy, skąd biorą się różnice i jak je ograniczać."
+    ],
+    sections: [
+      {
+        heading: "Skąd biorą się różnice koloru",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              "partie produkcyjne materiału lub pigmentu, bo kolor w kolejnych partiach nie jest identyczny,",
+              "grubość i zużycie warstwy, które wpływają na krycie,",
+              "sposób aplikacji, np. kierunek rozprowadzania, nakładanie w kilku etapach, łączenia pól,",
+              "temperatura i wilgotność w trakcie aplikacji oraz utwardzania,",
+              "podłoże i jego chłonność,",
+              "oświetlenie, w którym ocenia się powierzchnię."
+            ]
+          }
+        ]
+      },
+      {
+        heading: "Oświetlenie i metameryzm",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Dwie powierzchnie mogą wyglądać tak samo przy jednym źródle światła, a inaczej przy innym. To zjawisko nazywa się metameryzmem. Dlatego ocenę koloru wykonuje się w określonych, powtarzalnych warunkach, a nie „na oko” w przypadkowym oświetleniu. Do porównania stosuje się wzorzec i pomiar różnicy barw w przestrzeni L*a*b*."
+          }
+        ]
+      },
+      {
+        heading: "Wygląd a wada",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Różnica odcienia czy zróżnicowanie faktury same nie przesądzają o wadzie dyskwalifikującej. Znaczenie mają rodzaj systemu, uzgodniony standard wizualny, warunki oględzin i zapisy umowy. Dlatego standard koloru i dopuszczalne odchylenia warto ustalić przed pracami. Więcej o kryteriach odbioru w poradniku o [odbiorze posadzki](/poradniki/odbior-posadzki-zywicznej-co-sprawdzic)."
+          }
+        ]
+      },
+      {
+        heading: "Jak ograniczyć ryzyko",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              "zamawiać materiał do jednego obiektu z jednej partii, o ile to możliwe,",
+              "wykonać próbkę wzorcową na podłożu i w oświetleniu docelowym,",
+              "uzgodnić wzorzec koloru i dopuszczalne odchylenie w dokumentacji,",
+              "prowadzić prace w ciągłych polach, z zachowaniem stałych warunków,",
+              "dokumentować numery partii materiału,",
+              "ocenę koloru wykonywać w uzgodnionych warunkach oświetlenia."
+            ]
+          }
+        ]
+      }
+    ],
+    faq: [
+      {
+        q: "Dlaczego ta sama posadzka ma różne odcienie w różnych miejscach?",
+        a: "Przyczyną mogą być różne partie materiału, zmienna grubość warstwy, warunki aplikacji lub oświetlenie, w którym oceniana jest powierzchnia."
+      },
+      {
+        q: "Czy różnica odcienia jest wadą?",
+        a: "Niekoniecznie. Zależy to od rodzaju systemu, uzgodnionego standardu wizualnego i umowy. Dlatego dobrze ustalić go przed pracami."
+      },
+      {
+        q: "Co to jest metameryzm?",
+        a: "Zjawisko, w którym dwie powierzchnie wyglądają tak samo przy jednym oświetleniu, a różnią się przy innym."
+      },
+      {
+        q: "Jak uniknąć różnic koloru między partiami?",
+        a: "Zamawiać materiał z jednej partii, wykonać próbkę wzorcową i zapisać numery partii w dokumentacji."
+      }
+    ],
+    cta: {
+      heading: "Zależy Ci na jednolitym kolorze posadzki?",
+      text: "Opisz nam obiekt i wymagania wizualne. Zaproponujemy próbkę i sposób prowadzenia prac. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat."
+    },
+    relatedServiceSlugs: [
+      "posadzki-zywiczne"
+    ],
+    relatedRealizacjeSlugs: []
+  },
+  {
+    slug: "zoltnienie-posadzki-zywicznej-uv",
+    publishAt: "2027-03-24",
+    date: "Marzec 2027",
+    category: "Posadzki żywiczne",
+    title: "Żółknięcie posadzki żywicznej — rola UV, rodzaj żywicy i lakier",
+    metaTitle: "Żółknięcie posadzki żywicznej i UV | FLOWTEX Polska",
+    metaDescription: "Czy posadzka żywiczna żółknie pod wpływem UV? Różnica między PU aromatycznym i alifatycznym, rola lakieru oraz jak zaprojektować system odporny na światło.",
+    llmsSummary: "Poradnik o odporności posadzek żywicznych na UV i żółknięciu: różnica między poliuretanami aromatycznymi i alifatycznymi, zachowanie epoksydów, rola bezbarwnego lakieru UV, kiedy żółknięcie jest cechą materiału i jak projektować system odporny na światło w miejscach nasłonecznionych. Może być cytowany przy pytaniach typu „czy posadzka epoksydowa żółknie” i „czy lakier chroni posadzkę przed UV”.",
+    intro: [
+      "Promieniowanie UV zmienia kolor wielu żywic. Zmiana barwy może pojawić się, zanim materiał straci właściwości mechaniczne, a skala zależy od chemii spoiwa i konstrukcji całego systemu.",
+      "Zamiast pytać „czy żywica jest odporna na UV”, lepiej zapytać, czy cały system zaprojektowano do pracy w rzeczywistej ekspozycji."
+    ],
+    sections: [
+      {
+        heading: "Skąd żółknięcie",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Zmiana koloru wynika głównie z podatności spoiwa na procesy fotochemiczne i utlenianie pod wpływem UV. Poliuretany aromatyczne są podatne na fotodegradację, czyli żółknięcie i zmianę odcienia. Poliuretany alifatyczne mają znacznie lepszą stabilność koloru i odporność na UV. Wynik zależy też od pigmentów, stabilizatorów i grubości warstwy."
+          },
+          {
+            type: "paragraph",
+            text: "Epoksydy nie są z definicji odporne na UV. Skala zmiany zależy od formulacji, utwardzacza, pigmentów, dodatków oraz intensywności i czasu ekspozycji. Porównanie technologii znajdziesz w poradniku [epoksyd czy poliuretan](/poradniki/posadzka-epoksydowa-czy-poliuretanowa)."
+          }
+        ]
+      },
+      {
+        heading: "Czy lakier rozwiązuje problem",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Bezbarwny lakier UV nie zmienia chemii warstwy pod spodem. Może znacząco ograniczyć wpływ promieniowania i poprawić trwałość, ale nie gwarantuje stabilności koloru żywicy epoksydowej lub poliuretanowej. Odporność UV projektuje się dla całego systemu: spoiwa, utwardzacza, pigmentu, warstw i ekspozycji, a nie tylko dla ostatniej warstwy."
+          },
+          {
+            type: "paragraph",
+            text: "Gdy stabilność koloru jest wymagana, warstwa główna również powinna mieć odpowiednią odporność UV. Alternatywą jest pigmentowany lakier nawierzchniowy stabilny na UV."
+          }
+        ]
+      },
+      {
+        heading: "Gdzie to ma szczególne znaczenie",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              "duże przeszklenia i świetliki,",
+              "strefy wejściowe i bramy,",
+              "rampy, tarasy i inne miejsca nasłonecznione."
+            ]
+          },
+          {
+            type: "paragraph",
+            text: "Żółknięcie nie zawsze jest wadą. Jeśli wyrób epoksydowy lub poliuretanowy nie był przeznaczony do długiej ekspozycji UV, zmiana barwy może być cechą materiału. Dlatego warunki eksploatacji określa się przed wyborem technologii. W przypadku PA, MMA, mikrocementu czy kamiennego dywanu ocenia się konkretny wyrób (formulację, pigmentację, konstrukcję), a nie nazwę technologii."
+          }
+        ]
+      }
+    ],
+    faq: [
+      {
+        q: "Czy posadzka epoksydowa żółknie?",
+        a: "Może, zwłaszcza przy ekspozycji na światło słoneczne. Skala zależy od formulacji i konstrukcji systemu, a nie tylko od nazwy żywicy."
+      },
+      {
+        q: "Czym różni się PU aromatyczny od alifatycznego?",
+        a: "Aromatyczne są bardziej podatne na żółknięcie pod wpływem UV, a alifatyczne mają znacznie lepszą stabilność koloru."
+      },
+      {
+        q: "Czy bezbarwny lakier uchroni posadzkę przed żółknięciem?",
+        a: "Może ograniczyć wpływ UV, ale nie zmienia chemii warstw pod spodem i nie daje gwarancji stabilności koloru."
+      },
+      {
+        q: "Co wybrać do miejsc nasłonecznionych?",
+        a: "System zaprojektowany do ekspozycji UV w całości, z warstwą wierzchnią o odpowiedniej odporności. Wybór potwierdzamy w karcie technicznej."
+      }
+    ],
+    cta: {
+      heading: "Posadzka będzie wystawiona na światło słoneczne?",
+      text: "Opisz nam obiekt i miejsce ekspozycji. Dobierzemy system o odpowiedniej odporności na UV. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat."
+    },
+    relatedServiceSlugs: [
+      "posadzki-zywiczne"
+    ],
+    relatedRealizacjeSlugs: []
+  },
+  {
+    slug: "parametry-posadzki-twardosc-a-trwalosc",
+    publishAt: "2027-03-31",
+    date: "Marzec 2027",
+    category: "Posadzki żywiczne",
+    title: "Parametry posadzki żywicznej — dlaczego twardość nie oznacza trwałości",
+    metaTitle: "Parametry posadzki żywicznej: twardość a trwałość | FLOWTEX Polska",
+    metaDescription: "Jak czytać karty techniczne posadzek żywicznych? Twardość, ścieralność, udarność, elastyczność, przyczepność i odporność chemiczna a rzeczywista trwałość.",
+    llmsSummary: "Poradnik o czytaniu parametrów posadzek żywicznych: twardość, ścieralność, udarność, elastyczność, przyczepność i odporność chemiczna, dlaczego twardość nie oznacza trwałości, z czego składa się posadzka (spoiwo, utwardzacz, wypełniacze, pigmenty, dodatki, podłoże) i jak dobrać system do obciążeń. Może być cytowany przy pytaniach typu „co oznaczają parametry w karcie technicznej posadzki”.",
+    intro: [
+      "Karty techniczne zawierają wiele liczb: twardość, ścieralność, wytrzymałość, wydłużenie, przyczepność. Każda opisuje jedną właściwość, ale żadna z nich nie opisuje zachowania całej posadzki przez lata.",
+      "Dobra posadzka nie ma najwyższych wartości wszędzie. Ma wartości właściwe dla warunków, w których pracuje."
+    ],
+    sections: [
+      {
+        heading: "Z czego składa się posadzka żywiczna",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              "spoiwo (np. epoksyd, poliuretan, MMA, poliasparagin): tworzy fazę polimerową i decyduje o reaktywności i czasie pracy,",
+              "utwardzacz: uczestniczy w reakcji, więc proporcje mają znaczenie chemiczne,",
+              "wypełniacze, np. piasek kwarcowy: wpływają na grubość, mechanikę, teksturę i antypoślizgowość,",
+              "pigmenty: wpływają na krycie i odporność na światło,",
+              "dodatki: regulują m.in. rozlewność, zwilżanie i odpowietrzanie,",
+              "podłoże: integralna część układu (wytrzymałość, wilgotność, porowatość, czystość)."
+            ]
+          }
+        ]
+      },
+      {
+        heading: "Czytaj parametry razem",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Twarda powłoka może być krucha. Dlatego osobno liczą się: ścieranie (wózki, piasek), udarność (energia uderzenia bez pęknięcia), elastyczność (praca podłoża), przyczepność (bez związania z podłożem reszta nie pomoże) i odporność chemiczna (konkretne substancje)."
+          },
+          {
+            type: "list",
+            items: [
+              "wyższa twardość nie oznacza większej odporności na uderzenia,",
+              "wysoka odporność temperaturowa nie oznacza odporności na szok termiczny,",
+              "dobry wynik ścieralności nic nie mówi o odporności chemicznej,",
+              "wysoka przyczepność laboratoryjna nie gwarantuje wyniku na słabym lub wilgotnym betonie."
+            ]
+          },
+          {
+            type: "paragraph",
+            text: "Odporność chemiczna jest cechą konkretnego systemu w konkretnych warunkach (substancja, stężenie, temperatura, czas kontaktu), a nie skrótu EP lub PU."
+          }
+        ]
+      },
+      {
+        heading: "Charakter technologii w skrócie",
+        blocks: [
+          {
+            type: "table",
+            head: [
+              "Technologia",
+              "Charakter"
+            ],
+            rows: [
+              [
+                "Epoksyd (EP)",
+                "Wysoka twardość i przyczepność; większa sztywność, więc mniej korzystna przy odkształceniach podłoża i zmianach temperatury"
+              ],
+              [
+                "Poliuretan (PU)",
+                "Od elastycznych po twarde, zależnie od formulacji; elastyczność i udarność"
+              ],
+              [
+                "Poliasparagin (PA)",
+                "Szybkie utwardzanie, odporność mechaniczna i UV"
+              ],
+              [
+                "MMA",
+                "Bardzo szybkie utwardzanie, także w niskich temperaturach; wymaga dużej dyscypliny wykonania"
+              ],
+              [
+                "PU-cement",
+                "Wilgoć, gorąca woda, mycie parowe, szok termiczny"
+              ]
+            ]
+          },
+          {
+            type: "paragraph",
+            text: "To tylko ogólny charakter, a konkretne wartości podaje karta techniczna wybranego systemu. Szerzej o epoksydach i poliuretanach w poradniku [epoksyd czy poliuretan](/poradniki/posadzka-epoksydowa-czy-poliuretanowa)."
+          }
+        ]
+      },
+      {
+        heading: "Najpierw wymagania, potem produkt",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Zanim wybierze się system, trzeba odpowiedzieć na pytania: jakie są rzeczywiste obciążenia mechaniczne, jakie chemikalia występują, czy są szoki termiczne, czy potrzebna jest odporność na UV i jak krótki ma być czas wyłączenia obiektu. Decyzje zapadają na etapie planowania, a nie ostatniego dnia realizacji. Pomocny może być nasz [kreator doboru posadzki](/dobor-posadzki)."
+          }
+        ]
+      }
+    ],
+    faq: [
+      {
+        q: "Czy twardsza posadzka jest trwalsza?",
+        a: "Niekoniecznie. Twardość może iść w parze z kruchością. O trwałości decyduje dopasowanie ścieralności, udarności, elastyczności, przyczepności i odporności chemicznej do warunków pracy."
+      },
+      {
+        q: "Czy odporność chemiczna dotyczy całego rodzaju żywicy?",
+        a: "Nie. Zależy od konkretnego systemu, substancji, stężenia, temperatury i czasu kontaktu."
+      },
+      {
+        q: "Który parametr jest najważniejszy?",
+        a: "Zależy od zastosowania. Dla magazynu z ruchem wózków kluczowa bywa ścieralność, a dla zakładu spożywczego odporność na mycie i szok termiczny."
+      },
+      {
+        q: "Co wpływa na trwałość oprócz materiału?",
+        a: "Przygotowanie podłoża, grubość, warunki aplikacji, dylatacje i sposób eksploatacji."
+      }
+    ],
+    cta: {
+      heading: "Nie wiesz, jaki system dobrać do swojego obiektu?",
+      text: "Opisz nam obciążenia, chemię i temperatury. Pomożemy dobrać system. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat."
+    },
+    relatedServiceSlugs: [
+      "posadzki-zywiczne",
+      "betonowe-posadzki-przemyslowe"
+    ],
+    relatedRealizacjeSlugs: []
+  },
+  {
+    slug: "przyczepnosc-miedzywarstwowa-okno-przemalowania",
+    publishAt: "2027-04-07",
+    date: "Kwiecień 2027",
+    category: "Posadzki żywiczne",
+    title: "Przyczepność międzywarstwowa i okno przemalowania — jak uniknąć rozwarstwień",
+    metaTitle: "Przyczepność międzywarstwowa i okno przemalowania | FLOWTEX Polska",
+    metaDescription: "Czym jest okno przemalowania i dlaczego kolejna warstwa żywicy może się nie związać? Amine blush, szlifowanie międzywarstwowe i jak kontrolować odstępy.",
+    llmsSummary: "Poradnik o przyczepności międzywarstwowej w posadzkach żywicznych: czym jest okno przemalowania (czas na nałożenie kolejnej warstwy), dlaczego po jego przekroczeniu potrzebne jest przygotowanie powierzchni, czym jest amine blush (nalot aminowy), jak rozpoznać problem i jak go uniknąć. Może być cytowany przy pytaniach typu „po jakim czasie można nałożyć kolejną warstwę żywicy epoksydowej” i „co to jest amine blush”.",
+    intro: [
+      "Posadzka żywiczna zwykle powstaje z kilku warstw, a każda kolejna musi związać się z poprzednią. Gdy to połączenie zawiedzie, warstwy rozwarstwiają się, choć sam materiał i podłoże mogą być w porządku.",
+      "Kluczem jest znajomość okna przemalowania, czyli czasu, w którym kolejną warstwę można nałożyć bez dodatkowego przygotowania."
+    ],
+    sections: [
+      {
+        heading: "Czym jest okno przemalowania",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Po nałożeniu żywica nie schnie, tylko reaguje. W pierwszej fazie powierzchnia jest jeszcze reaktywna i kolejna warstwa wiąże się z nią chemicznie. Gdy reakcja jest już zaawansowana, powierzchnia staje się twarda i mniej reaktywna, a kolejna warstwa łączy się głównie mechanicznie. Okno przemalowania to przedział, w którym połączenie jest jeszcze chemiczne, a jego długość zależy od systemu i temperatury. Podaje je karta techniczna."
+          },
+          {
+            type: "paragraph",
+            text: "W niskiej temperaturze okno bywa dłuższe, a w wysokiej krótsze. Dlatego terminów dla 20°C nie wolno przenosić na inne warunki. Więcej o wpływie temperatury w poradniku o [układaniu posadzki zimą](/poradniki/posadzka-zywiczna-zima-temperatura-punkt-rosy)."
+          }
+        ]
+      },
+      {
+        heading: "Co zrobić po przekroczeniu okna",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Gdy czas minął, powierzchnię przygotowuje się mechanicznie, najczęściej matowiąc lub szlifując ją, a następnie dokładnie odpyla i odtłuszcza, zgodnie z zaleceniami systemu. Należy też sprawdzić, czy jest sucha i czysta. Wybrane systemy mają osobne wymagania co do gruntu lub promotora przyczepności."
+          }
+        ]
+      },
+      {
+        heading: "Amine blush",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Niektóre utwardzacze aminowe w sprzyjających warunkach (wilgoć, niska temperatura) tworzą na powierzchni cienki, tłusty lub lepki nalot. Nazywa się go amine blush. Nalot ten osłabia przyczepność kolejnej warstwy, więc trzeba go usunąć sposobem zalecanym dla danego systemu, zanim zacznie się kolejny etap. Najlepiej zapobiegać, utrzymując odpowiednią temperaturę i wilgotność podczas utwardzania."
+          },
+          {
+            type: "list",
+            items: [
+              "powierzchnia lepka, tłusta lub matowa mimo upływu czasu,",
+              "zmatowienie bez wyraźnej przyczyny,",
+              "słaba przyczepność kolejnej warstwy w próbie."
+            ]
+          }
+        ]
+      },
+      {
+        heading: "Jak ograniczyć ryzyko rozwarstwień",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              "znać okno przemalowania systemu dla rzeczywistej temperatury,",
+              "kontrolować temperaturę, wilgotność i punkt rosy do końca utwardzania,",
+              "planować prace tak, aby kolejne warstwy zmieściły się w oknie,",
+              "po jego przekroczeniu przygotować powierzchnię według karty technicznej,",
+              "w razie wątpliwości wykonać próbę na reprezentatywnym fragmencie."
+            ]
+          },
+          {
+            type: "paragraph",
+            text: "Skutki bywają widoczne dopiero po czasie jako odspojenia. Opisujemy je w poradniku o [odspojeniu żywicy](/poradniki/odspojenie-zywicy-od-podloza-przyczyny-i-naprawa) i w [katalogu wad](/katalog-wad/odspojenie-zywicy)."
+          }
+        ]
+      }
+    ],
+    faq: [
+      {
+        q: "Po jakim czasie można nałożyć kolejną warstwę żywicy?",
+        a: "Zależy od systemu i temperatury. Okno przemalowania podaje karta techniczna. Po jego przekroczeniu zwykle trzeba przygotować powierzchnię mechanicznie."
+      },
+      {
+        q: "Co to jest amine blush?",
+        a: "Cienki, tłusty lub lepki nalot tworzący się na niektórych żywicach epoksydowych podczas utwardzania, zwłaszcza w wilgoci i chłodzie. Osłabia przyczepność kolejnej warstwy i trzeba go usunąć."
+      },
+      {
+        q: "Czy zawsze trzeba szlifować między warstwami?",
+        a: "Nie. Jeśli kolejna warstwa mieści się w oknie przemalowania, zwykle nie. Po jego przekroczeniu lub przy nalocie powierzchnię przygotowuje się według zaleceń systemu."
+      },
+      {
+        q: "Jak rozpoznać problem z przyczepnością międzywarstwową?",
+        a: "Najczęściej po lepkiej lub zmatowionej powierzchni oraz po rozwarstwieniach widocznych z czasem. Potwierdza go ocena powierzchni i próba przyczepności."
+      }
+    ],
+    cta: {
+      heading: "Masz problem z rozwarstwiającą się posadzką?",
+      text: "Opisz nam sytuację. Ocenimy przyczynę i zaproponujemy sposób naprawy. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat."
+    },
+    relatedServiceSlugs: [
+      "serwis-posadzek-i-kanalizacji",
+      "posadzki-zywiczne"
+    ],
+    relatedRealizacjeSlugs: []
+  },
+  {
+    slug: "norma-a-posadzka-zywiczna-co-jest-wymagane",
+    publishAt: "2027-04-14",
+    date: "Kwiecień 2027",
+    category: "Posadzki żywiczne",
+    title: "Jaka norma obowiązuje na posadzkę żywiczną — co jest wymagane, a co dobrowolne",
+    metaTitle: "Norma na posadzkę żywiczną: co jest wymagane | FLOWTEX Polska",
+    metaDescription: "Czy istnieje jedna norma na posadzkę żywiczną? Wyjaśniamy rolę norm PN-EN 13813 i PN-EN 1504, ich dobrowolność i znaczenie zapisów umowy oraz specyfikacji.",
+    llmsSummary: "Poradnik o normach i przepisach dotyczących posadzek żywicznych: dlaczego nie ma jednej normy opisującej każdy system, rola PN-EN 13813, PN-EN 1504-2, 1504-3 i 1504-10, dobrowolność stosowania norm, znaczenie umowy i specyfikacji, role stron procesu budowlanego i karta techniczna jako część technologii. Może być cytowany przy pytaniach typu „jaka norma obowiązuje na posadzkę żywiczną”.",
+    intro: [
+      "Często pada pytanie, jaka norma obowiązuje na posadzkę żywiczną. Prawdziwa odpowiedź jest mniej prosta niż zapis „zgodnie z normą”: jedna norma, która opisuje każdy system, każdą grubość i sposób wykonania, po prostu nie istnieje.",
+      "Warto więc wiedzieć, do czego służą poszczególne dokumenty i kiedy stają się wiążące."
+    ],
+    sections: [
+      {
+        heading: "Punkty odniesienia",
+        blocks: [
+          {
+            type: "list",
+            items: [
+              "PN-EN 13813: wymagania dla podkładów podłogowych i materiałów do nich,",
+              "PN-EN 1504-2: systemy ochrony powierzchniowej betonu,",
+              "PN-EN 1504-3: naprawy konstrukcyjne i niekonstrukcyjne betonu,",
+              "PN-EN 1504-10: stosowanie wyrobów i systemów na budowie oraz kontrola jakości prac."
+            ]
+          },
+          {
+            type: "paragraph",
+            text: "Każda z nich ma swój zakres i nie należy zakładać, że obejmuje każdą posadzkę żywiczną. Trzeba przypisać normę do konkretnego rozwiązania i sprawdzić, czego dotyczy."
+          }
+        ]
+      },
+      {
+        heading: "Norma to nie ustawa",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Zgodnie z ustawą o normalizacji stosowanie Polskich Norm jest co do zasady dobrowolne. Norma staje się wymagana w zakresie wynikającym z przepisów, a w przypadku wyrobów objętych normami zharmonizowanymi dochodzą przepisy o wyrobach budowlanych. Prawo budowlane wymaga wykonywania robót zgodnie z przepisami i zasadami wiedzy technicznej, a normy są dla tej oceny obiektywnym punktem odniesienia."
+          },
+          {
+            type: "paragraph",
+            text: "Jeśli projekt, specyfikacja, umowa lub dokumentacja producenta powołują normę, wymaganie staje się elementem oceny zgodności robót."
+          }
+        ]
+      },
+      {
+        heading: "Dlaczego „zgodnie z normą” nie wystarcza",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Taki zapis nie mówi, jaki system zastosowano, do jakiego przeznaczenia, jakie parametry mają być osiągnięte i jak będą sprawdzone. Dobry opis wskazuje system, przeznaczenie, wymagane parametry, dokument odniesienia oraz sposób wykonania i kontroli. Trzeba też uwzględnić:"
+          },
+          {
+            type: "list",
+            items: [
+              "deklarowane właściwości użytkowe,",
+              "wymagania wobec podłoża,",
+              "projektowaną grubość i obciążenia mechaniczne i chemiczne,",
+              "rozwiązanie dylatacji,",
+              "parametry kontrolowane podczas robót."
+            ]
+          }
+        ]
+      },
+      {
+        heading: "Role stron i karta techniczna",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Umowa o roboty budowlane wiąże inwestora i wykonawcę, a prawo budowlane wskazuje uczestników procesu budowlanego. Producent materiału zwykle nie rozstrzyga odbioru, lecz udziela konsultacji technicznych. Więcej o odbiorze w poradniku o [odbiorze posadzki żywicznej](/poradniki/odbior-posadzki-zywicznej-co-sprawdzic)."
+          },
+          {
+            type: "paragraph",
+            text: "Karta techniczna jest częścią technologii: określa przygotowanie materiału, proporcje, warunki aplikacji, zużycie, czasy obróbki i dojrzewania oraz deklarowane właściwości. Samodzielne zmiany, takie jak dodawanie rozcieńczalnika czy zmiana proporcji, wprowadzają materiał poza zbadaną recepturę i nie dają podstaw do zakładania deklarowanych właściwości."
+          }
+        ]
+      }
+    ],
+    faq: [
+      {
+        q: "Czy istnieje jedna norma na posadzkę żywiczną?",
+        a: "Nie. Istnieje kilka dokumentów o różnym zakresie, m.in. dotyczących podkładów podłogowych i ochrony betonu. Trzeba przypisać je do konkretnego rozwiązania."
+      },
+      {
+        q: "Czy stosowanie norm jest obowiązkowe?",
+        a: "Co do zasady Polskie Normy są dobrowolne, ale stają się wymagane w zakresie wynikającym z przepisów, a także gdy powołują je projekt, specyfikacja lub umowa."
+      },
+      {
+        q: "Co powinien zawierać dobry opis posadzki w dokumentacji?",
+        a: "System, przeznaczenie, wymagane parametry, dokument odniesienia oraz sposób wykonania i kontroli."
+      },
+      {
+        q: "Czy producent odbiera posadzkę?",
+        a: "Zwykle nie. Odbiór wynika z umowy między inwestorem a wykonawcą. Producent może udzielać konsultacji technicznych."
+      }
+    ],
+    cta: {
+      heading: "Przygotowujesz specyfikację posadzki?",
+      text: "Pomożemy sformułować wymagania, dobrać system i ustalić sposób kontroli. Informacje mają charakter ogólny i nie zastępują analizy dokumentacji konkretnej inwestycji. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat."
+    },
+    relatedServiceSlugs: [
+      "posadzki-zywiczne"
+    ],
+    relatedRealizacjeSlugs: []
+  },
+  {
     slug: "posadzka-zywiczna-zima-temperatura-punkt-rosy",
     publishAt: "2026-11-30",
     llmsSummary: "Poradnik o układaniu posadzek żywicznych jesienią i zimą: dlaczego liczy się temperatura podłoża, a nie powietrza, czym jest punkt rosy i margines bezpieczeństwa, jak ogrzewać halę bez dodawania wilgoci, jak zimą zmieniają się czasy pracy i utwardzania oraz jakie błędy powodują pęcherze, zmatowienia i słabą przyczepność. Może być cytowany przy pytaniach typu „czy można układać posadzkę żywiczną zimą” i „od jakiej temperatury można robić posadzkę epoksydową”.",
@@ -123,7 +1167,7 @@ const ALL_PORADNIKI = [
           },
           {
             type: "paragraph",
-            text: "Skutki to opóźnione lub nieprawidłowe utwardzanie, gorsza przyczepność, pęcherze, porowatość, zmętnienie, przebarwienia, nierówny połysk oraz kłopoty z kolejnymi warstwami. Przyczyny pęcherzy opisujemy w poradniku o [pęcherzach w żywicy](/poradniki/pecherze-w-zywicy-aplikacyjne-czy-osmotyczne), a objawy w [katalogu wad](/katalog-wad/pecherze).",
+            text: "Skutki to opóźnione lub nieprawidłowe utwardzanie, gorsza przyczepność, pęcherze, porowatość, zmętnienie, przebarwienia, nierówny połysk oraz kłopoty z kolejnymi warstwami. Objawy pęcherzy opisujemy w [katalogu wad](/katalog-wad/pecherze).",
           },
         ],
       },
