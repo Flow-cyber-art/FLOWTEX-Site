@@ -232,8 +232,9 @@ function znajdzPoradnik(rawArgs) {
 function protokolInfo() {
   return [
     "Protokół odbioru posadzki żywicznej — wzór do wypełnienia (PDF, 3 strony A4): dane obiektu i systemu, warunki aplikacji, kontrola podłoża, kontrola powierzchni (wygląd, przyczepność, grubość), dokumentacja, wynik odbioru i podpisy stron.",
-    `Strona z formularzem (materiał wysyłany na e-mail): ${HOST}/protokol-odbioru-posadzki`,
-    `Bezpośredni plik PDF: ${HOST}/pliki/protokol-odbioru-posadzki-zywicznej.pdf`,
+    // Celowo bez bezpośredniego linku do PDF: materiał jest udostępniany po
+    // podaniu adresu e-mail w formularzu (lead magnet).
+    `Pobranie: po podaniu imienia, firmy i adresu e-mail w formularzu na stronie ${HOST}/protokol-odbioru-posadzki — link do PDF przychodzi e-mailem i pojawia się po wysłaniu formularza.`,
     `Poradnik o odbiorze: ${HOST}/poradniki/odbior-posadzki-zywicznej-co-sprawdzic`,
     "Wzór ma charakter pomocniczy i nie zastępuje umowy ani wymagań karty technicznej systemu.",
     CONTACT,

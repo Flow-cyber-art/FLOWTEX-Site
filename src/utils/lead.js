@@ -19,6 +19,22 @@ function describeTouch(t) {
   return parts.join(" · ");
 }
 
+// Zapis leada do arkusza Google przez /api/lead (api/lead.js). Nie czekamy na
+// wynik i nie przerywamy formularza przy błędzie — mail EmailJS idzie niezależnie.
+// keepalive: żądanie dokończy się nawet po przejściu na stronę /dziekujemy.
+function saveLead(lead) {
+  try {
+    fetch("/api/lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(lead),
+      keepalive: true,
+    }).catch(() => {});
+  } catch {
+    // brak fetch/keepalive — pomijamy, lead i tak idzie mailem
+  }
+}
+
 /**
  * Wysyła zapytanie: mail do firmy (z blokiem "Źródło zapytania") i potwierdzenie
  * do klienta (bez tego bloku). Po sukcesie zgłasza zdarzenie `generate_lead`.
@@ -58,6 +74,19 @@ export async function sendLead(form, { formId, context = "", trackParams = {} } 
     lead_page_url: pageUrl,
     lead_first_source: first ? `${first.source} / ${first.medium}` : "",
   };
+
+  saveLead({
+    lead_id: id,
+    form_id: formId,
+    name: form.name,
+    company: form.company,
+    email: form.email,
+    phone: form.phone,
+    message: form.message, // zawiera już kontekst i dane o obiekcie (ContactForm)
+    page_url: pageUrl,
+    source: describeTouch(session),
+    first_source: sameTouch ? "" : describeTouch(first),
+  });
 
   // @emailjs/browser jest potrzebny wyłącznie w momencie wysyłki — ładujemy
   // go dynamicznie zamiast dołączać do głównego bundla.
@@ -120,6 +149,18 @@ export async function sendMaterialLead(form, { formId, resourceName, resourceUrl
     resource_name: resourceName,
     download_url: downloadUrl,
   };
+
+  saveLead({
+    lead_id: id,
+    form_id: formId,
+    resource: resourceName,
+    name: form.name,
+    company: form.company,
+    email: form.email,
+    page_url: pageUrl,
+    source: describeTouch(session),
+    first_source: sameTouch ? "" : describeTouch(first),
+  });
 
   const { default: emailjs } = await import("@emailjs/browser");
   const opts = { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY };

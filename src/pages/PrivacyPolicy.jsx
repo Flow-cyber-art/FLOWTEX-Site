@@ -23,7 +23,7 @@ const SECTIONS = [
   },
   {
     heading: "5. Odbiorcy danych",
-    body: "Dane osobowe mogą być powierzane podmiotom świadczącym na rzecz administratora usługi techniczne, w tym usługi hostingu strony internetowej oraz obsługi poczty elektronicznej wykorzystywanej do przesyłania wiadomości z formularza kontaktowego. Dane nie są przekazywane do państw trzecich ani organizacji międzynarodowych, chyba że wynika to z lokalizacji dostawcy usługi poczty elektronicznej — w takim przypadku transfer odbywa się z zapewnieniem odpowiedniego poziomu ochrony danych zgodnie z wymogami RODO.",
+    body: "Dane osobowe mogą być powierzane podmiotom świadczącym na rzecz administratora usługi techniczne, w tym usługi hostingu strony internetowej, obsługi poczty elektronicznej wykorzystywanej do przesyłania wiadomości z formularzy oraz przechowywania zgłoszeń z formularzy w arkuszu kalkulacyjnym (Google). Dane nie są przekazywane do państw trzecich ani organizacji międzynarodowych, chyba że wynika to z lokalizacji dostawcy usługi poczty elektronicznej lub przechowywania danych — w takim przypadku transfer odbywa się z zapewnieniem odpowiedniego poziomu ochrony danych zgodnie z wymogami RODO.",
   },
   {
     heading: "6. Prawa osoby, której dane dotyczą",
