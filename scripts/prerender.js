@@ -39,6 +39,7 @@ const routes = [
   "/katalog-wad",
   ...DEFECTS.map((d) => `/katalog-wad/${d.id}`),
   "/dobor-posadzki",
+  "/kalkulator-punktu-rosy",
   "/kontakt",
   "/o-firmie",
   "/dziekujemy",

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { COLORS, ACCENT_TEXT } from "../theme.js";
 import { Link } from "react-router-dom";
-import { Layers, Phone, Mail, Menu, X, ChevronDown, Wrench, Search, ListChecks, Linkedin, Facebook, MapPin } from "lucide-react";
+import { Layers, Phone, Mail, Menu, X, ChevronDown, Wrench, Search, ListChecks, Thermometer, Linkedin, Facebook, MapPin } from "lucide-react";
 import { OFFER_GROUPS } from "../data/services.js";
 import CookieNotice from "./CookieNotice.jsx";
 import ContactFab from "./ContactFab.jsx";
@@ -21,6 +21,7 @@ const NAV_LINKS = [
 const TOOL_LINKS = [
   { href: "/dobor-posadzki", label: "Dobór posadzki", desc: "Odpowiedz na pytania, poznaj dopasowanie %", icon: ListChecks },
   { href: "/katalog-wad", label: "Katalog wad", desc: "Rozpoznaj objaw, poznaj przyczynę i naprawę", icon: Search },
+  { href: "/kalkulator-punktu-rosy", label: "Kalkulator punktu rosy", desc: "Sprawdź margines przed aplikacją żywicy", icon: Thermometer },
 ];
 
 // Linki w NAV_LINKS mieszają dwa typy: kotwice na stronie głównej ("/#sekcja")
