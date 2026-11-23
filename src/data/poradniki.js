@@ -1973,6 +1973,10 @@ const ALL_PORADNIKI = [
             type: "paragraph",
             text: "Nośność zapewnia płyta betonowa. Żywica tej nośności nie zastępuje — dlatego w obiektach o dużych obciążeniach pytanie brzmi zwykle nie „żywiczna czy betonowa”, lecz „jaka płyta i czy dodać powłokę”.",
           },
+          {
+            type: "paragraph",
+            text: "W magazynie spożywczym poszczególne strefy mogą potrzebować różnych wykończeń. W suchej strefie składowania sprawdzi się odpowiednio zaprojektowany beton. W strefach mytych gorącą wodą, narażonych na szoki termiczne lub częsty kontakt z tłuszczami, warto rozważyć [posadzkę poliuretanowo-cementową](/posadzki-poliuretanowe). Dobór zależy od temperatury, chemii i obciążeń w konkretnym miejscu.",
+          },
         ],
       },
       {

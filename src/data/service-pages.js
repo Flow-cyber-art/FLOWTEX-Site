@@ -372,7 +372,7 @@ export const SERVICE_PAGES = [
       },
       {
         heading: "Poliuretan-cement: gdy jest gorąco i mokro",
-        body: "W zakładach mięsnych, mleczarniach i przetwórniach posadzka codziennie przechodzi mycie gorącą wodą, często parą, a do tego ma kontakt z tłuszczami, kwasami organicznymi i krwią. W takich warunkach stosuje się systemy poliuretanowo-cementowe o grubości kilku milimetrów, które znoszą szoki termiczne, wysoką temperaturę i agresywną chemię spożywczą. Więcej w opisie [posadzek dla przemysłu spożywczego](/posadzki-dla-przemyslu-spozywczego).",
+        body: "W zakładach mięsnych, mleczarniach i przetwórniach posadzka codziennie przechodzi mycie gorącą wodą, często parą, a do tego ma kontakt z tłuszczami, kwasami organicznymi i krwią. W takich warunkach stosuje się systemy poliuretanowo-cementowe o grubości kilku milimetrów, które znoszą szoki termiczne, wysoką temperaturę i agresywną chemię spożywczą. Zobacz [naprawę posadzki PU-cement przy odpływach w zakładzie spożywczym](/realizacje/serwis-posadzki-przy-odplywach-zaklad-spozywczy-mazowieckie). Więcej o doborze systemu znajdziesz w opisie [posadzek dla przemysłu spożywczego](/posadzki-dla-przemyslu-spozywczego).",
       },
       {
         heading: "Poliuretan a poliuretan-cement",

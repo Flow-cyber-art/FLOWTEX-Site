@@ -220,7 +220,20 @@ export const REALIZACJE = [
           },
           {
             type: "paragraph",
-            text: "Przy tego typu pracach istotne jest nie tylko prawidłowe wykonanie poszczególnych warstw, ale również kontrola całej powierzchni po zakończeniu prac — to pomiary i dokumentacja pozwalają zweryfikować, czy wykonany system osiągnął wymagane parametry.",
+            text: "Po zakończeniu prac pod Grójcem sprawdzono parametry elektryczne gotowej posadzki.",
+          },
+        ],
+      },
+      {
+        heading: "Co sprawdza się przy odbiorze posadzki w strefie Ex?",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Kryteria odbioru posadzki wynikają z oceny ryzyka wybuchu i dokumentacji obiektu. Przy ocenie odprowadzania ładunków uwzględnia się rezystancję posadzki do uziemienia oraz jej połączenie z instalacją uziemiającą. Wytyczne dotyczące zagrożeń elektrostatycznych opisuje IEC TS 60079-32-1, a metody badań określa IEC 60079-32-2.",
+          },
+          {
+            type: "paragraph",
+            text: "Pomiary posadzki są jednym z elementów oceny. Przed pierwszym udostępnieniem miejsca pracy przepisy wymagają odrębnej weryfikacji ogólnego zabezpieczenia przed wybuchem.",
           },
         ],
       },
@@ -474,6 +487,19 @@ export const REALIZACJE = [
           {
             type: "paragraph",
             text: "Przy systemach ESD szczególnie istotne jest prawidłowe wykonanie warstwy przewodzącej i jej połączenie z uziemieniem — nieprawidłowo wykonany detal może wpłynąć na działanie całego systemu, nawet jeśli sama powierzchnia wygląda poprawnie.",
+          },
+        ],
+      },
+      {
+        heading: "Kontrola posadzki ESD po wykonaniu",
+        blocks: [
+          {
+            type: "paragraph",
+            text: "Po zakończeniu prac sprawdzono parametry elektryczne gotowej posadzki ESD o powierzchni 700 m².",
+          },
+          {
+            type: "paragraph",
+            text: "Kryteria oceny posadzki wynikają z programu kontroli ESD obowiązującego w obiekcie. IEC 61340-5-1 opisuje wymagania programu, a IEC 61340-4-1 metody pomiaru rezystancji posadzki, w tym rezystancji do ziemi. Gdy posadzka i obuwie służą do uziemiania personelu, osobno ocenia się działanie układu człowiek, obuwie i posadzka według IEC 61340-4-5.",
           },
         ],
       },
