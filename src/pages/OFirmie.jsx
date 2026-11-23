@@ -118,7 +118,7 @@ export default function OFirmie() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-5 md:px-8 py-14 md:py-20">
+      <section id="pawel-najduk" className="max-w-7xl mx-auto px-5 md:px-8 py-14 md:py-20">
         <div className="grid md:grid-cols-12 gap-10 items-start">
           <div className="md:col-span-4">
             <h2 className="ft-display text-2xl md:text-3xl" style={{ fontWeight: 700 }}>Osoba odpowiedzialna za stronę techniczną</h2>

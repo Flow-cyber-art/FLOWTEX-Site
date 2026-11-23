@@ -46,7 +46,7 @@ export default function FloorSelector() {
               "@type": "Service",
               name: "Dobór systemu posadzkowego",
               description: "Interaktywne narzędzie doboru technologii posadzki przemysłowej na podstawie obciążeń, chemii, wilgoci i wymagań higienicznych.",
-              provider: { "@type": "LocalBusiness", name: "FLOWTEX Polska" },
+              provider: { "@id": "https://www.flowtex.pl/#organization" },
               areaServed: "PL",
               url: canonicalUrl,
             },

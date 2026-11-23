@@ -72,7 +72,7 @@ export default function ProtokolOdbioru() {
     url: PAGE_URL,
     description: DESCRIPTION,
     inLanguage: "pl",
-    publisher: { "@type": "Organization", name: "FLOWTEX Polska", url: "https://www.flowtex.pl" },
+    publisher: { "@id": "https://www.flowtex.pl/#organization" },
   };
 
   return (

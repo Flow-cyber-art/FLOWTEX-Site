@@ -34,13 +34,6 @@ function Detail({ defect }) {
           "@context": "https://schema.org",
           "@graph": [
             {
-              "@type": "Person",
-              "@id": "https://www.flowtex.pl/#author-pawel-najduk",
-              name: AUTHOR.name,
-              jobTitle: AUTHOR.role,
-              worksFor: { "@type": "Organization", name: AUTHOR.organization },
-            },
-            {
               "@type": "Article",
               headline: defect.title,
               description: metaDescription,
@@ -48,7 +41,7 @@ function Detail({ defect }) {
               mainEntityOfPage: canonicalUrl,
               dateModified: defect.updated,
               author: { "@id": "https://www.flowtex.pl/#author-pawel-najduk" },
-              publisher: { "@type": "Organization", name: "FLOWTEX Polska" },
+              publisher: { "@id": "https://www.flowtex.pl/#organization" },
             },
             {
               "@type": "BreadcrumbList",
@@ -179,18 +172,12 @@ export default function DefectCatalog() {
           "@context": "https://schema.org",
           "@graph": [
             {
-              "@type": "Person",
-              "@id": "https://www.flowtex.pl/#author-pawel-najduk",
-              name: AUTHOR.name,
-              jobTitle: AUTHOR.role,
-              worksFor: { "@type": "Organization", name: AUTHOR.organization },
-            },
-            {
               "@type": "CollectionPage",
               name: "Katalog wad posadzek przemysłowych",
               description: "14 typów wad posadzek przemysłowych i żywicznych z przyczynami i kierunkiem naprawy.",
               url: "https://www.flowtex.pl/katalog-wad",
               author: { "@id": "https://www.flowtex.pl/#author-pawel-najduk" },
+              publisher: { "@id": "https://www.flowtex.pl/#organization" },
               mainEntity: {
                 "@type": "ItemList",
                 itemListElement: DEFECTS.map((item, index) => ({

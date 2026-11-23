@@ -109,7 +109,7 @@ export default function DewPoint() {
     operatingSystem: "Web",
     inLanguage: "pl",
     description: DESCRIPTION,
-    publisher: { "@type": "Organization", name: "FLOWTEX Polska", url: "https://www.flowtex.pl" },
+    publisher: { "@id": "https://www.flowtex.pl/#organization" },
   };
 
   const V = r.state === "ok" ? verdict[r.level] : null;

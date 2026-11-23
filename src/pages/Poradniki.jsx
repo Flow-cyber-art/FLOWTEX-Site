@@ -207,13 +207,8 @@ function PoradnikDetail({ item }) {
                 mainEntityOfPage: canonicalUrl,
                 inLanguage: "pl",
                 ...(image ? { image } : {}),
-                author: {
-                  "@type": "Person",
-                  name: "Paweł Najduk",
-                  jobTitle: "Właściciel i dyrektor techniczny",
-                  worksFor: { "@type": "Organization", name: "FLOWTEX Polska", url: "https://www.flowtex.pl/" },
-                },
-                publisher: { "@type": "Organization", name: "FLOWTEX Polska", url: "https://www.flowtex.pl/" },
+                author: { "@id": "https://www.flowtex.pl/#author-pawel-najduk" },
+                publisher: { "@id": "https://www.flowtex.pl/#organization" },
                 ...(services.length
                   ? { about: services.map((s) => ({ "@type": "Service", name: s.title, url: `https://www.flowtex.pl/${s.slug}` })) }
                   : {}),
