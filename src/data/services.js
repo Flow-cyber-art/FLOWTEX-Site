@@ -38,7 +38,7 @@ const CORE = [
             ["Typowe miejsca", "Magazyny, hale produkcyjne, laboratoria, warsztaty", "Chłodnie, strefy o zmiennej temperaturze", "Zakłady mięsne, mleczarnie, przetwórnie, kuchnie przemysłowe"],
           ],
         },
-        note: "Dokładne parametry zależą od konkretnego systemu i grubości warstwy, dlatego zawsze weryfikujemy je w karcie technicznej producenta. Szczegóły: [posadzki epoksydowe](/posadzki-epoksydowe), [posadzki poliuretanowe](/posadzki-poliuretanowe), [posadzki dla przemysłu spożywczego](/posadzki-dla-przemyslu-spozywczego) i [posadzki do hal i magazynów](/posadzki-do-hal-produkcyjnych-i-magazynow).",
+        note: "Dokładne parametry zależą od konkretnego systemu i grubości warstwy, dlatego zawsze weryfikujemy je w karcie technicznej producenta. Szczegóły: [posadzki epoksydowe](/posadzki-epoksydowe), [posadzki poliuretanowe](/posadzki-poliuretanowe), [posadzki dla przemysłu spożywczego](/posadzki-dla-przemyslu-spozywczego) i [posadzki do hal i magazynów](/posadzki-do-hal-produkcyjnych-i-magazynow). Jeśli obiekt jest w województwie mazowieckim, zobacz [ofertę i realizacje na Mazowszu](/posadzki-przemyslowe-mazowieckie).",
       },
       {
         heading: "Zastosowanie w różnych branżach",

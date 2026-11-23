@@ -88,7 +88,7 @@ export default function ServicePage() {
             serviceType: service.title,
             description: service.metaDescription,
             provider: { "@id": "https://www.flowtex.pl/#organization" },
-            areaServed: "PL",
+            areaServed: service.areaServed || "PL",
             url: canonicalUrl,
             ...(ogImage ? { image: ogImage } : {}),
             hasOfferCatalog: {

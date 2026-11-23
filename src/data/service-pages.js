@@ -5,6 +5,8 @@ import { Utensils, FlaskConical, Wrench, Droplets, Layers, Warehouse } from "luc
   (szablon ServicePage), z dodatkowymi polami:
   - group: "branza" | "technologia" — grupa w menu i stopce; te strony nie
     trafiają do kafelków "Nasza oferta" na stronie głównej (patrz CORE_SERVICES)
+  - group: "region" — strona regionalna linkowana z treści powiązanych usług
+  - areaServed: obszar obsługi w danych strukturalnych, jeśli inny niż Polska
   - imageSlug: nazwa zdjęcia z src/assets/realizacje/ użyta w nagłówku strony
   - relatedRealizacjeSlugs: realizacje pokazywane na stronie (oprócz tych,
     które mają w realizacje.js relatedServiceSlug równy slugowi strony)
@@ -200,7 +202,7 @@ export const SERVICE_PAGES = [
     shortDesc:
       "Rozwiązujemy pylenie, pęknięcia, ubytki i odspojenia — naprawa punktowa lub renowacja podłoża zamiast wymiany całej posadzki.",
     intro:
-      "Naprawiamy posadzki betonowe i żywiczne w halach produkcyjnych i magazynach. Usuwamy ubytki, naprawiamy dylatacje i odspojoną żywicę oraz ograniczamy pylenie betonu. Jeśli da się wydzielić uszkodzoną strefę i zapewnić czas na utwardzenie posadzki, planujemy prace etapami, podczas gdy pozostała część hali może pracować. Zobacz [naprawę posadzki przy odpływach przed audytem](/realizacje/serwis-posadzki-przy-odplywach-zaklad-spozywczy-mazowieckie).",
+      "Naprawiamy posadzki betonowe i żywiczne w halach produkcyjnych i magazynach. Usuwamy ubytki, naprawiamy dylatacje i odspojoną żywicę oraz ograniczamy pylenie betonu. Jeśli da się wydzielić uszkodzoną strefę i zapewnić czas na utwardzenie posadzki, planujemy prace etapami, podczas gdy pozostała część hali może pracować. Zobacz [naprawę posadzki przy odpływach przed audytem](/realizacje/serwis-posadzki-przy-odplywach-zaklad-spozywczy-mazowieckie). Poznaj też [ofertę posadzek przemysłowych na Mazowszu](/posadzki-przemyslowe-mazowieckie).",
     sections: [
       {
         heading: "Co przesłać do wyceny naprawy posadzki?",
@@ -487,5 +489,54 @@ export const SERVICE_PAGES = [
       { q: "Czym utwardza się powierzchnię posadzki betonowej?", a: "Posypką mineralną lub kwarcową. Zwiększa ona odporność na ścieranie w strefach ruchu wózków widłowych." },
       { q: "Jakie zbrojenie stosuje się w posadzkach betonowych?", a: "Rozproszone włóknami stalowymi lub polipropylenowymi albo tradycyjne, prętowe, przy większych rozpiętościach i obciążeniach punktowych. Wybór zależy od obciążeń." },
     ],
+  },
+  {
+    slug: "posadzki-przemyslowe-mazowieckie",
+    group: "region",
+    icon: Warehouse,
+    title: "Posadzki przemysłowe na Mazowszu",
+    h1: "Posadzki przemysłowe i żywiczne na Mazowszu",
+    metaTitle: "Posadzki przemysłowe i żywiczne na Mazowszu | FLOWTEX",
+    metaDescription: "Wykonujemy i naprawiamy posadzki przemysłowe na Mazowszu. Posadzki żywiczne do hal, magazynów i zakładów spożywczych. Zobacz realizacje i zapytaj o wycenę.",
+    shortDesc: "Wykonawstwo i naprawy posadzek przemysłowych w halach, magazynach i zakładach na Mazowszu.",
+    areaServed: { "@type": "AdministrativeArea", name: "Województwo mazowieckie" },
+    intro: "Wykonujemy i naprawiamy posadzki w halach produkcyjnych, magazynach i zakładach na Mazowszu. System dobieramy do warunków pracy konkretnej strefy. Innej nawierzchni potrzebuje magazyn z całozmianowym ruchem wózków, a innej stanowisko myte gorącą wodą lub pomieszczenie o podwyższonych wymaganiach czystości.",
+    sections: [
+      {
+        heading: "Co sprawdzamy przed doborem posadzki?",
+        table: {
+          head: ["Warunki w obiekcie", "Od czego zaczynamy"],
+          rows: [
+            ["[Hala produkcyjna lub magazyn](/posadzki-do-hal-produkcyjnych-i-magazynow)", "Oceniamy stan betonu, obciążenia, trasy przejazdu i miejsca, w których koła najczęściej skręcają lub hamują."],
+            ["[Zakład spożywczy z regularnym myciem](/posadzki-dla-przemyslu-spozywczego)", "Sprawdzamy temperaturę wody, chemię myjącą i odwodnienie. W mokrych strefach rozważamy PU-cement dopasowany do warunków pracy."],
+            ["[Farmacja i pomieszczenia czyste](/posadzki-clean-room)", "Ustalamy sposób czyszczenia i wymagania dotyczące faktury posadzki oraz połączeń ze ścianami."],
+            ["[Produkcja elektroniki](/posadzki-esd)", "Sprawdzamy wymagania programu kontroli ESD i uzgadniamy zakres pomiarów gotowej posadzki."],
+            ["[Strefa zagrożenia wybuchem](/posadzki-antywybuchowe-atex)", "Wymagania dla posadzki ustalamy na podstawie klasyfikacji strefy i dokumentacji obiektu."],
+          ],
+        },
+      },
+      {
+        heading: "Naprawa posadzki w czynnej hali",
+        body: "Podczas oględzin ustalamy, którą część hali można wydzielić i kiedy musi wrócić do pracy. Od tego zależy, czy wystarczy naprawa punktowa, jak podzielić remont na etapy i ile czasu przeznaczyć na utwardzanie. Zobacz zakres [napraw i renowacji posadzek przemysłowych](/renowacja-posadzek-przemyslowych).",
+      },
+      {
+        heading: "Trzy przykłady realizacji na Mazowszu",
+        items: [
+          "[Zakład spożywczy](/realizacje/serwis-posadzki-przy-odplywach-zaklad-spozywczy-mazowieckie). Przed audytem naprawiliśmy posadzkę PU-cement przy odpływach i skorygowaliśmy spadek przy wpuście. Prace trwały dwa dni.",
+          "[Hala pod Grójcem](/realizacje/posadzka-antywybuchowa-atex-grojec-1420-m2). Wykonaliśmy 1420 m² posadzki do strefy Ex w magazynie materiałów sypkich.",
+          "[Zakład farmaceutyczny](/realizacje/posadzka-zywiczna-clean-room-farmacja-mazowieckie). Przygotowaliśmy zdegradowane, porowate podłoże i wykonaliśmy 340 m² posadzki żywicznej do clean roomu.",
+        ],
+      },
+      {
+        heading: "Co przesłać do wyceny posadzki?",
+        body: "Podaj miejscowość, rodzaj obiektu i przybliżony metraż. Przy naprawie dołącz zdjęcie całej strefy i zbliżenie uszkodzenia z miarką. Jeśli zakład pracuje, napisz, kiedy można wydzielić strefę i do kiedy musi wrócić do użytkowania. Na tej podstawie ustalimy zakres oględzin i przygotujemy wycenę.",
+      },
+    ],
+    highlights: [
+      "Dobór i wykonanie posadzek żywicznych w halach i magazynach",
+      "Naprawy punktowe i renowacja posadzek w czynnych zakładach",
+      "Systemy PU-cement, ESD oraz posadzki do clean roomów i stref Ex",
+    ],
+    closing: "Siedziba FLOWTEX Polska znajduje się w Ciółkowie Małym. Przy pracach w czynnych zakładach uzgadniamy kolejność etapów i warunki ponownego oddania strefy do użytkowania.",
   },
 ];
