@@ -205,6 +205,10 @@ export const SERVICE_PAGES = [
       "Naprawiamy posadzki betonowe i żywiczne w halach produkcyjnych i magazynach. Usuwamy ubytki, naprawiamy dylatacje i odspojoną żywicę oraz ograniczamy pylenie betonu. Jeśli da się wydzielić uszkodzoną strefę i zapewnić czas na utwardzenie posadzki, planujemy prace etapami, podczas gdy pozostała część hali może pracować. Zobacz [naprawę posadzki przy odpływach przed audytem](/realizacje/serwis-posadzki-przy-odplywach-zaklad-spozywczy-mazowieckie). Poznaj też [ofertę posadzek przemysłowych na Mazowszu](/posadzki-przemyslowe-mazowieckie).",
     sections: [
       {
+        heading: "Wilgoć pod powłoką",
+        body: "Jeśli powłoka pęcherzy lub odspaja się od betonu, przed doborem naprawy ustalamy źródło wilgoci. Zobacz, [kiedy warto rozważyć posadzkę paroprzepuszczalną](/poradniki/posadzka-paroprzepuszczalna-na-betonie).",
+      },
+      {
         heading: "Co przesłać do wyceny naprawy posadzki?",
         body: "Podaj lokalizację zakładu, przybliżoną powierzchnię uszkodzenia, rodzaj posadzki, sposób użytkowania strefy i termin, w którym można ją czasowo wyłączyć. Zrób zdjęcie całej strefy oraz zbliżenie uszkodzenia ze skalą, np. z miarką. Te informacje pomogą przygotować oględziny i ustalić zakres wyceny.",
       },
@@ -493,6 +497,8 @@ export const SERVICE_PAGES = [
   {
     slug: "posadzki-przemyslowe-mazowieckie",
     group: "region",
+    imageAlt: "Szara posadzka przemysłowa w hali magazynowej",
+    imageIllustrative: true,
     icon: Warehouse,
     title: "Posadzki przemysłowe na Mazowszu",
     h1: "Posadzki przemysłowe i żywiczne na Mazowszu",

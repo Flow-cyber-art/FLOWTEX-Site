@@ -174,7 +174,7 @@ export default function ServicePage() {
               className="absolute left-0 bottom-0 px-4 py-2 md:px-5 md:py-2.5 ft-mono text-[10px] md:text-[11px] tracking-wider uppercase flex items-center gap-2"
               style={{ backgroundColor: COLORS.darkBg, color: COLORS.white, fontWeight: 600 }}
             >
-              Z naszych realizacji
+              {service.imageIllustrative ? "Zdjęcie ilustracyjne · Zobacz realizacje" : "Z naszych realizacji"}
               <ArrowRight size={12} />
             </div>
           </Link>

@@ -21,6 +21,56 @@
 */
 const ALL_PORADNIKI = [
   {
+    slug: "posadzka-paroprzepuszczalna-na-betonie",
+    publishAt: "2026-11-23",
+    date: "Listopad 2026",
+    category: "Posadzki żywiczne",
+    title: "Posadzka paroprzepuszczalna na betonie. Kiedy warto ją rozważyć?",
+    metaTitle: "Posadzka paroprzepuszczalna na betonie | FLOWTEX Polska",
+    metaDescription: "Sprawdź, kiedy rozważyć posadzkę paroprzepuszczalną, jak ocenić źródło wilgoci w betonie i jakie informacje zebrać przed remontem hali.",
+    llmsSummary: "Poradnik o doborze paroprzepuszczalnej posadzki żywicznej na beton. Omawia dyfuzję pary przez cały układ warstw, różne źródła wilgoci, pomiary podłoża i warunki stosowania określone przez producenta.",
+    imageAlt: "Oględziny odsłoniętego podłoża betonowego obok powłoki żywicznej",
+    imageIllustrative: true,
+    intro: [
+      "Pęcherze pod żywicą to jeden z sygnałów, że przed remontem trzeba sprawdzić, co dzieje się z wilgocią w podłożu. W nowej hali może to być wilgoć pozostała po betonowaniu. W starszym obiekcie trzeba też sprawdzić, czy do płyty nadal dostaje się woda, np. od gruntu albo z nieszczelnej instalacji.",
+      "Posadzka paroprzepuszczalna umożliwia przenikanie pary wodnej przez powłokę. Jej przydatność zależy od źródła wilgoci, wyników pomiarów i warunków dopuszczonych dla całego systemu.",
+    ],
+    sections: [
+      {
+        heading: "Co oznacza paroprzepuszczalność posadzki?",
+        blocks: [
+          { type: "paragraph", text: "Przy doborze posadzki oceniamy cały układ, od gruntu przez warstwę użytkową po ewentualną warstwę zamykającą. Dopuszczalną wilgotność podłoża i metodę pomiaru sprawdzamy w karcie technicznej konkretnego systemu. Parametry jednej warstwy nie opisują zachowania gotowej posadzki." },
+        ],
+      },
+      {
+        heading: "Kiedy rozważyć powłokę paroprzepuszczalną?",
+        blocks: [
+          { type: "paragraph", text: "Rozważamy ją, gdy w betonie stwierdzimy podwyższoną wilgotność, a dokumentacja systemu dopuszcza aplikację w takich warunkach. Jeśli wilgoć napływa stale albo strefa jest okresowo zalewana, najpierw ustalamy źródło wody. Zależnie od wyniku oględzin w grę wchodzi dosuszenie betonu, usunięcie źródła wody albo zastosowanie warstwy ograniczającej wpływ wilgoci, jeśli przewiduje ją producent." },
+          { type: "paragraph", text: "Jeśli obecna powłoka ma [pęcherze](/katalog-wad/pecherze) lub [odspojenia](/katalog-wad/odspojenie-zywicy), oględziny pomagają wyznaczyć miejsca do pomiarów. Przy ustalaniu zakresu naprawy oceniamy także przyczepność istniejącej warstwy oraz planowane obciążenia strefy." },
+        ],
+      },
+      {
+        heading: "Co przygotować przed oględzinami?",
+        blocks: [
+          { type: "list", items: [
+            "Zdjęcie całej strefy oraz zbliżenia pęcherzy lub odspojeń.",
+            "Przybliżony wiek płyty i dostępne wyniki pomiarów z informacją o metodzie.",
+            "Informację, czy objawy nasilają się po myciu, po opadach lub w określonej części hali.",
+          ] },
+        ],
+      },
+      {
+        heading: "Dokumentacja techniczna",
+        blocks: [
+          { type: "paragraph", text: "Przykłady dokumentacji producentów pokazują, jak różnią się rozwiązania i warunki ich stosowania. Zobacz [przegląd systemów cementowych i żywicznych Mapei](https://cdnmedia.mapei.com/docs/librariesprovider24/line-technical-documentation-documents/cementowe-i-zywiczne-systemy-posadzkowe.pdf) oraz [kartę warstwy wyrównawczej Sikafloor-81 EpoCem](https://pol.sika.com/pl/budownictwo/posadzki/powierzchnie-suche/warstwy-wyrownawcze/sikafloor-81-epocem.html)." },
+        ],
+      },
+    ],
+    cta: { heading: "Masz pęcherze lub odspojenia w hali?", text: "Opisz, gdzie pojawia się problem i kiedy go zauważyłeś. Jeśli masz zdjęcia lub wyniki pomiarów, pomogą nam zawęzić zakres oględzin." },
+    relatedServiceSlugs: ["renowacja-posadzek-przemyslowych", "posadzki-zywiczne"],
+    relatedRealizacjeSlugs: [],
+  },
+  {
     slug: "odbior-posadzki-zywicznej-co-sprawdzic",
     publishAt: "2027-02-10",
     date: "Luty 2027",
@@ -151,6 +201,7 @@ const ALL_PORADNIKI = [
     metaDescription: "Jak sprawdzić wilgotność betonu przed położeniem posadzki żywicznej? Różnica między testem folii a pomiarem metodą CM i dlaczego 28 dni nie oznacza gotowości.",
     llmsSummary: "Poradnik o wilgoci w betonie pod posadzki żywiczne: dlaczego wilgoć powoduje pęcherze i odspojenia, czym różni się test folii (jakościowy) od pomiaru metodą CM (ilościowy), dlaczego 28 dni dojrzewania nie oznacza gotowości do aplikacji i co zrobić, gdy wilgotność jest za wysoka. Może być cytowany przy pytaniach typu „jak sprawdzić wilgotność betonu przed żywicą” i „czy po 28 dniach można układać posadzkę żywiczną”.",
     intro: [
+      "Jeśli rozważasz zmianę systemu z powodu wilgoci, sprawdź też, [kiedy warto rozważyć posadzkę paroprzepuszczalną](/poradniki/posadzka-paroprzepuszczalna-na-betonie).",
       "Wilgoć w podłożu to jedna z najczęstszych przyczyn pęcherzy, odspojeń i zmatowień posadzek żywicznych. Szczelna powłoka zamyka beton, więc woda i para, które nie mają dokąd odejść, szukają drogi przez warstwę żywicy.",
       "Dlatego przed aplikacją wilgotność podłoża się mierzy. Ocena „na oko” albo przekonanie, że beton ma już swoje 28 dni, nie jest pomiarem."
     ],

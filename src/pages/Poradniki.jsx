@@ -265,6 +265,7 @@ function PoradnikDetail({ item }) {
               width="1200"
               height="630"
             />
+            {item.imageIllustrative && <p className="px-4 py-2 text-xs" style={{ color: COLORS.mutedOnLight }}>Zdjęcie ilustracyjne</p>}
           </div>
         )}
 
