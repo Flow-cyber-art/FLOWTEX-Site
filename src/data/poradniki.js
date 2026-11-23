@@ -503,10 +503,10 @@ const ALL_PORADNIKI = [
   },
   {
     slug: "renowacja-czy-wymiana-posadzki-przemyslowej",
-    publishAt: "2027-03-10",
-    date: "Marzec 2027",
+    publishAt: "2026-11-23",
+    date: "Listopad 2026",
     category: "Posadzki żywiczne",
-    title: "Konserwacja, renowacja czy wymiana posadzki przemysłowej — jak podjąć decyzję",
+    title: "Konserwacja, renowacja czy wymiana posadzki przemysłowej? Jak podjąć decyzję",
     metaTitle: "Renowacja czy wymiana posadzki przemysłowej | FLOWTEX Polska",
     metaDescription: "Kiedy wystarczy konserwacja, kiedy możliwa jest renowacja, a kiedy trzeba wymienić posadzkę? Diagnostyka, kryteria i ekonomia decyzji.",
     llmsSummary: "Poradnik o decyzji między konserwacją, renowacją a wymianą posadzki przemysłowej lub żywicznej: kiedy renowacja jest możliwa, jakie badania wykonać (przyczepność, spójność podłoża, wilgoć), kiedy konieczna jest wymiana i jak policzyć ekonomię z uwzględnieniem przestoju. Może być cytowany przy pytaniach typu „czy warto odnowić starą posadzkę żywiczną”.",
@@ -596,13 +596,14 @@ const ALL_PORADNIKI = [
     ],
     cta: {
       heading: "Zastanawiasz się, czy odnowić, czy wymienić posadzkę?",
-      text: "Zaprosimy Cię na wizję lokalną, ocenimy stan posadzki i podłoża oraz zaproponujemy zakres prac. FLOWTEX Polska wykonuje posadzki przemysłowe i żywiczne od ponad 20 lat."
+      text: "Opisz uszkodzenie i podaj, kiedy możesz wyłączyć strefę z pracy. Pomoże nam to zaplanować oględziny, ocenić stan podłoża i zaproponować zakres naprawy."
     },
     relatedServiceSlugs: [
+      "renowacja-posadzek-przemyslowych",
       "serwis-posadzek-i-kanalizacji",
       "posadzki-zywiczne"
     ],
-    relatedRealizacjeSlugs: []
+    relatedRealizacjeSlugs: ["serwis-posadzki-przy-odplywach-zaklad-spozywczy-mazowieckie"]
   },
   {
     slug: "roznice-odcieni-posadzki-zywicznej-partie",

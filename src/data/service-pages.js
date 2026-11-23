@@ -196,21 +196,25 @@ export const SERVICE_PAGES = [
     imageAlt: "Naprawa i renowacja posadzki przemysłowej — FLOWTEX Polska",
     h1: "Renowacja i naprawa posadzek przemysłowych",
     title: "Renowacja i naprawa posadzek przemysłowych",
-    metaTitle: "Naprawa i renowacja posadzek przemysłowych | FLOWTEX",
+    metaTitle: "Renowacja posadzek przemysłowych i naprawy w halach | FLOWTEX",
     metaDescription:
-      "Naprawiamy pęknięcia, dylatacje, ubytki i odspojoną żywicę w halach produkcyjnych i magazynach. Prace etapowe w czynnych zakładach. Zapytaj o wycenę.",
+      "Renowacja posadzek betonowych i żywicznych w halach i magazynach. Naprawiamy dylatacje, ubytki i odspojenia. Ustalamy zakres prac i możliwość etapowania.",
     shortDesc:
       "Rozwiązujemy pylenie, pęknięcia, ubytki i odspojenia — naprawa punktowa lub renowacja podłoża zamiast wymiany całej posadzki.",
     intro:
-      "Naprawiamy posadzki betonowe i żywiczne w halach produkcyjnych i magazynach. Usuwamy ubytki, naprawiamy dylatacje i odspojoną żywicę oraz ograniczamy pylenie betonu. Jeśli da się wydzielić uszkodzoną strefę i zapewnić czas na utwardzenie posadzki, planujemy prace etapami, podczas gdy pozostała część hali może pracować. Zobacz [naprawę posadzki przy odpływach przed audytem](/realizacje/serwis-posadzki-przy-odplywach-zaklad-spozywczy-mazowieckie). Poznaj też [ofertę posadzek przemysłowych na Mazowszu](/posadzki-przemyslowe-mazowieckie).",
+      "Naprawiamy posadzki betonowe i żywiczne w halach produkcyjnych i magazynach. Usuwamy ubytki, naprawiamy dylatacje i odspojoną żywicę oraz ograniczamy pylenie betonu. Jeśli da się wydzielić uszkodzoną strefę i zapewnić czas na utwardzenie posadzki, planujemy prace etapami, podczas gdy pozostała część hali może pracować. Zobacz też [ofertę posadzek przemysłowych na Mazowszu](/posadzki-przemyslowe-mazowieckie).",
     sections: [
-      {
-        heading: "Wilgoć pod powłoką",
-        body: "Jeśli powłoka pęcherzy lub odspaja się od betonu, przed doborem naprawy ustalamy źródło wilgoci. Zobacz, [kiedy warto rozważyć posadzkę paroprzepuszczalną](/poradniki/posadzka-paroprzepuszczalna-na-betonie).",
-      },
       {
         heading: "Co przesłać do wyceny naprawy posadzki?",
         body: "Podaj lokalizację zakładu, przybliżoną powierzchnię uszkodzenia, rodzaj posadzki, sposób użytkowania strefy i termin, w którym można ją czasowo wyłączyć. Zrób zdjęcie całej strefy oraz zbliżenie uszkodzenia ze skalą, np. z miarką. Te informacje pomogą przygotować oględziny i ustalić zakres wyceny.",
+      },
+      {
+        heading: "Naprawa przy odpływach przed audytem",
+        body: "W zakładzie spożywczym na Mazowszu posadzka odspajała się przy odpływach, a po myciu przy wpuście zostawała woda. Wyznaczyliśmy zasięg odspojenia, usunęliśmy uszkodzone fragmenty, odbudowaliśmy obrzeże wpustu i skorygowaliśmy spadek. Odtworzyliśmy posadzkę w systemie poliuretanowo-cementowym. Prace trwały dwa dni, a strefę oddaliśmy przed audytem. [Zobacz przebieg naprawy przy odpływach](/realizacje/serwis-posadzki-przy-odplywach-zaklad-spozywczy-mazowieckie).",
+      },
+      {
+        heading: "Wilgoć pod powłoką",
+        body: "Jeśli powłoka pęcherzy lub odspaja się od betonu, przed doborem naprawy ustalamy źródło wilgoci. Zobacz, [kiedy warto rozważyć posadzkę paroprzepuszczalną](/poradniki/posadzka-paroprzepuszczalna-na-betonie).",
       },
       {
         heading: "Najczęstsze objawy i kierunek naprawy",
@@ -231,7 +235,7 @@ export const SERVICE_PAGES = [
       },
       {
         heading: "Naprawa punktowa czy renowacja podłoża",
-        body: "Nie zawsze trzeba wymieniać całą posadzkę. Zamiast tego punktowo wzmacniamy i uzupełniamy uszkodzone miejsca, co pozwala ograniczyć koszty i czas przestoju. Gdy uszkodzenia są rozległe albo przyczyna leży w podłożu, naprawa punktowa nie wystarczy. Wtedy przeprowadzamy renowację podłoża, w tym naprawę odspojonej lub spękanej warstwy żywicznej i betonowej.",
+        body: "Przy miejscowych uszkodzeniach punktowo wzmacniamy i uzupełniamy posadzkę, co pozwala ograniczyć zakres robót i czas przestoju. Gdy uszkodzenia są rozległe albo sięgają podłoża, oceniamy, które warstwy da się zachować, a które trzeba naprawić lub wymienić. Sprawdź [jak wybrać między renowacją a wymianą posadzki](/poradniki/renowacja-czy-wymiana-posadzki-przemyslowej).",
       },
       {
         heading: "Dylatacje i cokoły",
