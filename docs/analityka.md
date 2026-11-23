@@ -26,10 +26,10 @@ znaleźć. Sprawdzaj w trybie podglądu GTM (Preview), po zaakceptowaniu cookies
    dla `https://www.flowtex.pl`. Skopiuj identyfikator pomiaru `G-…`.
 2. W Vercelu ustaw `GA4_ID=G-…` (bez `GTM_ID`) i uruchom deploy.
 3. W GA4: Administracja → Zdarzenia → oznacz `generate_lead` jako **kluczowe
-   zdarzenie**. Opcjonalnie także `click_phone` i `click_email`.
+   zdarzenie** dla zapytania ofertowego. `request_material`, `click_phone` i `click_email` raportuj osobno.
 4. W GA4: Administracja → Definicje niestandardowe → utwórz wymiary o zakresie
    „Zdarzenie" dla parametrów: `form_id`, `form_location`, `lead_context`,
-   `link_location`, `mode`, `top_result`, `lead_source`, `lead_medium`.
+   `link_location`, `mode`, `top_result`, `lead_source`, `lead_medium` i `lead_landing_page`.
 5. W strumieniu danych zostaw włączony pomiar zaawansowany („Zmiany strony na
    podstawie zdarzeń historii przeglądarki") — strona jest aplikacją SPA i tak
    liczone są odsłony kolejnych podstron.
@@ -40,9 +40,9 @@ znaleźć. Sprawdzaj w trybie podglądu GTM (Preview), po zaakceptowaniu cookies
    GA4 (analytics.google.com → strumień danych „Sieć") i skopiuj identyfikator `G-…`.
 2. Tag „Tag Google" z identyfikatorem `G-…`, reguła: Initialization – All Pages.
 3. Zmienne warstwy danych: `form_id`, `form_location`, `lead_context`, `lead_id`,
-   `link_location`, `mode`, `top_result`, `lead_source`, `lead_medium`, `page_path`.
+   `link_location`, `mode`, `top_result`, `lead_source`, `lead_medium`, `lead_landing_page`, `page_path`.
 4. Reguła „Zdarzenie niestandardowe" z wyrażeniem regularnym:
-   `^(generate_lead|click_phone|click_email|form_start|form_step|form_error|selector_start|selector_complete)$`
+   `^(generate_lead|request_material|click_phone|click_email|form_start|form_step|form_error|selector_start|selector_complete)$`
 5. Tag „GA4 – zdarzenie", nazwa zdarzenia `{{Event}}`, parametry ze zmiennych
    z punktu 3, reguła z punktu 4.
 6. Kroki 3–5 z wariantu A (kluczowe zdarzenie, wymiary, pomiar zaawansowany).
@@ -73,7 +73,8 @@ z gotową treścią zapytania.
 
 | Zdarzenie | Kiedy | Parametry |
 | --- | --- | --- |
-| `generate_lead` | Poprawna wysyłka formularza | `form_id`, `form_location`, `lead_context`, `lead_id`, `lead_source`, `lead_medium`, `request_type`, `industry`, `area_range` |
+| `generate_lead` | Poprawna wysyłka zapytania ofertowego | `form_id`, `form_location`, `lead_context`, `lead_id`, `lead_source`, `lead_medium`, `lead_landing_page`, `request_type`, `industry`, `area_range` |
+| `request_material` | Poprawne zgłoszenie po materiał, np. wzór protokołu odbioru | `form_id`, `form_location`, `lead_context`, `lead_id`, `lead_source`, `lead_medium`, `lead_landing_page` |
 | `click_phone` | Kliknięcie numeru telefonu | `link_location` |
 | `click_email` | Kliknięcie adresu e-mail | `link_location` |
 | `form_start` | Pierwsze wejście w pole formularza | `form_id` |
@@ -147,3 +148,7 @@ prawnikowi przed włączeniem pomiaru.
 3. GA4 → Raporty → Czas rzeczywisty: widać odsłonę i zdarzenie `click_phone`.
 4. Wyślij testowe zapytanie — w czasie rzeczywistym pojawi się `generate_lead`,
    a w mailu blok „Źródło zapytania".
+5. Prześlij testowe zgłoszenie po wzór protokołu. W podglądzie GTM i w GA4
+   sprawdź zdarzenie `request_material`. Oznacza ono zgłoszenie po materiał.
+   Faktyczne pobranie pliku można sprawdzić osobno w zdarzeniu `file_download`,
+   jeśli pomiar pobrań jest włączony.

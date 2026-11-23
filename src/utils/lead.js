@@ -105,6 +105,7 @@ export async function sendLead(form, { formId, context = "", trackParams = {} } 
     lead_id: id,
     lead_source: session?.source || "",
     lead_medium: session?.medium || "",
+    lead_landing_page: session?.landing || "",
     ...trackParams,
   });
   return id;
@@ -188,13 +189,14 @@ const materialTemplate = import.meta.env.VITE_EMAILJS_TEMPLATE_MATERIAL_ID || im
     }
   }
 
-  track("generate_lead", {
+  track("request_material", {
     form_id: formId,
     form_location: window.location.pathname,
     lead_context: resourceName.slice(0, 100),
     lead_id: id,
     lead_source: session?.source || "",
     lead_medium: session?.medium || "",
+    lead_landing_page: session?.landing || "",
   });
   return { id, emailed };
 }
