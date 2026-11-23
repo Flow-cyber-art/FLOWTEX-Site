@@ -194,14 +194,18 @@ export const SERVICE_PAGES = [
     imageAlt: "Naprawa i renowacja posadzki przemysłowej — FLOWTEX Polska",
     h1: "Renowacja i naprawa posadzek przemysłowych",
     title: "Renowacja i naprawa posadzek przemysłowych",
-    metaTitle: "Renowacja i naprawa posadzek przemysłowych | FLOWTEX Polska",
+    metaTitle: "Naprawa i renowacja posadzek przemysłowych | FLOWTEX",
     metaDescription:
-      "Naprawa pęknięć, ubytków, dylatacji, pylenia i odspojonej żywicy. Renowacja posadzek betonowych i żywicznych, także w działającym zakładzie.",
+      "Naprawiamy pęknięcia, dylatacje, ubytki i odspojoną żywicę w halach produkcyjnych i magazynach. Prace etapowe w czynnych zakładach. Zapytaj o wycenę.",
     shortDesc:
       "Rozwiązujemy pylenie, pęknięcia, ubytki i odspojenia — naprawa punktowa lub renowacja podłoża zamiast wymiany całej posadzki.",
     intro:
-      "Pylący beton, pęknięcia, odspojona żywica pod wózkami, wykruszone dylatacje, klawiszujące styki płyt i uszkodzone cokoły to usterki, które rzadko czekają na dogodny termin remontu. Naprawiamy i renowujemy posadzki betonowe i żywiczne: od napraw punktowych po renowację podłoża, w wielu przypadkach bez zatrzymywania całego zakładu.",
+      "Naprawiamy posadzki betonowe i żywiczne w halach produkcyjnych i magazynach. Usuwamy ubytki, naprawiamy dylatacje i odspojoną żywicę oraz ograniczamy pylenie betonu. Jeśli da się wydzielić uszkodzoną strefę i zapewnić czas na utwardzenie posadzki, planujemy prace etapami, podczas gdy pozostała część hali może pracować. Zobacz [naprawę posadzki przy odpływach przed audytem](/realizacje/serwis-posadzki-przy-odplywach-zaklad-spozywczy-mazowieckie).",
     sections: [
+      {
+        heading: "Co przesłać do wyceny naprawy posadzki?",
+        body: "Podaj lokalizację zakładu, przybliżoną powierzchnię uszkodzenia, rodzaj posadzki, sposób użytkowania strefy i termin, w którym można ją czasowo wyłączyć. Zrób zdjęcie całej strefy oraz zbliżenie uszkodzenia ze skalą, np. z miarką. Te informacje pomogą przygotować oględziny i ustalić zakres wyceny.",
+      },
       {
         heading: "Najczęstsze objawy i kierunek naprawy",
         body: "Każdy objaw ma w naszym [katalogu wad posadzek](/katalog-wad) osobny opis z przyczynami i sugestiami rozwiązania. Poniżej najczęstsze przypadki w skrócie.",

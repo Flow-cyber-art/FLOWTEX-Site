@@ -369,7 +369,8 @@ export const DEFECTS = [
     title: "Rysy włoskowate",
     intro: "Sieć drobnych, powierzchniowych rys widoczna głównie w skośnym świetle, bez wyraźnej głębokości.",
     image: "flowtex-defect-wloskowate.webp",
-    updated: "2026-08-27",
+    updated: "2026-11-23",
+    nextStep: "Jeśli rysy są powierzchniowe, mają stałą szerokość i wokół nich nie ma ubytków, zacznij od obserwacji. Zamów oględziny, jeśli rysy się poszerzają, ich krawędzie się wykruszają albo pojawia się różnica poziomów. Zrób zdjęcie całej strefy i zbliżenie z miarką. Podaj, od kiedy rysy są widoczne i czy w tym miejscu jeżdżą wózki.",
     explanation: "Rysy włoskowate są zwykle powierzchniowe i nieszkodliwe konstrukcyjnie, ale nie należy zakładać tego z góry — dopiero ocena szerokości, głębokości i tego, czy sieć rys pogłębia się w czasie, pozwala bezpiecznie zamknąć je powłoką zamiast szukać głębszej przyczyny.",
     causes: [
       "Zbyt szybkie wysychanie wierzchniej warstwy podczas wiązania",

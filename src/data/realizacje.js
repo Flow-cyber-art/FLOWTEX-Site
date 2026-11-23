@@ -86,7 +86,7 @@ export const REALIZACJE = [
           },
           {
             type: "paragraph",
-            text: "Realizację nadzorował Paweł Najduk, właściciel i dyrektor techniczny FLOWTEX Polska. Więcej o objawach i przyczynach znajdziesz w katalogu wad (/katalog-wad).",
+            text: "Realizację nadzorował Paweł Najduk, właściciel i dyrektor techniczny FLOWTEX Polska. Podobne objawy opisujemy w [katalogu wad posadzek](/katalog-wad/odspojenie-zywicy). Jeśli uszkodzenie wymaga oględzin, sprawdź [zakres napraw i renowacji posadzek](/renowacja-posadzek-przemyslowych).",
           },
         ],
       },

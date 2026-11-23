@@ -4,6 +4,11 @@
   "framework": "vite",
   "redirects": [
     {
+      "source": "/dobor-",
+      "destination": "/dobor-posadzki",
+      "permanent": true
+    },
+    {
       "source": "/wspolpraca.html",
       "destination": "/",
       "permanent": true

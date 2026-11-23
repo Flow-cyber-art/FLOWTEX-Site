@@ -143,6 +143,7 @@ function Detail({ defect }) {
           <p className="defect-kicker"><span>03</span> NASTĘPNY KROK</p>
           <h2 className="defect-funnel-lead">Widzisz ten problem u siebie? Możemy Ci pomóc — rozpoznamy przyczynę i zaproponujemy naprawę.</h2>
           <p>Opisz problem — wrócimy z możliwym kierunkiem działania i przygotujemy bezpłatną wycenę. Możesz też zadzwonić od razu.</p>
+          {defect.nextStep && <p>{defect.nextStep}</p>}
           <div className="defect-funnel-quick-contact">
             <a href="tel:+48507394552"><Phone size={16} /> +48 507 394 552</a>
             <a href="mailto:kontakt@flowtex.pl"><Mail size={16} /> kontakt@flowtex.pl</a>

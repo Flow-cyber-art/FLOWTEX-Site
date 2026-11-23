@@ -1,3 +1,4 @@
+import { renderInline } from "../utils/inline.jsx";
 import React from "react";
 import { COLORS, ACCENT_TEXT } from "../theme.js";
 import { Link, useParams } from "react-router-dom";
@@ -377,7 +378,7 @@ function RealizacjaDetail({ item }) {
                 }
                 return (
                   <p key={bIdx} className="text-base md:text-lg" style={{ color: COLORS.textOnLight }}>
-                    {block.text}
+                    {renderInline(block.text)}
                   </p>
                 );
               })}
