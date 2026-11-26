@@ -30,6 +30,7 @@ const { PORADNIKI } = await import(path.join(root, "src/data/poradniki.js"));
 
 const routes = [
   "/",
+  "/en",
   "/polityka-prywatnosci",
   "/polityka-cookies",
   "/realizacje",
@@ -111,6 +112,8 @@ function injectRouteCss(html, url) {
 
 function injectHelmet(html, helmet) {
   let out = html;
+  const language = helmet?.htmlAttributes?.toComponent()?.lang;
+  if (language) out = out.replace(/(<html[^>]*\blang=")[^"]+"/, (_match, prefix) => `${prefix}${language}"`);
 
   // <title> — helmet.title.toString() zwraca kompletny tag <title>...</title>
   if (helmet?.title) {
@@ -129,7 +132,7 @@ function injectHelmet(html, helmet) {
     // Dołączono "og:image": bez tego strony z własnym, konkretnym zdjęciem
     // (realizacje, docelowo też katalog wad) i tak pokazywały ogólne
     // /og-image.jpg ze statycznego index.html, bo ta pętla go nie obsługiwała.
-    ["og:title", "og:description", "og:url", "og:image"].forEach((prop) => {
+    ["og:title", "og:description", "og:url", "og:image", "og:locale"].forEach((prop) => {
       const m = metaStr.match(new RegExp(`<meta[^>]*\\bproperty="${prop}"[^>]*>`));
       const re = new RegExp(`<meta[^>]*\\bproperty="${prop}"[^>]*>`);
       if (m && re.test(out)) out = out.replace(re, m[0]);
@@ -146,6 +149,8 @@ function injectHelmet(html, helmet) {
   // canonical link
   if (helmet?.link) {
     const linkStr = helmet.link.toString();
+    const alternates = linkStr.match(/<link[^>]*\brel="alternate"[^>]*\bhreflang="[^"]+"[^>]*>/gi);
+    if (alternates) out = out.replace("</head>", `${alternates.join("\n")}\n  </head>`);
     const canMatch = linkStr.match(/<link[^>]*\brel="canonical"[^>]*>/);
     if (canMatch) {
       out = out.replace(/<link[^>]*\brel="canonical"[^>]*>/, canMatch[0]);

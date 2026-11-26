@@ -149,6 +149,8 @@ export default function Home() {
           content="Posadzki żywiczne i przemysłowe dla zakładów spożywczych, farmacji, elektroniki, stref ESD i ATEX. Dobór systemu, wykonanie, pomiary. Wycena w całej Polsce."
         />
         <link rel="canonical" href="https://www.flowtex.pl/" />
+        <link rel="alternate" hrefLang="pl" href="https://www.flowtex.pl/" />
+        <link rel="alternate" hrefLang="en" href="https://www.flowtex.pl/en" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

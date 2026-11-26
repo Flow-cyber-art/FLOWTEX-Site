@@ -13,7 +13,8 @@ import { ANALYTICS_ENABLED, getConsent, setConsent } from "../utils/analytics.js
 //     "Ustawienia cookies" w stopce.
 const NOTICE_KEY = "flowtex_cookie_notice_dismissed";
 
-export default function CookieNotice({ onVisibilityChange }) {
+export default function CookieNotice({ onVisibilityChange, language = "pl" }) {
+  const english = language === "en";
   const [visible, setVisible] = useState(false);
 
   const show = (value) => {
@@ -60,12 +61,22 @@ export default function CookieNotice({ onVisibilityChange }) {
   return (
     <div
       role="dialog"
-      aria-label={ANALYTICS_ENABLED ? "Zgoda na pliki cookies" : "Informacja o plikach cookies"}
+      aria-label={english ? "Cookies" : ANALYTICS_ENABLED ? "Zgoda na pliki cookies" : "Informacja o plikach cookies"}
       className="fixed bottom-0 left-0 right-0 z-50 px-4 py-4 md:px-6"
       style={{ backgroundColor: COLORS.darkBg, borderTop: `1px solid ${COLORS.darkBorder}` }}
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-4 md:gap-6">
-        {ANALYTICS_ENABLED ? (
+        {english ? (
+          <p className="text-xs md:text-sm flex-1" style={{ color: COLORS.mutedOnDark }}>
+            {ANALYTICS_ENABLED
+              ? "We use essential cookies to run this site. With your consent, we also use Google Analytics cookies to understand how visitors use the site and where enquiries come from. We do not use advertising cookies. "
+              : "This site uses only essential cookies. "}
+            <Link to="/polityka-cookies" reloadDocument hrefLang="pl" className="underline hover:opacity-80" style={{ color: COLORS.accent }}>
+              Cookie policy (Polish)
+            </Link>
+            .
+          </p>
+        ) : ANALYTICS_ENABLED ? (
           <p className="text-xs md:text-sm flex-1" style={{ color: COLORS.mutedOnDark }}>
             Używamy plików niezbędnych do działania strony. Za Twoją zgodą włączymy też analityczne
             pliki cookies Google Analytics, żeby wiedzieć, które treści są przydatne i skąd trafiają
@@ -93,7 +104,7 @@ export default function CookieNotice({ onVisibilityChange }) {
               className={buttonClass}
               style={{ border: `1px solid ${COLORS.accent}`, color: COLORS.accent, backgroundColor: "transparent" }}
             >
-              Odrzuć
+              {english ? "Reject" : "Odrzuć"}
             </button>
             <button
               type="button"
@@ -101,7 +112,7 @@ export default function CookieNotice({ onVisibilityChange }) {
               className={buttonClass}
               style={{ border: `1px solid ${COLORS.accent}`, backgroundColor: COLORS.accent, color: COLORS.accentText }}
             >
-              Akceptuję
+              {english ? "Accept" : "Akceptuję"}
             </button>
           </div>
         ) : (
@@ -111,7 +122,7 @@ export default function CookieNotice({ onVisibilityChange }) {
             className={buttonClass}
             style={{ backgroundColor: COLORS.accent, color: COLORS.accentText }}
           >
-            Rozumiem
+            {english ? "OK" : "Rozumiem"}
           </button>
         )}
       </div>
