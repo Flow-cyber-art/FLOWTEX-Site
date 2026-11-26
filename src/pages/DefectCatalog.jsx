@@ -140,6 +140,9 @@ function Detail({ defect }) {
           {defect.id === "rysy-wloskowate" && (
             <p>Zobacz, jak oceniamy podłoże i dobieramy zakres prac przy <Link to="/renowacja-posadzek-przemyslowych">naprawie posadzek przemysłowych</Link>.</p>
           )}
+          {defect.id === "zastoiny-wody" && (
+            <p>Zobacz, jak wyglądała <Link to="/realizacje/serwis-posadzki-przy-odplywach-zaklad-spozywczy-mazowieckie">naprawa posadzki przy odpływach przed audytem</Link>, lub sprawdź <Link to="/serwis-posadzek-i-kanalizacji">zakres serwisu posadzek i kanalizacji</Link>.</p>
+          )}
           <div className="defect-funnel-quick-contact">
             <a href="tel:+48507394552"><Phone size={16} /> +48 507 394 552</a>
             <a href="mailto:kontakt@flowtex.pl"><Mail size={16} /> kontakt@flowtex.pl</a>

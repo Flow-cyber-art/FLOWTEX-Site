@@ -305,7 +305,8 @@ export const DEFECTS = [
     title: "Zastoiny wody / brak spadków",
     intro: "Woda zbiera się w nieckach na powierzchni zamiast spływać do wpustów, co sprzyja śliskości i rozwojowi mikroorganizmów.",
     image: "flowtex-defect-kaluzowanie.webp",
-    updated: "2026-08-27",
+    updated: "2026-11-26",
+    nextStep: "Do wstępnej oceny prześlij zdjęcie całej strefy po myciu, zbliżenie wpustu i zdjęcie miejsca, w którym zostaje woda. Podaj, czy wpust odbiera wodę, jak duża jest kałuża i kiedy można udostępnić strefę do oględzin.",
     explanation: "Brak spadków rzadko wynika z jednego błędu — to zwykle suma niewielkich odchyleń w warstwie wyrównującej, które kumulują się w nieckę w newralgicznym miejscu. Punktowa korekta spadków jest zwykle szybsza i tańsza niż wymiana całej strefy, o ile problem zostanie precyzyjnie zmapowany pomiarem.",
     causes: [
       "Niewystarczające spadki wykonane podczas układania warstwy wyrównującej",
@@ -321,8 +322,8 @@ export const DEFECTS = [
     ],
     faq: [
       {
-        question: "Czy zastoiny wody można naprawić bez wymiany całej posadzki?",
-        answer: "W większości przypadków tak — punktowa korekta spadków w miejscu zalegania wody rozwiązuje problem bez ingerencji w całą powierzchnię.",
+        question: "Kiedy da się poprawić spadek przy odpływie miejscowo?",
+        answer: "Miejscową korektę można rozważyć, gdy wpust jest drożny, podłoże stabilne, a niecka lub niewłaściwy spadek występują na ograniczonej powierzchni. Pomiar rzędnych posadzki i wpustu pozwala ustalić, jak duży fragment trzeba naprawić.",
       },
       {
         question: "Dlaczego woda zbiera się tylko w jednym miejscu hali?",
