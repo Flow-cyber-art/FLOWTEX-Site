@@ -255,12 +255,16 @@ const CORE = [
         body: "W ofercie mamy odboje ścienne Polysto® montowane wzdłuż tras transportu wewnętrznego, elementy narożnikowe chroniące słupy i naroża w strefach manewrowych, poliestrowe panele ścienne odporne na uderzenia — pozwalające odnowić uszkodzone powierzchnie bez ich wymiany — oraz cokoły zapewniające bezszwowe, higieniczne połączenie ściany z podłogą.",
       },
       {
-        heading: "Dobór do obciążenia",
-        body: "Rodzaj i grubość odboju dobieramy indywidualnie, na podstawie wywiadu dotyczącego rodzaju i natężenia ruchu wózków oraz urządzeń poruszających się po hali. Dla elementów wystających ponad standardową wysokość odboju proponujemy dodatkowe osłony ścienne, ograniczające ryzyko uszkodzeń w miejscach o podwyższonym ryzyku kolizji.",
+        heading: "Odboje ścienne PE-HD i dobór do obciążenia",
+        body: "Odboje ścienne z PE-HD (polietylenu o wysokiej gęstości) stosuje się m.in. na trasach wózków i przy stanowiskach załadunku, gdzie ściany są narażone na powtarzające się uderzenia. Rodzaj i grubość odboju dobieramy indywidualnie, na podstawie wywiadu dotyczącego rodzaju i natężenia ruchu wózków oraz urządzeń poruszających się po hali. Dla elementów wystających ponad standardową wysokość odboju proponujemy dodatkowe osłony ścienne, ograniczające ryzyko uszkodzeń w miejscach o podwyższonym ryzyku kolizji.",
       },
       {
         heading: "Higiena i wykończenie",
         body: "Cokoły Polysto® z gładką powłoką Sanicoat, bezpieczną dla żywności, stosujemy tam, gdzie liczy się zgodność z wymogami higienicznymi, np. w przemyśle spożywczym. Wszystkie połączenia elementów wykonujemy na bazie systemowego kleju Hygiseal®, co zapewnia szczelność i trwałość, a montaż prowadzimy tak, by umożliwić ewentualną wymianę pojedynczych elementów bez ingerencji w konstrukcję ściany.",
+      },
+      {
+        heading: "Ochrona ścian w zakładzie spożywczym we Wrocławiu",
+        body: "W hali produkcji przekąsek we Wrocławiu zamontowaliśmy odboje, cokoły higieniczne i okładziny ścienne Polysto®. [Zobacz realizację systemów odbojowych we Wrocławiu](/realizacje/systemy-odbojowe-zaklad-przekasek-wroclaw-3400-m2).",
       },
     ],
     highlights: [
