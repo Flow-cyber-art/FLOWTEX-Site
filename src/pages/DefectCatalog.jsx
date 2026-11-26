@@ -137,6 +137,9 @@ function Detail({ defect }) {
           <h2 className="defect-funnel-lead">Widzisz ten problem u siebie? Możemy Ci pomóc — rozpoznamy przyczynę i zaproponujemy naprawę.</h2>
           <p>Opisz problem — wrócimy z możliwym kierunkiem działania i przygotujemy bezpłatną wycenę. Możesz też zadzwonić od razu.</p>
           {defect.nextStep && <p>{defect.nextStep}</p>}
+          {defect.id === "rysy-wloskowate" && (
+            <p>Zobacz, jak oceniamy podłoże i dobieramy zakres prac przy <Link to="/renowacja-posadzek-przemyslowych">naprawie posadzek przemysłowych</Link>.</p>
+          )}
           {defect.id === "zastoiny-wody" && (
             <p>Zobacz, jak wyglądała <Link to="/realizacje/serwis-posadzki-przy-odplywach-zaklad-spozywczy-mazowieckie">naprawa posadzki przy odpływach przed audytem</Link>, lub sprawdź <Link to="/serwis-posadzek-i-kanalizacji">zakres serwisu posadzek i kanalizacji</Link>.</p>
           )}

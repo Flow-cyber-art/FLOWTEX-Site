@@ -1335,6 +1335,7 @@ const ALL_PORADNIKI = [
             "Stan podłoża: wilgotność, wytrzymałość, rysy i dylatacje.",
           ] },
           { type: "paragraph", text: "Wstępny kierunek możesz sprawdzić w naszym narzędziu [dobór systemu posadzkowego](/dobor-posadzki), a ostateczny wybór potwierdzamy po wizji lokalnej i ocenie podłoża." },
+          { type: "paragraph", text: "Jeśli dobierasz system do chłodni lub strefy częstego mycia, zobacz naszą [ofertę posadzek poliuretanowych i PU-cementowych](/posadzki-poliuretanowe). Przykład zastosowania PU-cementu znajdziesz w opisie [naprawy posadzki przy odpływach w zakładzie spożywczym](/realizacje/serwis-posadzki-przy-odplywach-zaklad-spozywczy-mazowieckie)." },
         ],
       },
       {
@@ -1950,14 +1951,14 @@ const ALL_PORADNIKI = [
   {
     slug: "posadzka-zywiczna-czy-betonowa-do-magazynu",
     llmsSummary: "Poradnik o różnicy między posadzką betonową (nośność, utwardzanie, zbrojenie, dylatacje) a żywiczną (powłoka bezspoinowa, higiena, ścieranie), kiedy wystarczy beton, kiedy dokłada się żywicę, błędy i pytania do wykonawcy.",
-    publishAt: "2026-12-02",
+    publishAt: "2026-11-26",
     title: "Posadzka żywiczna czy betonowa do magazynu? Co wybrać i kiedy łączyć oba rozwiązania",
     metaTitle: "Posadzka żywiczna czy betonowa do magazynu? Poradnik | FLOWTEX Polska",
     metaDescription:
       "Posadzka żywiczna czy betonowa do magazynu? Sprawdź, czym się różnią, do czego służy każda z nich i kiedy warto położyć żywicę na betonie.",
     category: "Magazyny i hale",
     imageAlt: "Układanie betonowej posadzki przemysłowej w dużej hali magazynowej",
-    date: "Grudzień 2026",
+    date: "Listopad 2026",
     intro: [
       "Płyta betonowa, która nie udźwignie regałów wysokiego składowania, ściera się pod kołami wózków widłowych albo pęka bez zaplanowanych dylatacji — to typowe problemy inwestycji magazynowych na etapie budowy lub rozbudowy. Z drugiej strony pyląca, pękająca posadzka betonowa i wymogi higieniczne to częsty powód, dla którego zakłady sięgają po posadzki żywiczne.",
       "Pytanie „żywiczna czy betonowa?” sugeruje wybór jednego z dwóch. W praktyce to dwa różne elementy posadzki, które często się uzupełniają. Wyjaśniamy, do czego służy każdy z nich i jak podjąć decyzję.",
