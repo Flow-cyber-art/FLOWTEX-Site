@@ -83,7 +83,7 @@ const CORE = [
       },
       {
         heading: "Zastosowania",
-        body: "Posadzki ESD stosujemy w halach produkcji i montażu elektroniki, strefach EPA, laboratoriach oraz magazynach komponentów wrażliwych na wyładowania. Przykładem jest nasza realizacja 700 m² posadzki ESD dla strefy produkcji elektroniki. Posadzki ESD są też spokrewnione z [posadzkami do stref zagrożenia wybuchem](/posadzki-antywybuchowe-atex), ale cel zastosowania jest inny — dlatego w strefach Ex wymagania określamy osobno (zobacz: [posadzki antywybuchowe ATEX](/posadzki-antywybuchowe-atex)).",
+        body: "Posadzki ESD stosujemy w halach produkcji i montażu elektroniki, strefach EPA, laboratoriach oraz magazynach komponentów wrażliwych na wyładowania. W zakładzie elektronicznym wykonaliśmy [700 m² posadzki ESD](/realizacje/posadzka-esd-przemysl-elektroniczny-700-m2). Po zakończeniu prac sprawdziliśmy parametry elektryczne gotowej powierzchni. Posadzki ESD są też spokrewnione z [posadzkami do stref zagrożenia wybuchem](/posadzki-antywybuchowe-atex), ale cel zastosowania jest inny — dlatego w strefach Ex wymagania określamy osobno (zobacz: [posadzki antywybuchowe ATEX](/posadzki-antywybuchowe-atex)).",
       },
       {
         heading: "ESD czy ATEX: porównanie",
@@ -103,7 +103,7 @@ const CORE = [
       },
       {
         heading: "Pomiary i dokumentacja",
-        body: "Po zakończeniu prac sprawdzamy parametry elektryczne wykonanej posadzki, ponieważ nieprawidłowo wykonany detal — np. połączenie warstwy przewodzącej z uziemieniem — może wpłynąć na działanie całego systemu, nawet jeśli powierzchnia wygląda poprawnie. Pomiary i dokumentacja pozwalają zweryfikować, czy system osiągnął wymagane parametry, a późniejsza kontrola w trakcie eksploatacji pozwala utrzymać je na właściwym poziomie.",
+        body: "Po zakończeniu prac sprawdzamy parametry elektryczne wykonanej posadzki, ponieważ nieprawidłowo wykonany detal — np. połączenie warstwy przewodzącej z uziemieniem — może wpłynąć na działanie całego systemu, nawet jeśli powierzchnia wygląda poprawnie. Zakres odbioru ustalamy na podstawie programu kontroli ESD danego zakładu. Obejmuje on ocenę parametrów posadzki, takich jak rezystancja do ziemi, zgodnie z uzgodnionymi kryteriami. Jeśli posadzka z obuwiem ESD służy do uziemiania personelu, trzeba też ocenić działanie układu człowiek, obuwie i posadzka.",
       },
     ],
     highlights: [
@@ -337,6 +337,10 @@ const CORE = [
         body: "Betonowe posadzki przemysłowe sprawdzają się przede wszystkim w halach magazynowych wysokiego składowania, na placach manewrowych i w strefach produkcyjnych, gdzie kluczowa jest nośność i odporność na obciążenia od regałów oraz wózków widłowych.",
       },
       {
+        heading: "Co przygotować do wyceny posadzki betonowej?",
+        body: "Prześlij rzut hali i przybliżony metraż. Napisz, jakie wózki będą jeździć po posadzce, podaj obciążenia od stóp regałów i maszyn oraz opisz stan podłoża. Jeśli masz projekt, dołącz układ dylatacji i wymagania dotyczące równości. Przy modernizacji pomogą też zdjęcia istniejącej posadzki. Na tej podstawie ustalimy, co trzeba sprawdzić przed doborem płyty, zbrojenia i wykończenia.",
+      },
+      {
         heading: "Dylatacje i wykończenie",
         body: "Dylatacje konstrukcyjne i pozorne wykonujemy zgodnie z projektem technologicznym obiektu, co ogranicza ryzyko niekontrolowanego pękania płyty. Taka posadzka może funkcjonować samodzielnie albo posłużyć jako podłoże pod docelową [posadzkę żywiczną](/posadzki-zywiczne), jeśli w przyszłości zajdzie taka potrzeba.",
       },
@@ -348,7 +352,7 @@ const CORE = [
       "Możliwość późniejszego wykończenia warstwą żywiczną",
     ],
     closing:
-      "To rozwiązanie sprawdza się jako samodzielna nawierzchnia magazynowa lub jako podłoże pod docelową posadzkę żywiczną.",
+      "Jeśli dobierasz nawierzchnię dla magazynu, zobacz [porównanie posadzki betonowej i żywicznej](/poradniki/posadzka-zywiczna-czy-betonowa-do-magazynu) pod kątem ruchu wózków, mycia i utrzymania powierzchni.",
     faq: [
       { q: "Po co utwardza się powierzchnię posadzki betonowej?", a: "Utwardzanie posypką mineralną lub kwarcową zwiększa odporność na ścieranie, co jest istotne w strefach ruchu wózków widłowych." },
       { q: "Jakie zbrojenie stosuje się w posadzkach betonowych?", a: "Zbrojenie dobieramy do obciążeń: rozproszone włóknami stalowymi lub polipropylenowymi albo tradycyjne, prętowe, przy większych rozpiętościach i obciążeniach punktowych." },
