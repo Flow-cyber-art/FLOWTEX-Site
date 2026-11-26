@@ -77,6 +77,7 @@ const PRIORITY_OVERRIDES = {
 // sitemap: nie ma sensu prosić Google o indeksację strony, którą i tak
 // sam odrzuci).
 const staticRoutes = [
+  { path: "/en", changefreq: "monthly", lastmod: gitDate("src/pages/EnglishHome.jsx") },
   { path: "/", changefreq: "monthly", lastmod: gitDate("src/pages/Home.jsx") },
   { path: "/realizacje", changefreq: "weekly", lastmod: gitDate("src/data/realizacje.js") },
   { path: "/poradniki", changefreq: "weekly", lastmod: gitDate("src/data/poradniki.js") },

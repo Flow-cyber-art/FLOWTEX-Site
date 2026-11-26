@@ -290,6 +290,7 @@ export default function Layout({ children }) {
                 style={{ color: COLORS.mutedOnDark }}
               />
             ))}
+            <a href="/en" hrefLang="en" lang="en" aria-label="English version" className="ft-mono text-xs underline underline-offset-4" style={{ color: COLORS.white }}>EN</a>
             <Link
               to="/kontakt"
               className="ft-mono text-xs tracking-wider uppercase px-4 py-2 rounded-sm hover:opacity-90 transition"
@@ -300,6 +301,7 @@ export default function Layout({ children }) {
           </nav>
 
           <div className="flex items-center gap-4 lg:hidden">
+            <a href="/en" hrefLang="en" lang="en" aria-label="English version" className="ft-mono text-xs underline underline-offset-4" style={{ color: COLORS.white }}>EN</a>
             <button
               style={{ color: COLORS.white }}
               onClick={() => setMenuOpen((v) => !v)}

@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import Home from "./pages/Home.jsx";
@@ -27,7 +27,14 @@ const Kontakt = lazy(() => import("./pages/Kontakt.jsx"));
 const OFirmie = lazy(() => import("./pages/OFirmie.jsx"));
 const Dziekujemy = lazy(() => import("./pages/Dziekujemy.jsx"));
 
+const EnglishHome = lazy(() => import("./pages/EnglishHome.jsx"));
+
 export default function App() {
+  const { pathname } = useLocation();
+  if (pathname === "/en" || pathname === "/en/") {
+    return <Suspense fallback={null}><EnglishHome /></Suspense>;
+  }
+
   return (
     <Layout>
       <ScrollToTop />
