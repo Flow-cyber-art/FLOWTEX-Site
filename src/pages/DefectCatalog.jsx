@@ -137,6 +137,9 @@ function Detail({ defect }) {
           <h2 className="defect-funnel-lead">Widzisz ten problem u siebie? Możemy Ci pomóc — rozpoznamy przyczynę i zaproponujemy naprawę.</h2>
           <p>Opisz problem — wrócimy z możliwym kierunkiem działania i przygotujemy bezpłatną wycenę. Możesz też zadzwonić od razu.</p>
           {defect.nextStep && <p>{defect.nextStep}</p>}
+          {defect.id === "zastoiny-wody" && (
+            <p>Zobacz, jak wyglądała <Link to="/realizacje/serwis-posadzki-przy-odplywach-zaklad-spozywczy-mazowieckie">naprawa posadzki przy odpływach przed audytem</Link>, lub sprawdź <Link to="/serwis-posadzek-i-kanalizacji">zakres serwisu posadzek i kanalizacji</Link>.</p>
+          )}
           <div className="defect-funnel-quick-contact">
             <a href="tel:+48507394552"><Phone size={16} /> +48 507 394 552</a>
             <a href="mailto:kontakt@flowtex.pl"><Mail size={16} /> kontakt@flowtex.pl</a>
