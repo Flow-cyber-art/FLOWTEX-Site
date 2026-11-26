@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Layout from "./components/Layout.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import Home from "./pages/Home.jsx";
+import { ENGLISH_PAGES } from "./data/english-pages.js";
 
 // Code-splitting tras: Home zostaje eager (to zawsze najważniejsza,
 // pierwsza odsłona — strona główna, potencjalny LCP). Pozostałe podstrony
@@ -31,8 +32,10 @@ const EnglishHome = lazy(() => import("./pages/EnglishHome.jsx"));
 
 export default function App() {
   const { pathname } = useLocation();
-  if (pathname === "/en" || pathname === "/en/") {
-    return <Suspense fallback={null}><EnglishHome /></Suspense>;
+  const englishPath = pathname.replace(/\/$/, "");
+  const englishPage = ENGLISH_PAGES.find((page) => page.path === englishPath);
+  if (englishPath === "/en" || englishPage) {
+    return <Suspense fallback={null}><EnglishHome page={englishPage} /></Suspense>;
   }
 
   return (

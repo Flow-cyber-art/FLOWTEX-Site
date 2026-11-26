@@ -11,6 +11,7 @@
 // PRZED buildem Vite, bo nie zależy od niczego poza plikami w src/data.
 
 import fs from "node:fs";
+import { ENGLISH_PAGES } from "../src/data/english-pages.js";
 import { execSync } from "node:child_process";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -78,6 +79,7 @@ const PRIORITY_OVERRIDES = {
 // sam odrzuci).
 const staticRoutes = [
   { path: "/en", changefreq: "monthly", lastmod: gitDate("src/pages/EnglishHome.jsx") },
+  ...ENGLISH_PAGES.map(({ path }) => ({ path, changefreq: "monthly" })),
   { path: "/", changefreq: "monthly", lastmod: gitDate("src/pages/Home.jsx") },
   { path: "/realizacje", changefreq: "weekly", lastmod: gitDate("src/data/realizacje.js") },
   { path: "/poradniki", changefreq: "weekly", lastmod: gitDate("src/data/poradniki.js") },
