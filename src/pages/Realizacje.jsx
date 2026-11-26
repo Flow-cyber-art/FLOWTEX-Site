@@ -3,6 +3,7 @@ import React from "react";
 import { COLORS, ACCENT_TEXT } from "../theme.js";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { ENGLISH_PAGES } from "../data/english-pages.js";
 import ContactSection from "../components/ContactSection.jsx";
 import { TYPE_BY_SERVICE } from "../components/ContactForm.jsx";
 import { ArrowRight, ArrowLeft, CalendarDays } from "lucide-react";
@@ -231,6 +232,7 @@ function RealizacjeList() {
 }
 
 function RealizacjaDetail({ item }) {
+  const englishPage = ENGLISH_PAGES.find((page) => page.polishPath === `/realizacje/${item.slug}`);
   const canonicalUrl = `${LIST_URL}/${item.slug}`;
   const image = toAbsoluteUrl(CASE_STUDY_IMAGES[item.slug]);
   const relatedService = item.relatedServiceSlug ? getServiceBySlug(item.relatedServiceSlug) : null;
@@ -258,6 +260,8 @@ function RealizacjaDetail({ item }) {
         <title>{pageTitle}</title>
         <meta name="description" content={metaDescription} />
         <link rel="canonical" href={canonicalUrl} />
+        {englishPage && <link rel="alternate" hrefLang="pl" href={canonicalUrl} />}
+        {englishPage && <link rel="alternate" hrefLang="en" href={`https://www.flowtex.pl${englishPage.path}`} />}
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:url" content={canonicalUrl} />

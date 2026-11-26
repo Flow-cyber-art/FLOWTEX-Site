@@ -2,6 +2,7 @@ import React from "react";
 import { COLORS, ACCENT_TEXT } from "../theme.js";
 import { Link, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { ENGLISH_PAGES } from "../data/english-pages.js";
 import { ArrowRight, Check, ArrowLeft } from "lucide-react";
 import { CORE_SERVICES, getServiceBySlug } from "../data/services.js";
 import { REALIZACJE } from "../data/realizacje.js";
@@ -50,6 +51,7 @@ export default function ServicePage() {
   const remainder = otherServices.length % 3;
   const ctaSpan = remainder === 0 ? 3 : 3 - remainder;
   const pageTitle = service.metaTitle || `${service.title} | FLOWTEX Polska`;
+  const englishPage = ENGLISH_PAGES.find((page) => page.polishPath === `/${service.slug}`);
   const canonicalUrl = `https://www.flowtex.pl/${service.slug}`;
   // Zdjęcia z import.meta.glob mają ścieżkę względną — og:image musi być pełnym URL-em.
   const ogImage = realizationImage
@@ -62,6 +64,8 @@ export default function ServicePage() {
         <title>{pageTitle}</title>
         <meta name="description" content={service.metaDescription} />
         <link rel="canonical" href={canonicalUrl} />
+        {englishPage && <link rel="alternate" hrefLang="pl" href={canonicalUrl} />}
+        {englishPage && <link rel="alternate" hrefLang="en" href={`https://www.flowtex.pl${englishPage.path}`} />}
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={service.metaDescription} />
         <meta property="og:url" content={canonicalUrl} />

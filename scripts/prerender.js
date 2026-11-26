@@ -12,6 +12,7 @@
 // PO standardowym buildzie klienta i buildzie SSR.
 
 import fs from "node:fs";
+import { ENGLISH_PAGES } from "../src/data/english-pages.js";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -31,6 +32,7 @@ const { PORADNIKI } = await import(path.join(root, "src/data/poradniki.js"));
 const routes = [
   "/",
   "/en",
+  ...ENGLISH_PAGES.map(({ path }) => path),
   "/polityka-prywatnosci",
   "/polityka-cookies",
   "/realizacje",

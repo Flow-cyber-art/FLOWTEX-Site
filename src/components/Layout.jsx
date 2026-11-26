@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { COLORS, ACCENT_TEXT } from "../theme.js";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Layers, Phone, Mail, Menu, X, ChevronDown, Wrench, Search, ListChecks, Thermometer, FileText, Linkedin, Facebook, MapPin } from "lucide-react";
 import { OFFER_GROUPS } from "../data/services.js";
+import { ENGLISH_PAGES } from "../data/english-pages.js";
 import CookieNotice from "./CookieNotice.jsx";
 import ContactFab from "./ContactFab.jsx";
 import { ANALYTICS_ENABLED, openConsentSettings } from "../utils/analytics.js";
@@ -181,6 +182,9 @@ function MobileAccordion({ label, icon, children }) {
 }
 
 export default function Layout({ children }) {
+  const { pathname } = useLocation();
+  const polishPath = pathname.replace(/\/$/, "");
+  const englishPath = ENGLISH_PAGES.find((page) => page.polishPath === polishPath)?.path ?? "/en";
   const [menuOpen, setMenuOpen] = useState(false);
   const [cookieBannerVisible, setCookieBannerVisible] = useState(false);
 
@@ -290,7 +294,7 @@ export default function Layout({ children }) {
                 style={{ color: COLORS.mutedOnDark }}
               />
             ))}
-            <a href="/en" hrefLang="en" lang="en" aria-label="English version" className="ft-mono text-xs underline underline-offset-4" style={{ color: COLORS.white }}>EN</a>
+            <a href={englishPath} hrefLang="en" lang="en" aria-label="English version" className="ft-mono text-xs underline underline-offset-4" style={{ color: COLORS.white }}>EN</a>
             <Link
               to="/kontakt"
               className="ft-mono text-xs tracking-wider uppercase px-4 py-2 rounded-sm hover:opacity-90 transition"
@@ -301,7 +305,7 @@ export default function Layout({ children }) {
           </nav>
 
           <div className="flex items-center gap-4 lg:hidden">
-            <a href="/en" hrefLang="en" lang="en" aria-label="English version" className="ft-mono text-xs underline underline-offset-4" style={{ color: COLORS.white }}>EN</a>
+            <a href={englishPath} hrefLang="en" lang="en" aria-label="English version" className="ft-mono text-xs underline underline-offset-4" style={{ color: COLORS.white }}>EN</a>
             <button
               style={{ color: COLORS.white }}
               onClick={() => setMenuOpen((v) => !v)}
