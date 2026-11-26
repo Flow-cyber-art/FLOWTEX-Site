@@ -1335,6 +1335,7 @@ const ALL_PORADNIKI = [
             "Stan podłoża: wilgotność, wytrzymałość, rysy i dylatacje.",
           ] },
           { type: "paragraph", text: "Wstępny kierunek możesz sprawdzić w naszym narzędziu [dobór systemu posadzkowego](/dobor-posadzki), a ostateczny wybór potwierdzamy po wizji lokalnej i ocenie podłoża." },
+          { type: "paragraph", text: "Jeśli dobierasz system do chłodni lub strefy częstego mycia, zobacz naszą [ofertę posadzek poliuretanowych i PU-cementowych](/posadzki-poliuretanowe). Przykład zastosowania PU-cementu znajdziesz w opisie [naprawy posadzki przy odpływach w zakładzie spożywczym](/realizacje/serwis-posadzki-przy-odplywach-zaklad-spozywczy-mazowieckie)." },
         ],
       },
       {

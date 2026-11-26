@@ -246,8 +246,8 @@ export const SERVICE_PAGES = [
         body: "Klawiszowanie na styku płyt to sygnał, że łączniki przenoszące obciążenia między sąsiednimi polami przestały pracować prawidłowo albo nigdy nie zostały prawidłowo wykonane. Ruch kołowy przez taki styk przyspiesza degradację krawędzi, dlatego przed naprawą oceniamy stan łączników i nośność krawędzi, a w newralgicznych strefach warto ograniczyć ruch wózków do czasu naprawy. Szczegóły w katalogu wad: [uszkodzenie i różnica poziomów na stykach płyt betonowych](/katalog-wad/odspojenie-stykow).",
       },
       {
-        heading: "Prace w działającym zakładzie",
-        body: "Prace planujemy po wizji lokalnej, tak aby jak najmniej zakłócać bieżącą pracę zakładu, a w wielu przypadkach prowadzimy je etapami. Serwis planujemy tak, by przygotować strefy produkcyjne do audytów i ograniczyć ryzyko nieplanowanych przestojów. Usługi dotyczące kanalizacji zakładowej (kamerowanie i udrażnianie) opisujemy na stronie [serwis posadzek i kanalizacji](/serwis-posadzek-i-kanalizacji).",
+        heading: "Ile czasu trzeba wyłączyć strefę z użytkowania?",
+        body: "Okno serwisowe obejmuje przygotowanie podłoża, wykonanie naprawy i utwardzenie materiału. Przed wyceną ustalamy, kiedy strefa musi być gotowa na ruch pieszy, przejazd wózków lub mycie. Te terminy mogą się różnić w zależności od systemu i warunków w hali. Jeśli da się oddzielić strefę robót od pracującej części zakładu, ustalamy też kolejność etapów. Usługi dotyczące kanalizacji zakładowej (kamerowanie i udrażnianie) opisujemy na stronie [serwis posadzek i kanalizacji](/serwis-posadzek-i-kanalizacji).",
       },
       {
         heading: "Co sprawdzamy przed aplikacją i jak wygląda odbiór",
